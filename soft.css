@@ -170,7 +170,7 @@ nav a {
 }
 
 main {
-    margin-top: 120px;
+    margin-top: 100px;
     padding: 20px;
     text-align: center;
 }
@@ -458,4 +458,9 @@ main {
     footer p {
         display: none;
     }
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
 }
