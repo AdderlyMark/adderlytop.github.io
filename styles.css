@@ -440,4 +440,10 @@ footer {
     footer p {
         display: none;
     }
+    iframe {
+        display: none;
+    }
+    .youtube-section {
+        display: none;
+    }
 }
