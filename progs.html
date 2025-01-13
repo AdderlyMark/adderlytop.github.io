@@ -10,26 +10,6 @@
 <script>
     let headerHidden = false;
     let logoHidden = false;
-
-    function updateLayout() {
-        const header = document.querySelector('header');
-        const logo = document.querySelector('.logo');
-        const currentWidth = window.innerWidth;
-        if (currentWidth < 1175) {
-            if (!headerHidden) {
-                header.style.display = 'none';
-                headerHidden = true;
-            }
-        } else {
-            if (headerHidden) {
-                header.style.display = 'block';
-                headerHidden = false;
-            }
-        }
-    }
-
-    window.addEventListener('load', updateLayout);
-    window.addEventListener('resize', updateLayout);
 </script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
@@ -227,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <li><a href="index" class="nav-button">Главная</a></li>
             <li><a href="soft" class="nav-button">Софт от Аддерли</a></li>
             <li><a href="builds" class="nav-button">Сборки от Аддерли</a></li>
-            <li><a href="windows_pe" class="nav-button">Windows PE от Аддерли</a></li>
+            <li><a href="win_pe" class="nav-button">Windows PE от Аддерли</a></li>
         </ul>
         <ul class="second-row">
             <li><a href="bio" class="nav-button">Обо мне</a></li>
@@ -338,13 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="https://github.com/Vencord/Installer/releases/latest/download/VencordInstaller.exe" class="download-button">Скачать</a>
                     </div>
                 </div>
-                <div class="program">
-                    <img src="icons/apps/44.png" alt="Discord2" class="program-icon">
-                    <div class="program-description">
-                        <p>Discord - версия для Windows 7</p>
-                        <a href="https://cdn.discordapp.com/attachments/1251614710311157761/1259433845715898418/DiscordSetup.exe?ex=66df61eb&is=66de106b&hm=05c2e96a8398961e30ef7324d04ddb650fdfde177eb01e6db30910f6233ee4a7&" class="download-button">Скачать</a>
-                    </div>
-                </div>
             </section>
 
             <section id="players" class="program-section">
@@ -360,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="icons/apps/10.png" alt="MPC-HC" class="program-icon">
                     <div class="program-description">
                         <p>MPC-HC - удобный видеоплеер поддерживающий огромное количество кодеков.</p>
-                        <a href="https://github.com/clsid2/mpc-hc/releases/download/2.3.5/MPC-HC.2.3.5.x64.exe" class="download-button">Скачать</a>
+                        <a href="https://github.com/clsid2/mpc-hc/releases/" class="download-button">Скачать</a>
                     </div>
                 </div>
                 <div class="program">
