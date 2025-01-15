@@ -171,6 +171,7 @@ nav a {
 main {
     padding: 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .builds-header {
@@ -178,7 +179,25 @@ main {
     font-size: 34px;
     color: #ffffff;
     margin-top: 120px;
-    margin-bottom: 20px;
+    margin-bottom: -25px;
+}
+
+.builds-header1 {
+    text-align: center;
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: -25px;
+}
+
+
+.downloads-header {
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .mobile-header {
@@ -267,7 +286,8 @@ main {
     margin: 3px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0px 0px 4px 0.1px black;
-
+    width: calc(50% - 175px);
+    min-width: 300px;
 }
 
 .download-button img.icon {
@@ -530,7 +550,6 @@ main {
     border-radius: 10px;
     justify-content: center;
     position: relative;
-
 }
 
 .accordion::after {
@@ -538,8 +557,6 @@ main {
     color: white;
     right: 20px;
     position: absolute;
-
-
 }
 
 .accordion.active::after {
@@ -553,12 +570,69 @@ main {
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
     opacity: 0;
     transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
 .panel.open {
+    max-height: none;
+    opacity: 1;
+    transition: none;
+}
+
+.accordion1-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.accordion1 {
+    background-color: #2e2e2e;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.4s ease;
+    border-radius: 10px;
+    justify-content: center;
+    position: relative;
+
+}
+
+.accordion1::after {
+    content: '\002B';
+    color: white;
+    right: 20px;
+    position: absolute;
+
+
+}
+
+.accordion1.active::after {
+    content: "\2212";
+    color: white;
+}
+
+.panel1 {
+    border-radius: 10px;
+    background-color: #191919;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.panel1.open {
     max-height: 500px;
     opacity: 1;
 }
@@ -618,7 +692,6 @@ main {
 }
 
 h1 {
-    margin: 0;
     padding: 0;
 }
 
