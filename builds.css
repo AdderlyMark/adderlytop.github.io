@@ -641,6 +641,21 @@ main {
     footer p {
         display: none;
     }
+    .welcome-panel {
+        width: 90%;
+        min-width: 90%;
+    }
+    .panels-container {
+        display: block; 
+    }
+    .panels-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        gap: 20px; 
+        max-width: 1180px;
+        width: 90%;
+    }
 }
 
 .welcome-panel {
@@ -715,4 +730,38 @@ h1 {
         font-size: 16px;
         max-width: 650px;
     }
+}
+
+.panels-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    max-width: 1480px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Панели */
+.welcome-panel {
+    width: 45%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Кнопки */
+.welcome-button {
+    display: block;
+    padding: 15px 15px;
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
