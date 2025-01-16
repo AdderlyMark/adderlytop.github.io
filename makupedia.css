@@ -141,3 +141,30 @@ footer {
     display: block;
     margin: 0 auto;
 }
+
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+        width: 250px;
+        position: fixed;
+        top: 0px;
+        bottom: 0;
+        overflow-y: auto;
+        border-right: 2px solid #d3d3d3;
+        background-color: #eef3f7;
+        padding: 15px;
+    }
+    
+    .header-container {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        color: white;
+    }
+
+    main {
+        margin-left: 20px;
+        padding: 20px;
+    }
+}
