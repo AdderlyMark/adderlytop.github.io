@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'sf';
+    src: url('fonts/sf.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+  font-family: 'sf';
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #202122;
+}
+
+header {
+    background-color: #f8f9fa;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    overflow-y: auto;
+    border-right: 2px solid #d3d3d3;
+    background-color: #eef3f7;
+    padding: 15px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    color: white;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #3366cc;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+h1 {
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 5px;
+}
+
+h2 {
+    color: #3366cc;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #191919;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.telegram-link {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.telegram-link:hover {
+    text-decoration: underline;
+}
+
+.telegram-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.header-container .site-icon {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
