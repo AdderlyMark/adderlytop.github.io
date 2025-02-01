@@ -202,9 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
 <body>
 
     
-    <h1 class="builds-header">MakuOS 11 22H2 V6 (Windows 11 22H2, 22621.4460)
+    <h1 class="builds-header">MakuOS 11 22H2 V7 (Windows 11 22H2, 22621.4751)
     </h1>
-    <h3 class="builds-header1">Windows Defender удалён // Обновления есть // Pro редакция // EN + RU
+    <h3 class="builds-header1">Windows Defender есть // Обновления есть // Pro редакция // Русский язык
     </h3>
 
 <header>
@@ -217,9 +217,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <nav>
         <ul class="first-row">
             <li><a href="index" class="nav-button">Главная</a></li>
+            <li><a href="builds" class="nav-button">Сборки от Аддерли</a></li>
             <li><a href="makutweaker" class="nav-button">Скачать MakuTweaker</a></li>
             <li><a href="soft" class="nav-button">Софт от Аддерли</a></li>
-            <li><a href="builds" class="nav-button">Сборки от Аддерли</a></li>
         </ul>
         <ul class="second-row">
             <li><a href="win_pe" class="nav-button">Windows PE от Аддерли</a></li>
@@ -263,10 +263,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="bootleg">
             </div>
             <div class="image-gallery">
-                <img src="images/bootlegs/makuos11_winver.png" alt="MakuOS 11 Image 1">
-                <img src="images/bootlegs/makuos11_lang.png" alt="MakuOS 11 Image 2">
-                <img src="images/bootlegs/makuos11_taskmgr.png" alt="MakuOS 11 Image 3">
+                <img src="images/bootlegs/makuos11_main.png" alt="MakuOS 11 Image 1">
+                <img src="images/bootlegs/makuos11_winver.png" alt="MakuOS 11 Image 2">
+                <img src="images/bootlegs/makuos11_appwiz.png" alt="MakuOS 11 Image 3">
                 <img src="images/bootlegs/makuos11_size.png" alt="MakuOS 11 Image 4">
+                <img src="images/bootlegs/makuos11_taskmgr.png" alt="MakuOS 11 Image 5">
+                <img src="images/bootlegs/makuos11_taskmgr2.png" alt="MakuOS 11 Image 6">
             </div>
             <div class="accordion-container">
                 <button class="accordion">Изменения в сборке</button>
@@ -278,39 +280,50 @@ document.addEventListener('DOMContentLoaded', () => {
                     Microsoft Teams, Microsoft Family, Quick Assist, Dev Home, Solitaire Collection,<br>
                     Power Automate Desktop, Get Help, Feedback Hub, Outlook, Microsoft Todos.<br><br>
                     
+                    <h1>Прочие изменения:</h1>
+                    Убрана проверка на железо при установке системы.<br>
+                    интегрированы все обновления по 1 февраля 2025 года.<br>
+                    интегрированы Microsoft Visual C++ 2005 - 2022 x86 и x64<br>
+                    На рабочем столе есть папка "от Марка Аддерли", в котором находятся установщики VLC, MPC-HC,<br>Telegram, Zapret, Steam, Everything, а так же ссылки на библиотеку софта, и <a href="https://t.me/maku_library" target="_blank" style="color: yellow;">Telegram канал с репаками без вирусов</a>.</p>
+
+                    В сборке изменено OOBE, в котором был включён вход в локальную учётную запись и скрыты какие либо страницы с рекламой.<br>
+                    На рабочем столе имеется приложение "MakuOS 11 Launcher", в котором можно применить различные твики первой необходимости,<br>разрешить обновление до 24H2, и активировать систему.<br><br>
+
                     <h1>Применённые настройки:</h1>
                     <h3>Основное:</h3>
                     Включены скрытые файлы, папки, и диски<br>
                     Включены расширения файлов<br>
-                    Отключены виджеты<br>
-                    Скрыта кнопка "Галерея"<br>
-                    Откреплены закрепления на панели задач<br>
-                    Отключён поиск Bing на панели задач<br>
+                    Включена поддержка скриптов PowerShell<br>
+                    Включена иконка "Этот Компьютер" на рабочем столе<br>
+                    Включена возможность удалить Microsoft Edge<br>
+                    Включена максимальная производительность системы<br>
+                    Включён буфер обмена<br>
+                    Для ускорения быстродействия, было отключено ускорение индексации диска<br>
                     По умолчанию открывается "Этот ПК" вместо "Главная"<br>
-                    Отключён быстрый запуск<br>
-                    Отключена гибернация<br>
+                    Разрешен вход в локальный аккаунт<br>
+                    Отключена дефрагментация дисков<br>
+                    Отключено удаленное управление реестром<br>
+                    Отключена отправка отчёт об ошибках Windows<br>
+                    Отключена служба карт<br>
+                    Отключена служба UPnP устройств (она никому не нужна)<br>
+                    Отключена служба смарт карт<br>
+                    Отключена служба раздачи мобильного интернета<br>
+                    Отключена активность лишних фоновых приложений<br>
+                    Отключена изоляция ядра<br>
                     Отключено залипание клавиш<br>
-                    Отключена первоначальная настройка Microsoft Edge<br>
                     Отключена задержка контекстного меню<br>
                     Отключена автоперезагрузка при синем экране смерти<br>
-                    Microsoft Edge можно удалить<br>
-                    Включена иконка "Этот Компьютер" на рабочем столе<br>
-                    Включён буфер обмена<br>
-                    Убрана подпись "Ярлык" у новых ярлыков<br>
+                    Отключён сенсорный ввод клавиатуры<br>
+                    Отключен получение геолокации для UWP приложений<br>
+                    Отключён Content Delivery Manager, который отвечает за предустановку рекламы<br>
                     Отключено требование интернета в первоначальной настройке<br>
-                    Разрешен вход в локальный аккаунт<br>
                     Автоматически введён 30 дневной ключ продукта<br>
                     Удалён рекламный диалог "Давайте завершим настройку этого устройства"<br>
-                    Отключён Content Delivery Manager, который отвечает за предустановку рекламы<br>
                     Запрещена установка стандартных мусорных UWP приложений после обновления системы<br>
-                    На панели задач добавлена кнопка "Завершить задачу" в ПКМ по программе<br>
-                    Включён DirectPlay<br>
-                    Интегрированны NET Framework 2.0, 3.0, 3.5.<br>
-                    Удалён Windows Defender.<br><br>
+                    На панели задач добавлена кнопка "Завершить задачу" в ПКМ по программе<br><br>
             
                     <h3>Телеметрия:</h3>
                     Запрещена диагностика установленных приложений<br>
-                    Запрещена телеметрия за активацией системы<br>
                     Запрещена публикация активности пользователя<br>
                     Запрещён сбор информации о пользователе<br>
                     Запрещён сбор информации об устройстве пользователя<br>
@@ -319,16 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     Запрещено эксперементирование над системой пользователя<br>
                     Отключена отправка результатов поиска пользователя<br>
                     Отключена активация управления голосом<br>
-                    Отключена тихая установка рекламных приложений<br>
                     Отключён сбор информации о голосе пользователя при использовании функций ввода голосом<br><br>
-            
-                    <h1>Прочие изменения:</h1>
-                    Интегрированны все обновления по конец декабря 2024 года.<br>
-                    В сборке присутствует два языка: Английский и Русский.<br>
-                    Убрана проверка на железо при установке системы.<br>
-                    Предустановлен MakuTweaker.<br>
-                    В сборке используется изменённое OOBE, в котором включён вход в локальную учётную запись, и скрыты какие либо страницы с рекламой.<br>
-                    На рабочем столе имеется приложение "MakuOS 11 Launcher", в котором можно применить Compact OS,<br>разрешить обновление до 24H2, и активировать систему.<br><br>
                 </div>
             </div>
 
@@ -373,19 +377,32 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
 
             <div class="accordion-container">
-                <button class="accordion1">Что нового в V6 версии сборки?</button>
+                <button class="accordion1">Что нового в V7 версии сборки?</button>
                 <div class="panel1 panel4">
                     <div style="text-align: left; padding-left: 20px;">
                     <br>
-                    • Была обновлена сборка с обновления 22621.4391 до 22621.4460<br>
-                    • Больше не отключается HPET таймер. Статистика показала, что на мощных ПК это иногда может вызывать проблемы<br>
-                    • Больше не устанавливаются обновления до 23H2 при подключении к интернету!<br>
-                    • Больше не вшиваются платные кодеки для iPhone<br>
-                    • Окончательно был удалён Windows Defender, версия с его наличием имеется в 24H2 сборке.<br>
-                    • Теперь названия ПК устанавливается в формате "MakuOS V6 - "число 0-9999"<br>
-                    • SmartScreen больше не удалён, сделано это с целью повышения безопасности и на всякий случай стабильности системы<br>
-                    • Сборка больше не сжимается в ESD формат, вместо него используется старый WIM. Эксперимент показал, что это чутка повышает скорость установки, и вероятнее всего, с этим будет намного меньше проблем.<br>
-                    • Была добавлена своя тема оформления с обоями и звуками. (стандартную тему можно вернуть в параметрах)<br><br>
+                    • Сборка обновлена с обновления 22621.4460 до 22621.4751 (1 февраля 2025)<br>
+                    • Windows Defender больше не удалён<br>
+                    • Сборка больше не мультиязычная. Сделано это в угоду оптимизации производительности.<br>
+                    • Был глобально переработан MakuOS Launcher. Добавлены функции включения NET Framework,<br>отключения гибернации, приостановки службы обновления, отключения UAC и SmartScreen.<br>
+                    • Теперь интегрированы Microsoft Visual C++ 2005 - 2022 x86 и x64<br>
+                    • Появилась папка "от Марка Аддерли", где находятся инсталляторы программ первой необходимости,<br>Zapret, а так же различные ссылки на репаки<br>
+                    • В сборку включён совершенной новый ремейк MakuTweaker<br>
+                    • Включена поддержка скриптов PowerShell<br>
+                    • Для оптимизации работы, была отключено ускорение индексации диска<br>
+                    • Отключена дефрагментация дисков<br>
+                    • Отключено удаленное управление реестром<br>
+                    • Отключена отправка отчёт об ошибках Windows<br>
+                    • Отключен получение геолокации для UWP приложений<br>
+                    • Отключена служба карт<br>
+                    • Отключена служба UPnP устройств (она никому не нужна)<br>
+                    • Отключена служба смарт карт<br>
+                    • Отключена служба раздачи мобильного интернета<br>
+                    • Отключена активность лишних фоновых приложений<br>
+                    • Отключена изоляция ядра<br>
+                    • Включена максимальная производительность системы<br>
+                    • Отключён сенсорный ввод клавиатуры<br>
+                    • Тема оформления с обоями и звуками была удалена<br><br>
                 </div>
             </div>
 
@@ -393,25 +410,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="accordion1">Контрольные суммы образа</button>
                 <div class="panel1 panel5">
                     <br>
-                    <h1>CRC32: 357B06AE</h1><br>
-                    <h1>MD5: 90657F30EA546A0AA4BE4D9EE6352DB0</h1><br>
-                    <h1>SHA-256: 54c87c5c59bb77d3eba36e6cd29c571156c6f5ac6d66535b9e96306f333a227b</h1><br>
-                    <h1>SHA-1: 272FA33EFEC2517BEA4349B96FCDE18FACC21CB0</h1><br><br>
+                    <h1>CRC32: 87E6E4A6</h1><br>
+                    <h1>MD5: 07B3EF178565153C90F44C99511FCDAF</h1><br>
+                    <h1>SHA-256: ab8e5f243619976f0df8fcb8e5ffb709f4ec52b089a75db6a55b5cce35597069</h1><br>
+                    <h1>SHA-1: 80DDAB15E4CA763290C6E131E7B0EFAC76F2BC76</h1><br>
                 </div>
             </div>
 
             <h1 class="downloads-header">Скачать сборку MakuOS 11 22H2:</h1>
             <div class="downloads-container">
-                <a href="https://t.me/adderly324/3737" class="download-button" target="_blank">
+                <a href="https://t.me/Maku_Library/60" class="download-button" target="_blank">
                     <img src="icons/qbit.png" alt="Qbit" class="icon"> Скачать с торрента
                 </a>
-                <a href="https://pixeldrain.com/u/6DpWZ9HZ" class="download-button" target="_blank">
+                <a href="https://pixeldrain.com/u/P1jdWcqY" class="download-button" target="_blank">
                     <img src="icons/pixeldrain.png" alt="PixelDrain" class="icon"> PixelDrain
                 </a>
-                <a href="https://drive.google.com/file/d/1Db-WLVEeffBepEf5UU_NDbZ0YI-02EqK/view?usp=sharing" class="download-button" target="_blank">
+                <a href="https://drive.google.com/file/d/17vV5lahGuFEChSqXwVpIr7JPX86stxeq/view?usp=sharing" class="download-button" target="_blank">
                     <img src="icons/googledrive.png" alt="Google Drive" class="icon"> Google Drive
                 </a>
-                <a href="https://www.mediafire.com/file/pi4nlbk9ro27xaz/MakuOS+11+22H2+V6.iso/file" class="download-button" target="_blank">
+                <a href="https://www.mediafire.com/file/lzddakdn3o9qfg6/MakuOS+11+22H2+V7.iso/file" class="download-button" target="_blank">
                     <img src="icons/mediafire.png" alt="MediaFire" class="icon"> MediaFire
                 </a>
             </div>
