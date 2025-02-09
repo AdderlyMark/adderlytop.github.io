@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <body>
 
     
-    <h1 class="builds-header">MakuOS 11 22H2 V7 (Windows 11 22H2, 22621.4751)
+    <h1 class="builds-header">MakuOS 11 22H2 V8 (Windows 11 22H2, 22621.4751)
     </h1>
     <h3 class="builds-header1">Windows Defender есть // Обновления есть // Pro редакция // Русский язык
     </h3>
@@ -278,20 +278,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h1>Удалённые приложения:</h1>
                     Карты, Диктофон, Люди, Погода, Новости, Почта, Календарь, Clipchamp,<br>
                     Microsoft Teams, Microsoft Family, Quick Assist, Dev Home, Solitaire Collection,<br>
-                    Power Automate Desktop, Get Help, Feedback Hub, Outlook, Microsoft Todos.<br><br>
+                    Power Automate Desktop, Get Help, Feedback Hub, Outlook, Microsoft Todos.<br>
+                    Компоненты Windows Mixed Reality, Holo, Raw Image Extension<br><br>
                     
                     <h1>Прочие изменения:</h1>
                     Убрана проверка на железо при установке системы.<br>
                     Обновления заблокированы на 22H2 версии.<br>
-                    Интегрированы все обновления по 1 февраля 2025 года.<br>
-                    Интегрированы Microsoft Visual C++ 2005 - 2022 x86 и x64<br>
-                    На рабочем столе есть папка "от Марка Аддерли", в котором находятся установщики VLC, MPC-HC,<br>Telegram, Zapret, Steam, Everything, а так же ссылки на библиотеку софта, и <a href="https://t.me/maku_library" target="_blank" style="color: yellow;">Telegram канал с репаками без вирусов</a>.</p>
+                    Интегрированы все обновления по 10 февраля 2025 года.<br>
+                    На рабочем столе есть папка "от Марка Аддерли", в котором находятся установщики браузеров, MPC-HC,<br>Telegram, Zapret, Steam, Everything, а так же ссылки на библиотеку софта,<br>отключение антивируса, и <a href="https://t.me/maku_library" target="_blank" style="color: yellow;">Telegram канал с репаками без вирусов</a>.</p>
 
                     В сборке изменено OOBE, в котором был включён вход в локальную учётную запись и скрыты какие либо страницы с рекламой.<br>
                     На рабочем столе имеется приложение "MakuOS 11 Launcher", в котором можно применить различные твики первой необходимости,<br>разрешить обновление до 24H2, и активировать систему.<br><br>
 
                     <h1>Применённые настройки:</h1>
                     <h3>Основное:</h3>
+                    По умолчанию открывается "Этот ПК" вместо "Главная"<br>
+                    Разрешен вход в локальный аккаунт<br>
                     Включены скрытые файлы, папки, и диски<br>
                     Включены расширения файлов<br>
                     Включена поддержка скриптов PowerShell<br>
@@ -299,28 +301,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     Включена возможность удалить Microsoft Edge<br>
                     Включена максимальная производительность системы<br>
                     Включён буфер обмена<br>
-                    Для ускорения быстродействия, было отключено ускорение индексации диска<br>
-                    По умолчанию открывается "Этот ПК" вместо "Главная"<br>
-                    Разрешен вход в локальный аккаунт<br>
-                    Отключена дефрагментация дисков<br>
-                    Отключено удаленное управление реестром<br>
+                    Включён режим "Больше закреплений" в меню Пуск<br>
                     Отключено автошифрование диска с помощью Bitlocker<br>
-                    Отключена отправка отчёт об ошибках Windows<br>
-                    Отключена служба карт<br>
-                    Отключена служба UPnP устройств (она никому не нужна)<br>
-                    Отключена служба смарт карт<br>
-                    Отключена служба раздачи мобильного интернета<br>
                     Отключена активность лишних фоновых приложений<br>
                     Отключена изоляция ядра<br>
                     Отключено залипание клавиш<br>
                     Отключена задержка контекстного меню<br>
                     Отключена автоперезагрузка при синем экране смерти<br>
-                    Отключён сенсорный ввод клавиатуры<br>
-                    Отключен получение геолокации для UWP приложений<br>
+                    Отключено получение геолокации для UWP приложений<br>
+                    Отключено принудительное открытие скриншотера на кнопку PrntScr<br>
                     Отключён Content Delivery Manager, который отвечает за предустановку рекламы<br>
-                    Отключено требование интернета в первоначальной настройке<br>
-                    Автоматически введён 30 дневной ключ продукта<br>
-                    Удалён рекламный диалог "Давайте завершим настройку этого устройства"<br>
+                    Отключён рекламный диалог "Давайте завершим настройку этого устройства"<br>
+                    Отключено требование интернета в первоначальной настройке (если он отсутствует)<br>
                     Запрещена установка стандартных мусорных UWP приложений после обновления системы<br>
                     На панели задач добавлена кнопка "Завершить задачу" в ПКМ по программе<br><br>
             
@@ -379,10 +371,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
 
             <div class="accordion-container">
-                <button class="accordion1">Что нового в V7 версии сборки?</button>
+                <button class="accordion1">Что нового в V7/V8 версии сборки?</button>
                 <div class="panel1 panel4">
                     <div style="text-align: left; padding-left: 20px;">
                     <br>
+                    V7:<br>
                     • Сборка обновлена с обновления 22621.4460 до 22621.4751 (1 февраля 2025)<br>
                     • Windows Defender больше не удалён<br>
                     • Сборка больше не мультиязычная. Сделано это в угоду оптимизации производительности.<br>
@@ -390,22 +383,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     • Теперь интегрированы Microsoft Visual C++ 2005 - 2022 x86 и x64<br>
                     • Появилась папка "от Марка Аддерли", где находятся инсталляторы программ первой необходимости,<br>Zapret, а так же различные ссылки на репаки<br>
                     • В сборку включён совершенно новый ремейк MakuTweaker<br>
-                    • Включена поддержка скриптов PowerShell<br>
-                    • Для оптимизации работы, была отключено ускорение индексации диска<br>
                     • Отключено автошифрование диска с помощью Bitlocker<br>
-                    • Отключена дефрагментация дисков<br>
-                    • Отключено удаленное управление реестром<br>
-                    • Отключена отправка отчёт об ошибках Windows<br>
                     • Отключен получение геолокации для UWP приложений<br>
                     • Отключена служба карт<br>
-                    • Отключена служба UPnP устройств (она никому не нужна)<br>
-                    • Отключена служба смарт карт<br>
-                    • Отключена служба раздачи мобильного интернета<br>
                     • Отключена активность лишних фоновых приложений<br>
                     • Отключена изоляция ядра<br>
-                    • Включена максимальная производительность системы<br>
-                    • Отключён сенсорный ввод клавиатуры<br>
                     • Тема оформления с обоями и звуками была удалена<br><br>
+
+                    V8:<br>
+                    • Включён режим "Больше закреплений" в меню Пуск<br>
+                    • Отключено принудительное открытие скриншотера на кнопку PrntScr<br>
+                    • Была обратно включена индексация дисков<br>
+                    • Служба UPnP устройств больше не отключена<br>
+                    • Служба смарт карт больше не отключена<br>
+                    • Служба раздачи мобильного интернета больше не отключена<br>
+                    • Дефрагментация дисков больше не отключена<br>
+                    • Удаленное управление реестром больше не отключено<br>
+                    • Служба отправки отчётов об ошибках Windows больше не отключена<br><br>
                 </div>
             </div>
 
@@ -413,14 +407,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="accordion1">Контрольные суммы образа</button>
                 <div class="panel1 panel5">
                     <br>
-                    <h1>CRC32: 87E6E4A6</h1><br>
-                    <h1>MD5: 07B3EF178565153C90F44C99511FCDAF</h1><br>
+                    <h1>CRC32: 4937CF36</h1><br>
+                    <h1>MD5: 428858DF4D4F6A53C33E1FD72C626388</h1><br>
                     <h1>SHA-256: ab8e5f243619976f0df8fcb8e5ffb709f4ec52b089a75db6a55b5cce35597069</h1><br>
-                    <h1>SHA-1: 80DDAB15E4CA763290C6E131E7B0EFAC76F2BC76</h1><br>
+                    <h1>SHA-1: 1BF6BEDF2EB520000532FC92D01D74B22E534AE0</h1><br>
                 </div>
             </div>
 
-            <h1 class="downloads-header">Скачать сборку MakuOS 11 22H2:</h1>
+            <h1 class="downloads-header">Скачать сборку MakuOS 11 22H2 V8:</h1>
             <div class="downloads-container">
                 <a href="https://t.me/Maku_Library/60" class="download-button" target="_blank">
                     <img src="icons/qbit.png" alt="Qbit" class="icon"> Скачать с торрента
@@ -428,10 +422,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="https://pixeldrain.com/u/P1jdWcqY" class="download-button" target="_blank">
                     <img src="icons/pixeldrain.png" alt="PixelDrain" class="icon"> PixelDrain
                 </a>
-                <a href="https://drive.google.com/file/d/17vV5lahGuFEChSqXwVpIr7JPX86stxeq/view?usp=sharing" class="download-button" target="_blank">
+                <a href="https://drive.google.com/file/d/1kZQbtVTsytFwyz_uTnfgay6Zsd1GoMAZ/view?usp=sharing" class="download-button" target="_blank">
                     <img src="icons/googledrive.png" alt="Google Drive" class="icon"> Google Drive
                 </a>
-                <a href="https://www.mediafire.com/file/lzddakdn3o9qfg6/MakuOS+11+22H2+V7.iso/file" class="download-button" target="_blank">
+                <a href="https://www.mediafire.com/file/l1o3gcb0p9ivxwv/MakuOS+11+22H2+V8.iso/file" class="download-button" target="_blank">
                     <img src="icons/mediafire.png" alt="MediaFire" class="icon"> MediaFire
                 </a>
             </div>
