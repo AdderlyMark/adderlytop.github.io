@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <body>
 
     
-    <h1 class="builds-header">MakuOS 10 22H2 V5 (Windows 10 22H2, 19045.5073)
+    <h1 class="builds-header">MakuOS 10 22H2 V6 (Windows 10 22H2, 19045.5440)
     </h1>
     <h3 class="builds-header1">Windows Defender есть // Обновления есть // Pro редакция // Русский язык
     </h3>
@@ -278,18 +278,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h1>Удалённые приложения:</h1>
                 Карты, Диктофон, Люди, Погода, Новости, Почта, Календарь, Clipchamp,<br>
                 Microsoft Teams, Microsoft Family, Quick Assist, Dev Home, Solitaire Collection,<br>
-                Power Automate Desktop, Get Help, Feedback Hub, Outlook, Microsoft Todos.<br><br>
+                Power Automate Desktop, Get Help, Feedback Hub, Outlook, Microsoft Todos.
+                3D Viewer, Paint 3D, OneNote, Copilot, Windows Insider Program<br><br>
                 
                 <h1>Прочие изменения:</h1>
-                Интегрированы все обновления по 3 февраля 2025 года.<br>
-                Интегрированы Microsoft Visual C++ 2005 - 2022 x86 и x64<br>
-                На рабочем столе есть папка "от Марка Аддерли", в котором находятся установщики браузеров, MPC-HC,<br>Telegram, Zapret, Steam, Everything, а так же ссылки на библиотеку софта, и <a href="https://t.me/maku_library" target="_blank" style="color: yellow;">Telegram канал с репаками без вирусов</a>.</p>
+                Интегрированы все обновления по 10 февраля 2025 года.<br>
+                На рабочем столе есть папка "от Марка Аддерли", в котором находятся установщики браузеров, MPC-HC,<br>Telegram, Zapret, Steam, Everything, а так же ссылки на библиотеку софта,<br>отключение антивируса, и <a href="https://t.me/maku_library" target="_blank" style="color: yellow;">Telegram канал с репаками без вирусов</a>.</p>
 
                 В сборке изменено OOBE, в котором были скрыты какие либо страницы с рекламой и требованием входа в Microsoft<br>
                 На рабочем столе имеется приложение "MakuOS Launcher",<br>в котором можно применить различные твики первой необходимости, и активировать систему.<br><br>
 
                 <h1>Применённые настройки:</h1>
                 <h3>Основное:</h3>
+                По умолчанию открывается "Этот ПК" вместо "Главная"<br>
+                Разрешен вход в локальный аккаунт<br>
                 Включены скрытые файлы, папки, и диски<br>
                 Включены расширения файлов<br>
                 Включена поддержка скриптов PowerShell<br>
@@ -297,27 +299,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 Включена возможность удалить Microsoft Edge<br>
                 Включена максимальная производительность системы<br>
                 Включён буфер обмена<br>
-                Для ускорения быстродействия, было отключено ускорение индексации диска<br>
-                По умолчанию открывается "Этот ПК" вместо "Главная"<br>
-                Отключена дефрагментация дисков<br>
-                Отключено удаленное управление реестром<br>
+                Включён режим "Больше закреплений" в меню Пуск<br>
                 Отключено автошифрование диска с помощью Bitlocker<br>
-                Отключена отправка отчёт об ошибках Windows<br>
-                Отключена служба карт<br>
-                Отключена служба UPnP устройств (она никому не нужна)<br>
-                Отключена служба смарт карт<br>
-                Отключена служба раздачи мобильного интернета<br>
                 Отключена активность лишних фоновых приложений<br>
                 Отключена изоляция ядра<br>
                 Отключено залипание клавиш<br>
                 Отключена задержка контекстного меню<br>
                 Отключена автоперезагрузка при синем экране смерти<br>
-                Отключён сенсорный ввод клавиатуры<br>
-                Отключен получение геолокации для UWP приложений<br>
+                Отключено получение геолокации для UWP приложений<br>
+                Отключено принудительное открытие скриншотера на кнопку PrntScr<br>
                 Отключён Content Delivery Manager, который отвечает за предустановку рекламы<br>
-                Автоматически введён 30 дневной ключ продукта<br>
-                Удалён рекламный диалог "Давайте завершим настройку этого устройства"<br>
-                Запрещена установка стандартных мусорных UWP приложений после обновления системы<br><br>
+                Отключён рекламный диалог "Давайте завершим настройку этого устройства"<br>
+                Отключено требование интернета в первоначальной настройке (если он отсутствует)<br>
+                Запрещена установка стандартных мусорных UWP приложений после обновления системы<br>
+                На панели задач добавлена кнопка "Завершить задачу" в ПКМ по программе<br><br>
         
                 <h3>Телеметрия:</h3>
                 Запрещена диагностика установленных приложений<br>
@@ -374,31 +369,33 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
 
             <div class="accordion-container">
-                <button class="accordion1">Что нового в V5 версии сборки?</button>
+                <button class="accordion1">Что нового в V5/V6 версии сборки?</button>
                 <div class="panel1 panel4">
                     <div style="text-align: left; padding-left: 20px;">
                     <br>
+                    V5:<br>
                     • Сборка обновлена с обновления 19045.5073 до 19045.5440 (3 февраля 2025)<br>
+                    • Windows Defender больше не удалён<br>
                     • Сборка больше не мультиязычная. Сделано это в угоду оптимизации производительности.<br>
                     • Был глобально переработан MakuOS Launcher. Добавлены функции включения NET Framework,<br>отключения гибернации, приостановки службы обновления, отключения UAC и SmartScreen.<br>
-                    • Теперь интегрированы Microsoft Visual C++ 2005 - 2022 x86 и x64<br>
                     • Появилась папка "от Марка Аддерли", где находятся инсталляторы программ первой необходимости,<br>Zapret, а так же различные ссылки на репаки<br>
                     • В сборку включён совершенно новый ремейк MakuTweaker<br>
-                    • Включена поддержка скриптов PowerShell<br>
-                    • Для оптимизации работы, была отключено ускорение индексации диска<br>
                     • Отключено автошифрование диска с помощью Bitlocker<br>
-                    • Отключена дефрагментация дисков<br>
-                    • Отключено удаленное управление реестром<br>
-                    • Отключена отправка отчёт об ошибках Windows<br>
                     • Отключен получение геолокации для UWP приложений<br>
                     • Отключена служба карт<br>
-                    • Отключена служба UPnP устройств (она никому не нужна)<br>
-                    • Отключена служба смарт карт<br>
-                    • Отключена служба раздачи мобильного интернета<br>
                     • Отключена активность лишних фоновых приложений<br>
                     • Отключена изоляция ядра<br>
-                    • Включена максимальная производительность системы<br>
-                    • Отключён сенсорный ввод клавиатуры<br><br>
+                    • Тема оформления с обоями и звуками была удалена<br><br>
+
+                    V6:<br>
+                    • Была обратно включена индексация дисков<br>
+                    • Служба UPnP устройств больше не отключена<br>
+                    • Служба смарт карт больше не отключена<br>
+                    • Служба раздачи мобильного интернета больше не отключена<br>
+                    • Дефрагментация дисков больше не отключена<br>
+                    • Удаленное управление реестром больше не отключено<br>
+                    • Служба отправки отчётов об ошибках Windows больше не отключена<br>
+                    • Редисты больше не интегрированы, так как это вызывало проблемы с приложениями<br><br>
                 </div>
             </div>
 
@@ -406,21 +403,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="accordion1">Контрольные суммы образа</button>
                 <div class="panel1 panel5">
                     <br>
-                    <h1>CRC32: ACC2BE39</h1><br>
-                    <h1>MD5: 9302E09DE72A8147DDE21625BACAC6F5</h1><br>
-                    <h1>SHA-1: 57513DB9B33534C98CEE83FB376FEFA8E5C0A666</h1><br><br>
+                    <h1>CRC32: 0B732C72</h1><br>
+                    <h1>MD5: B0B22BC7A03CA199F4643762A7B84335</h1><br>
+                    <h1>SHA-256: 01f0b2fcfa3e57f04c8f180a066d4caddce34316fc390280e823a0d5f7e11cd7</h1><br>
+                    <h1>SHA-1: 6F84A309EEC441698ACAFC1A4EA913907452F0BB</h1><br><br>
                 </div>
             </div>
 
-            <h1 class="downloads-header">Скачать сборку MakuOS 10 22H2:</h1>
+            <h1 class="downloads-header">Скачать сборку MakuOS 10 22H2 V6:</h1>
             <div class="downloads-container">
-                <a href="https://pixeldrain.com/u/GRwxh4A7" class="download-button" target="_blank">
+                <a href="https://pixeldrain.com/u/KjiFHgs8" class="download-button" target="_blank">
                     <img src="icons/pixeldrain.png" alt="PixelDrain" class="icon"> PixelDrain
                 </a>
-                <a href="https://drive.google.com/file/d/1MJYDkiPLpQcjNAnbW6x_UCure7wMxipw/view?usp=sharing" class="download-button" target="_blank">
+                <a href="https://drive.google.com/file/d/19Z1a7pU8iu33IG8AUiwJOkB_vZDa200f/view?usp=sharing" class="download-button" target="_blank">
                     <img src="icons/googledrive.png" alt="Google Drive" class="icon"> Google Drive
                 </a>
-                <a href="https://www.mediafire.com/file/5vd9fuq9hx5uf2v/MakuOS+10+22H2+V5.iso/file" class="download-button" target="_blank">
+                <a href="https://www.mediafire.com/file/vxicdvo6azougpa/MakuOS+10+22H2+V6.iso/file" class="download-button" target="_blank">
                     <img src="icons/mediafire.png" alt="MediaFire" class="icon"> MediaFire
                 </a>
             </div>
