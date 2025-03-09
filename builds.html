@@ -182,54 +182,74 @@ document.addEventListener('DOMContentLoaded', () => {
 </head>
 <body>
 
-    
-    <h1 class="builds-header" style="margin-bottom: 20px;">Сборки от Аддерли</h1>
+    <section class="hero" id="home">
+        <h1>Сборки от Аддерли</h1>
+        <p>Лучшие сборки Windows - без какого либо мусора, рекламы и Яндексов.</p>
+    </section>
 
-    <div class="panels-container">
-        <div class="welcome-panel">
-            <h1><strong>Добро пожаловать на Сборки от Аддерли!</strong><br>Какую сборку вы ищете?</h1>
-            
-            <h2>Сборки на основе Windows 11</h2>
-            <div class="button-container">
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_11_24H2', '_blank')">MakuOS 11 24H2 (Windows 11 24H2)</button>
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_11_22H2', '_blank')">MakuOS 11 22H2 (Windows 11 22H2)</button>
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_11_Lite', '_blank')">MakuOS 11 Lite (Windows 11 22H2)</button>
-            </div>
-            
-            <h2>Сборки на основе Windows 10</h2>
-            <div class="button-container">
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_10_22H2', '_blank')">MakuOS 10 22H2 (Windows 10 22H2)</button>
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_10_Lite', '_blank')">MakuOS 10 Lite (Windows 10 1809)</button><br>
-            </div>
-    
-            <div class="button-container">
-                <button class="welcome-button" onclick="window.open('https://adderly.top/faq', '_blank')">Часто задаваемые вопросы...</button>
+    <!-- Карточки -->
+    <section class="cards">
+        <div class="card">
+            <a href="makuos_11_22H2">
+                <img src="https://github.com/AdderlyMark/adderlytop.github.io/blob/main/images/win11.jpg?raw=true" alt="Windows 11 Main">
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">MakuOS 11 22H2 V8 (Windows 11 22H2, 22621.4751)</h3>
+                <p class="card-description">Сборка со всеми обновлениями и оптимизацией на основе версии 22H2.<br>На данный момент, последняя версия Windows без каких либо проблем.<br>Подойдёт для современных ПК.</p>
+                <a href="makuos_11_22H2" class="button">Подробнее о сборке Windows 11 22H2</a>
             </div>
         </div>
-    
-        <div class="welcome-panel">
-            <h1><strong>Либо же, можете отсортировать<br>сборки по железу ПК:</strong></h1>
-            
-            <h2>Для современных устройств...</h2>
-            <div class="button-container">
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_11_24H2', '_blank')">MakuOS 11 24H2 (Windows 11 24H2)</button>
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_11_22H2', '_blank')">MakuOS 11 22H2 (Windows 11 22H2)</button>
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_10_22H2', '_blank')">MakuOS 10 22H2 (Windows 10 22H2)</button>
-            </div>
-            
-            <h2>Для слабых ПК...</h2>
-            <div class="button-container">
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_11_Lite', '_blank')">MakuOS 11 Lite (Windows 11 22H2)</button>
-                <button class="welcome-button" onclick="window.open('https://adderly.top/makuos_10_Lite', '_blank')">MakuOS 10 Lite (Windows 10 1809)</button><br>
-            </div>
-
-            <div class="button-container">
-                <button class="welcome-button" onclick="window.open('https://adderly.top/faq', '_blank')">Часто задаваемые вопросы...</button>
+        <div class="card">
+            <a href="makuos_11_Lite">
+                <img src="https://github.com/AdderlyMark/adderlytop.github.io/blob/main/images/win11.jpg?raw=true" alt="Windows 11 Lite">
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">MakuOS 11 Lite 22H2 V2 (Windows 11 22H2, 22621.1702)</h3>
+                <p class="card-description">Windows Lite сборка со всеми обновлениями на основе Windows 11 с обновлениями по лето 2023 года.<br>Без Windows Defender, центра обновлений, и какого либо мусора.<br>Для современных игр она подойдёт, но подойдёт тем, кто хотел попробовать Windows 11 на старых ПК.</p>
+                <a href="makuos_11_Lite" class="button">Подробнее о сборке Windows 11 Lite</a>
             </div>
         </div>
-    </div>
-    
-    
+        <div class="card">
+            <a href="makuos_11_24H2">
+                <img src="https://github.com/AdderlyMark/adderlytop.github.io/blob/main/images/win11shit.png?raw=true" alt="Windows 11 24H2">
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">MakuOS 11 24H2 V5 (Windows 11 24H2, 26100.3037)</h3>
+                <p class="card-description">Сборка со всеми обновлениями и оптимизацией на основе самой последней Windows 11 24H2. У 70% пользователей с 24H2 версией Windows 11 имеются проблемы с интернетом, синими экранами, и драйверами.<br>Тот кто любит использовать всё самое последнее - скорее всего оптимальный вариант.</p>
+                <a href="makuos_11_24H2" class="button">Подробнее о сборке Windows 11 24H2</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="makuos_10_22H2">
+                <img src="https://github.com/AdderlyMark/adderlytop.github.io/blob/main/images/win10.jpg?raw=true" alt="Windows 10 22H2">
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">MakuOS 10 22H2 V6 (Windows 10 22H2, 19045.5440)</h3>
+                <p class="card-description">Сборка со всеми обновлениями и оптимизацией на основе самой последней версии Windows 10. Подойдёт для современных ПК.</p>
+                <a href="makuos_10_22H2" class="button">Подробнее о сборке Windows 10 22H2</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="makuos_10_Lite">
+                <img src="https://github.com/AdderlyMark/adderlytop.github.io/blob/main/images/win10old.jpg?raw=true" alt="Windows 10 1809">
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">MakuOS 10 Lite 1809 V4 (Windows 10 1809, 17763.6414)</h3>
+                <p class="card-description">Windows Lite сборка со всеми обновлениями на основе Windows 10 2018 года. Без Windows Defender, центра обновлений, и какого либо мусора. Для игр не подойдёт, но даст жизнь старому ПК.</p>
+                <a href="makuos_10_Lite" class="button">Подробнее о сборке Windows 10 1809</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="makuos_8">
+                <img src="https://github.com/AdderlyMark/adderlytop.github.io/blob/main/images/win8.jpg?raw=true" alt="Windows 8">
+            </a>
+            <div class="card-content">
+                <h3 class="card-title">Windows 8 by Adderly V7</h3>
+                <p class="card-description">Сборка на основе Windows 8.1 с обновлениями по 2015 год, и с различными красивыми темами с обоями.</p><br>
+                <a href="makuos_8" class="button">Подробнее о сборке Windows 8</a>
+            </div>
+        </div>
+    </section>
     
     <script>
         function scrollToSection(sectionId) {
@@ -311,10 +331,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <main>
 </main>
-
-    <div class="modal" id="modal">
-        <img id="modalImage" src="" alt="Увеличенное изображение">
-    </div>
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.pageYOffset > 50);
+        });
+    </script>
 <footer>
     <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
         <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
