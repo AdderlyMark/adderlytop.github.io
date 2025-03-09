@@ -13,26 +13,29 @@
 
 body {
   font-family: 'sf', sans-serif;
-
     background-color: #000000;
     color: #ffffff;
     line-height: 1.6;
 }
 
 header {
-    background-color: #191919;
-    color: #ffffff;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
 }
+
+header.scrolled {
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
 
 .logo {
     margin-left: 40px;
@@ -43,28 +46,38 @@ header {
 
 .logo a {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-}
-
-.logo a:hover {
-    text-decoration: underline;
+    margin-top: -9px;
 }
 
 .site-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
     margin-right: 10px;
     position: relative;
-    top: 7.7px;
+    top: 8.5px;
 }
 
 .mobile-header {
     display: none;
 }
 
-@media (max-width: 1170px) {
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+}
+
+@media (max-width: 1270px) {
     header {
         display: none;
     }
@@ -132,20 +145,8 @@ nav ul {
     gap: 15px;
 }
 
-.first-row, .second-row {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 3px;
-}
-
 header nav ul li {
     margin: 0 15px;
-}
-
-heaed nav ul li:hover{
-    text-decoration: none;
-    transform: scale(1.2);
 }
 
 header nav ul li a {
@@ -164,13 +165,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.first-row, .second-row {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 3px;
-}
-
 header nav ul li {
     margin: 0 15px;
 
@@ -187,33 +181,42 @@ header nav ul li a:hover {
     transform: scale(1.2);
 }
 
-.first-row, .second-row {
+nav ul {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    margin: 0;
-    margin-bottom: 5px;
+    gap: 3px;
 }
 
-.first-row li, .second-row li {
-    margin: 0 1px;
-}
-
-.first-row {
-    margin-bottom: 20px;
-}
-
-.nav-button {
-    background-color: #2e2e2e;
-    color: #ffffff;
-    padding: 8px 15px;
+nav a {
+    position: relative;
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #ff6b6b;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+nav a:hover {
+    color: #ff6b6b;
 }
 
 main {
-    margin-top: 120px;
+    margin-top: 90px;
     text-align: center;
     padding-bottom: 70px;
 }
@@ -281,18 +284,6 @@ footer {
     width: 20px;
     height: 20px;
     margin-right: 5px;
-}
-
-.telegram-link {
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.telegram-link:hover {
-    text-decoration: underline;
 }
 
 .telegram-icon {
@@ -363,48 +354,6 @@ footer {
 .container {
     max-width: 1200px;
     width: 100%;
-}
-
-.news-section {
-    margin-bottom: 20px;
-    transition: transform 0.2s ease;
-}
-
-.news-section:hover {
-    transform: scale(1.05);
-}
-
-
-.news {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: var(--header-color, #191919);
-    border-radius: 7px;
-    position: relative;
-}
-
-.news-icon {
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-}
-
-.news-text {
-    margin-right: 20px;
-    text-align: left;
-}
-
-.news-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.news-title:hover {
-    text-decoration: underline;
 }
 
 .nav-button:hover {

@@ -19,19 +19,23 @@
   }
   
   header {
-      background-color: #191919;
-      color: #ffffff;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 15px 0;
-      text-align: center;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+header.scrolled {
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
 
 .logo {
     margin-left: 40px;
@@ -42,21 +46,17 @@
 
 .logo a {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-}
-
-.logo a:hover {
-    text-decoration: underline;
+    margin-top: -9px;
 }
 
 .site-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
     margin-right: 10px;
     position: relative;
-    top: 7.7px;
+    top: 8.5px;
 }
 
 footer {
@@ -101,22 +101,24 @@ footer {
     font-weight: bold;
 }
 
-.telegram-link:hover {
-    text-decoration: underline;
-}
-
 .telegram-icon {
     width: 20px;
     height: 20px;
     margin-right: 5px;
 }
 
-header {
-    top: 0;
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: bounce 2s infinite;
 }
 
-footer {
-    bottom: 0;
+@keyframes bounce {
+    0%, 100% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
 }
 
 nav {
@@ -134,38 +136,74 @@ nav ul {
     gap: 15px;
 }
 
-.first-row, .second-row {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 5px;
-}
-
-.first-row li, .second-row li {
-    margin: 0 1px;
-}
-
 header nav ul li {
     margin: 0 15px;
 }
 
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header nav ul li {
+    margin: 0 15px;
+
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3px;
+}
+
 nav a {
-    color: #ffffff;
+    position: relative;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.first-row {
-    margin-bottom: 19px;
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #ff6b6b;
+    transform: scaleX(0);
+    transition: transform 0.3s;
 }
 
-.nav-button {
-    background-color: #2e2e2e;
-    color: #ffffff;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+nav a:hover {
+    color: #ff6b6b;
 }
 
 main {
@@ -178,7 +216,7 @@ main {
     text-align: center;
     font-size: 34px;
     color: #ffffff;
-    margin-top: 120px;
+    margin-top: 90px;
     margin-bottom: -25px;
 }
 
@@ -372,7 +410,7 @@ main {
 }
 
 
-@media (max-width: 1170px) {
+@media (max-width: 1270px) {
     header {
         display: none;
     }
