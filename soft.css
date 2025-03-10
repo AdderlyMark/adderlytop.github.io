@@ -496,6 +496,28 @@ main {
     opacity: 1;
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.hero h1 {
+    font-size: 4em;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: white;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
 @media (max-width: 600px) {
     footer p {
         display: none;

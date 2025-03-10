@@ -421,8 +421,8 @@ main {
 
 .hero h1 {
     font-size: 4em;
-    color: #ff6b6b;
-    text-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .hero p {
