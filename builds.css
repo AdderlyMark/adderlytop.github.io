@@ -439,7 +439,6 @@ main {
     border: none;
     border-radius: 5px;
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.6);
     word-wrap: break-word;
     text-align: center;
     display: inline-block;
@@ -500,7 +499,7 @@ main {
 }
 
 .card-title {
-    color: #ff6b6b;
+    color: #ffffff;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
