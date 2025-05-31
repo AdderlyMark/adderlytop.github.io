@@ -782,6 +782,13 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
+.button-spacing {
+    margin-right: 10px;
+    margin-bottom: 10px; 
+    display: inline-block;
+}
+
+
 @media (max-width: 1270px) {
     header {
         display: none;
