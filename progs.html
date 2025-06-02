@@ -9,6 +9,8 @@
     let headerHidden = false;
     let logoHidden = false;
 </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
+     crossorigin="anonymous"></script>
     <meta property="og:title" content="Сайт Марка Аддерли">
     <meta property="og:keywords" content="adderly, adderlyfun, adderlytop adderly fun, adderly top, марк аддерли, аддерли, аддерлитоп, аддерли фан, аддерли топ, сборки от аддерли, makuadarii, скачать программы, программы, набор софта, библиотека софта, библиотека программ, каталог программ">
     <meta property="og:description" content="Здесь ты можешь скачать самые популярные и необходимые приложения!">
@@ -190,26 +192,23 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 
 <header>
-        <div class="logo">
-            <a href="index">
-                <img src="images/favicon.png" alt="MakuT" class="site-icon">
-                Adderly.Top
-            </a>
-        </div>
+    <div class="logo">
+        <a href="index">
+            <img src="images/favicon.png" alt="MakuT" class="site-icon">
+            Adderly.Top
+        </a>
+    </div>
     <nav>
-        <ul class="first-row">
-            <li><a href="index" class="nav-button">Главная</a></li>
-            <li><a href="builds" class="nav-button">Сборки от Аддерли</a></li>
-            <li><a href="makutweaker" class="nav-button">Скачать MakuTweaker</a></li>
-            <li><a href="soft" class="nav-button">Софт от Аддерли</a></li>
-        </ul>
-        <ul class="second-row">
-            <li><a href="win_pe" class="nav-button">Windows PE от Аддерли</a></li>
-            <li><a href="makupedia" class="nav-button">MakuPedia</a></li>
-            <li><a href="progs" class="nav-button">Скачать программы</a></li>
-            <li><a href="support" class="nav-button">Поддержать</a></li>
+        <ul>
+            <li><a href="index">Главная</a></li>
+            <li><a href="builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="makupedia">MakuPedia</a></li>
+            <li><a href="progs">Программы</a></li>
+            <li><a href="support">Поддержать</a></li>
         </ul>
     </nav>
+
     <div class="palette-container">
         <button id="palette-button" class="palette-button">
             <img src="icons/color.png" alt="Palette Icon" class="palette-icon">
@@ -669,6 +668,13 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </main>
 
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.pageYOffset > 50);
+        });
+    </script>
+    
     <footer>
         <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
             <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
