@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-68MY39SKZ9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <title>Сборки от Аддерли - MakuOS 11 24H2</title>
+    <link rel="stylesheet" href="builds.css">
+<script>
+    let headerHidden = false;
+    let logoHidden = false;
+</script>
+
+    <meta property="og:title" content="Сайт Марка Аддерли">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 11 24h2, макуос, makuos, windows 11 24h2">
+    <meta property="og:description" content="Скачать сборку MakuOS 11 24H2 на основе Windows 11 24H2 LTSC">
+<meta name="description" content="Здесь вы можете скачать разные сборки от Марка Аддерли.">
+<meta name="keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 11 24h2, макуос, makuos, windows 11 24h2">
+    <meta property="og:image" content="images/favicon.png">
+    <link rel="icon" href="images/favicon.png">
+
+ <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const paletteButton = document.getElementById('palette-button');
+    const colorPicker = document.getElementById('color-picker');
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const buttons = document.querySelectorAll('.nav-button');
+    const mobileHeader = document.querySelector('.mobile-header');
+    const floatingButtons = document.querySelectorAll('.floating-button');
+    const downloadButtons = document.querySelectorAll('.download-button');
+    const accordionButtons = document.querySelectorAll('.accordion');
+    const accordionPanels = document.querySelectorAll('.panel');
+    const accordionButtons1 = document.querySelectorAll('.accordion1');
+    const accordionPanels1 = document.querySelectorAll('.panel1');
+    const welcomeButtons = document.querySelectorAll('.welcome-button');
+
+    colorPicker.classList.add('hidden');
+
+    paletteButton.addEventListener('click', () => {
+        colorPicker.classList.toggle('hidden');
+    });
+
+    const colorOptions = document.querySelectorAll('.color-option');
+    colorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const chosenColor = option.getAttribute('data-color');
+            document.body.style.backgroundColor = chosenColor;
+
+            let headerFooterColor;
+            let buttonColor;
+            if (chosenColor === "#000000") {
+                        headerFooterColor = "#191919";
+                        buttonColor = "#2e2e2e";
+                    } else if (chosenColor === "#44280a") {
+                        headerFooterColor = "#944f00";
+                        buttonColor = "#7a3c02";
+                    } else if (chosenColor === "#1c440a") {
+                        headerFooterColor = "#246301";
+                        buttonColor = "#388e3c";
+                    } else if (chosenColor === "#0a1f44") {
+                        headerFooterColor = "#002b5e";
+                        buttonColor = "#005e92";
+                    } else if (chosenColor === "#0a4441") {
+                        headerFooterColor = "#009688";
+                        buttonColor = "#00796b";
+                    } else if (chosenColor === "#300a44") {
+                        headerFooterColor = "#491066";
+                        buttonColor = "#60038c";
+                    } else if (chosenColor === "#440a34") {
+                        headerFooterColor = "#630549";
+                        buttonColor = "#8a0665";
+                    } else if (chosenColor === "#440a0a") {
+                        headerFooterColor = "#700000";
+                        buttonColor = "#9c0202";
+                    }
+            header.style.backgroundColor = headerFooterColor;
+            footer.style.backgroundColor = headerFooterColor;
+            mobileHeader.style.backgroundColor = headerFooterColor;
+            floatingButtons.forEach(button => {
+                button.style.backgroundColor = buttonColor;
+                button.style.color = "#ffffff";
+            });
+            buttons.forEach(button => {
+                button.style.backgroundColor = buttonColor;
+                button.style.color = "#ffffff";
+            });
+
+            downloadButtons.forEach(button => {
+                button.style.backgroundColor = buttonColor;
+                button.style.color = "#ffffff";
+            });
+            accordionButtons.forEach(button => {
+                button.style.backgroundColor = buttonColor;
+                button.style.color = "#ffffff";
+            });
+            accordionPanels.forEach(panel => {
+            panel.style.backgroundColor = headerFooterColor;
+            });
+            accordionButtons1.forEach(button => {
+                button.style.backgroundColor = buttonColor;
+                button.style.color = "#ffffff";
+            });
+            accordionPanels1.forEach(panel => {
+            panel.style.backgroundColor = headerFooterColor;
+            });
+            welcomeButtons.forEach(button => {
+                button.style.backgroundColor = buttonColor;
+                button.style.color = "#ffffff";
+            });
+
+            colorPicker.classList.add('hidden');
+            localStorage.setItem('themeColor', chosenColor);
+        });
+    });
+
+    const savedColor = localStorage.getItem('themeColor');
+    if (savedColor) {
+        document.body.style.backgroundColor = savedColor;
+        let headerFooterColor;
+        let buttonColor;
+
+        if (savedColor === "#000000") {
+                    headerFooterColor = "#191919";
+                    buttonColor = "#2e2e2e";
+                } else if (savedColor === "#44280a") {
+                    headerFooterColor = "#944f00";
+                    buttonColor = "#7a3c02";
+                } else if (savedColor === "#1c440a") {
+                    headerFooterColor = "#246301";
+                    buttonColor = "#388e3c";
+                } else if (savedColor === "#0a1f44") {
+                    headerFooterColor = "#002b5e";
+                    buttonColor = "#005e92";
+                } else if (savedColor === "#0a4441") {
+                    headerFooterColor = "#009688";
+                    buttonColor = "#00796b";
+                } else if (savedColor === "#300a44") {
+                    headerFooterColor = "#491066";
+                    buttonColor = "#60038c";
+                } else if (savedColor === "#440a34") {
+                    headerFooterColor = "#630549";
+                    buttonColor = "#8a0665";
+                } else if (savedColor === "#440a0a") {
+                    headerFooterColor = "#700000";
+                    buttonColor = "#9c0202";
+                }
+
+        header.style.backgroundColor = headerFooterColor;
+        footer.style.backgroundColor = headerFooterColor;
+        mobileHeader.style.backgroundColor = headerFooterColor; 
+        buttons.forEach(button => {
+            button.style.backgroundColor = buttonColor;
+            button.style.color = "#ffffff";
+        });
+
+        downloadButtons.forEach(button => {
+            button.style.backgroundColor = buttonColor;
+            button.style.color = "#ffffff";
+        });
+        accordionButtons.forEach(button => {
+            button.style.backgroundColor = buttonColor;
+            button.style.color = "#ffffff";
+        });
+        accordionPanels.forEach(panel => {
+            panel.style.backgroundColor = headerFooterColor;
+        });
+        accordionButtons1.forEach(button => {
+            button.style.backgroundColor = buttonColor;
+            button.style.color = "#ffffff";
+        });
+        accordionPanels1.forEach(panel => {
+            panel.style.backgroundColor = headerFooterColor;
+        });
+        floatingButtons.forEach(button => {
+            button.style.backgroundColor = buttonColor;
+            button.style.color = "#ffffff";
+        });
+        welcomeButtons.forEach(button => {
+            button.style.backgroundColor = buttonColor;
+            button.style.color = "#ffffff";
+        });
+    }
+});
+    </script>
+
+</head>
+<body>
+    
+    <h1 class="builds-header">MakuOS 11 24H2 LTSC (Windows 11 24H2, 26100.1742)
+    </h1>
+    <h3 class="builds-header1">Windows Defender есть // Обновления есть // Русский язык (скоро появится больше вариантов)
+    </h3>
+
+    <header>
+        <div class="logo">
+            <a href="index">
+                <img src="images/favicon.png" alt="MakuT" class="site-icon">
+                Adderly.Top
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index">Главная</a></li>
+                <li><a href="builds">Сборки</a></li>
+                <li><a href="makutweaker">MakuTweaker</a></li>
+                <li><a href="makupedia">MakuPedia</a></li>
+                <li><a href="win_pe">WinPE</a></li>
+                <li><a href="support">Поддержать</a></li>
+            </ul>
+        </nav>
+
+        <div class="palette-container">
+            <button id="palette-button" class="palette-button">
+                <img src="icons/color.png" alt="Palette Icon" class="palette-icon">
+            </button>
+            <div id="color-picker" class="color-picker hidden">
+                <h4>Выбрать тему:</h4>
+                <div class="color-options">
+                    <div class="color-option" style="background-color: #000000;" data-color="#000000"></div>
+                    <div class="color-option" style="background-color: #44280a;" data-color="#44280a"></div>
+                    <div class="color-option" style="background-color: #1c440a;" data-color="#1c440a"></div>
+                    <div class="color-option" style="background-color: #0a1f44;" data-color="#0a1f44"></div>
+                    <div class="color-option" style="background-color: #0a4441;" data-color="#0a4441"></div>
+                    <div class="color-option" style="background-color: #300a44;" data-color="#300a44"></div>
+                    <div class="color-option" style="background-color: #440a34;" data-color="#440a34"></div>
+                    <div class="color-option" style="background-color: #440a0a;" data-color="#440a0a"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<header class="mobile-header">
+    <nav>
+        <ul class="mobile-menu">
+            <li><a href="index" class="nav-button">Главная</a></li>
+            <li><a href="soft" class="nav-button">Софт</a></li>
+            <li><a href="support" class="nav-button">Поддержать</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+        <section id="makuos-11-24h2" class="bootleg-section">
+            <div class="bootleg">
+            </div>
+            <div class="image-gallery">
+                <img src="images/bootlegs/makuos24h2_main.png" alt="MakuOS 11 Image 1">
+                <img src="images/bootlegs/makuos24h2_laun.png" alt="MakuOS 11 Image 2">
+            </div>
+            <div class="accordion-container">
+                <button class="accordion">Изменения в сборке</button>
+                <div class="panel panel1">
+                    <div style="text-align: left; padding-left: 20px;">
+                <br>
+                    <h1>Изменения в сборке:</h1>
+                    Отсутствуют какие либо UWP приложения, но Microsoft Store автоматически устанавливается при наличии интернета.<br>
+                    Если у вас Microsoft Store не появился автоматически - нажмите Win+R, и пропишите wsreset -i<br>
+                    Убрана проверка на железо при установке системы.<br>
+                    На рабочем столе есть папка "от Марка Аддерли", в котором находятся установщики<br>Google Chrome, 7-Zip, MPC-HC, Telegram, Zapret, Steam, Everything, установщиков Microsoft Visual C++ 2005 - 2022 x86 и x64,<br><a href="https://youtu.be/97CMTnJL9p0" target="_blank" style="color: yellow;">а так же программы MakuYan которая запрещает Яндекс</a>, ссылки на социальные сети, и <a href="https://t.me/maku_library" target="_blank" style="color: yellow;">Telegram канал с репаками без вирусов</a>.</p>
+                    Там же, имеется установщик MakuTweaker, которым можно применить различные твики,<br>активировать систему, а так же очень эластично и подробно её настроить.<br>
+                    В сборке изменено OOBE, в котором был включён вход в локальную учётную запись:<br>(для этого обязательно отключите интернет перед установкой)<br><br>
+
+                    <h1>Применённые настройки:</h1>
+                    По умолчанию открывается "Этот ПК" вместо "Главная"<br>
+                    Разрешен вход в локальный аккаунт<br>
+                    Включены скрытые файлы, папки, и диски<br>
+                    Включены расширения файлов<br>
+                    Включена иконка "Этот Компьютер" на рабочем столе<br>
+                    Включён режим "Больше закреплений" в меню Пуск<br>
+                    Отключена реклама и "предложения" в меню Пуск<br>
+                    Отключено автошифрование диска с помощью Bitlocker<br>
+                    Отключено требование интернета в первоначальной настройке (если он отсутствует)<br>
+                    Отключено залипание клавиш<br>
+                    Отключена задержка контекстного меню<br>
+                    Отключена автоперезагрузка при синем экране смерти<br>
+                    Отключён Content Delivery Manager, который отвечает за предустановку рекламы<br>
+                    Отключена различная телеметрия<br>
+                    Удалены различные Speech компоненты и нарратор<br><br>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion">В чём фишка LTSC редакции по сравнению с Pro/Home?</button>
+                <div class="panel1 panel4">
+                    <div style="text-align: left; padding-left: 20px;">
+                    <br>
+                    <h1>Поддержка Windows 11 24H2 Pro/Home и каких либо клиентских редакций заканчивается в октябре 2026 года.<br>Чтобы обеспечить безопасность людям, MakuOS 11 перешла<br>в LTSC канал с расширенной поддержкой до 2029 года.</h1><br>
+                    Windows 11 LTSC 2024 - это корпоративная редакция системы, которая получает официальную поддержку до 2029 года<br>
+                    (в отличие от домашних и Pro-версий, поддержка которых практически закончилась).<br>
+                    В этой версии отсутствуют навязчивые функциональные апдейты:<br>
+                    все обновления тщательно проверяются и сводятся в основном к патчам безопасности,<br>
+                    поэтому их установка абсолютно безопасна. Кроме того, LTSC лишена предустановленного мусора<br>
+                    в виде UWP-приложений, да и в целом вся система чище и работает заметно быстрее.<br>
+                    Именно поэтому она уже заслужила доверие пользователей не только в странах СНГ и Украине, но и по всему миру.<br><br>
+                    Если у вас Microsoft Store не появился автоматически - нажмите Win+R, и пропишите wsreset -i<br><br>
+                </div>
+            </div>
+
+            <div class="adsense-wrapper" style="margin: 20px 0; text-align: center;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9240026161894199"
+         data-ad-slot="7270588498"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+            <div class="adsense-wrapper" style="margin: 20px 0; text-align: center;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9240026161894199"
+         data-ad-slot="7270588498"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+<div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9998;"></div>
+<div id="confirm-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; padding:20px; max-width:500px; width:90%; border-radius:12px; box-shadow:0 0 25px rgba(0,0,0,0.4); z-index:9999; text-align:center; font-family:sans-serif; color:#000;">
+  <h2 style="margin-top:0; color:#222;">Перед загрузкой MakuOS</h2>
+  <p style="font-size:15px; line-height:1.5; margin:15px 0;">
+Чтобы не возникало лишних вопросов, убедитесь, что вы знаете, как переустанавливать Windows,
+и заранее подготовьте драйверы для интернета. Я снял два ролика на YouTube, которые помогут вам установить Windows.
+Если вы столкнётесь с какими-либо ошибками или проблемами, загляните в раздел «Часто задаваемые вопросы» на сайте - он тоже обязательно вам поможет.
+  </p>
+
+  <div style="margin:15px 0;">
+    <a href="https://youtu.be/nBvSLOUS03Y?si=s9nTSFTtqLg8XjFe" target="_blank" 
+       style="display:inline-block; width:375px; background:#ff0000; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+       Как переустановить Windows без флешки?
+    </a><br>
+    <a href="https://youtu.be/ckCrrp2WuMc?si=XvxUVWSznJrxU_SY" target="_blank" 
+       style="display:inline-block; width:375px; background:#ff0000; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+       Как установить Windows правильно?
+    </a><br>
+        <a href="https://adderly.top/faq" target="_blank" 
+       style="display:inline-block; width:375px; background:#ff0000; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+       Часто задаваемые вопросы
+    </a>
+  </div>
+
+  <label style="display:block; margin:15px 0; font-size:14px; text-align:left;">
+    <input type="checkbox" id="confirm-check">  
+    Я ознакомился с роликами - знаю как переустановить Windows, имею драйвера, и готов к загрузке образа.
+  </label>
+  <div style="margin-top:20px;">
+    <button onclick="proceedDownload()" style="background:#4CAF50; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-right:10px;">Продолжить</button>
+    <button onclick="closePopup()" style="background:#ccc; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Отмена</button>
+  </div>
+</div>
+<script>
+let downloadLink = null;
+
+function openPopup(link) {
+  downloadLink = link;
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("confirm-popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("confirm-popup").style.display = "none";
+  downloadLink = null;
+}
+
+function proceedDownload() {
+  if (document.getElementById("confirm-check").checked) {
+    window.open(downloadLink, "_blank");
+    closePopup();
+  } else {
+    alert("Посмотрите внимательно ролики, если вы не знаете как переустанавливать Windows. Если посмотреть и прочитать все советы - нет надобности лишний раз обращаться за помощью в Telegram.");
+  }
+}
+</script>
+
+            <h1 class="downloads-header">Скачать сборку MakuOS 11 24H2 LTSC на русском:</h1>
+            <div class="downloads-container">
+                <a href="https://drive.google.com/file/d/1CQRv0YcduDHE4ga0rZlh9nSgT78wMV5A/view?usp=sharing" class="download-button" onclick="openPopup(this.href); return false;">
+                    <img src="icons/googledrive.png" alt="Google Drive" class="icon"> Google Drive
+                </a>
+                <a href="https://www.mediafire.com/file/haoq5882fi39mrc/MakuOS+11+24H2+LTSC.iso/file" class="download-button" onclick="openPopup(this.href); return false;">
+                    <img src="icons/mediafire.png" alt="MediaFire" class="icon"> MediaFire
+                </a>
+                <a href="https://pixeldrain.com/u/Qe5ps48N" class="download-button" onclick="openPopup(this.href); return false;">
+                    <img src="icons/pixeldrain.png" alt="PixelDrain" class="icon"> PixelDrain
+                </a>
+                <a href="https://mega.nz/file/wRsXVTgT#74IvD0xAfgbDmseCRQfEkJkX9VJ0k4Z25ISI2BGRACw" class="download-button" onclick="openPopup(this.href); return false;">
+                    <img src="icons/mega.png" alt="MediaFire" class="icon"> MEGA
+                </a>
+            </div>
+
+                        <br></h2>Скачать сборку MakuOS 11 24H2 LTSC на английском:</h2>
+                        </h3>Скоро</h3>
+
+            <div class="adsense-wrapper" style="margin: 20px 0; text-align: center;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9240026161894199"
+         data-ad-slot="7270588498"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+        </section>
+
+</main>
+
+    <div class="modal" id="modal">
+        <img id="modalImage" src="" alt="Увеличенное изображение">
+    </div>
+
+    <script>
+
+        const images = document.querySelectorAll('.image-gallery img');
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                modalImage.src = this.src;
+            });
+        });
+
+        modal.addEventListener('click', function() {
+            modal.style.display = 'none'; 
+        });
+    </script>
+
+<script>
+document.querySelectorAll('.accordion').forEach((accordion) => {
+    const panel = accordion.nextElementSibling;
+
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    accordion.classList.add('active');
+    panel.classList.add('open');
+
+    accordion.addEventListener('click', function () {
+        panel.classList.toggle('open');
+        this.classList.toggle('active');
+
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+});
+
+document.querySelectorAll('.accordion1').forEach((accordion, index) => {
+        accordion.addEventListener('click', function() {
+            const panel = this.nextElementSibling;
+            panel.classList.toggle('open');
+            this.classList.toggle('active');
+            
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    });
+
+
+</script>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolled', window.pageYOffset > 50);
+    });
+</script>
+
+<footer>
+    <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
+        <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
+    </a>
+    <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
+        <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
+    </a>
+    <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
+        <img src="icons/boosty.jpg" alt="Boosty Icon" class="social-icon">
+    </a>
+    <p>&copy; 2025 Adderly.Top // Марк Аддерли</p>
+</footer>
+</body>
+</html>
