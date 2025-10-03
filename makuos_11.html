@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     <h1 class="builds-header">MakuOS 11 24H2 LTSC V2 (Windows 11 24H2, 26100.1742)
     </h1>
-    <h3 class="builds-header1">Windows Defender есть // Обновления есть // Русский язык (скоро появится больше вариантов)
+    <h3 class="builds-header1">Windows Defender на выбор // Русский язык (скоро появится на английском)
     </h3>
 
     <header>
@@ -279,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     Включены расширения файлов<br>
                     Включена иконка "Этот Компьютер" на рабочем столе<br>
                     Включён режим "Больше закреплений" в меню Пуск<br>
+                    Включена максимальная производительность в электропитании<br>
                     Отключена реклама и "предложения" в меню Пуск<br>
                     Отключено автошифрование диска с помощью Bitlocker<br>
                     Отключено требование интернета в первоначальной настройке (если он отсутствует)<br>
@@ -403,7 +404,17 @@ function proceedDownload() {
             </div>
 
             <h1 class="downloads-header">Скачать сборку MakuOS 11 24H2 LTSC V2 на русском без Windows Defender:</h1>
-            </h3>Уже в процессе</h3>
+            <div class="downloads-container">
+                <a href="https://www.mediafire.com/file/pdj6j66louw2qsj/MakuOS+11+LTSC+24H2+V2+Defenderless.iso/file" class="download-button" onclick="openPopup(this.href); return false;">
+                    <img src="icons/mediafire.png" alt="MediaFire" class="icon"> MediaFire
+                </a>
+                <a href="https://pixeldrain.com/u/wTEe2ofF" class="download-button" onclick="openPopup(this.href); return false;">
+                    <img src="icons/pixeldrain.png" alt="PixelDrain" class="icon"> PixelDrain
+                </a>
+                <a href="https://mega.nz/file/cZE1BDDQ#KqYyv-Tpu3lB4CBd7l_JySas2-9iDMFUvovrJiTK0y4" class="download-button" onclick="openPopup(this.href); return false;">
+                    <img src="icons/mega.png" alt="MEGA" class="icon"> MEGA
+                </a>
+            </div>
 
             <h1 class="downloads-header">Скачать сборку MakuOS 11 24H2 LTSC V2 на английском с Windows Defender:</h1>
             </h3>В октябре</h3>
