@@ -18,7 +18,6 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <title>Результаты MakuTweaker Benchmark</title>
     <style>
-        /* Существующие стили */
         table {
             border-collapse: collapse;
             margin: 0 auto 30px auto;
@@ -127,76 +126,112 @@
             console.log('Собраны данные процессоров:', allCpus.length);
         };
 
-        const searchCpu = (query) => {
-            const resultsDiv = document.getElementById('similar-cpu-results');
-            const resultsTableBody = document.getElementById('similar-cpu-tbody');
-            resultsTableBody.innerHTML = '';
-            resultsDiv.style.display = 'none';
+const searchCpu = (query) => {
+    const resultsDiv = document.getElementById('similar-cpu-results');
+    const resultsTableBody = document.getElementById('similar-cpu-tbody');
+    resultsTableBody.innerHTML = '';
+    resultsDiv.style.display = 'none';
 
-            if (query.length < 2) {
-                return;
-            }
+    if (query.length < 1) {
+        return; 
+    }
+    const isGlobalSearch = query.startsWith('/');
+    let cleanQuery = query;
 
-            const lowerQuery = query.toLowerCase();
+    if (isGlobalSearch) {
 
-            const matchedCpu = allCpus.find(cpu => cpu.name.toLowerCase().includes(lowerQuery));
+        cleanQuery = query.substring(1).trim(); 
+    }
+    if (cleanQuery.length < 1) {
+        return;
+    }
+    const lowerCleanQuery = cleanQuery.toLowerCase().replace(/-/g, '');
 
-            if (!matchedCpu) {
-                resultsDiv.style.display = 'block';
-                resultsTableBody.innerHTML = `<tr><td colspan="4">Процессор "${query}" не найден в базе.</td></tr>`;
-                return;
-            }
+    let foundCpus = [];
+    let matchedCpu = null;
+    
+    // --- Логика поиска ---
 
-            const singleTolerance = matchedCpu.single * 0.10;
-            const multiTolerance = matchedCpu.multi * 0.10;
+    if (isGlobalSearch) {
+        foundCpus = allCpus.filter(cpu => 
+            cpu.name.toLowerCase().replace(/-/g, '').includes(lowerCleanQuery)
+        ).sort((a, b) => b.multi - a.multi);
 
-            const similarCpus = allCpus
-                .filter(cpu => cpu.name !== matchedCpu.name)
-                .filter(cpu => {
-                    const isSimilarSingle = Math.abs(cpu.single - matchedCpu.single) <= singleTolerance;
-                    const isSimilarMulti = Math.abs(cpu.multi - matchedCpu.multi) <= multiTolerance;
-                    return isSimilarSingle && isSimilarMulti;
-                })
-                .sort((a, b) => {
-                    const diffA = Math.abs(a.single - matchedCpu.single) + Math.abs(a.multi - matchedCpu.multi);
-                    const diffB = Math.abs(b.single - matchedCpu.single) + Math.abs(b.multi - matchedCpu.multi);
-                    return diffA - diffB;
-                })
-                .slice(0, 10);
+    } else {
 
+        matchedCpu = allCpus.find(cpu => cpu.name.toLowerCase().replace(/-/g, '').includes(lowerCleanQuery));
+
+        if (!matchedCpu) {
             resultsDiv.style.display = 'block';
+            resultsTableBody.innerHTML = `<tr><td colspan="4">Процессор "${query}" не найден в базе.</td></tr>`;
+            return;
+        }
+        
+        const singleTolerance = matchedCpu.single * 0.10;
+        const multiTolerance = matchedCpu.multi * 0.10;
 
-            let matchRow = `
-                <tr>
-                    <td class="name match-text">${matchedCpu.name}</td>
-                    <td class="score match-text">${matchedCpu.single}</td>
-                    <td class="score match-text">${matchedCpu.multi}</td>
-                    <td style="color: #ff9800;">(Найденный процессор)</td>
-                </tr>
-            `;
+        const similarCpus = allCpus
+            .filter(cpu => cpu.name !== matchedCpu.name)
+            .filter(cpu => {
+                const isSimilarSingle = Math.abs(cpu.single - matchedCpu.single) <= singleTolerance;
+                const isSimilarMulti = Math.abs(cpu.multi - matchedCpu.multi) <= multiTolerance;
+                return isSimilarSingle && isSimilarMulti;
+            })
+            .sort((a, b) => {
+                const diffA = Math.abs(a.single - matchedCpu.single) + Math.abs(a.multi - matchedCpu.multi);
+                const diffB = Math.abs(b.single - matchedCpu.single) + Math.abs(b.multi - matchedCpu.multi);
+                return diffA - diffB;
+            })
+            .slice(0, 10);
+        foundCpus.push(matchedCpu);
+        foundCpus.push(...similarCpus);
+        
+    }
+    
 
-            resultsTableBody.innerHTML += matchRow;
+    if (foundCpus.length === 0) {
+        resultsDiv.style.display = 'block';
+        resultsTableBody.innerHTML = `<tr><td colspan="4">По вашему запросу "${query}" ничего не найдено.</td></tr>`;
+        return;
+    }
+    
+    resultsDiv.style.display = 'block';
 
-            if (similarCpus.length > 0) {
-                similarCpus.forEach(cpu => {
-                    const row = `
-                        <tr>
-                            <td class="name">${cpu.name}</td>
-                            <td class="score">${cpu.single}</td>
-                            <td class="score">${cpu.multi}</td>
-                            <td>~10% по обоим показателям</td>
-                        </tr>
-                    `;
-                    resultsTableBody.innerHTML += row;
-                });
+    if (isGlobalSearch) {
+        document.querySelector('.similar-cpu-results h3').textContent = `Результаты глобального поиска по "${cleanQuery}" (отсортировано по Многопоточному):`;
+    } else {
+        document.querySelector('.similar-cpu-results h3').textContent = `Результат поиска и похожие процессоры (~10% по обоим показателям):`;
+    }
+
+    foundCpus.forEach((cpu, index) => {
+        let comment = '';
+        let matchClass = '';
+
+        if (!isGlobalSearch) {
+            if (index === 0) {
+                comment = '(Найденный процессор)';
+                matchClass = 'match-text';
             } else {
-                resultsTableBody.innerHTML += `<tr><td colspan="4">Похожих процессоров (~10% по обоим показателям) не найдено.</td></tr>`;
+                comment = '~10% по обоим показателям';
             }
-        };
+        } else {
+            comment = 'Глоб. Поиск';
+        }
+
+        const row = `
+            <tr>
+                <td class="name ${matchClass}">${cpu.name}</td>
+                <td class="score ${matchClass}">${cpu.single}</td>
+                <td class="score ${matchClass}">${cpu.multi}</td>
+                <td style="color: ${matchClass ? '#ff9800' : 'inherit'};">${comment}</td>
+            </tr>
+        `;
+        resultsTableBody.innerHTML += row;
+    });
+};
 
 
         document.addEventListener('DOMContentLoaded', () => {
-            // ... (Ваш существующий код для смены темы) ...
             const paletteButton = document.getElementById('palette-button');
             const colorPicker = document.getElementById('color-picker');
             const header = document.querySelector('header');
@@ -391,6 +426,7 @@
 
         <div class="search-container">
             <input type="text" id="cpu-search" placeholder="Введите название процессора для поиска похожих (например, 13700KF)">
+            <h6>Вы так же можете добавить в начале "/`" чтобы сделать глобальный поиск.</h6>
         </div>
 
         <div id="similar-cpu-results" class="similar-cpu-results">
