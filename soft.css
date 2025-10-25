@@ -221,79 +221,6 @@ main {
     text-align: center;
 }
 
-@media (max-width: 1270px) {
-    header {
-        display: none;
-    }
-    
-    .mobile-header {
-        display: block;
-        background-color: #191919;
-        color: #ffffff;
-        padding: 15px 0;
-        text-align: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    .mobile-header nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .mobile-header nav ul li {
-        margin: 0 5px;
-    }
-
-    .mobile-header nav ul li a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 8px 12px;
-        background-color: #2e2e2e;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    main {
-    	margin-top: 60px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 90px;
-    }
-
-    .button-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .button-section a {
-        flex: 1 1 calc(50% - 10px);
-        margin: 0;
-        padding: 8px 16px;
-        background-color: #2e2e2e;
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        max-width: none;
-        transform: scale(1);
-    }
-
-    .button-section a:nth-child(3) {
-        flex-basis: 100%;
-    }
-}
-
-
 .program-section {
     margin-bottom: 50px;
 }
@@ -570,4 +497,85 @@ h1 {
     cursor: pointer;
     font-size: 12px;
     text-align: left; 
+}
+
+@media (max-width: 1270px) {
+    header {
+        display: none;
+    }
+    
+    .mobile-header {
+        display: block;
+        background-color: #191919;
+        color: #ffffff;
+        padding: 15px 0;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .mobile-header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobile-header nav ul li {
+        margin: 0 5px;
+    }
+
+    .mobile-header nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 12px;
+        background-color: #2e2e2e;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    main {
+    	margin-top: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 90px;
+    }
+
+    .button-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .button-section a {
+        flex: 1 1 calc(50% - 10px);
+        margin: 0;
+        padding: 8px 16px;
+        background-color: #2e2e2e;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        max-width: none;
+        transform: scale(1);
+    }
+
+    .button-section a:nth-child(3) {
+        flex-basis: 100%;
+    }
+
+    .floating-panel {
+        display: none;
+        top: 0px;
+    }
+
+    .floating-panel button {
+        display: none;
+    }
 }
