@@ -425,6 +425,7 @@
         <button class="floating-button" onclick="scrollToSection('laptop_intel')">Ноутбучные Intel Core процессоры</button>
         <button class="floating-button" onclick="scrollToSection('laptop_amd')">Ноутбучные AMD Ryzen процессоры</button>
         <button class="floating-button" onclick="scrollToSection('other_intel')">Прочие Intel процессоры</button>
+        <button class="floating-button" onclick="scrollToSection('xeon_intel')">Intel Xeon процессоры</button>
         <button class="floating-button" onclick="scrollToSection('other_amd')">Прочие AMD процессоры</button>
     </div>
     
@@ -576,6 +577,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <tr><td class="name">Intel Core i5 4460</td><td class="score sorttable_numeric">759</td><td class="score sorttable_numeric">2836</td></tr>
                 <tr><td class="name">Intel Core i5 3570</td><td class="score sorttable_numeric">733</td><td class="score sorttable_numeric">2771</td></tr>
                 <tr><td class="name">Intel Core i5 3470</td><td class="score sorttable_numeric">696</td><td class="score sorttable_numeric">2632</td></tr>
+                <tr><td class="name">Intel Core i5 2500</td><td class="score sorttable_numeric">655</td><td class="score sorttable_numeric">2429</td></tr>
                 <tr><td class="name">Intel Core i5 2400</td><td class="score sorttable_numeric">611</td><td class="score sorttable_numeric">2256</td></tr>
 
                 <tr><td class="name">Intel Core i3 13100F</td><td class="score sorttable_numeric">1168</td><td class="score sorttable_numeric">8226</td></tr>
@@ -589,6 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <tr><td class="name">Intel Core i3 8100</td><td class="score sorttable_numeric">883</td><td class="score sorttable_numeric">3414</td></tr>
                 <tr><td class="name">Intel Core i3 4360</td><td class="score sorttable_numeric">852</td><td class="score sorttable_numeric">2150</td></tr>
                 <tr><td class="name">Intel Core i3 3220</td><td class="score sorttable_numeric">620</td><td class="score sorttable_numeric">1619</td></tr>
+                <tr><td class="name">Intel Core i3 2120</td><td class="score sorttable_numeric">593</td><td class="score sorttable_numeric">1515</td></tr>
             </tbody>
         </table>
         <h2>Настольные AMD Ryzen процессоры</h2>
@@ -739,6 +742,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <tr><td class="name">AMD Ryzen 5 7545HS</td><td class="score sorttable_numeric">997</td><td class="score sorttable_numeric">8826</td></tr>
                     <tr><td class="name">AMD Ryzen 5 6600H</td><td class="score sorttable_numeric">1139</td><td class="score sorttable_numeric">10775</td></tr>
                     <tr><td class="name">AMD Ryzen 5 5600H</td><td class="score sorttable_numeric">964</td><td class="score sorttable_numeric">8646</td></tr>
+                    <tr><td class="name">AMD Ryzen 5 7430U</td><td class="score sorttable_numeric">957</td><td class="score sorttable_numeric">7801</td></tr>
                     <tr><td class="name">AMD Ryzen 5 7530U</td><td class="score sorttable_numeric">1032</td><td class="score sorttable_numeric">8803</td></tr>
                     <tr><td class="name">AMD Ryzen 5 5500U</td><td class="score sorttable_numeric">913</td><td class="score sorttable_numeric">6199</td></tr>
                     <tr><td class="name">AMD Ryzen 5 3500U</td><td class="score sorttable_numeric">732</td><td class="score sorttable_numeric">2971</td></tr>
@@ -760,21 +764,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </tr>
                 </thead>
                 <tbody>
-
-                    <tr><td class="name">Intel Xeon E3 1270 V3</td><td class="score sorttable_numeric">890</td><td class="score sorttable_numeric">4325</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2667 V4</td><td class="score sorttable_numeric">865</td><td class="score sorttable_numeric">8703</td></tr>
-                    <tr><td class="name">Intel Xeon E5 1660 V4</td><td class="score sorttable_numeric">853</td><td class="score sorttable_numeric">8519</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2697 V3</td><td class="score sorttable_numeric">824</td><td class="score sorttable_numeric">13642</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2699 V3</td><td class="score sorttable_numeric">826</td><td class="score sorttable_numeric">10465</td></tr>
-                    <tr><td class="name">Intel Xeon E3 1230 V3</td><td class="score sorttable_numeric">823</td><td class="score sorttable_numeric">2730</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2680 V4</td><td class="score sorttable_numeric">816</td><td class="score sorttable_numeric">12648</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2690 V4</td><td class="score sorttable_numeric">781</td><td class="score sorttable_numeric">13832</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2690 V2</td><td class="score sorttable_numeric">592</td><td class="score sorttable_numeric">7758</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2680 V3</td><td class="score sorttable_numeric">728</td><td class="score sorttable_numeric">10117</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2670 V3</td><td class="score sorttable_numeric">712</td><td class="score sorttable_numeric">10682</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2650 V2</td><td class="score sorttable_numeric">585</td><td class="score sorttable_numeric">5508</td></tr>
-                    <tr><td class="name">Intel Xeon E5 2640 V2</td><td class="score sorttable_numeric">389</td><td class="score sorttable_numeric">4483</td></tr>
-
                     <tr><td class="name">Intel Pentium Gold G6400</td><td class="score sorttable_numeric">796</td><td class="score sorttable_numeric">2036</td></tr>
                     <tr><td class="name">Intel Pentium Gold 7505</td><td class="score sorttable_numeric">709</td><td class="score sorttable_numeric">2210</td></tr>
                     <tr><td class="name">Intel Pentium Gold G4400</td><td class="score sorttable_numeric">690</td><td class="score sorttable_numeric">1357</td></tr>
@@ -800,6 +789,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     <tr><td class="name">Intel NVIDIA CC150</td><td class="score sorttable_numeric">839</td><td class="score sorttable_numeric">8680</td></tr>
 
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Intel Xeon процессоры</h2>
+        <div id="xeon_intel" class="table-container">
+            <table class="sortable">
+                <thead>
+                    <tr>
+                        <th class="name">Процессор</th>
+                        <th class="score sorttable_numeric">Одноядерный</th>
+                        <th class="score sorttable_numeric">Многопоточный</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="name">Intel Xeon E5 2667 V4 (8 Ядер)</td><td class="score sorttable_numeric">865</td><td class="score sorttable_numeric">8703</td></tr>
+                    <tr><td class="name">Intel Xeon E5 1660 V4 (8 Ядер)</td><td class="score sorttable_numeric">853</td><td class="score sorttable_numeric">8519</td></tr>
+                    <tr><td class="name">Intel Xeon E5 2680 V3 (12 Ядер)</td><td class="score sorttable_numeric">728</td><td class="score sorttable_numeric">10117</td></tr>
+                    <tr><td class="name">Intel Xeon E5 2670 V3 (12 Ядер)</td><td class="score sorttable_numeric">712</td><td class="score sorttable_numeric">10682</td></tr>
                 </tbody>
             </table>
         </div>
