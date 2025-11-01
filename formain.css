@@ -1,0 +1,94 @@
+main {
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+#welcome {
+    margin-top: 50px;
+    font-size: 2.5em;
+}
+#discription {
+    font-size: 1.1em;
+    margin-top: 30px;
+}
+.page {
+    width: 95%;
+    height: auto;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+#ytvid {
+    margin-top: 20px;
+    border-radius: 20px;
+}
+#ytsubs {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.button-menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.row a {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    background-color: #191919;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.1s linear;
+    &:hover {
+        box-shadow:
+            0 0 0 2px white,
+            0 0 0 4px #3c82f8;
+    }
+}
+@media (max-width: 768px) {
+    main{width: 95%;}
+    .row {
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+    }
+
+    .row a {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .page {
+        padding: 30px 0;
+        margin-top: -10px;
+    }
+    body{overflow: auto;}
+}

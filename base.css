@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{min-height: 90vh;width: 90%;margin: 0 auto;border-radius: 40px;margin-top: 20px;}
+@font-face {
+    font-family: "sf";
+    src: url("fonts/sf.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: "sf", sans-serif;
+    background: linear-gradient(273deg, #06064d, #000623, #001c8b);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 12s ease infinite;
+    -moz-animation: AnimationName 12s ease infinite;
+    animation: AnimationName 12s ease infinite;
+    color: #ffffff;
+}
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+header {
+    position: sticky;
+    top: 10px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 35px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s;
+    z-index: 1;
+}
+header.header-narrow {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 60px;
+}
+.logo {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-icon {
+    height: 40px;
+    width: 40px;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    padding-right: 5px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+nav a {
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition:
+        background-color 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+nav a:hover {
+    background-color: #008ffd24;
+    color: #0192fe;
+    transform: scale(1.05);
+}
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px 5px;
+    width: 12%;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    position: sticky;
+    max-width: 150px;
+    min-width: 130px;
+}
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+.menu-container {
+    position: absolute;
+    top: 60px;
+    right: 10%;
+    z-index: 100;
+    border: 1px solid #ffffff2e;
+    box-shadow: 0 5px 20px 0 #0000005e;
+    border-radius: 20px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 200px;
+  }
+  .menu-item {
+    font-family: 'sf';
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:hover{    
+    background-color: #008ffd24;
+    color: #0192fe;}
+  }
+    .menu-items {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .menu-items a {
+    color: white;
+    font-family: 'sf';
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 5px 0;
+  }
+.menu-item.active-link,
+.menu-item:hover {
+  box-shadow:
+      0 0 0 2px white,
+      0 0 0 4px #3c82f8;
+}
+
+
+#burger {
+    display: block;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    margin-right: 25px;
+    align-self: center;
+    filter: invert(1);
+}
+#buildsburger{display: none;}
+#makutweakerburger{display: none;}
+#supportburger{display: none;}
+
+@media (max-width: 968px) {
+    nav {
+        display: none;
+    }
+    #buildsburger{display: block;}
+    #makutweakerburger{display: block;}
+    #supportburger{display: block;}
+    footer{width: 25%;}
+}
+@media (max-width: 440px) {
+    footer{width: 30%;}
+}
+
+@media (max-width: 768px){
+    header{width: 95%;}
+}
+
+header,footer,.menu-container,main{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
+}
