@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="builds" class="menu-item" id="buildsburger">Сборки от Аддерли</a>
     <a href="windows" class="menu-item">Официальные ISO Windows</a>
     <a href="makutweaker" class="menu-item" id="makutweakerburger">Скачать MakuTweaker</a>
-    <a href="makubench" class="menu-item">MakuTweaker MakuBenchmark</a>
+    <a href="makubench" class="menu-item">MakuTweaker Benchmark</a>
     <a href="makuyan" class="menu-item">Запрещатор Яндекса</a>
     <a href="makupedia" class="menu-item">MakuPedia</a>
     <a href="win_pe" class="menu-item">Windows PE от Аддерли</a>
