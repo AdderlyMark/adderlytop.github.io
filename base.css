@@ -12,46 +12,16 @@ main{min-height: 90vh;width: 90%;margin: 0 auto;border-radius: 40px;margin-top: 
 }
 body {
     font-family: "sf", sans-serif;
-    background: linear-gradient(273deg, #06064d, #000623, #001c8b);
-    background-size: 600% 600%;
-    -webkit-animation: AnimationName 12s ease infinite;
-    -moz-animation: AnimationName 12s ease infinite;
-    animation: AnimationName 12s ease infinite;
+    background: #060644;
     color: #ffffff;
+    overscroll-behavior: none;
 }
-@-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.slider-btn {
+  line-height: 1;    
+  padding: 0;       
+  font-family: Arial, sans-serif;
 }
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-@keyframes AnimationName {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+
 header {
     position: sticky;
     top: 10px;
@@ -119,30 +89,52 @@ footer {
     margin: 0 auto;
     padding: 5px 5px;
     width: 12%;
-    bottom: 0;
+    bottom: 10px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;
     border-radius: 50px;
     margin-top: 10px;
+    margin-bottom: 10px; 
     position: sticky;
-    max-width: 150px;
-    min-width: 130px;
+    max-width: 400px;
+    min-width: 400px;
+    transition: 0.3s;
+}
+footer p{font-size: 14px;}
+@media(max-width:440px){
+    #trademark{display: none;}
+    footer{max-width: 150px;min-width: 130px;}
 }
 .social-icon {
     width: 20px;
     height: 20px;
     margin-top: 5px;
+    border-radius: 10px;
+    transition: 0.1s linear;
+    &:hover{box-shadow: 0 0 0 4px #3c82f8;}
+}
+
+@media (max-width: 968px) {
+
+}
+
+@media (max-width: 440px) {
+    footer {
+        width: 30%;
+        bottom: 5px; 
+        margin-bottom: 5px;
+    }
 }
 .menu-container {
     position: absolute;
-    top: 60px;
-    right: 10%;
+    top: calc(100% + 10px);
+    right: 0;
     z-index: 100;
     border: 1px solid #ffffff2e;
-    box-shadow: 0 5px 20px 0 #0000005e;
     border-radius: 20px;
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
@@ -183,17 +175,16 @@ footer {
 .menu-item.active-link,
 .menu-item:hover {
   box-shadow:
-      0 0 0 2px white,
       0 0 0 4px #3c82f8;
 }
-
+.slider-container,.accordition-container{max-width: 2400px;}
 
 #burger {
     display: block;
     cursor: pointer;
     width: 35px;
     height: 35px;
-    margin-right: 25px;
+    margin-right: 10px;
     align-self: center;
     filter: invert(1);
 }
@@ -208,14 +199,6 @@ footer {
     #buildsburger{display: block;}
     #makutweakerburger{display: block;}
     #supportburger{display: block;}
-    footer{width: 25%;}
-}
-@media (max-width: 440px) {
-    footer{width: 30%;}
-}
-
-@media (max-width: 768px){
-    header{width: 95%;}
 }
 
 header,footer,.menu-container,main{

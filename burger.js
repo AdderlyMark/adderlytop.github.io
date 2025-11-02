@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const burgerMenu = document.getElementById('burger');
-
+  const header = document.querySelector('header');
+  
   let menuContainer = document.createElement('div');
   menuContainer.className = 'menu-container';
   menuContainer.style.display = 'none';
@@ -21,7 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
   document.body.appendChild(menuContainer);
   
+  function positionMenu() {
+    const burgerRect = burgerMenu.getBoundingClientRect();
+    const headerRect = header.getBoundingClientRect();
+    
+    menuContainer.style.position = 'fixed';
+    menuContainer.style.top = `${headerRect.bottom + 10}px`;
+    menuContainer.style.right = `${window.innerWidth - burgerRect.right}px`;
+  }
+  
   function animateOpen(element, duration) {
+    positionMenu(); 
     element.style.display = 'flex';
     element.style.opacity = '0';
     element.style.transform = 'translateY(-10px)';
@@ -43,16 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
       if (callback) callback();
     }, duration);
   }
-
+  
   burgerMenu.addEventListener('click', function(event) {
     event.stopPropagation();
     
     if (menuContainer.style.display === 'none' || menuContainer.style.display === '') {
-      animateOpen(menuContainer, 300);
+      animateOpen(menuContainer, 200);
       burgerMenu.classList.add('active');
       localStorage.setItem('menuOpen', 'true');
     } else {
-      animateClose(menuContainer, 300, function() {
+      animateClose(menuContainer, 200, function() {
         localStorage.setItem('menuOpen', 'false');
       });
       burgerMenu.classList.remove('active');
@@ -62,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('click', function(event) {
     if (!menuContainer.contains(event.target) && event.target !== burgerMenu) {
       if (menuContainer.style.display === 'flex') {
-        animateClose(menuContainer, 300, function() {
+        animateClose(menuContainer, 200, function() {
           localStorage.setItem('menuOpen', 'false');
         });
         burgerMenu.classList.remove('active');
@@ -70,25 +81,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (menuContainer.style.display === 'flex') {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        positionMenu();
+      }, 10);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (menuContainer.style.display === 'flex') {
+      positionMenu();
+    }
+  });
+  
   if (localStorage.getItem('menuOpen') === 'true') {
     animateOpen(menuContainer, 0);
     burgerMenu.classList.add('active');
   }
-});
-
-const currentPath = window.location.pathname.replace(/\/$/, '');
-document.querySelectorAll('.menu-item').forEach(link => {
-  const href = link.getAttribute('href');
-  if (currentPath.endsWith(href)) {
-    link.classList.add('active-link');
-  }
+  
+  const currentPath = window.location.pathname.replace(/\/$/, '');
+  document.querySelectorAll('.menu-item').forEach(link => {
+    const href = link.getAttribute('href');
+    if (currentPath.endsWith(href)) {
+      link.classList.add('active-link');
+    }
+  });
 });
 
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   const main = document.querySelector('main');
   const mainTop = main.getBoundingClientRect().top;
-
   if (mainTop <= header.offsetHeight) {
     header.classList.add('header-narrow');
   } else {
