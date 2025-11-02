@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="menu-items">
     <a href="index" class="menu-item">Главная</a>
     <a href="builds" class="menu-item" id="buildsburger">Сборки от Аддерли</a>
-    <a href="windows" class="menu-item">Официальные Windows</a>
-    <a href="makutweaker" class="menu-item" id="makutweakerburger">MakuTweaker</a>
-    <a href="makubench" class="menu-item">MakuBench</a>
+    <a href="windows" class="menu-item">Официальные ISO Windows</a>
+    <a href="makutweaker" class="menu-item" id="makutweakerburger">Скачать MakuTweaker</a>
+    <a href="makubench" class="menu-item">MakuTweaker MakuBenchmark</a>
     <a href="makuyan" class="menu-item">Запрещатор Яндекса</a>
     <a href="makupedia" class="menu-item">MakuPedia</a>
-    <a href="win_pe" class="menu-item">Win PE</a>
-    <a href="faq" class="menu-item">FAQ</a>
+    <a href="win_pe" class="menu-item">Windows PE от Аддерли</a>
+    <a href="faq" class="menu-item">Часто задаваемые вопросы</a>
     <a href="support" class="menu-item" id="supportburger">Поддержать</a>
     </div>
   `;
