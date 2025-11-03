@@ -35,8 +35,6 @@ header.scrolled {
     padding: 15px 2%;
     background: rgba(50, 50, 50, 0.7);
 }
-
-
 .logo {
     margin-left: 40px;
     position: absolute;
@@ -327,25 +325,20 @@ main {
     width: calc(50% - 175px);
     min-width: 300px;
 }
-
 .download-button img.icon {
     width: 20px;
     height: 20px;
     margin-right: 5px;
     transform: translateY(4px);
 }
-
 .button-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
-
 .palette-container {
     position: relative;
 }
-
 .palette-button {
     background: none;
     border: none;
@@ -359,12 +352,10 @@ main {
     width: 30px;
     height: 30px;
 }
-
 .palette-icon {
     width: 100%;
     height: auto;
 }
-
 .color-picker {
     display: flex;
     flex-direction: column;
@@ -377,14 +368,12 @@ main {
     right: calc(0px + 40px);
     z-index: 1001;
 }
-
 .color-options {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 10px;
 }
-
 .color-option {
     width: 40px;
     height: 40px;
@@ -418,20 +407,17 @@ main {
     text-align: center;
     padding: 0 5%;
 }
-
 .hero h1 {
     font-size: 4em;
     color: #ffffff;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
-
 .hero p {
     font-size: 1.2em;
     color: white;
     max-width: 800px;
     margin-bottom: 40px;
 }
-
 .button {
     background: #2e2e2e;
     color: white;
@@ -446,17 +432,14 @@ main {
     text-decoration: none;
     margin-top: auto;
 }
-
 .button:hover {
     background: #ff5252;
     transform: translateY(-2px);
 }
-
 @keyframes slideIn {
     0% { transform: translateY(-20px); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
-
 .cards {
     margin-top: -30px;
     display: grid;
@@ -465,7 +448,6 @@ main {
     padding: 30px;
     align-items: stretch;
 }
-
 .card {
     position: relative;
     overflow: hidden;
@@ -476,19 +458,16 @@ main {
     flex-direction: column;
     justify-content: space-between;
 }
-
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
-
 .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     transition: transform 0.3s;
 }
-
 .card:hover img {
     transform: scale(1.05);
 }
@@ -585,7 +564,7 @@ main {
 .panel {
     border-radius: 10px;
     background-color: #191919;
-    padding: 0 18px;
+    padding: 0 18px 0 18px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -859,7 +838,6 @@ h1 {
     .button-section a:nth-child(3) {
         flex-basis: 100%;
     }
-
     .floating-panel {
         position: fixed;
         top: 70px;
@@ -881,7 +859,6 @@ h1 {
         align-items: center; 
         margin-bottom: 10px;
     }
-    
     .panel-header span {
         flex-grow: 1;
         margin-left: 3px;

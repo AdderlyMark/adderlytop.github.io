@@ -33,11 +33,6 @@ main {
     margin-top: 20px;
     border-radius: 20px;
 }
-#ytsubs {
-    border-radius: 15px;
-    overflow: hidden;
-    margin-top: 5px;
-}
 .button-menu-section {
     display: flex;
     flex-direction: column;
@@ -90,4 +85,6 @@ main {
         margin-top: -10px;
     }
     body{overflow: auto;}
+
+    
 }
