@@ -90,3 +90,64 @@ main {
     body{overflow-y: hidden;}
     footer{margin-top: 20px;}
 }
+
+.youtube-section {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.youtube-section h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.youtube-section iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 700px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .youtube-section {
+        max-width: 90%;
+        margin-top: 15px;
+    }
+    
+    .youtube-section h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .youtube-section {
+        max-width: 95%;
+        margin-top: 10px;
+    }
+    
+    .youtube-section h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .youtube-section iframe {
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .youtube-section h2 {
+        font-size: 16px;
+    }
+    
+    .youtube-section iframe {
+        border-radius: 8px;
+    }
+}

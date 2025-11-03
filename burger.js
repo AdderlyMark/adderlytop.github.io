@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // Закрываем меню при клике на любую ссылку в меню
     document.querySelectorAll('.menu-item').forEach(link => {
       link.addEventListener('click', function() {
         localStorage.setItem('menuOpen', 'false');
@@ -106,8 +105,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
+
     const currentPath = window.location.pathname.replace(/\/$/, '');
     document.querySelectorAll('.menu-item').forEach(link => {
+      const href = link.getAttribute('href');
+      if (currentPath.endsWith(href)) {
+        link.classList.add('active-link');
+      }
+    });
+    document.querySelectorAll('nav a').forEach(link => {
       const href = link.getAttribute('href');
       if (currentPath.endsWith(href)) {
         link.classList.add('active-link');
