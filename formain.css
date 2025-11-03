@@ -85,6 +85,8 @@ main {
         margin-top: -10px;
     }
     body{overflow: auto;}
-
-    
+}
+@media (min-width: 2440px){
+    body{overflow-y: hidden;}
+    footer{margin-top: 20px;}
 }

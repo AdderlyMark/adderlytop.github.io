@@ -119,7 +119,11 @@ footer p{font-size: 14px;}
 }
 
 .youtube-section {
-    margin-top: 20px;
+    margin-top: 12px;
+}
+
+.youtube-section h2 {
+    margin-bottom: 6px;
 }
 
 .youtube-section iframe {
