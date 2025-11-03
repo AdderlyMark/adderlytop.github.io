@@ -30,9 +30,18 @@
     <meta name="keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, windows 11 24h2, windows 11, 24h2, 22h2, windows 10, makuos mini">
     <meta property="og:image" content="images/favicon.png">
     <style>
-main{display: flex;flex-direction: column;text-align: center;gap: 10px;}
-h1{margin-top: 20px;}
-.ltsc, .pro, .other {
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.ltsc, .pro, .other, .lite {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 15px;
@@ -41,7 +50,7 @@ h1{margin-top: 20px;}
     text-align: start;
 }
 
-.ltsc a, .pro a, .win8, .win7 {
+.ltsc a, .pro a, .other a, .lite a {
     background-color: #191919;
     border-radius: 20px;
     padding: 20px;
@@ -52,47 +61,76 @@ h1{margin-top: 20px;}
     transition: 0.1s linear;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
+
 }
 
-.ltsc a:hover, .pro a:hover, .win8:hover, .win7:hover {
-    &:hover {
-        box-shadow:
-            0 0 0 4px #3c82f8;
-    }
+.ltsc a:hover, .pro a:hover, .other a:hover, .lite a:hover {
+    box-shadow: 0 0 0 4px #3c82f8;
 }
-.ltsc img, .pro img, .win8 img, .win7 img {
+
+.ltsc img, .pro img, .other img, .lite img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 15px;
 }
+
 .card-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: start;
 }
+
 .card-title {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 5px;
     color: #ffffff;
+    text-align: start;
 }
+
 .card-description {
     font-size: 0.95rem;
     line-height: 1.5;
     color: #cccccc;
     margin-bottom: 10px;
+    text-align: start;
 }
-.other{margin-bottom: 50px;}
-h2{margin-top: 25px;}
+
+.other {
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-top: 25px;
+}
+
+.ribbon {
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    background: linear-gradient(45deg, #ff005e, #ff7b00);
+    color: #fff;
+    padding: 4px 50px;
+    font-weight: bold;
+    font-size: 14px;
+    transform: rotate(-35deg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+}
+
 @media (max-width: 968px) {
-    .ltsc, .pro {
+    .ltsc, .pro, .lite, .other {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 15px;
     }
     
-    .ltsc img, .pro img, .win8 img, .win7 img {
+    .ltsc img, .pro img, .other img, .lite img {
         height: 180px;
     }
     
@@ -104,17 +142,19 @@ h2{margin-top: 25px;}
         font-size: 0.9rem;
     }
 }
+
 @media (max-width: 768px) {
-    .ltsc, .pro {
+    .ltsc, .pro, .other, .lite {
         grid-template-columns: 1fr;
         gap: 15px;
+        justify-content: start;
     }
     
-    .ltsc a, .pro a, .win8, .win7 {
+    .ltsc a, .pro a, .other a, .lite a {
         padding: 15px;
     }
     
-    .ltsc img, .pro img, .win8 img, .win7 img {
+    .ltsc img, .pro img, .other img, .lite img {
         height: 160px;
     }
     
@@ -125,23 +165,19 @@ h2{margin-top: 25px;}
     .card-description {
         font-size: 0.85rem;
     }
-    
-    .button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
 }
+
 @media (max-width: 440px) {
-    .ltsc, .pro {
+    .ltsc, .pro, .other, .lite {
         grid-template-columns: 1fr;
         gap: 12px;
     }
     
-    .ltsc a, .pro a, .win8, .win7 {
+    .ltsc a, .pro a, .other a, .lite a {
         padding: 12px;
     }
     
-    .ltsc img, .pro img, .win8 img, .win7 img {
+    .ltsc img, .pro img, .other img, .lite img {
         height: 140px;
     }
     
@@ -154,7 +190,6 @@ h2{margin-top: 25px;}
         line-height: 1.4;
     }
 }
-
     </style>
 </head>
 
@@ -177,20 +212,40 @@ h2{margin-top: 25px;}
 <main>
 <h1>Сборки от Аддерли</h1>
 <h3>Лучшие сборки Windows - без какого либо мусора,рекламы и Яндексов.</h3>
-<h2>Редакции Pro</h2>
+<h2>Основные сборки на Pro редакции</h2>
 <div class="pro">
-        <a class="win10" href="makuos_10">
-        <img src="images/win10.jpg" >
-        <div class="card-content">
-                <h3 class="card-title">MakuOS 10 Pro 22H2<br>(Windows 10 22H2 19045.6456)</h3>
-                <p class="card-description">Сборка со всеми финальными обновлениями и оптимизацией на основе самой последней версии Windows 10.<br>Тем, кому не нравится Windows 11, подойдёт как вариант самой актуальной системы.<br>Подойдёт для современных ПК.</p>
-            </div>
-    </a>
+<a class="win10" href="makuos_10">
+    <div class="ribbon">Новинка!</div>
+    <img src="images/win10.jpg">
+    <div class="card-content">
+        <h3 class="card-title">MakuOS 10 Pro 22H2<br>(Windows 10 22H2 19045.6456)</h3>
+        <p class="card-description">
+            Сборка со всеми обновлениями и оптимизацией на основе самой последней версии Windows 10.<br>
+            Тем, кому не нравится Windows 11, подойдёт как вариант самой актуальной системы.<br>
+            Подойдёт для современных ПК.
+        </p>
+    </div>
+</a>
+
+<a class="win11" href="makuos_11">
+    <div class="ribbon">Новинка!</div>
+    <img src="images/win11shit.png">
+    <div class="card-content">
+        <h3 class="card-title">MakuOS 11 Pro 24H2<br>(Windows 11 24H2 26100.7015)</h3>
+        <p class="card-description">
+            Сборка со всеми обновлениями и оптимизацией на основе почти самой последней версии Windows 11 – 24H2.<br>
+            Подойдёт для современных ПК.
+        </p>
+    </div>
+</a>
+</div>
+<h2>Mini и Lite сборки для слабых ПК</h2>
+<div class="lite">
     <a class="win11-22h2" href="makuos_11_Lite">
         <img src="images/win11.jpg">
         <div class="card-content">
                 <h3 class="card-title">MakuOS 11 Lite 22H2 V2<br>(Windows 11 22H2, 22621.1702)</h3>
-                <p class="card-description">Сборка на основе Windows 11 с обновлениями по лето 2023 года.<br>Без Windows Defender, центра обновлений, и какого либо мусора.<br>Для современных игр она не подойдёт. Но подойдёт тем, кто хотел попробовать Windows 11 на слабых ПК.</p>
+                <p class="card-description">Сборка со всеми обновлениями на основе Windows 11 с обновлениями по лето 2023 года.<br>Без Windows Defender, центра обновлений, и какого либо мусора.<br>Для современных игр она не подойдёт. Но подойдёт тем, кто хотел попробовать Windows 11 на слабых ПК.</p>
             </div>
     </a>
     <a class="win10-22h2" href="makuos_mini">
@@ -204,11 +259,11 @@ h2{margin-top: 25px;}
         <img src="images/win10old.jpg">
          <div class="card-content">
                 <h3 class="card-title">MakuOS 10 Lite 1809<br>(Windows 10 1809, 17763.6414)</h3>
-                <p class="card-description">Сборка со всеми обновлениями на основе Windows 10 1809.<br>Без Windows Defender, центра обновлений, и какого либо мусора.<br>Для современных игр она не подойдёт. Но подойдёт тем, кто хочет Windows 10 на очень слабых ПК или MacBook Intel.</p>
+                <p class="card-description">Сборка со всеми обновлениями на основе Windows 10 1809 с обновлениями по 2024 год.<br>Без Windows Defender, центра обновлений, и какого либо мусора.<br>Для современных игр она не подойдёт. Но подойдёт тем, кто хочет Windows 10 на очень слабых ПК или MacBook Intel.</p>
             </div>
     </a>
 </div>
-<h2>Редакции LTSC</h2>
+<h2>Сборки на основе LTSC редакции</h2>
 <div class="ltsc">
     <a class="win11ltsc" href="makuos_11_ltsc">
         <img src="images/win11shit.png">
