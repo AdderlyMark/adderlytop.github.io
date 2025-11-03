@@ -33,20 +33,82 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 20px;justify-content: center;
+            gap: 20px;
+            justify-content: center;
             align-items: center;
+            padding: 20px;
         }
-        .box{display: flex;flex-direction: column;gap: 10px;justify-content: center;align-items: center;}
+        .box{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+        }
         #button-link{
-            width: 400px;height: 50px;
+            width: 100%;
+            max-width: 400px;
+            min-height: 50px;
+            padding: 15px 20px;
             background-color: #191919;
-            text-decoration: none;color: white;
-            display: flex;justify-content: center;
-            align-items: center;border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
             transition: 0.1s linear;
-            &:hover{
-    box-shadow:
-      0 0 0 4px #3c82f8;
+            text-align: center;
+            word-wrap: break-word;
+        }
+        #button-link:hover{
+            box-shadow: 0 0 0 4px #3c82f8;
+        }
+        
+        /* Адаптивность для планшетов */
+        @media (max-width: 768px) {
+            #button-link {
+                max-width: 100%;
+                min-height: 55px;
+                font-size: 16px;
+            }
+        }
+        
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 480px) {
+            main {
+                padding: 15px 10px;
+                gap: 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+            
+            .box {
+                gap: 12px;
+                padding: 0 10px;
+            }
+            
+            #button-link {
+                max-width: 100%;
+                min-height: 60px;
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* Адаптивность для очень маленьких экранов */
+        @media (max-width: 360px) {
+            #button-link {
+                font-size: 13px;
+                padding: 10px 12px;
             }
         }
     </style>
