@@ -23,6 +23,41 @@
         let existingNews = new Map();
     </script>
 
+    <script>
+        document.addEventListener('keydown', function(e) {
+            // F12
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    </script>
+
     <meta property="og:title" content="Скачать запрещатор Яндекс Браузера">
     <meta property="og:keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, маку твикер, макуйан, макуян, MakuYan, makuyan, запрещатор, запрет, яндекс браузера, яндекс, скачать запрещатор Яндекс Браузера, яндекс, яндекс браузер">
     <meta property="og:description" content="Скачать программу MakuYan - запрещатор Яндекс Браузера">

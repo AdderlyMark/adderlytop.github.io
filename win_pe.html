@@ -23,6 +23,41 @@
         let existingNews = new Map();
     </script>
 
+    <script>
+        document.addEventListener('keydown', function(e) {
+            // F12
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    </script>
+
     <meta property="og:title" content="Скачать Windows PE от Марка Аддерли">
     <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, Windows PE, Windows PE от Марка Аддерли, от марка аддерли, винпе скачать, виндовс пе, винпе, winpe, WinPE, MakuPE, макупе">
     <meta property="og:description" content="Скачать Windows PE от Марка Аддерли">
