@@ -124,21 +124,20 @@
 
 <h1 style="padding-top: 0px;">Скачать MakuOS 10 с Windows Defender</h1>
 <div class="buttons">
-  <a href="#" onclick="event.preventDefault(); openPopup('https://www.mediafire.com/file/rtd4fjqk3gy2e76/MakuOS+10+Pro+22H2.iso/file')"><img src="icons/mediafire.png" id="button-img">Скачать с MediaFire</a>
-  <a href="#" onclick="event.preventDefault(); openPopup('https://pixeldrain.com/u/Etnqpk1D')"><img src="icons/pixeldrain.png" id="button-img">Скачать с PixelDrain</a>
+    <a href="#" onclick="event.preventDefault(); openPopup('https://www.mediafire.com/file/rtd4fjqk3gy2e76/MakuOS+10+Pro+22H2.iso/file')"><img src="icons/mediafire.png" id="button-img">Скачать с MediaFire</a>
+    <a href="#" onclick="event.preventDefault(); openPopup('https://pixeldrain.com/u/Etnqpk1D')"><img src="icons/pixeldrain.png" id="button-img">Скачать с PixelDrain</a>
     <a href="#" onclick="event.preventDefault(); openPopup('https://mega.nz/file/3A02VYob#dR0kYrik5JRyGO8SMi7Rs_cjg6m8yLnUz_DZ3dsXdMQ')"><img src="icons/mega.png" id="button-img">Скачать с Mega</a>
 </div>
 
 <h1 style="padding-top: 0px;">Скачать MakuOS 10 без Windows Defender</h1>
 <div class="buttons">
-  <a href="#" onclick="event.preventDefault(); openPopup('https://www.mediafire.com/file/mt5k35b5fecn7ea/MakuOS+10+Pro+22H2+Defenderless.iso/file')"><img src="icons/mediafire.png" id="button-img">Скачать с MediaFire</a>
-  <a href="#" onclick="event.preventDefault(); openPopup('https://pixeldrain.com/u/SqWMLeZv')"><img src="icons/pixeldrain.png" id="button-img">Скачать с PixelDrain</a>
+    <a href="#" onclick="event.preventDefault(); openPopup('https://www.mediafire.com/file/mt5k35b5fecn7ea/MakuOS+10+Pro+22H2+Defenderless.iso/file')"><img src="icons/mediafire.png" id="button-img">Скачать с MediaFire</a>
+    <a href="#" onclick="event.preventDefault(); openPopup('https://pixeldrain.com/u/SqWMLeZv')"><img src="icons/pixeldrain.png" id="button-img">Скачать с PixelDrain</a>
     <a href="#" onclick="event.preventDefault(); openPopup('https://mega.nz/file/a4QDQKTS#kQV3YBY2zzvsDmoQgnowswD7pO2YLKJi1EPBmUkRziY')"><img src="icons/mega.png" id="button-img">Скачать с Mega</a>
 </div>
 </div>
 <br>
 </div>
-
 
 </main>
 <footer>
@@ -164,26 +163,31 @@
 
   <div style="margin:15px 0;">
     <a href="https://youtu.be/nBvSLOUS03Y?si=s9nTSFTtqLg8XjFe" target="_blank" 
-       style="display:inline-block; width:375px; background:#ff0000; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+       style="display:inline-block; width:375px; background:#4CAF50; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
        Как переустановить Windows без флешки?
     </a><br>
     <a href="https://youtu.be/ckCrrp2WuMc?si=XvxUVWSznJrxU_SY" target="_blank" 
-       style="display:inline-block; width:375px; background:#ff0000; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+       style="display:inline-block; width:375px; background:#4CAF50; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
        Как установить Windows правильно?
     </a><br>
         <a href="https://adderly.top/faq" target="_blank" 
-       style="display:inline-block; width:375px; background:#ff0000; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+       style="display:inline-block; width:375px; background:#4CAF50; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
        Часто задаваемые вопросы
     </a>
   </div>
 
-  <label style="display:block; margin:15px 0; font-size:14px; text-align:left;">
-    <input type="checkbox" id="confirm-check">  
-    Я ознакомился с роликами - знаю как переустановить Windows, имею драйвера, и готов к загрузке образа.
+<label style="display:block; margin:15px 0; font-size:14px; text-align:left; cursor: pointer;">
+    <input type="checkbox" id="confirm-check">  
+    Я ознакомился с роликами - знаю как переустанавливать Windows, имею драйвера, и готов к загрузке образа.
   </label>
+  
+  <div id="warning-msg" style="display:none; color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 5px; font-size: 13px; line-height: 1.4; margin-bottom: 15px; border: 1px solid #ffcdd2; text-align: left;">
+    Убедитесь, что вы точно знаете как переустанавливать систему. Вам никто не будет помогать, если вы не посмотрите туториалы, в которых всё уже достаточно подробно описано.
+  </div>
+
   <div style="margin-top:20px;">
-    <button onclick="proceedDownload()" style="background:#4CAF50; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-right:10px;">Продолжить</button>
-    <button onclick="closePopup()" style="background:#ccc; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Отмена</button>
+    <button id="continue-btn" onclick="proceedDownload()" disabled style="background:#ff0000; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:not-allowed; margin-right:10px; opacity: 0.5; transition: 0.3s;">Продолжить</button>
+    <button onclick="closePopup()" style="background:#4CAF50; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Отмена</button>
   </div>
 </div>
 <script src="burger.js"></script>
@@ -210,9 +214,25 @@
     });
 
     let downloadLink = null;
+    let timerInterval = null;
 
 function openPopup(link) {
   downloadLink = link;
+  
+  const checkbox = document.getElementById("confirm-check");
+  const btn = document.getElementById("continue-btn");
+  const warning = document.getElementById("warning-msg");
+  
+  checkbox.checked = false;
+  warning.style.display = "none";
+  
+  btn.disabled = true;
+  btn.style.opacity = "0.5";
+  btn.style.cursor = "not-allowed";
+  btn.innerText = "Продолжить";
+  
+  clearInterval(timerInterval);
+
   document.getElementById("overlay").style.display = "block";
   document.getElementById("confirm-popup").style.display = "block";
 }
@@ -220,15 +240,47 @@ function openPopup(link) {
 function closePopup() {
   document.getElementById("overlay").style.display = "none";
   document.getElementById("confirm-popup").style.display = "none";
+  clearInterval(timerInterval);
   downloadLink = null;
 }
 
+document.getElementById("confirm-check").addEventListener('change', function() {
+    const btn = document.getElementById("continue-btn");
+    const warning = document.getElementById("warning-msg");
+    
+    if (this.checked) {
+        warning.style.display = "block";
+        let secondsLeft = 15;
+        
+        btn.innerText = `Ждите ${secondsLeft} сек...`;
+        
+        timerInterval = setInterval(() => {
+            secondsLeft--;
+            if (secondsLeft > 0) {
+                btn.innerText = `Ждите ${secondsLeft} сек...`;
+            } else {
+                clearInterval(timerInterval);
+                btn.disabled = false;
+                btn.style.opacity = "1";
+                btn.style.cursor = "pointer";
+                btn.innerText = "Продолжить";
+            }
+        }, 1000);
+        
+    } else {
+        clearInterval(timerInterval);
+        warning.style.display = "none";
+        btn.disabled = true;
+        btn.style.opacity = "0.5";
+        btn.style.cursor = "not-allowed";
+        btn.innerText = "Продолжить";
+    }
+});
+
 function proceedDownload() {
-  if (document.getElementById("confirm-check").checked) {
+  if (downloadLink) {
     window.open(downloadLink, "_blank");
     closePopup();
-  } else {
-    alert("Посмотрите внимательно ролики, если вы не знаете как переустанавливать Windows. Если посмотреть и прочитать все советы - нет надобности лишний раз обращаться за помощью в Telegram.");
   }
 }
 </script>
