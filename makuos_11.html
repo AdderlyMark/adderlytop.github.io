@@ -163,16 +163,13 @@
   </p>
 
   <div style="margin:15px 0;">
-    <a href="https://youtu.be/nBvSLOUS03Y?si=s9nTSFTtqLg8XjFe" target="_blank" 
-       style="display:inline-block; width:375px; background:#4CAF50; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+    <a href="https://youtu.be/nBvSLOUS03Y?si=s9nTSFTtqLg8XjFe" target="_blank" id="confirmLinks">
        Как переустановить Windows без флешки?
     </a><br>
-    <a href="https://youtu.be/ckCrrp2WuMc?si=XvxUVWSznJrxU_SY" target="_blank" 
-       style="display:inline-block; width:375px; background:#4CAF50; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+    <a href="https://youtu.be/ckCrrp2WuMc?si=XvxUVWSznJrxU_SY" target="_blank" id="confirmLinks">
        Как установить Windows правильно?
     </a><br>
-        <a href="https://adderly.top/faq" target="_blank" 
-       style="display:inline-block; width:375px; background:#4CAF50; color:#fff; text-decoration:none; padding:10px 15px; border-radius:8px; margin:5px; font-weight:bold;">
+        <a href="https://adderly.top/faq" target="_blank" id="confirmLinks">
        Часто задаваемые вопросы
     </a>
   </div>
@@ -186,33 +183,39 @@
     Убедитесь, что вы точно знаете как переустанавливать систему. Вам никто не будет помогать, если вы не посмотрите туториалы, в которых всё уже достаточно подробно описано.
   </div>
     
-  <div style="margin-top:20px;">
+  <div style="margin-top:20px;" class="popupButtons">
     <button id="continue-btn" onclick="proceedDownload()" disabled style="background:#ff0000; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:not-allowed; margin-right:10px; opacity: 0.5; transition: 0.3s;">Продолжить</button>
     <button onclick="closePopup()" style="background:#4CAF50; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Отмена</button>
   </div>
 </div>
 <script src="burger.js"></script>
 <script>
-    document.querySelectorAll('.accordion').forEach((accordion, index) => {
-        if (index === 0) {
-            const panel = accordion.nextElementSibling;
-            accordion.classList.add('active');
-            panel.classList.add('open');
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
+document.querySelectorAll('.accordion').forEach((accordion, index) => {
+    if (index === 0) {
+        const panel = accordion.nextElementSibling;
+        accordion.classList.add('active');
+        panel.classList.add('open');
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+    
+    accordion.addEventListener('click', function() {
+        const panel = this.nextElementSibling;
         
-        accordion.addEventListener('click', function() {
-            const panel = this.nextElementSibling;
-            panel.classList.toggle('open');
-            this.classList.toggle('active');
-            
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
+        this.classList.toggle('active');
+        panel.classList.toggle('open');
+        
+        if (panel.classList.contains('open')) {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } else {
+            panel.style.maxHeight = null;
+        }
     });
+});
+window.addEventListener('resize', () => {
+    document.querySelectorAll('.panel.open').forEach(panel => {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    });
+});
 
 let downloadLink = null;
 let timerInterval = null;
@@ -285,5 +288,6 @@ function proceedDownload() {
   }
 }
 </script>
+<script src="imageLighter.js"></script>
 </body>
 </html>

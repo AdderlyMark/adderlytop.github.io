@@ -72,7 +72,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.4s ease;
+    transition: background-color 0.1s ease,border-radius 0.1s ease;
     border-radius: 10px;
     justify-content: center;
     position: relative;
@@ -86,16 +86,18 @@ p {
     right: 20px;
     position: absolute;
 }
-
+.accordion.active{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
 .accordion.active::after {
     content: "\2212";
     color: white;
 }
 
 .panel {
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     background-color: #0c0c30;
-    padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -103,9 +105,13 @@ p {
     width: 100%;
     margin: 0 auto;
 }
+.panel div {
+    height: auto;
+    overflow: visible;
+}
 
 .panel.open {
-    max-height: 500px;
+    max-height: auto;
     opacity: 1;
 }
 
@@ -139,14 +145,8 @@ p {
     padding: 0 20px;
 }
 
-.buttons a:hover {
-    box-shadow:
-        0 0 0 4px #3c82f8;
-}
-
-.buttons a:last-child:nth-child(odd) {
-    grid-column: 1 / 3;
-}
+.buttons a:hover {box-shadow:0 0 0 4px #3c82f8;}
+.buttons a:last-child:nth-child(odd) {grid-column: 1 / 3;}
 
 #overlay {
   display: none;
@@ -211,28 +211,14 @@ p {
   color: #ccc;
 }
 
-.popup-links {
-  margin: 20px 0;
+#confirmLinks{
+  display:inline-block; width:80%; background:#ff0000; 
+  color:#fff; text-decoration:none; padding:10px 15px; 
+  border-radius:8px; margin:5px; font-weight:bold;
+  transition: 0.1s linear;
+  &:hover{box-shadow:0 0 0 4px #3c82f8;}
 }
-
-.popup-links a {
-  display: inline-block;
-  width: 100%;
-  max-width: 400px;
-  background: #ff0000;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 15px;
-  border-radius: 10px;
-  margin: 8px 0;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-
-.popup-links a:hover {
-  background: #cc0000;
-}
-
+.popupButtons button{transition: 0.1s linear;&:hover{box-shadow:0 0 0 4px #3c82f8;}}
 .checkbox-container {
   display: flex;
   align-items: flex-start;
