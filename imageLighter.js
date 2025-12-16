@@ -34,7 +34,7 @@ function openImage(src) {
   img.src = src;
   overlay.style.display = 'flex';
   document.body.style.overflow = 'hidden';
-  
+
   setTimeout(() => {
     overlay.style.background = 'rgba(0, 0, 0, 0.9)';
     overlay.style.backdropFilter = 'blur(10px)';
@@ -48,36 +48,30 @@ function closeImage() {
   overlay.style.backdropFilter = 'blur(0px)';
   img.style.transform = 'scale(0.8)';
   img.style.opacity = '0';
-  
+
   setTimeout(() => {
     overlay.style.display = 'none';
     document.body.style.overflow = '';
   }, 300);
 }
-
-overlay.addEventListener('click', (e) => {
-  if (e.target === overlay) {
-    closeImage();
-  }
-});
-
-img.addEventListener('click', (e) => {
-  e.stopPropagation();
-});
+overlay.addEventListener('click', closeImage);
 
 document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('img[src$=".png"], img[src$=".PNG"], img[src$=".jpg"], img[src$=".JPG"], img[src$=".jpeg"], img[src$=".JPEG"]');
-  
+  const images = document.querySelectorAll(
+    'img[src$=".png"], img[src$=".PNG"], img[src$=".jpg"], img[src$=".JPG"], img[src$=".jpeg"], img[src$=".JPEG"]'
+  );
+
   images.forEach(image => {
-    if (image.classList.contains('site-icon') || 
-        image.classList.contains('social-icon') || 
-        image.id === 'button-img') {
+    if (
+      image.classList.contains('site-icon') ||
+      image.classList.contains('social-icon') ||
+      image.id === 'button-img'
+    ) {
       return;
     }
-    
+
     image.style.cursor = 'pointer';
-    image.addEventListener('click', (e) => {
-      e.stopPropagation();
+    image.addEventListener('click', () => {
       openImage(image.src);
     });
   });
@@ -88,16 +82,21 @@ const observer = new MutationObserver((mutations) => {
     mutation.addedNodes.forEach((node) => {
       if (node.tagName === 'IMG') {
         const src = node.src.toLowerCase();
-        if (src.endsWith('.png') || src.endsWith('.jpg') || src.endsWith('.jpeg')) {
-          if (node.classList.contains('site-icon') || 
-              node.classList.contains('social-icon') || 
-              node.id === 'button-img') {
+        if (
+          src.endsWith('.png') ||
+          src.endsWith('.jpg') ||
+          src.endsWith('.jpeg')
+        ) {
+          if (
+            node.classList.contains('site-icon') ||
+            node.classList.contains('social-icon') ||
+            node.id === 'button-img'
+          ) {
             return;
           }
-          
+
           node.style.cursor = 'pointer';
-          node.addEventListener('click', (e) => {
-            e.stopPropagation();
+          node.addEventListener('click', () => {
             openImage(node.src);
           });
         }
