@@ -1,187 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adderly.Top - Поддержать</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-    crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-68MY39SKZ9');
-    </script>
-    <meta property="og:image" content="https://adderly.top/images/favicon.png">
-    <link rel="icon" href="images/favicon.png">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="base.css">
-
-    <script>
-        const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
-        let existingNews = new Map();
-    </script>
-
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adderly.Top - Поддержать</title>
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
             }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
+            gtag("js", new Date());
+            gtag("config", "G-68MY39SKZ9");
+        </script>
+        <meta
+            property="og:image"
+            content="https://adderly.top/images/favicon.png"
+        />
+        <link rel="icon" href="images/favicon.png" />
+        <link
+            rel="shortcut icon"
+            href="images/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="base.css" />
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
+        <script>
+            const toggleDisplay = (el, condition, display) =>
+                (el.style.display = condition ? display : "none");
+            let existingNews = new Map();
+        </script>
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
-
-    <meta property="og:title" content="Поддержать Марка Аддерли различными способами">
-    <meta property="og:keywords" content="adderly, adderlyfun, аддерли топ, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, поддержать марка аддерли, задонатить, поддержать, марку аддерли">
-    <meta name="keywords" content="adderly, adderlyfun, аддерли топ, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, поддержать марка аддерли, задонатить, поддержать, марку аддерли">
-    <meta property="og:description" content="Поддержать Марка Аддерли различными способами">
-    <meta property="og:image" content="images/favicon.png">
-    <style>
-        main{
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .box{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 500px;
-        }
-        #button-link{
-            width: 100%;
-            max-width: 400px;
-            min-height: 50px;
-            padding: 15px 20px;
-            background-color: #191919;
-            text-decoration: none;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            transition: 0.1s linear;
-            text-align: center;
-            word-wrap: break-word;
-        }
-        #button-link:hover{
-            box-shadow: 0 0 0 4px #3c82f8;
-        }
-    
-        @media (max-width: 768px) {
-            #button-link {
-                max-width: 100%;
-                min-height: 55px;
-                font-size: 16px;
-            }
-        }
-    
-        @media (max-width: 480px) {
+        <meta
+            property="og:title"
+            content="Поддержать Марка Аддерли различными способами"
+        />
+        <meta
+            property="og:keywords"
+            content="adderly, adderlyfun, аддерли топ, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, поддержать марка аддерли, задонатить, поддержать, марку аддерли"
+        />
+        <meta
+            name="keywords"
+            content="adderly, adderlyfun, аддерли топ, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, поддержать марка аддерли, задонатить, поддержать, марку аддерли"
+        />
+        <meta
+            property="og:description"
+            content="Поддержать Марка Аддерли различными способами"
+        />
+        <meta property="og:image" content="images/favicon.png" />
+        <style>
             main {
-                padding: 15px 10px;
-                gap: 15px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
             }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            p {
-                font-size: 16px;
-            }
-            
             .box {
-                gap: 12px;
-                padding: 0 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 500px;
             }
-            
             #button-link {
-                max-width: 100%;
-                min-height: 60px;
-                font-size: 14px;
-                padding: 12px 15px;
+                width: 100%;
+                max-width: 400px;
+                min-height: 50px;
+                padding: 15px 20px;
+                background-color: #191919;
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                transition: 0.1s linear;
+                text-align: center;
+                word-wrap: break-word;
             }
-        }
-    
-        @media (max-width: 360px) {
-            #button-link {
-                font-size: 13px;
-                padding: 10px 12px;
+            #button-link:hover {
+                box-shadow: 0 0 0 4px #3c82f8;
             }
-        }
-    </style>
-</head>
 
+            @media (max-width: 768px) {
+                #button-link {
+                    max-width: 100%;
+                    min-height: 55px;
+                    font-size: 16px;
+                }
+            }
 
-<body>
-<header>
-    <a href="index" class="logo">
-        <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
-    </a>
-        <nav>
-            <ul>
-                <li><a href="builds">Сборки</a></li>
-                <li><a href="makutweaker">MakuTweaker</a></li>
-                <li><a href="support">Поддержать</a></li>
-            </ul>
-        </nav>
-        <img src="icons/burger.svg" alt="Меню" id="burger">
-</header>
-<main>
-    <h1>Поддержать Марка Аддерли</h1>
-    <p>Ты можешь поддержать меня различными способами! :)</p>
-    <div class="box">
-     <a href="https://boosty.to/adderly" id="button-link">Купить спонсорскую подписку на Boosty</a>
-     <a href="https://boosty.to/adderly/single-payment/donation/660832/target?share=target_link" id="button-link">Одноразовый донат на Boosty</a>
-     <a href="https://t.me/adderly324/3488" id="button-link">Поддержать криптовалютой</a>
-    </div>
-</main>
-<footer>
-        <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
-        </a>
-        <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
-        </a>
-        <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
-        </a>
-        <p id="trademark">© 2025 Adderly.Top // Марк Аддерли</p>
-    </footer>
-<script src="burger.js"></script>
-</body>
+            @media (max-width: 480px) {
+                main {
+                    padding: 15px 10px;
+                    gap: 15px;
+                }
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                .box {
+                    gap: 12px;
+                    padding: 0 10px;
+                }
+
+                #button-link {
+                    max-width: 100%;
+                    min-height: 60px;
+                    font-size: 14px;
+                    padding: 12px 15px;
+                }
+            }
+
+            @media (max-width: 360px) {
+                #button-link {
+                    font-size: 13px;
+                    padding: 10px 12px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="index" class="logo">
+                <img
+                    src="images/favicon.png"
+                    alt="MakuT"
+                    class="site-icon"
+                />Adderly.Top
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="builds">Сборки</a></li>
+                    <li><a href="makutweaker">MakuTweaker</a></li>
+                    <li><a href="support">Поддержать</a></li>
+                </ul>
+            </nav>
+            <img src="icons/burger.svg" alt="Меню" id="burger" />
+        </header>
+        <main>
+            <h1>Поддержать Марка Аддерли</h1>
+            <p>Ты можешь поддержать меня различными способами! :)</p>
+            <div class="box">
+                <a href="https://boosty.to/adderly" id="button-link"
+                    >Купить спонсорскую подписку на Boosty</a
+                >
+                <a
+                    href="https://boosty.to/adderly/single-payment/donation/660832/target?share=target_link"
+                    id="button-link"
+                    >Одноразовый донат на Boosty</a
+                >
+                <a href="https://t.me/adderly324/3488" id="button-link"
+                    >Поддержать криптовалютой</a
+                >
+            </div>
+        </main>
+        <footer>
+            <a
+                href="https://t.me/adderly324"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/tg.png"
+                    alt="Telegram Icon"
+                    class="social-icon"
+                />
+            </a>
+            <a
+                href="https://youtube.com/@MakuAdarii"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/yt.png"
+                    alt="YouTube Icon"
+                    class="social-icon"
+                />
+            </a>
+            <a
+                href="https://www.boosty.to/adderly"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/boosty.png"
+                    alt="Boosty Icon"
+                    class="social-icon"
+                />
+            </a>
+            <p id="trademark">© 2025 Adderly.Top // Марк Аддерли</p>
+        </footer>
+        <script src="burger.js"></script>
+    </body>
 </html>

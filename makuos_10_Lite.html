@@ -1,350 +1,546 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adderly.Top - MakuOS 10 Lite</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-    crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-68MY39SKZ9');
-    </script>
-    <meta property="og:image" content="https://adderly.top/images/favicon.png">
-    <link rel="icon" href="images/favicon.png">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="formakuos.css">
-
-    <script>
-        const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
-        let existingNews = new Map();
-    </script>
-
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adderly.Top - MakuOS 10 Lite</title>
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
             }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
+            gtag("js", new Date());
+            gtag("config", "G-68MY39SKZ9");
+        </script>
+        <meta
+            property="og:image"
+            content="https://adderly.top/images/favicon.png"
+        />
+        <link rel="icon" href="images/favicon.png" />
+        <link
+            rel="shortcut icon"
+            href="images/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="base.css" />
+        <link rel="stylesheet" href="formakuos.css" />
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
+        <script>
+            const toggleDisplay = (el, condition, display) =>
+                (el.style.display = condition ? display : "none");
+            let existingNews = new Map();
+        </script>
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
+        <meta property="og:title" content="MakuOS 10 1809 Lite" />
+        <meta
+            property="og:keywords"
+            content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 10 1809, макуос, makuos, windows 10 1809 Lite, makuos 10 lite"
+        />
+        <meta
+            property="og:description"
+            content="Скачать сборку MakuOS 10 1809 Lite на основе Windows 10 1809"
+        />
+        <meta
+            name="description"
+            content="Скачать сборку MakuOS 10 1809 Lite на основе Windows 10 1809"
+        />
+        <meta
+            name="keywords"
+            content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 10 1809, макуос, makuos, windows 10 1809 Lite, makuos 10 lite"
+        />
+        <meta property="og:image" content="images/favicon.png" />
+    </head>
+    <body>
+        <header>
+            <a href="index" class="logo">
+                <img
+                    src="images/favicon.png"
+                    alt="MakuT"
+                    class="site-icon"
+                />Adderly.Top
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="builds">Сборки</a></li>
+                    <li><a href="makutweaker">MakuTweaker</a></li>
+                    <li><a href="support">Поддержать</a></li>
+                </ul>
+            </nav>
+            <img src="icons/burger.svg" alt="Меню" id="burger" />
+        </header>
 
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
+        <main>
+            <h1>MakuOS 10 Lite 1809 V4 (Windows 10 1809, 17763.6414)</h1>
+            <p>
+                Windows Defender удалён // Все обновления по 2024 год // Pro
+                редакция // EN + RU + UA
+            </p>
 
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
+            <div class="accordion-container">
+                <button class="accordion">Изменения в сборке</button>
+                <div class="panel">
+                    <div style="text-align: left; padding-left: 20px">
+                        <br />
+                        <h1>Удалённые приложения:</h1>
+                        Удалён Microsoft Edge, Windows Defender, Xbox и
+                        Microsoft Store.<br />
+                        Clipchamp, Microsoft Новости, Фотографии, Погода,
+                        Диктофон, Сообщения, Компоненты управления голосом,<br />
+                        Календарь, Microsoft Solitaire Collection, Sticky Notes,
+                        3D Viewer, Print 3D, OneDrive,<br />
+                        Windows Hello, Windows Error Report, Feedback Hub, Get
+                        Help, Windows Sybsystem For Linux,<br />
+                        Remote Assistance, Your Phone, Skype, Windows Mixed
+                        Reality, Easy Transfer.<br /><br />
 
-    <meta property="og:title" content="MakuOS 10 1809 Lite">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 10 1809, макуос, makuos, windows 10 1809 Lite, makuos 10 lite">
-    <meta property="og:description" content="Скачать сборку MakuOS 10 1809 Lite на основе Windows 10 1809">
-    <meta name="description" content="Скачать сборку MakuOS 10 1809 Lite на основе Windows 10 1809">
-    <meta name="keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 10 1809, макуос, makuos, windows 10 1809 Lite, makuos 10 lite">
-    <meta property="og:image" content="images/favicon.png">
-</head>
-<body>
-<header>
-    <a href="index" class="logo">
-        <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
-    </a>
-        <nav>
-            <ul>
-                <li><a href="builds">Сборки</a></li>
-                <li><a href="makutweaker">MakuTweaker</a></li>
-                <li><a href="support">Поддержать</a></li>
-            </ul>
-        </nav>
-        <img src="icons/burger.svg" alt="Меню" id="burger">
-</header>
+                        <h1>Применённые настройки:</h1>
+                        <h3>Основное:</h3>
+                        Удалён центр обновления системы<br />
+                        Включены скрытые файлы, папки, и диски<br />
+                        Включены расширения файлов<br />
+                        Откреплены закрепления на панели задач<br />
+                        Отключён поиск Bing на панели задач<br />
+                        По умолчанию открывается "Этот ПК" вместо "Главная"<br />
+                        Отключён SmartScreen<br />
+                        Отключён быстрый запуск<br />
+                        Отключена гибернация<br />
+                        Отключено залипание клавиш<br />
+                        Отключена задержка контекстного меню<br />
+                        Отключена автоперезагрузка при синем экране смерти<br />
+                        Включена иконка "Этот Компьютер" на рабочем столе<br />
+                        Включён буфер обмена<br />
+                        Убрана подпись "Ярлык" у новых ярлыков<br />
+                        Отключено требование интернета в первоначальной
+                        настройке<br />
+                        Разрешен вход в локальный аккаунт<br />
+                        Автоматически введён 30 дневной ключ продукта<br />
+                        Включён старый просмотрщик фото<br />
+                        Отключён Content Delivery Manager, который отвечает за
+                        предустановку рекламы<br />
+                        Из панели задач убраны рекламные иконки<br />
+                        Отключён SmartScreen и Включён DirectPlay<br />
+                        Интегрированны NET Framework 2.0, 3.0, 3.5, и 4.7.2.<br /><br />
 
-<main>
-    <h1>MakuOS 10 Lite 1809 V4 (Windows 10 1809, 17763.6414)</h1>
-    <p>Windows Defender удалён // Все обновления по 2024 год // Pro редакция // EN + RU + UA</p>
+                        <h3>Телеметрия:</h3>
+                        Запрещена диагностика установленных приложений<br />
+                        Запрещена телеметрия за активацией системы<br />
+                        Запрещена публикация активности пользователя<br />
+                        Запрещён сбор информации о пользователе<br />
+                        Запрещён сбор информации об устройстве пользователя<br />
+                        Запрещён автоматической вход в аккаунт OneDrive<br />
+                        Запрещён сбор информации о производительности системы<br />
+                        Запрещено эксперементирование над системой
+                        пользователя<br />
+                        Отключена отправка сведений о сбоях приложений при их
+                        зависании<br />
+                        Отключена отправка результатов поиска пользователя<br />
+                        Отключена активация управления голосом<br />
+                        Отключена тихая установка рекламных приложений<br />
+                        Отключён сбор информации о голосе пользователя при
+                        использовании функций ввода голосом<br /><br />
 
-<div class="accordion-container">
-    <button class="accordion">Изменения в сборке</button>
-    <div class="panel">
-        <div style="text-align: left; padding-left: 20px;">
-           <br>
-        <h1>Удалённые приложения:</h1>
-                    Удалён Microsoft Edge, Windows Defender, Xbox и Microsoft Store.<br>
-                    Clipchamp, Microsoft Новости, Фотографии, Погода, Диктофон, Сообщения, Компоненты управления голосом,<br>
-                    Календарь, Microsoft Solitaire Collection, Sticky Notes, 3D Viewer, Print 3D, OneDrive,<br>
-                    Windows Hello, Windows Error Report, Feedback Hub, Get Help, Windows Sybsystem For Linux,<br>
-                    Remote Assistance, Your Phone, Skype, Windows Mixed Reality, Easy Transfer.<br><br>
-                    
-                    <h1>Применённые настройки:</h1>
-                    <h3>Основное:</h3>
-                    Удалён центр обновления системы<br>
-                    Включены скрытые файлы, папки, и диски<br>
-                    Включены расширения файлов<br>
-                    Откреплены закрепления на панели задач<br>
-                    Отключён поиск Bing на панели задач<br>
-                    По умолчанию открывается "Этот ПК" вместо "Главная"<br>
-                    Отключён SmartScreen<br>
-                    Отключён быстрый запуск<br>
-                    Отключена гибернация<br>
-                    Отключено залипание клавиш<br>
-                    Отключена задержка контекстного меню<br>
-                    Отключена автоперезагрузка при синем экране смерти<br>
-                    Включена иконка "Этот Компьютер" на рабочем столе<br>
-                    Включён буфер обмена<br>
-                    Убрана подпись "Ярлык" у новых ярлыков<br>
-                    Отключено требование интернета в первоначальной настройке<br>
-                    Разрешен вход в локальный аккаунт<br>
-                    Автоматически введён 30 дневной ключ продукта<br>
-                    Включён старый просмотрщик фото<br>
-                    Отключён Content Delivery Manager, который отвечает за предустановку рекламы<br>
-                    Из панели задач убраны рекламные иконки<br>
-                    Отключён SmartScreen и Включён DirectPlay<br>
-                    Интегрированны NET Framework 2.0, 3.0, 3.5, и 4.7.2.<br><br>
-            
-                    <h3>Телеметрия:</h3>
-                    Запрещена диагностика установленных приложений<br>
-                    Запрещена телеметрия за активацией системы<br>
-                    Запрещена публикация активности пользователя<br>
-                    Запрещён сбор информации о пользователе<br>
-                    Запрещён сбор информации об устройстве пользователя<br>
-                    Запрещён автоматической вход в аккаунт OneDrive<br>
-                    Запрещён сбор информации о производительности системы<br>
-                    Запрещено эксперементирование над системой пользователя<br>
-                    Отключена отправка сведений о сбоях приложений при их зависании<br>
-                    Отключена отправка результатов поиска пользователя<br>
-                    Отключена активация управления голосом<br>
-                    Отключена тихая установка рекламных приложений<br>
-                    Отключён сбор информации о голосе пользователя при использовании функций ввода голосом<br><br>
-            
-                    <h1>Прочие изменения:</h1>
-                    Интегрированны все обновления по конец октября 2024 года.<br>
-                    В сборке присутствует три языка: Английский, Русский, и Украинский.<br>
-                    Предустановлен MakuTweaker.<br>
-                    В сборке используется изменённое OOBE, в котором включён вход в локальную учётную запись, и скрыты какие либо страницы с рекламой.<br><br>
+                        <h1>Прочие изменения:</h1>
+                        Интегрированны все обновления по конец октября 2024
+                        года.<br />
+                        В сборке присутствует три языка: Английский, Русский, и
+                        Украинский.<br />
+                        Предустановлен MakuTweaker.<br />
+                        В сборке используется изменённое OOBE, в котором включён
+                        вход в локальную учётную запись, и скрыты какие либо
+                        страницы с рекламой.<br /><br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion">Как установить Windows?</button>
+                <div class="panel">
+                    <div style="text-align: left; padding-left: 20px">
+                        <br />
+                        Подробный и понятный туториал как установить Windows уже
+                        есть на моём канале -
+                        <a
+                            href="https://youtu.be/ckCrrp2WuMc"
+                            style="text-decoration: underline; color: yellow"
+                            >https://youtu.be/ckCrrp2WuMc</a
+                        ><br />
+                        <br />
+                        Если вы видите ошибку 0x7E, это значит, что вы запустили
+                        установщик системы который должен быть записан на
+                        флешку.<br />
+                        Обновление Windows с одной на другую это чреватое дело,
+                        и зачастую оно вызывает проблемы в дальнейшем.<br />
+                        Для того чтобы установить Windows должным образом,
+                        используйте Rufus. Ventoy в 1809 использовать не
+                        желательно.<br /><br />
+                        <h1>Rufus:</h1>
+                        Перейдите на сайт
+                        <a
+                            href="https://rufus.ie"
+                            style="text-decoration: underline; color: green"
+                            >rufus.ie</a
+                        >, и
+                        <a
+                            href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe"
+                            style="text-decoration: underline; color: yellow"
+                            >скачайте программу</a
+                        >.<br />
+                        Далее, в пункте "Устройство" выберите вашу флешку, на 8
+                        ГБ и выше.<br />
+                        В пункте "Метод загрузки", справа есть кнопка "Выбрать".
+                        Выберите ISO образ MakuOS. Далее, в "Схема раздела" вам
+                        нужно указать таблицу разделов вашего SSD. -
+                        <a
+                            href="https://lifehacker.ru/kak-uznat-gpt-ili-mbr/"
+                            style="text-decoration: underline; color: yellow"
+                            >Как узнать схему раздела?</a
+                        ><br />
+                        Зачастую, "Целевую систему" и "Файловую систему" можно
+                        не трогать. Никакие галочки не нажимайте, и при каких
+                        либо диалогах снимайте их.<br />
+                        Для начала записи на флешку, нажмите "СТАРТ", и
+                        согласитесь на форматирование.<br />
+                        Когда прогрессбар дойдёт до 100% и будет "Готов",
+                        закройте окно.<br />
+                        <br />
+
+                        <h2>
+                            Выбранный образ ISO содержит отозванный загрузчик
+                            UEFI...?
+                        </h2>
+                        В новых версиях Rufus эта ошибка вылезает абсолютно на
+                        всех образах Windows которые НЕ скачаны из сайта
+                        Microsoft.<br /><br />
+
+                        <h1>После записи образа на флешку</h1>
+                        После успешной записи на флешку, запомните размер вашего
+                        системного раздела С, и попрощайтесь со своей системой,
+                        предварительно сохранив важные файлы и данные, и
+                        загрузитесь с флешки.<br />
+                        Для этого, откройте меню Пуск, зажмите клавишу Shift, и
+                        перезагрузитесь.<br />
+                        Затем, выберите USB FDD, или что либо связанное с
+                        USB.<br />
+                        <br />Всё что вам осталось, это следовать инструкциям
+                        установщика Windows.<br />Будьте аккуратны с разделами -
+                        если вы хотите переустановить только систему, и
+                        сохранить файлы и данные на других разделах:<br />Удалите
+                        раздел С, вес которого вы запомнили. (К примеру, если
+                        ваш системный раздел весил 80 ГБ, удаляйте тот, что
+                        весит 80 ГБ.)<br />А так же микро разделы с весом на 100
+                        - 500 мегабайт. Затем, установите систему на незанятое
+                        пространство. Удачи! <br /><br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion">Контрольные суммы</button>
+                <div class="panel">
+                    <div style="text-align: left; padding-left: 20px">
+                        <br />
+                        <h1>CRC32: D685AA75</h1>
+                        <br />
+                        <h1>MD5: 77DE1CE598DD948C1A2858C4B20AF70D</h1>
+                        <br />
+                        <h1>SHA-1: 4A7AF5DC89F61EF6D09625D7E30E25368A07999A</h1>
+                        <br /><br />
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="padding-top: 20px">
+                Скачать сборку MakuOS 10 1809 Lite
+            </h1>
+            <div class="buttons">
+                <a
+                    href="#"
+                    onclick="event.preventDefault(); openPopup('https://drive.google.com/file/d/1BffklbcGBZ4u-u-X8l8kzArzguIA4AYi/view?usp=sharing')"
+                    ><img src="icons/googledrive.png" id="button-img" />Скачать
+                    с Google Диска</a
+                >
+                <a
+                    href="#"
+                    onclick="event.preventDefault(); openPopup('https://t.me/Maku_Library/19')"
+                    ><img src="icons/tg.png" id="button-img" />Скачать с
+                    Telegram</a
+                >
+                <a
+                    href="#"
+                    onclick="event.preventDefault(); openPopup('https://pixeldrain.com/u/KHVPVhyh')"
+                    ><img src="icons/pixeldrain.png" id="button-img" />Скачать с
+                    PixelDrain</a
+                >
+            </div>
+        </main>
+        <footer>
+            <a
+                href="https://t.me/adderly324"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/tg.png"
+                    alt="Telegram Icon"
+                    class="social-icon"
+                />
+            </a>
+            <a
+                href="https://youtube.com/@MakuAdarii"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/yt.png"
+                    alt="YouTube Icon"
+                    class="social-icon"
+                />
+            </a>
+            <a
+                href="https://www.boosty.to/adderly"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/boosty.png"
+                    alt="Boosty Icon"
+                    class="social-icon"
+                />
+            </a>
+            <p id="trademark">© 2025 Adderly.Top // Марк Аддерли</p>
+        </footer>
+        <div id="overlay"></div>
+        <div id="confirm-popup">
+            <h2 style="margin-top: 0; color: #222">Перед загрузкой MakuOS</h2>
+            <p
+                style="
+                    font-size: 15px;
+                    line-height: 1.5;
+                    margin: 15px 0;
+                    color: #222;
+                    text-align: start;
+                "
+            >
+                Чтобы не возникало лишних вопросов, убедитесь, что вы знаете,
+                как переустанавливать Windows, и заранее подготовьте драйверы
+                для интернета. Я снял два ролика на YouTube, которые помогут вам
+                установить Windows. Если вы столкнётесь с какими-либо ошибками
+                или проблемами, загляните в раздел «Часто задаваемые вопросы» на
+                сайте - он тоже обязательно вам поможет.
+                <br /><br />
+                Обратите внимание! Windows Lite - сборка максимально урезанная,
+                которая идеально подойдёт для слабых ПК... Либо, для тех, кого
+                волнуют лишние фоновые процессы и службы. Её не нужно ставить на
+                современный компьютер, это практически не даст прироста
+                производительности.<br /><br />
+                НА ЭТОЙ СБОРКЕ НЕ БУДЕТ РАБОТАТЬ VALORANT, FACEIT, И ОФИЦИАЛЬНЫЙ
+                ЛАУНЧЕР ROCKSTAR. <br /><br />
+                Обновления системы будут недоступны и нет гарантии что все
+                программы будут работать.
+            </p>
+
+            <div style="margin: 15px 0">
+                <a
+                    href="https://youtu.be/nBvSLOUS03Y?si=s9nTSFTtqLg8XjFe"
+                    target="_blank"
+                    id="confirmLinks"
+                >
+                    Как переустановить Windows без флешки? </a
+                ><br />
+                <a
+                    href="https://youtu.be/ckCrrp2WuMc?si=XvxUVWSznJrxU_SY"
+                    target="_blank"
+                    id="confirmLinks"
+                >
+                    Как установить Windows правильно? </a
+                ><br />
+                <a
+                    href="https://adderly.top/faq"
+                    target="_blank"
+                    id="confirmLinks"
+                >
+                    Часто задаваемые вопросы
+                </a>
+            </div>
+
+            <label
+                style="
+                    display: block;
+                    margin: 15px 0;
+                    font-size: 14px;
+                    text-align: left;
+                    cursor: pointer;
+                "
+            >
+                <input type="checkbox" id="confirm-check" />   Я ознакомился с
+                роликами - знаю как переустанавливать Windows, имею драйвера, и
+                готов к загрузке образа.
+            </label>
+
+            <div
+                id="warning-msg"
+                style="
+                    display: none;
+                    color: #d32f2f;
+                    background: #ffebee;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 13px;
+                    line-height: 1.4;
+                    margin-bottom: 15px;
+                    border: 1px solid #ffcdd2;
+                    text-align: left;
+                "
+            >
+                Убедитесь, что вы точно знаете как переустанавливать систему.
+                Вам никто не будет помогать, если вы не посмотрите туториалы, в
+                которых всё уже достаточно подробно описано.
+            </div>
+
+            <div style="margin-top: 20px" class="popupButtons">
+                <button
+                    id="continue-btn"
+                    onclick="proceedDownload()"
+                    disabled
+                    style="
+                        background: #ff0000;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                        cursor: not-allowed;
+                        margin-right: 10px;
+                        opacity: 0.5;
+                        transition: 0.3s;
+                    "
+                >
+                    Продолжить
+                </button>
+                <button
+                    onclick="closePopup()"
+                    style="
+                        background: #4caf50;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                        cursor: pointer;
+                    "
+                >
+                    Отмена
+                </button>
+            </div>
         </div>
-    </div>
-</div>
+        <script src="burger.js"></script>
+        <script>
+            document
+                .querySelectorAll(".accordion")
+                .forEach((accordion, index) => {
+                    if (index === 0) {
+                        const panel = accordion.nextElementSibling;
+                        accordion.classList.add("active");
+                        panel.classList.add("open");
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
 
-<div class="accordion-container">
-    <button class="accordion">Как установить Windows?</button>
-    <div class="panel">
-        <div style="text-align: left; padding-left: 20px;">
-           <br>
-        Подробный и понятный туториал как установить Windows уже есть на моём канале - <a href="https://youtu.be/ckCrrp2WuMc" style="text-decoration: underline; color: yellow;">https://youtu.be/ckCrrp2WuMc</a><br>
-                    <br>
-                    Если вы видите ошибку 0x7E, это значит, что вы запустили установщик системы который должен быть записан на флешку.<br>
-                    Обновление Windows с одной на другую это чреватое дело, и зачастую оно вызывает проблемы в дальнейшем.<br>
-                    Для того чтобы установить Windows должным образом, используйте Rufus. Ventoy в 1809 использовать не желательно.<br><br>
-                    <h1>Rufus:</h1>
-                    Перейдите на сайт <a href="https://rufus.ie" style="text-decoration: underline; color: green;">rufus.ie</a>, и <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" style="text-decoration: underline; color: yellow;">скачайте программу</a>.<br>
-                    Далее, в пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
-                    В пункте "Метод загрузки", справа есть кнопка "Выбрать". Выберите ISO образ MakuOS.
-                    Далее, в "Схема раздела" вам нужно указать таблицу разделов вашего SSD. - <a href="https://lifehacker.ru/kak-uznat-gpt-ili-mbr/" style="text-decoration: underline; color: yellow;">Как узнать схему раздела?</a><br>
-                    Зачастую, "Целевую систему" и "Файловую систему" можно не трогать. Никакие галочки не нажимайте, и при каких либо диалогах снимайте их.<br>
-                    Для начала записи на флешку, нажмите "СТАРТ", и согласитесь на форматирование.<br>
-                    Когда прогрессбар дойдёт до 100% и будет "Готов", закройте окно.<br>
-                    <br>
+                    accordion.addEventListener("click", function () {
+                        const panel = this.nextElementSibling;
+                        panel.classList.toggle("open");
+                        this.classList.toggle("active");
 
-                    <h2>Выбранный образ ISO содержит отозванный загрузчик UEFI...?</h2>
-                    В новых версиях Rufus эта ошибка вылезает абсолютно на всех образах Windows которые НЕ скачаны из сайта Microsoft.<br><br>
+                        if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                        } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                        }
+                    });
+                });
 
-                    <h1>После записи образа на флешку</h1>
-                    После успешной записи на флешку, запомните размер вашего системного раздела С, и попрощайтесь со своей системой, предварительно сохранив важные файлы и данные, и загрузитесь с флешки.<br>
-                    Для этого, откройте меню Пуск, зажмите клавишу Shift, и перезагрузитесь.<br>
-                    Затем, выберите USB FDD, или что либо связанное с USB.<br>
-                    <br>Всё что вам осталось, это следовать инструкциям установщика Windows.<br>Будьте аккуратны с разделами - если вы хотите переустановить только систему, и сохранить файлы и данные на других разделах:<br>Удалите раздел С, вес которого вы запомнили. (К примеру, если ваш системный раздел весил 80 ГБ, удаляйте тот, что весит 80 ГБ.)<br>А так же микро разделы с весом на 100 - 500 мегабайт. Затем, установите систему на незанятое пространство. Удачи!
-                    <br><br>
-        </div>
-    </div>
-</div>
+            let downloadLink = null;
+            let timerInterval = null;
 
-<div class="accordion-container">
-    <button class="accordion">Контрольные суммы</button>
-    <div class="panel">
-        <div style="text-align: left; padding-left: 20px;">
-            <br>
-            <h1>CRC32: D685AA75</h1><br>
-                    <h1>MD5: 77DE1CE598DD948C1A2858C4B20AF70D</h1><br>
-                    <h1>SHA-1: 4A7AF5DC89F61EF6D09625D7E30E25368A07999A</h1><br><br>
-        </div>
-    </div>
-</div>
+            function openPopup(link) {
+                downloadLink = link;
 
+                const checkbox = document.getElementById("confirm-check");
+                const btn = document.getElementById("continue-btn");
+                const warning = document.getElementById("warning-msg");
 
-<h1 style="padding-top: 20px;">Скачать сборку MakuOS 10 1809 Lite</h1>
-<div class="buttons">
-  <a href="#" onclick="event.preventDefault(); openPopup('https://drive.google.com/file/d/1BffklbcGBZ4u-u-X8l8kzArzguIA4AYi/view?usp=sharing')"><img src="icons/googledrive.png" id="button-img">Скачать с Google Диска</a>
-  <a href="#" onclick="event.preventDefault(); openPopup('https://t.me/Maku_Library/19')"><img src="icons/tg.png" id="button-img">Скачать с Telegram</a>
-  <a href="#" onclick="event.preventDefault(); openPopup('https://pixeldrain.com/u/KHVPVhyh')"><img src="icons/pixeldrain.png" id="button-img">Скачать с PixelDrain</a>
-</div>
+                checkbox.checked = false;
+                warning.style.display = "none";
 
-</main>
-<footer>
-        <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
-        </a>
-        <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
-        </a>
-        <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
-        </a>
-        <p id="trademark">© 2025 Adderly.Top // Марк Аддерли</p>
-    </footer>
-  <div id="overlay"></div>
-<div id="confirm-popup">
-  <h2 style="margin-top:0; color:#222;">Перед загрузкой MakuOS</h2>
-  <p style="font-size:15px; line-height:1.5; margin:15px 0;color: #222;text-align: start;">
-Чтобы не возникало лишних вопросов, убедитесь, что вы знаете, как переустанавливать Windows,
-и заранее подготовьте драйверы для интернета. Я снял два ролика на YouTube, которые помогут вам установить Windows.
-Если вы столкнётесь с какими-либо ошибками или проблемами, загляните в раздел «Часто задаваемые вопросы» на сайте - он тоже обязательно вам поможет.
-<br><br> Обратите внимание! Windows Lite - сборка максимально урезанная, которая идеально подойдёт для слабых ПК...
-Либо, для тех, кого волнуют лишние фоновые процессы и службы. Её не нужно ставить на современный компьютер, это практически не даст прироста производительности.<br><br>
-НА ЭТОЙ СБОРКЕ НЕ БУДЕТ РАБОТАТЬ VALORANT, FACEIT, И ОФИЦИАЛЬНЫЙ ЛАУНЧЕР ROCKSTAR. <br><br> Обновления системы будут недоступны и нет гарантии что все программы будут работать.
-  </p>
-
- <div style="margin:15px 0;">
-    <a href="https://youtu.be/nBvSLOUS03Y?si=s9nTSFTtqLg8XjFe" target="_blank" id="confirmLinks">
-       Как переустановить Windows без флешки?
-    </a><br>
-    <a href="https://youtu.be/ckCrrp2WuMc?si=XvxUVWSznJrxU_SY" target="_blank" id="confirmLinks">
-       Как установить Windows правильно?
-    </a><br>
-        <a href="https://adderly.top/faq" target="_blank" id="confirmLinks">
-       Часто задаваемые вопросы
-    </a>
-  </div>
-
-<label style="display:block; margin:15px 0; font-size:14px; text-align:left; cursor: pointer;">
-    <input type="checkbox" id="confirm-check">  
-    Я ознакомился с роликами - знаю как переустанавливать Windows, имею драйвера, и готов к загрузке образа.
-  </label>
-  
-  <div id="warning-msg" style="display:none; color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 5px; font-size: 13px; line-height: 1.4; margin-bottom: 15px; border: 1px solid #ffcdd2; text-align: left;">
-    Убедитесь, что вы точно знаете как переустанавливать систему. Вам никто не будет помогать, если вы не посмотрите туториалы, в которых всё уже достаточно подробно описано.
-  </div>
-
-  <div style="margin-top:20px;" class="popupButtons">
-    <button id="continue-btn" onclick="proceedDownload()" disabled style="background:#ff0000; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:not-allowed; margin-right:10px; opacity: 0.5; transition: 0.3s;">Продолжить</button>
-    <button onclick="closePopup()" style="background:#4CAF50; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Отмена</button>
-  </div>
-</div>
-<script src="burger.js"></script>
-<script>
-    document.querySelectorAll('.accordion').forEach((accordion, index) => {
-        if (index === 0) {
-            const panel = accordion.nextElementSibling;
-            accordion.classList.add('active');
-            panel.classList.add('open');
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-        
-        accordion.addEventListener('click', function() {
-            const panel = this.nextElementSibling;
-            panel.classList.toggle('open');
-            this.classList.toggle('active');
-            
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    });
-
-    let downloadLink = null;
-    let timerInterval = null;
-
-function openPopup(link) {
-  downloadLink = link;
-  
-  const checkbox = document.getElementById("confirm-check");
-  const btn = document.getElementById("continue-btn");
-  const warning = document.getElementById("warning-msg");
-  
-  checkbox.checked = false;
-  warning.style.display = "none";
-  
-  btn.disabled = true;
-  btn.style.opacity = "0.5";
-  btn.style.cursor = "not-allowed";
-  btn.innerText = "Продолжить";
-  
-  clearInterval(timerInterval);
-
-  document.getElementById("overlay").style.display = "block";
-  document.getElementById("confirm-popup").style.display = "block";
-}
-
-function closePopup() {
-  document.getElementById("overlay").style.display = "none";
-  document.getElementById("confirm-popup").style.display = "none";
-  clearInterval(timerInterval);
-  downloadLink = null;
-}
-
-document.getElementById("confirm-check").addEventListener('change', function() {
-    const btn = document.getElementById("continue-btn");
-    const warning = document.getElementById("warning-msg");
-    
-    if (this.checked) {
-        warning.style.display = "block";
-        let secondsLeft = 15;
-        
-        btn.innerText = `Ждите ${secondsLeft} сек...`;
-        
-        timerInterval = setInterval(() => {
-            secondsLeft--;
-            if (secondsLeft > 0) {
-                btn.innerText = `Ждите ${secondsLeft} сек...`;
-            } else {
-                clearInterval(timerInterval);
-                btn.disabled = false;
-                btn.style.opacity = "1";
-                btn.style.cursor = "pointer";
+                btn.disabled = true;
+                btn.style.opacity = "0.5";
+                btn.style.cursor = "not-allowed";
                 btn.innerText = "Продолжить";
-            }
-        }, 1000);
-        
-    } else {
-        clearInterval(timerInterval);
-        warning.style.display = "none";
-        btn.disabled = true;
-        btn.style.opacity = "0.5";
-        btn.style.cursor = "not-allowed";
-        btn.innerText = "Продолжить";
-    }
-});
 
-function proceedDownload() {
-  if (downloadLink) {
-    window.open(downloadLink, "_blank");
-    closePopup();
-  }
-}
-</script>
-<script src="imageLighter.js"></script>
-</body>
+                clearInterval(timerInterval);
+
+                document.getElementById("overlay").style.display = "block";
+                document.getElementById("confirm-popup").style.display =
+                    "block";
+            }
+
+            function closePopup() {
+                document.getElementById("overlay").style.display = "none";
+                document.getElementById("confirm-popup").style.display = "none";
+                clearInterval(timerInterval);
+                downloadLink = null;
+            }
+
+            document
+                .getElementById("confirm-check")
+                .addEventListener("change", function () {
+                    const btn = document.getElementById("continue-btn");
+                    const warning = document.getElementById("warning-msg");
+
+                    if (this.checked) {
+                        warning.style.display = "block";
+                        let secondsLeft = 15;
+
+                        btn.innerText = `Ждите ${secondsLeft} сек...`;
+
+                        timerInterval = setInterval(() => {
+                            secondsLeft--;
+                            if (secondsLeft > 0) {
+                                btn.innerText = `Ждите ${secondsLeft} сек...`;
+                            } else {
+                                clearInterval(timerInterval);
+                                btn.disabled = false;
+                                btn.style.opacity = "1";
+                                btn.style.cursor = "pointer";
+                                btn.innerText = "Продолжить";
+                            }
+                        }, 1000);
+                    } else {
+                        clearInterval(timerInterval);
+                        warning.style.display = "none";
+                        btn.disabled = true;
+                        btn.style.opacity = "0.5";
+                        btn.style.cursor = "not-allowed";
+                        btn.innerText = "Продолжить";
+                    }
+                });
+
+            function proceedDownload() {
+                if (downloadLink) {
+                    window.open(downloadLink, "_blank");
+                    closePopup();
+                }
+            }
+        </script>
+        <script src="imageLighter.js"></script>
+    </body>
 </html>

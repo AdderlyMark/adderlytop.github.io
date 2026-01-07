@@ -1,168 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adderly.Top - Официальные Windows</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-    crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-68MY39SKZ9');
-    </script>
-    <meta property="og:image" content="https://adderly.top/images/favicon.png">
-    <link rel="icon" href="images/favicon.png">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="base.css">
-
-    <script>
-        const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
-        let existingNews = new Map();
-    </script>
-
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adderly.Top - Официальные Windows</title>
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
             }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
+            gtag("js", new Date());
+            gtag("config", "G-68MY39SKZ9");
+        </script>
+        <meta
+            property="og:image"
+            content="https://adderly.top/images/favicon.png"
+        />
+        <link rel="icon" href="images/favicon.png" />
+        <link
+            rel="shortcut icon"
+            href="images/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="base.css" />
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
+        <script>
+            const toggleDisplay = (el, condition, display) =>
+                (el.style.display = condition ? display : "none");
+            let existingNews = new Map();
+        </script>
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
-
-    <meta property="og:title" content="Скачать официальные ISO образы Windows от Марка Аддерли">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 11 22h2, макуос, makuos, windows 11 22h2 Lite, makuos 11 lite, windows 11 download, windows 11, windows 10 download, windows 10, скачать виндовс, download windows, скачать windows 10, скачать windows 11, официальную, официальный">
-    <meta property="og:description" content="Скачать официальные ISO образы Windows от Марка Аддерли">
-    <meta name="description" content="Здесь вы можете скачать официальные ISO образы Windows.">
-    <meta name="keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 11 22h2, макуос, makuos, windows 11 22h2 Lite, makuos 11 lite, windows 11 download, windows 11, windows 10 download, windows 10, скачать виндовс, download windows, скачать windows 10, скачать windows 11, официальную, официальный">
-    <meta property="og:image" content="images/favicon.png">
-    <style>
-        main{
-            display: flex;justify-content: center;align-items: center;
-            text-align: center;gap: 10px;
-            flex-direction: column;
-        }
-        #linki{
-            text-decoration: none;color: #ffffff;
-            background-color: #191919;width: 400px;height: 50px;
-            display: flex;justify-content: center;align-items: center;
-            border-radius: 12px;
-            transition: 0.1s linear;
-            &:hover {
-            box-shadow:
-            0 0 0 4px #3c82f8;
-    }
-        }
-                @media (max-width: 768px) {
-            #linki {
-                max-width: 100%;
-                min-height: 55px;
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
+        <meta
+            property="og:title"
+            content="Скачать официальные ISO образы Windows от Марка Аддерли"
+        />
+        <meta
+            property="og:keywords"
+            content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 11 22h2, макуос, makuos, windows 11 22h2 Lite, makuos 11 lite, windows 11 download, windows 11, windows 10 download, windows 10, скачать виндовс, download windows, скачать windows 10, скачать windows 11, официальную, официальный"
+        />
+        <meta
+            property="og:description"
+            content="Скачать официальные ISO образы Windows от Марка Аддерли"
+        />
+        <meta
+            name="description"
+            content="Здесь вы можете скачать официальные ISO образы Windows."
+        />
+        <meta
+            name="keywords"
+            content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 11 22h2, макуос, makuos, windows 11 22h2 Lite, makuos 11 lite, windows 11 download, windows 11, windows 10 download, windows 10, скачать виндовс, download windows, скачать windows 10, скачать windows 11, официальную, официальный"
+        />
+        <meta property="og:image" content="images/favicon.png" />
+        <style>
             main {
-                padding: 15px 10px;
-                gap: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+                flex-direction: column;
             }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            p {
-                font-size: 16px;
-            }
-            
-            .box {
-                gap: 12px;
-                padding: 0 10px;
-            }
-            
             #linki {
-                max-width: 100%;
-                min-height: 60px;
-                font-size: 14px;
-                padding: 12px 15px;
+                text-decoration: none;
+                color: #ffffff;
+                background-color: #191919;
+                width: 400px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                transition: 0.1s linear;
+                &:hover {
+                    box-shadow: 0 0 0 4px #3c82f8;
+                }
             }
-        }
-        @media (max-width: 360px) {
-            #linki {
-                font-size: 13px;
-                padding: 10px 12px;
+            @media (max-width: 768px) {
+                #linki {
+                    max-width: 100%;
+                    min-height: 55px;
+                    font-size: 16px;
+                }
             }
-        }
-        #w11{margin-top: 30px;}
-    </style>
-</head>
 
+            @media (max-width: 480px) {
+                main {
+                    padding: 15px 10px;
+                    gap: 15px;
+                }
 
-<body>
-<header>
-    <a href="index" class="logo">
-        <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
-    </a>
-        <nav>
-            <ul>
-                <li><a href="builds">Сборки</a></li>
-                <li><a href="makutweaker">MakuTweaker</a></li>
-                <li><a href="support">Поддержать</a></li>
-            </ul>
-        </nav>
-        <img src="icons/burger.svg" alt="Меню" id="burger">
-</header>
+                h1 {
+                    font-size: 24px;
+                }
 
-<main>
-<h1>Скачать официальные ISO образы Windows от Microsoft</h1>
-<p>Вы можете загрузить официальные образы Windows напрямую с этой страницы и без обхода блокировок.<br>Все образы были выгружены из источников Microsoft и залиты на Google Диск,за исключением старых Windows 11 и Windows 10.<br>Так как они официально удалены,их нужно было собирать заново.</p>
-<h2 id="w11">Windows 11</h2>
-<a href="https://drive.google.com/file/d/1MpyXMlAZ7RMz5ESoBJfQMMl0bEsEoaoc/view?usp=sharing" id="linki">Скачать официальную Windows 11 24H2 (26100.1742) [RU - Все редакции]</a>
-<a href="https://drive.google.com/file/d/1cLONkFrpaPt0a9Kbwgaa3BaShp_wJTwW/view?usp=sharing" id="linki">Скачать официальную Windows 11 22H2 (22621.1702) [RU - Все редакции]</a>
-<h2>Windows 10</h2>
-<a href="https://drive.google.com/file/d/1png7XiEMI42Sn5upAljxFy9Hp5TZDXoY/view?usp=sharing" id="linki">Скачать официальную Windows 10 22H2 (19045.2965) [RU - Все редакции]</a>
-<a href="https://drive.google.com/file/d/1ZJuIzZTtlQ1c7-2VC1kxYj3kTH-Izm-J/view?usp=sharing" id="linki">Скачать официальную Windows 10 20H2 (19042.508) [RU - Все редакции]</a>
-</main>
-<footer>
-        <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
-        </a>
-        <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
-        </a>
-        <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
-        </a>
-        <p id="trademark">© 2025 Adderly.Top // Марк Аддерли</p>
-    </footer>
-<script src="burger.js"></script>
-</body>
+                p {
+                    font-size: 16px;
+                }
+
+                .box {
+                    gap: 12px;
+                    padding: 0 10px;
+                }
+
+                #linki {
+                    max-width: 100%;
+                    min-height: 60px;
+                    font-size: 14px;
+                    padding: 12px 15px;
+                }
+            }
+            @media (max-width: 360px) {
+                #linki {
+                    font-size: 13px;
+                    padding: 10px 12px;
+                }
+            }
+            #w11 {
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="index" class="logo">
+                <img
+                    src="images/favicon.png"
+                    alt="MakuT"
+                    class="site-icon"
+                />Adderly.Top
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="builds">Сборки</a></li>
+                    <li><a href="makutweaker">MakuTweaker</a></li>
+                    <li><a href="support">Поддержать</a></li>
+                </ul>
+            </nav>
+            <img src="icons/burger.svg" alt="Меню" id="burger" />
+        </header>
+
+        <main>
+            <h1>Скачать официальные ISO образы Windows от Microsoft</h1>
+            <p>
+                Вы можете загрузить официальные образы Windows напрямую с этой
+                страницы и без обхода блокировок.<br />Все образы были выгружены
+                из источников Microsoft и залиты на Google Диск,за исключением
+                старых Windows 11 и Windows 10.<br />Так как они официально
+                удалены,их нужно было собирать заново.
+            </p>
+            <h2 id="w11">Windows 11</h2>
+            <a
+                href="https://drive.google.com/file/d/1MpyXMlAZ7RMz5ESoBJfQMMl0bEsEoaoc/view?usp=sharing"
+                id="linki"
+                >Скачать официальную Windows 11 24H2 (26100.1742) [RU - Все
+                редакции]</a
+            >
+            <a
+                href="https://drive.google.com/file/d/1cLONkFrpaPt0a9Kbwgaa3BaShp_wJTwW/view?usp=sharing"
+                id="linki"
+                >Скачать официальную Windows 11 22H2 (22621.1702) [RU - Все
+                редакции]</a
+            >
+            <h2>Windows 10</h2>
+            <a
+                href="https://drive.google.com/file/d/1png7XiEMI42Sn5upAljxFy9Hp5TZDXoY/view?usp=sharing"
+                id="linki"
+                >Скачать официальную Windows 10 22H2 (19045.2965) [RU - Все
+                редакции]</a
+            >
+            <a
+                href="https://drive.google.com/file/d/1ZJuIzZTtlQ1c7-2VC1kxYj3kTH-Izm-J/view?usp=sharing"
+                id="linki"
+                >Скачать официальную Windows 10 20H2 (19042.508) [RU - Все
+                редакции]</a
+            >
+        </main>
+        <footer>
+            <a
+                href="https://t.me/adderly324"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/tg.png"
+                    alt="Telegram Icon"
+                    class="social-icon"
+                />
+            </a>
+            <a
+                href="https://youtube.com/@MakuAdarii"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/yt.png"
+                    alt="YouTube Icon"
+                    class="social-icon"
+                />
+            </a>
+            <a
+                href="https://www.boosty.to/adderly"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="icons/boosty.png"
+                    alt="Boosty Icon"
+                    class="social-icon"
+                />
+            </a>
+            <p id="trademark">© 2025 Adderly.Top // Марк Аддерли</p>
+        </footer>
+        <script src="burger.js"></script>
+    </body>
 </html>

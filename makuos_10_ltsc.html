@@ -24,40 +24,6 @@
         let existingNews = new Map();
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
 
     <meta property="og:title" content="Скачать сборку MakuOS 10 LTSC">
     <meta property="og:keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 10, makuos 10 21h2, макуос, makuos, windows 10 21h2, ltsc, makuos ltsc, makuos 10 ltsc">
@@ -143,7 +109,7 @@
         <div style="text-align: left; padding-left: 20px;">
             <h1>Для создания локальной учётной записи, либо отключите интернет, либо нажмите на кнопку "Вместо этого присоединить к домену" / "Domain join instead".</h1>
             <img src="images/bootlegs/oobe1.png" alt="OOBEimg" style="width: 95%; height: auto; display: block;"><br>
-                    
+
         </div>
     </div>
 </div>
@@ -210,7 +176,7 @@
     <input type="checkbox" id="confirm-check">  
     Я ознакомился с роликами - знаю как переустанавливать Windows, имею драйвера, и готов к загрузке образа.
   </label>
-  
+
   <div id="warning-msg" style="display:none; color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 5px; font-size: 13px; line-height: 1.4; margin-bottom: 15px; border: 1px solid #ffcdd2; text-align: left;">
     Убедитесь, что вы точно знаете как переустанавливать систему. Вам никто не будет помогать, если вы не посмотрите туториалы, в которых всё уже достаточно подробно описано.
   </div>
@@ -229,13 +195,13 @@ document.querySelectorAll('.accordion').forEach((accordion, index) => {
         panel.classList.add('open');
         panel.style.maxHeight = panel.scrollHeight + "px";
     }
-    
+
     accordion.addEventListener('click', function() {
         const panel = this.nextElementSibling;
-        
+
         this.classList.toggle('active');
         panel.classList.toggle('open');
-        
+
         if (panel.classList.contains('open')) {
             panel.style.maxHeight = panel.scrollHeight + "px";
         } else {
@@ -254,19 +220,19 @@ let downloadLink = null;
 
 function openPopup(link) {
   downloadLink = link;
-  
+
   const checkbox = document.getElementById("confirm-check");
   const btn = document.getElementById("continue-btn");
   const warning = document.getElementById("warning-msg");
-  
+
   checkbox.checked = false;
   warning.style.display = "none";
-  
+
   btn.disabled = true;
   btn.style.opacity = "0.5";
   btn.style.cursor = "not-allowed";
   btn.innerText = "Продолжить";
-  
+
   clearInterval(timerInterval);
 
   document.getElementById("overlay").style.display = "block";
@@ -283,13 +249,13 @@ function closePopup() {
 document.getElementById("confirm-check").addEventListener('change', function() {
     const btn = document.getElementById("continue-btn");
     const warning = document.getElementById("warning-msg");
-    
+
     if (this.checked) {
         warning.style.display = "block";
         let secondsLeft = 15;
-        
+
         btn.innerText = `Ждите ${secondsLeft} сек...`;
-        
+
         timerInterval = setInterval(() => {
             secondsLeft--;
             if (secondsLeft > 0) {
@@ -302,7 +268,7 @@ document.getElementById("confirm-check").addEventListener('change', function() {
                 btn.innerText = "Продолжить";
             }
         }, 1000);
-        
+
     } else {
         clearInterval(timerInterval);
         warning.style.display = "none";
