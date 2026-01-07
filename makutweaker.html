@@ -23,41 +23,6 @@
         let existingNews = new Map();
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
-
     <meta property="og:title" content="Скачать MakuTweaker">
     <meta property="og:keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс">
     <meta property="og:description" content="Скачать MakuTweaker от Марка Аддерли">
@@ -263,34 +228,34 @@ p {
         width: 95%;
         border-radius: 20px;
     }
-    
+
     .accordion-container {
         width: 95%;
     }
-    
+
     .slider-btn {
         font-size: 1.6rem;
     }
-    
+
     .slide-counter {
         font-size: 0.85rem;
     }
-    
+
     .buttons {
         grid-template-columns: 1fr;
         width: 90%;
         gap: 10px;
     }
-    
+
     .buttons a {
         height: 50px;
         font-size: 14px;
     }
-    
+
     .buttons a:last-child:nth-child(odd) {
         grid-column: 1;
     }
-    
+
     .accordion {
         font-size: 18px;
     }
@@ -336,7 +301,7 @@ p {
       <div class="slide"><img src="images/makut/makut12.png" alt="Слайд 11"></div>
       <div class="slide"><img src="images/makut/makut13.png" alt="Слайд 12"></div>
       <div class="slide"><img src="images/makut/makut14.png" alt="Слайд 14"></div>
-      
+
     </div>
   </div>
   <button class="slider-btn next">&gt;</button>
@@ -397,7 +362,7 @@ p {
 Новое обновление MakuTweaker 4.3.0!<br>
 Была проведена большая работа добавлению функций в которых действительно нуждались люди!
 <br><br>
-• Был обновлён порядок вкладок в программе! Теперь они отсортированы по важности и по популярности, а так же по виду. В самом начале титульный "Проводник", далее настройка центра обновлений, затем крупнейшая вкладка "Система и восстановление", удаляющее встроенный мусор "Удаление UWP приложения", дальше различные вкладочки... А в конце, серьёзные вкладки типа Активатора, установки приложений, и таймер выключения! 
+• Был обновлён порядок вкладок в программе! Теперь они отсортированы по важности и по популярности, а так же по виду. В самом начале титульный "Проводник", далее настройка центра обновлений, затем крупнейшая вкладка "Система и восстановление", удаляющее встроенный мусор "Удаление UWP приложения", дальше различные вкладочки... А в конце, серьёзные вкладки типа Активатора, установки приложений, и таймер выключения!
 <br><br>
 • Был наведён порядок и в разделе "Удаление UWP приложений"! Теперь, мусорные UWP отсортированы по какой либо важности. Слева находятся только сугубо похороненные приложения которые отключены или заброшены компанией Microsoft. Посередине по прежнему вполне терпимые, и к ним прибавилась возможность удалить Outlook!
 <br><br>
@@ -494,12 +459,12 @@ p {
             panel.classList.add('open');
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
-        
+
         accordion.addEventListener('click', function() {
             const panel = this.nextElementSibling;
             panel.classList.toggle('open');
             this.classList.toggle('active');
-            
+
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
             } else {

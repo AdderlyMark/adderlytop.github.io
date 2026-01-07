@@ -25,38 +25,9 @@
     </script>
 
     <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
 
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
     </script>
 
     <meta property="og:title" content="Сайт Марка Аддерли">

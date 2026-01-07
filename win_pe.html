@@ -23,41 +23,6 @@
         let existingNews = new Map();
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
-
     <meta property="og:title" content="Скачать Windows PE от Марка Аддерли">
     <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, Windows PE, Windows PE от Марка Аддерли, от марка аддерли, винпе скачать, виндовс пе, винпе, winpe, WinPE, MakuPE, макупе">
     <meta property="og:description" content="Скачать Windows PE от Марка Аддерли">
@@ -263,34 +228,34 @@ p {
         width: 95%;
         border-radius: 20px;
     }
-    
+
     .accordion-container {
         width: 95%;
     }
-    
+
     .slider-btn {
         font-size: 1.6rem;
     }
-    
+
     .slide-counter {
         font-size: 0.85rem;
     }
-    
+
     .buttons {
         grid-template-columns: 1fr;
         width: 90%;
         gap: 10px;
     }
-    
+
     .buttons a {
         height: 50px;
         font-size: 14px;
     }
-    
+
     .buttons a:last-child:nth-child(odd) {
         grid-column: 1;
     }
-    
+
     .accordion {
         font-size: 18px;
     }
@@ -418,12 +383,12 @@ p {
             panel.classList.add('open');
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
-        
+
         accordion.addEventListener('click', function() {
             const panel = this.nextElementSibling;
             panel.classList.toggle('open');
             this.classList.toggle('active');
-            
+
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
             } else {

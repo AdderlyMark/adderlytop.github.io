@@ -24,40 +24,6 @@
         let existingNews = new Map();
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
 
     <meta property="og:title" content="Скачать MakuOS 10 Mini">
     <meta property="og:keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, makuos 10 22H2, макуос, makuos, windows 10 22H2 Lite, makuos 10 lite, makuos mini, mini">
@@ -103,7 +69,7 @@
                     Календарь, Microsoft Solitaire Collection, Sticky Notes, 3D Viewer, Print 3D, OneDrive,<br>
                     Windows Hello, Feedback Hub, Get Help, Windows Sybsystem For Linux, Retail Demo Content,<br>
                     Remote Assistance, Skype, Windows Mixed Reality, Easy Transfer, компоненты Hyper-V.<br><br>
-                    
+
                     <h1>Прочие изменения:</h1>
                     На рабочем столе есть папка "от Марка Аддерли", в котором находятся установщики<br>Google Chrome, Microsoft Edge, 7-Zip, MPC-HC, Telegram, Zapret, Steam, Everything,<br><a href="https://youtu.be/97CMTnJL9p0" target="_blank" style="color: yellow;">а так же программы MakuYan которая запрещает Яндекс</a>, ссылки на социальные сети, и <a href="https://t.me/maku_library" target="_blank" style="color: yellow;">Telegram канал с репаками без вирусов</a>.</p>
                     На рабочем столе имеется приложение "MakuTweaker",<br>в котором можно применить различные твики, активировать систему, и многое другое.<br><br>
@@ -175,7 +141,7 @@
     <input type="checkbox" id="confirm-check">  
     Я ознакомился с роликами - знаю как переустанавливать Windows, имею драйвера, и готов к загрузке образа.
   </label>
-  
+
   <div id="warning-msg" style="display:none; color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 5px; font-size: 13px; line-height: 1.4; margin-bottom: 15px; border: 1px solid #ffcdd2; text-align: left;">
     Убедитесь, что вы точно знаете как переустанавливать систему. Вам никто не будет помогать, если вы не посмотрите туториалы, в которых всё уже достаточно подробно описано.
   </div>
@@ -194,13 +160,13 @@ document.querySelectorAll('.accordion').forEach((accordion, index) => {
         panel.classList.add('open');
         panel.style.maxHeight = panel.scrollHeight + "px";
     }
-    
+
     accordion.addEventListener('click', function() {
         const panel = this.nextElementSibling;
-        
+
         this.classList.toggle('active');
         panel.classList.toggle('open');
-        
+
         if (panel.classList.contains('open')) {
             panel.style.maxHeight = panel.scrollHeight + "px";
         } else {
@@ -219,19 +185,19 @@ window.addEventListener('resize', () => {
 
 function openPopup(link) {
   downloadLink = link;
-  
+
   const checkbox = document.getElementById("confirm-check");
   const btn = document.getElementById("continue-btn");
   const warning = document.getElementById("warning-msg");
-  
+
   checkbox.checked = false;
   warning.style.display = "none";
-  
+
   btn.disabled = true;
   btn.style.opacity = "0.5";
   btn.style.cursor = "not-allowed";
   btn.innerText = "Продолжить";
-  
+
   clearInterval(timerInterval);
 
   document.getElementById("overlay").style.display = "block";
@@ -248,13 +214,13 @@ function closePopup() {
 document.getElementById("confirm-check").addEventListener('change', function() {
     const btn = document.getElementById("continue-btn");
     const warning = document.getElementById("warning-msg");
-    
+
     if (this.checked) {
         warning.style.display = "block";
         let secondsLeft = 15;
-        
+
         btn.innerText = `Ждите ${secondsLeft} сек...`;
-        
+
         timerInterval = setInterval(() => {
             secondsLeft--;
             if (secondsLeft > 0) {
@@ -267,7 +233,7 @@ document.getElementById("confirm-check").addEventListener('change', function() {
                 btn.innerText = "Продолжить";
             }
         }, 1000);
-        
+
     } else {
         clearInterval(timerInterval);
         warning.style.display = "none";
