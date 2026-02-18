@@ -8,14 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     menuContainer.innerHTML = `
       <div class="menu-items">
       <a href="index" class="menu-item">Главная</a>
-      <a href="builds" class="menu-item" id="buildsburger">Сборки от Аддерли</a>
-      <a href="windows" class="menu-item">Официальные ISO Windows</a>
+      <a href="windows" class="menu-item">Скачать официальные Windows</a>
       <a href="makutweaker" class="menu-item" id="makutweakerburger">Скачать MakuTweaker</a>
       <a href="makubench" class="menu-item">MakuTweaker Benchmark</a>
       <a href="makuyan" class="menu-item">Запрещатор Яндекса</a>
       <a href="makupedia" class="menu-item">MakuPedia</a>
       <a href="win_pe" class="menu-item">Windows PE от Аддерли</a>
-      <a href="faq" class="menu-item">Часто задаваемые вопросы</a>
       <a href="support" class="menu-item" id="supportburger">Поддержать</a>
       </div>
     `;
