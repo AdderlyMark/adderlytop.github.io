@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adderly.Top - Сборки от Аддерли</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
+    crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68MY39SKZ9');
+    </script>
+    <meta property="og:image" content="https://adderly.top/images/favicon.png">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="base.css">
+
+    <script>
+        const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
+        let existingNews = new Map();
+    </script>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            // F12
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    </script>
+
+    <meta property="og:title" content="Скачать сборки от Марка Аддерли">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, windows 11 24h2, windows 11, 24h2, 22h2, windows 10, makuos mini">
+    <meta property="og:description" content="Скачать сборки от Марка Аддерли">
+    <meta name="description" content="Скачать сборки от Марка Аддерли">
+    <meta name="keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, windows 11 24h2, windows 11, 24h2, 22h2, windows 10, makuos mini">
+    <meta property="og:image" content="images/favicon.png">
+    <style>
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.ltsc, .pro, .other, .lite {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+    width: 90%;
+    margin: 5px auto;
+    text-align: start;
+}
+
+.ltsc a, .pro a, .other a, .lite a {
+    background-color: #191919;
+    border-radius: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: 0.1s linear;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.ltsc a:hover, .pro a:hover, .other a:hover, .lite a:hover {
+    box-shadow: 0 0 0 4px #3c82f8;
+}
+
+.ltsc img, .pro img, .other img, .lite img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-align: start;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #cccccc;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+.other {
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-top: 25px;
+}
+
+.ribbon {
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    background: linear-gradient(45deg, #ff005e, #ff7b00);
+    color: #fff;
+    padding: 4px 50px;
+    font-weight: bold;
+    font-size: 14px;
+    transform: rotate(-35deg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+}
+
+@media (max-width: 968px) {
+    .ltsc, .pro, .lite, .other {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+    }
+    
+    .ltsc img, .pro img, .other img, .lite img {
+        height: 180px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ltsc, .pro, .other, .lite {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        justify-content: start;
+    }
+    
+    .ltsc a, .pro a, .other a, .lite a {
+        padding: 15px;
+    }
+    
+    .ltsc img, .pro img, .other img, .lite img {
+        height: 160px;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .ltsc, .pro, .other, .lite {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .ltsc a, .pro a, .other a, .lite a {
+        padding: 12px;
+    }
+    
+    .ltsc img, .pro img, .other img, .lite img {
+        height: 140px;
+    }
+    
+    .card-title {
+        font-size: 0.95rem;
+    }
+    #bb{width: 90%;margin: 0 auto;}
+    .card-description {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+}
+    </style>
+</head>
+
+
+<body>
+<header>
+    <a href="index" class="logo">
+        <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
+    </a>
+        <nav>
+            <ul>
+                <li><a href="builds">Сборки</a></li>
+                <li><a href="makutweaker">MakuTweaker</a></li>
+                <li><a href="support">Поддержать</a></li>
+            </ul>
+        </nav>
+        <img src="icons/burger.svg" alt="Меню" id="burger">
+</header>
+
+<main>
+<h1>Сборки от Аддерли</h1>
+<h3 id="bb">Лучшие сборки Windows - без какого либо мусора, рекламы и Яндексов.</h3>
+<h2>Основные сборки на Pro редакции</h2>
+<div class="pro">
+<a class="win11" href="makuos_11">
+    <div class="ribbon">Новинка!</div>
+    <img src="images/win11shit.png">
+    <div class="card-content">
+        <h3 class="card-title">MakuOS 11 Pro 24H2<br>(Windows 11 24H2 26100.7015)</h3>
+        <p class="card-description">
+            Сборка со всеми обновлениями и оптимизацией на основе почти самой последней версии Windows 11 – 24H2.<br>
+            Подойдёт для современных ПК.
+        </p>
+    </div>
+</a>
+<a class="win10" href="makuos_10">
+    <div class="ribbon">Новинка!</div>
+    <img src="images/win10.jpg">
+    <div class="card-content">
+        <h3 class="card-title">MakuOS 10 Pro 22H2<br>(Windows 10 22H2 19045.6456)</h3>
+        <p class="card-description">
+            Сборка со всеми обновлениями и оптимизацией на основе самой последней версии Windows 10.<br>
+            Тем, кому не нравится Windows 11, подойдёт как вариант самой актуальной системы.<br>
+            Подойдёт для современных ПК.
+        </p>
+    </div>
+</a>
+</div>
+<h2>Mini и Lite сборки для слабых ПК</h2>
+<div class="lite">
+    <a class="win11-22h2" href="makuos_11_Lite">
+        <img src="images/win11.jpg">
+        <div class="card-content">
+                <h3 class="card-title">MakuOS 11 Lite 22H2 V2<br>(Windows 11 22H2, 22621.1702)</h3>
+                <p class="card-description">Сборка со всеми обновлениями на основе Windows 11 с обновлениями по лето 2023 года.<br>Без Windows Defender, центра обновлений и какого либо мусора.<br>Для современных игр она не подойдёт. Но подойдёт тем, кто хотел попробовать Windows 11 на слабых ПК.</p>
+            </div>
+    </a>
+    <a class="win10-22h2" href="makuos_mini">
+            <div class="ribbon">Новинка!</div>
+        <img src="images/win10.jpg">
+         <div class="card-content">
+                <h3 class="card-title">MakuOS 10 Mini 22H2 V2<br>(Windows 10 22H2, 19045.6456)</h3>
+                <p class="card-description">Windows Mini сборка на основе самой актуальной Windows 10 со всеми финальными обновлениями.<br>Без Windows Defender, UWP приложений и какого либо мусора.<br>Для игр возможно подойдёт, и точно даст жизнь старому ПК.</p>
+            </div>
+    </a>
+    <a class="win10-1809" href="makuos_10_Lite">
+        <img src="images/win10old.jpg">
+         <div class="card-content">
+                <h3 class="card-title">MakuOS 10 Lite 1809<br>(Windows 10 1809, 17763.6414)</h3>
+                <p class="card-description">Сборка со всеми обновлениями на основе Windows 10 1809 с обновлениями по 2024 год.<br>Без Windows Defender, центра обновлений и какого либо мусора.<br>Для современных игр она не подойдёт. Но подойдёт тем, кто хочет Windows 10 на очень слабых ПК или MacBook Intel.</p>
+            </div>
+    </a>
+</div>
+<h2>Сборки на основе LTSC редакции</h2>
+<div class="ltsc">
+    <a class="win11ltsc" href="makuos_11_ltsc">
+        <img src="images/win11shit.png">
+        <div class="card-content">
+            <h3 class="card-title">MakuOS 11 24H2 LTSC<br>(Windows 11 24H2, 26100.1742)</h3>
+            <p class="card-description">Сборка со всеми обновлениями и оптимизацией на основе самой последней Windows 11 24H2.<br>Тот кто любит использовать всё самое последнее - скорее всего оптимальный вариант.<br>На старых устройствах желательно ставить 22H2.</p>
+        </div>
+    </a>
+    <a class="win10ltsc" href="makuos_10_ltsc">
+        <img src="images/win10.jpg" >
+        <div class="card-content">
+                <h3 class="card-title">MakuOS 10 21H2 LTSC<br>(Windows 10 21H2 19044.1288)</h3>
+                <p class="card-description">Сборка со всеми обновлениями и оптимизацией на основе самой последней версии Windows 10.<br>Тем, кому не нравится Windows 11, подойдёт как вариант самой актуальной системы.<br>Подойдёт для современных ПК.</p>
+            </div>
+    </a>
+</div>
+<h2>Старые Windows</h2>
+<div class="other">
+<a class="win8" href="makuos_8">
+    <img src="images/win8.jpg">
+     <div class="card-content">
+                <h3 class="card-title">MakuOS 8.1 (Windows 8.1 с обновлениями по 2023)</h3>
+                <p class="card-description">Сборка на основе Windows 8.1 со всеми обновлениями по 2023 год.</p><br>
+            </div>
+</a>
+<a class="win7" href="makuos_7">
+    <img src="images/win7.png">
+     <div class="card-content">
+                <h3 class="card-title">MakuOS 7 (Windows 7 с обновлениями по 2020)</h3>
+                <p class="card-description">Сборка на основе Windows 7 со всеми обновлениями по 2020 год.</p><br>
+            </div>
+</a>
+</div>
+</main>
+<footer>
+        <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
+        </a>
+        <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
+        </a>
+        <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
+        </a>
+        <p id="trademark">© 2025 Adderly.Top // Марк Аддерли</p>
+    </footer>
+<script src="burger.js"></script>
+</body>
+</html>

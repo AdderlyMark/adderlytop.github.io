@@ -149,8 +149,11 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 50px;
     flex-wrap: wrap;
+}
+
+.cta-wrapper + .cta-wrapper {
+    margin-top: -20px;
 }
 
     @media (max-width: 768px) {
@@ -223,6 +226,11 @@
 
         <a href="https://youtube.com/@makuadarii" target="_blank" class="cta-button">
         YouTube канал
+    </a>
+</div>
+<div class="cta-wrapper">
+    <a href="https://adderly.top/makuos_legacy" target="_blank" class="cta-button">
+        Архив сборок MakuOS
     </a>
 </div>
 
