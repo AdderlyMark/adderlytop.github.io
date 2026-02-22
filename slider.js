@@ -33,9 +33,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (startX - endX > 50) nextBtn.click();
     else if (endX - startX > 50) prevBtn.click();
   });
-
-  let autoSlide = setInterval(() => nextBtn.click(), 5000);
-  document.querySelector(".slider-container").addEventListener("mouseenter", () => clearInterval(autoSlide));
-  document.querySelector(".slider-container").addEventListener("mouseleave", () => autoSlide = setInterval(() => nextBtn.click(), 5000));
 });
-
