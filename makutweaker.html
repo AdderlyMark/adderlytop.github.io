@@ -23,40 +23,7 @@
         let existingNews = new Map();
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
 
     <meta property="og:title" content="Скачать MakuTweaker">
     <meta property="og:keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс">
@@ -86,77 +53,83 @@ h2 {
 p {
     font-size: clamp(14px, 1.5vw, 18px);
 }
-.slider-container {
-  position: relative;
-  width: 80%;max-width: 1440px;
-  margin: 10px auto;
-  border-radius: 25px;
-  overflow: hidden;
-  background-color: #191919;
-  transition: all 0.3s ease;
+
+.gallery-container {
+    width: 80%;
+    margin: 20px auto;
 }
 
-.slides-wrapper {
-  overflow: hidden;
-  width: 100%;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
+.gallery img {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #191919;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
 }
 
-.slide {
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.gallery img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px #3c82f8;
 }
 
-.slide img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 20px;
+@media (max-width: 768px) {
+    .gallery-container {
+        width: 95%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-  background-color: #191919;
-  height: 45px;
-  width: 45px;
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+    z-index: 9999;
 }
 
-.slider-btn.prev {
-  left: 10px;
-}
-.slider-btn.next {
-  right: 10px;
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-.slide-counter {
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-  background-color: #191919;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+.lightbox-img {
+    width: auto;
+    height: auto;
+    max-width: 98vw;
+    max-height: 98vh;
+    border-radius: 20px;
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
 }
+
+.lightbox.active .lightbox-img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
 .accordion-container {margin: 0 auto;width: 80%;max-width: 2000px;}
 
 .accordion {
@@ -248,32 +221,9 @@ p {
     grid-column: 1 / 3;
 }
 @media (max-width: 768px) {
-  .slider-container {
-    width: 95%;
-    border-radius: 20px;
-  }
   .accordion-container{width: 95%;}
-  .slider-btn {
-    font-size: 1.6rem;
-  }
-  .slide-counter {
-    font-size: 0.85rem;
-  }
-      .slider-container {
-        width: 95%;
-        border-radius: 20px;
-    }
-    
     .accordion-container {
         width: 95%;
-    }
-    
-    .slider-btn {
-        font-size: 1.6rem;
-    }
-    
-    .slide-counter {
-        font-size: 0.85rem;
     }
     
     .buttons {
@@ -317,31 +267,17 @@ p {
     <p>MakuTweaker позволяет очень гибко и эластично настроить вашу систему под себя,<br>
 включая удаление неудаляемых приложений, а также различные параметры реестра,<br>
 которые недоступны простым пользователям!</p>
-            <div class="slider-container">
-  <button class="slider-btn prev">&lt;</button>
-
-  <div class="slides-wrapper">
-    <div class="slides">
-      <div class="slide"><img src="images/makut/makut1.png" alt="Слайд 1"></div>
-      <div class="slide"><img src="images/makut/makut2.png" alt="Слайд 2"></div>
-      <div class="slide"><img src="images/makut/makut3.png" alt="Слайд 3"></div>
-      <div class="slide"><img src="images/makut/makut4.png" alt="Слайд 4"></div>
-      <div class="slide"><img src="images/makut/makut5.png" alt="Слайд 5"></div>
-      <div class="slide"><img src="images/makut/makut6.png" alt="Слайд 6"></div>
-      <div class="slide"><img src="images/makut/makut7.png" alt="Слайд 7"></div>
-      <div class="slide"><img src="images/makut/makut8.png" alt="Слайд 8"></div>
-      <div class="slide"><img src="images/makut/makut9.png" alt="Слайд 9"></div>
-      <div class="slide"><img src="images/makut/makut10.png" alt="Слайд 13"></div>
-      <div class="slide"><img src="images/makut/makut11.png" alt="Слайд 10"></div>
-      <div class="slide"><img src="images/makut/makut12.png" alt="Слайд 11"></div>
-      <div class="slide"><img src="images/makut/makut13.png" alt="Слайд 12"></div>
-      <div class="slide"><img src="images/makut/makut14.png" alt="Слайд 14"></div>
-      
-    </div>
-  </div>
-  <button class="slider-btn next">&gt;</button>
-  <div class="slide-counter">
-    <span id="current-slide">1</span> / <span id="total-slides">14</span>
+<div class="gallery-container">
+  <div class="gallery">
+    <img src="images/makut/makut1.png">
+    <img src="images/makut/makut2.png">
+    <img src="images/makut/makut3.png">
+    <img src="images/makut/makut4.png">
+    <img src="images/makut/makut5.png">
+    <img src="images/makut/makut6.png">
+    <img src="images/makut/makut7.png">
+    <img src="images/makut/makut8.png">
+    <img src="images/makut/makut9.png">
   </div>
 </div>
 <div class="accordion-container">
@@ -470,10 +406,10 @@ MakuTweaker 5.0.31 - Микрофикс<br>
 </div>
 
 <div class="accordion-container">
-    <button class="accordion">Обновление MakuTweaker 5.0.0 (12 октября 2025)</button>
+    <button class="accordion">Обновление MakuTweaker 5.0 (12 октября 2025)</button>
     <div class="panel">
         <div style="text-align: left; padding-left: 20px;">
-                            <h1>Что нового в MakuTweaker 5.0.0?</h1>
+                            <h1>Что нового в MakuTweaker 5.0?</h1>
 Спустя 4 месяца тишины - представляю вам MakuTweaker 5.0!<br><br>
 
 Новые функции:<br>
@@ -598,7 +534,6 @@ MakuTweaker 5.0.31 - Микрофикс<br>
     </footer>
 </div>
 <script src="burger.js"></script>
-<script src="slider.js"></script>
 <script>
     document.querySelectorAll('.accordion').forEach((accordion, index) => {
         if (index === 0 || index === 1) {
@@ -620,6 +555,41 @@ MakuTweaker 5.0.31 - Микрофикс<br>
             }
         });
     });
+</script>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.lightbox-close');
+
+document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+closeBtn.addEventListener('click', closeLightbox);
+
+lightboxImg.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', closeLightbox);
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
 </script>
 </body>
 
