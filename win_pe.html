@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adderly.Top - MakuPE</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-    crossorigin="anonymous"></script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -13,10 +13,12 @@
         gtag('js', new Date());
         gtag('config', 'G-68MY39SKZ9');
     </script>
+
     <meta property="og:image" content="https://adderly.top/images/favicon.png">
     <link rel="icon" href="images/favicon.png">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="base.css">
+    
+    <link rel="stylesheet" href="styles.css">
 
     <script>
         const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
@@ -25,33 +27,12 @@
 
     <script>
         document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
+            if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') { e.preventDefault(); return false; }
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') { e.preventDefault(); return false; }
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') { e.preventDefault(); return false; }
+            if (e.ctrlKey && e.key === 'u') { e.preventDefault(); return false; }
         });
-
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
             return false;
@@ -63,373 +44,181 @@
     <meta property="og:description" content="Скачать Windows PE от Марка Аддерли">
     <meta name="description" content="Скачать Windows PE от Марка Аддерли">
     <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, Windows PE, Windows PE от Марка Аддерли, от марка аддерли, винпе скачать, виндовс пе, винпе, winpe, WinPE, MakuPE, макупе">
-    <meta property="og:image" content="images/favicon.png">
-    <style>
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 5px;
-}
-
-h1 {
-    margin-top: 30px;
-    font-size: clamp(20px, 2.5vw, 32px);
-}
-
-h2 {
-    font-size: clamp(16px, 2vw, 24px);
-}
-
-p {
-    font-size: clamp(14px, 1.5vw, 18px);
-}
-.slider-container {
-  position: relative;
-  width: 80%;max-width: 2000px;
-  margin: 10px auto;
-  border-radius: 25px;
-  overflow: hidden;
-  background-color: #191919;
-  transition: all 0.3s ease;
-}
-
-.slides-wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 20px;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-  background-color: #191919;
-  height: 45px;
-  width: 45px;
-}
-
-.slider-btn.prev {
-  left: 10px;
-}
-.slider-btn.next {
-  right: 10px;
-}
-
-.slide-counter {
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-  background-color: #191919;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-.accordion-container {margin: 0 auto;width: 80%;max-width: 2000px;}
-
-.accordion {
-    background-color: #151540;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    border: none;
-    outline: none;
-    font-size: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.4s ease;
-    border-radius: 10px;
-    justify-content: center;
-    position: relative;
-
-}
-
-.accordion::after {
-    content: '\002B';
-    color: white;
-    right: 20px;
-    position: absolute;
-}
-
-.accordion.active::after {
-    content: "\2212";
-    color: white;
-}
-
-.panel {
-    border-radius: 10px;
-    background-color: #0c0c30;
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.panel.open {
-    max-height: 500px;
-    opacity: 1;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 350px));
-    margin-top: 3px;
-    margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.buttons a {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #151540;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    transition: 0.1s linear;
-    font-size: clamp(14px, 1.2vw, 18px);
-    padding: 0 20px;
-}
-
-.buttons a:hover {
-    box-shadow:
-        0 0 0 4px #3c82f8;
-}
-
-.buttons a:last-child:nth-child(odd) {
-    grid-column: 1 / 3;
-}
-
-
-
-.buttons a:last-child:nth-child(odd) {
-    grid-column: 1 / 3;
-}
-@media (max-width: 768px) {
-  .slider-container {
-    width: 95%;
-    border-radius: 20px;
-  }
-  .accordion-container{width: 95%;}
-  .slider-btn {
-    font-size: 1.6rem;
-  }
-  .slide-counter {
-    font-size: 0.85rem;
-  }
-      .slider-container {
-        width: 95%;
-        border-radius: 20px;
-    }
-    
-    .accordion-container {
-        width: 95%;
-    }
-    
-    .slider-btn {
-        font-size: 1.6rem;
-    }
-    
-    .slide-counter {
-        font-size: 0.85rem;
-    }
-    
-    .buttons {
-        grid-template-columns: 1fr;
-        width: 90%;
-        gap: 10px;
-    }
-    
-    .buttons a {
-        height: 50px;
-        font-size: 14px;
-    }
-    
-    .buttons a:last-child:nth-child(odd) {
-        grid-column: 1;
-    }
-    
-    .accordion {
-        font-size: 18px;
-    }
-}
-#button-img{width: 25px;margin-right: 10px;}
-    </style>
 </head>
 <body>
 <header>
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
-        <nav>
-            <ul>
-                <li><a href="builds">Сборки</a></li>
-                <li><a href="makutweaker">MakuTweaker</a></li>
-                <li><a href="support">Поддержать</a></li>
-            </ul>
-        </nav>
-        <img src="icons/burger.svg" alt="Меню" id="burger">
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="support">Поддержать</a></li>
+        </ul>
+    </nav>
+    <img src="icons/burger.svg" alt="Меню" id="burger">
 </header>
 
 <main>
-    <h1>Скачать MakuPE (Windows Preinstallation Environment)</h1>
-    <p>На основе Windows 10 1809 x64</p>
-            <div class="slider-container">
-  <button class="slider-btn prev">&lt;</button>
-
-  <div class="slides-wrapper">
-    <div class="slides">
-      <div class="slide"><img src="images/winpe/winpe1.png" alt="Слайд 1"></div>
-      <div class="slide"><img src="images/winpe/winpe2.png" alt="Слайд 2"></div>
-      <div class="slide"><img src="images/winpe/winpe3.png" alt="Слайд 3"></div>
-      <div class="slide"><img src="images/winpe/winpe4.png" alt="Слайд 4"></div>
-      <div class="slide"><img src="images/winpe/winpe5.png" alt="Слайд 5"></div>
-      <div class="slide"><img src="images/winpe/winpe6.png" alt="Слайд 6"></div>
-    </div>
-  </div>
-  <button class="slider-btn next">&gt;</button>
-  <div class="slide-counter">
-    <span id="current-slide">1</span> / <span id="total-slides">14</span>
-  </div>
-</div>
-<div class="accordion-container">
-    <button class="accordion">Приложения в WindowsPE // MakuPE</button>
-    <div class="panel">
-        <div style="text-align: left; padding-left: 20px;">
-            <br>
-                    Браузер Chrome, Telegram, 7-Zip, AnyDesk, Recuva, EasyBCD, WinNTSetup, CPU-Z, GPU-Z, CrystalDiskInfo, Unlocker, Victoria,<br>Everything, System Informer, Speccy, Explorer++, Bootice, Q-Dir, HDD Low Level, Notepad++, Mini Tool Partition Wizard, Hex Editor...<br><br>
+    <h1>Скачать MakuPE</h1>
+    <p>MakuPE - это удобная и быстрая среда восстановления Windows, которая помогает вернуть систему к жизни в случае сбоев. С её помощью вы сможете получить доступ к файлам, даже если основная ОС не загружается. Образ содержит набор необходимых инструментов для диагностики, восстановления и обслуживания компьютера. Просто запишите образ на маленькую флешку, например до двух гигабайт и держите всегда под рукой надёжный инструмент для восстановления системы.</p>
+    
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="images/winpe/winpe1.png" alt="Скриншот 1">
+            <img src="images/winpe/winpe2.png" alt="Скриншот 2">
+            <img src="images/winpe/winpe3.png" alt="Скриншот 3">
+            <img src="images/winpe/winpe4.png" alt="Скриншот 4">
+            <img src="images/winpe/winpe5.png" alt="Скриншот 5">
+            <img src="images/winpe/winpe6.png" alt="Скриншот 6">
         </div>
     </div>
-</div>
 
-<div class="accordion-container">
-    <button class="accordion">Остальные преимущества</button>
-    <div class="panel">
-        <div style="text-align: left; padding-left: 20px;">
-            <br>
- В MakuPE есть встроенные интернет драйвера, что позволит выйти в интернет<br>с помощью браузера Ungoogled Chromium, и даже зайти в Telegram.<br>Так же по желанию, можно будет попросить помощь у друга или родственника и дать доступ к своему ПК с помощью AnyDesk.<br>Образ теперь основан на Windows 10 1809, что делает его на пару сотен мегабайт легче, и он поместится даже на 2 ГБ флешку.<br>И самое главное, MakuPE поддерживает GPT и UEFI, что без проблем позволит запустить её на современном ПК.<br><br>
+    <div class="accordion-container">
+        <button class="accordion">Приложения в WindowsPE // MakuPE</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Браузер Chrome, Telegram, 7-Zip, AnyDesk, Recuva, EasyBCD, WinNTSetup, CPU-Z, GPU-Z, CrystalDiskInfo, Unlocker, Victoria, Everything, System Informer, Speccy, Explorer++, Bootice, Q-Dir, HDD Low Level, Notepad++, Mini Tool Partition Wizard, Hex Editor...</p>
+            </div>
         </div>
     </div>
-</div>
-<div class="accordion-container">
-    <button class="accordion">Как установить?</button>
-    <div class="panel">
-        <div style="text-align: left; padding-left: 20px;">
- <br>
-                    Windows PE нельзя установить как обычную систему. Этот образ создан для записи на флешку,<br>чтобы можно было запускать портативную Windows напрямую из под USB накопителя.<br>Зачастую это полезно для временного доступа к файлам на компьютере, и особенно - восстановления системы.<br>
-                    <br>
-                    <h1>Образ просто нужно записать на флешку для последующего запуска.</h1>
-                    Перейдите на сайт <a href="https://rufus.ie" style="text-decoration: underline; color: green;">rufus.ie</a>, и <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" style="text-decoration: underline; color: yellow;">скачайте программу</a>.<br>
-                    Далее, в пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
-                    В пункте "Метод загрузки", справа есть кнопка "Выбрать". Выберите ISO образ MakuPE.
-                    Далее, в "Схема раздела" вам нужно указать таблицу разделов вашего SSD. - <a href="https://lifehacker.ru/kak-uznat-gpt-ili-mbr/" style="text-decoration: underline; color: yellow;">Как узнать схему раздела?</a><br>
-                    Зачастую, "Целевую систему" и "Файловую систему" можно не трогать. Никакие галочки не нажимайте, и при каких либо диалогах снимайте их.<br>
-                    Для начала записи на флешку, нажмите "СТАРТ", и согласитесь на форматирование.<br>
-                    Когда прогрессбар дойдёт до 100% и будет "Готов", закройте окно.<br>
-                    <br>
 
-                    <h1>Второй способ - Ventoy, но лучше используйте первый вариант.</h1>
-                    Перейдите на сайт <a href="https://www.ventoy.net/" style="text-decoration: underline; color: green;">ventoy.net</a>, и <a href="https://sourceforge.net/projects/ventoy/files/latest/download" style="text-decoration: underline; color: yellow;">скачайте программу</a>.<br>
-                    Далее, распакуйте архив куда-либо и запустите файл <strong><em>Ventoy2Disk.exe</em></strong>.<BR>
-                    В пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
-                    Сверху на вкладке "Настройки" обязательно поставьте галочку на Secure Boot Support если он у вас включён.<br><a href="https://remontka.pro/enable-secure-boot/" style="text-decoration: underline; color: yellow;">Как узнать, включён ли Secure Boot?</a><br>
-                    Осталось нажать кнопку "Установить", и согласиться на форматирование флешки.<br>После этого, вам останется просто перекинуть ISO файл на уже чистую флешку.<br>
-                    <br>
-
-                    <h1>После записи образа на флешку</h1>
-                    Для входа в MakuPE вам достаточно перезагрузиться с флешки.<br>
-                    Для этого, откройте меню Пуск, зажмите клавишу Shift, и перезагрузитесь.<br>
-                    Затем, выберите USB FDD, или что либо связанное с USB.<br><br>
+    <div class="accordion-container">
+        <button class="accordion">Остальные преимущества</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>В MakuPE есть встроенные интернет драйвера, что позволит выйти в интернет с помощью браузера Ungoogled Chromium, и даже зайти в Telegram.<br>
+                Так же по желанию, можно будет попросить помощь у друга или родственника и дать доступ к своему ПК с помощью AnyDesk.<br>
+                Образ теперь основан на Windows 10 1809, что делает его на пару сотен мегабайт легче, и он поместится даже на 2 ГБ флешку.<br>
+                И самое главное, MakuPE поддерживает GPT и UEFI, что без проблем позволит запустить её на современном ПК.</p>
+            </div>
         </div>
     </div>
-</div>
 
+    <div class="accordion-container">
+        <button class="accordion">Как установить?</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Windows PE нельзя установить как обычную систему. Этот образ создан для записи на флешку, чтобы можно было запускать портативную Windows напрямую из под USB накопителя. Зачастую это полезно для временного доступа к файлам на компьютере, и особенно - восстановления системы.</p>
+                
+                <h1>Образ просто нужно записать на флешку для последующего запуска.</h1>
+                <p>Перейдите на сайт <a href="https://rufus.ie" style="text-decoration: underline; color: #a855f7;">rufus.ie</a>, и <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" style="text-decoration: underline; color: #c0a8e6;">скачайте программу</a>.<br>
+                Далее, в пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
+                В пункте "Метод загрузки", справа есть кнопка "Выбрать". Выберите ISO образ MakuPE.<br>
+                Далее, в "Схема раздела" вам нужно указать таблицу разделов вашего SSD. - <a href="https://lifehacker.ru/kak-uznat-gpt-ili-mbr/" style="text-decoration: underline; color: #c0a8e6;">Как узнать схему раздела?</a><br>
+                Зачастую, "Целевую систему" и "Файловую систему" можно не трогать. Никакие галочки не нажимайте, и при каких либо диалогах снимайте их.<br>
+                Для начала записи на флешку, нажмите "СТАРТ", и согласитесь на форматирование.<br>
+                Когда прогрессбар дойдёт до 100% и будет "Готов", закройте окно.</p>
 
-<h1 style="padding-top: 20px;">Скачать MakuPE</h1>
-<div class="buttons">
-  <a href="https://www.mediafire.com/file/i7lm360jq643v24/MakuPE+V2.iso/file"><img src="icons/mediafire.png" id="button-img">Скачать с MediaFire</a>
-  <a href="https://t.me/Maku_Library/81"><img src="icons/tg.png" id="button-img">Скачать с Telegram</a>
-  <a href="https://drive.google.com/file/d/1d9eyBsGK7Xesd7opNYdex5MshSVQABy5/view?usp=sharing"><img src="icons/googledrive.png" id="button-img">Скачать с Google Диска</a>
-</div>
+                <h1>Второй способ - Ventoy, но лучше используйте первый вариант.</h1>
+                <p>Перейдите на сайт <a href="https://www.ventoy.net/" style="text-decoration: underline; color: #a855f7;">ventoy.net</a>, и <a href="https://sourceforge.net/projects/ventoy/files/latest/download" style="text-decoration: underline; color: #c0a8e6;">скачайте программу</a>.<br>
+                Далее, распакуйте архив куда-либо и запустите файл <strong><em>Ventoy2Disk.exe</em></strong>.<br>
+                В пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
+                Сверху на вкладке "Настройки" обязательно поставьте галочку на Secure Boot Support если он у вас включён. <a href="https://remontka.pro/enable-secure-boot/" style="text-decoration: underline; color: #c0a8e6;">Как узнать, включён ли Secure Boot?</a><br>
+                Осталось нажать кнопку "Установить", и согласиться на форматирование флешки. После этого, вам останется просто перекинуть ISO файл на уже чистую флешку.</p>
+
+                <h1>После записи образа на флешку</h1>
+                <p>Для входа в MakuPE вам достаточно перезагрузиться с флешки.<br>
+                Для этого, откройте меню Пуск, зажмите клавишу Shift, и перезагрузитесь.<br>
+                Затем, выберите USB FDD, или что либо связанное с USB.</p>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuPE</h1>
+    <div class="buttons" style="margin-top: 0; padding-top: 0;">
+        <a href="https://www.mediafire.com/file/i7lm360jq643v24/MakuPE+V2.iso/file" class="btn-primary" style="display: flex; align-items: center;">
+            <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px;"> Скачать с MediaFire
+        </a>
+        <a href="https://t.me/Maku_Library/81" class="btn-secondary" style="display: flex; align-items: center;">
+            <img src="icons/tg.png" alt="Telegram" style="width: 24px; margin-right: 10px;"> Скачать с Telegram
+        </a>
+        <a href="https://drive.google.com/file/d/1d9eyBsGK7Xesd7opNYdex5MshSVQABy5/view?usp=sharing" class="btn-secondary" style="display: flex; align-items: center;">
+            <img src="icons/googledrive.png" alt="Google Drive" style="width: 24px; margin-right: 10px;"> Скачать с Google Диска
+        </a>
+    </div>
 
 </main>
+
 <footer>
+    <div class="footer-socials">
         <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
+            <img src="icons/tg.png" alt="Telegram" class="social-icon">
         </a>
         <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
+            <img src="icons/yt.png" alt="YouTube" class="social-icon">
         </a>
         <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
+            <img src="icons/boosty.png" alt="Boosty" class="social-icon">
         </a>
-        <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
-    </footer>
-</div>
+    </div>
+    <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
+
 <script src="burger.js"></script>
-<script src="slider.js"></script>
+
 <script>
+    function updateAccordionHeights() {
+        document.querySelectorAll('.panel.open').forEach(panel => {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        });
+    }
+
     document.querySelectorAll('.accordion').forEach((accordion, index) => {
+        const panel = accordion.nextElementSibling;
         if (index === 0) {
-            const panel = accordion.nextElementSibling;
             accordion.classList.add('active');
             panel.classList.add('open');
-            panel.style.maxHeight = panel.scrollHeight + "px";
         }
         
         accordion.addEventListener('click', function() {
-            const panel = this.nextElementSibling;
-            panel.classList.toggle('open');
             this.classList.toggle('active');
+            panel.classList.toggle('open');
             
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
+            if (panel.classList.contains('open')) {
                 panel.style.maxHeight = panel.scrollHeight + "px";
+            } else {
+                panel.style.maxHeight = null;
             }
         });
+    });
+
+    window.addEventListener('load', updateAccordionHeights);
+    window.addEventListener('resize', updateAccordionHeights);
+</script>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+    lightbox.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
     });
 </script>
 </body>
