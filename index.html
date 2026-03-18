@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adderly.Top - Главная</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-    crossorigin="anonymous"></script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -13,116 +13,175 @@
         gtag('js', new Date());
         gtag('config', 'G-68MY39SKZ9');
     </script>
+
     <meta property="og:image" content="https://adderly.top/images/favicon.png">
     <link rel="icon" href="images/favicon.png">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="formain.css">
+    
+    <link rel="stylesheet" href="styles.css">
 
     <script>
         const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
         let existingNews = new Map();
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
-
     <meta property="og:title" content="Сайт Марка Аддерли">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10">
+    <meta property="og:keywords" content="adderly, adderlytop, adderly top, марк аддерли, аддерли, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10, скачать макутвикер, макутвикер, маку твикер, download makutweaker, makutweaker download">
     <meta property="og:description" content="Главная страница сайта Марка Аддерли">
     <meta name="description" content="Главная страница сайта Марка Аддерли, сборки, блог и новости.">
-    <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10">
-</head>
 
+    <style>
+        .home-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        
+        .home-grid a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #fff;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 16px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+        }
+
+        .home-grid a:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .home-grid a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            filter: brightness(0) invert(1);
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(12px);
+            margin: 40px auto 20px;
+            max-width: 800px;
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .video-card h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .home-grid {
+                grid-template-columns: 1fr;
+            }
+            .video-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
 
 <body>
 <header>
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
-        <nav>
-            <ul>
-                <li><a href="builds">Сборки</a></li>
-                <li><a href="makutweaker">MakuTweaker</a></li>
-                <li><a href="support">Поддержать</a></li>
-            </ul>
-        </nav>
-        <img src="icons/burger.svg" alt="Меню" id="burger">
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="support">Поддержать</a></li>
+        </ul>
+    </nav>
+    <img src="icons/burger.svg" alt="Меню" id="burger">
 </header>
 
 <main>
-<section>
-    <h1 id="welcome">Добро пожаловать на Adderly.Top!</h1>
+    <section>
+        <h1 id="welcome">Добро пожаловать на Adderly.Top!</h1>
         <p id="discription">Это сайт Марка Аддерли - техноблогера на YouTube.<br>
-        Здесь вы можете скачать мои сборки Windows, оригинальные ISO, MakuTweaker, и многое другое!<br>
-        На сайте есть реклама. Если вы выключите адблок и нажмёте крестик,вы поможете мне продолжать свою деятельность!
-</section>
-<div class="page">
-    <section class="button-menu-section">
-            <div class="row">
-                <a href="builds">Сборки от Аддерли</a>
-                <a href="windows">Скачать официальные Windows</a>
-            </div>
-            <div class="row">
-                <a href="makutweaker">Скачать MakuTweaker</a>
-                <a href="makubench">MakuTweaker Benchmark</a>
-            </div>
-            <div class="row">
-                <a href="win_pe">Windows PE от Аддерли</a>
-                <a href="makuyan">Запрещатор Яндекса</a>
-            </div>
-            <div class="row">
-                <a href="https://t.me/adderly324" id="tgchanell">Telegram канал</a>
-                <a href="https://boosty.to/adderly" id="supboosty">Поддержать на Boosty</a>
-            </div>
-            </div>
-        </section>
+        Здесь вы можете скачать мои сборки Windows, оригинальные ISO, MakuTweaker и многое другое!<br>
+        На сайте есть реклама. Если вы выключите адблокер, вы поможете мне продолжать свою деятельность!</p>
+    </section>
 
-         <section class="youtube-section">
-                <h2>Самое актуальное видео на YouTube канале</h2>
-                <iframe height="393"
+    <section class="button-menu-section">
+        <div class="home-grid">
+            <a href="builds">Сборки от Аддерли</a>
+            <a href="windows">Скачать официальные Windows</a>
+            <a href="makutweaker">Скачать MakuTweaker</a>
+            <a href="makubench">MakuTweaker Benchmark</a>
+            <a href="win_pe">Windows PE от Аддерли</a>
+            <a href="makuyan">Запрещатор Яндекса</a>
+            
+            <a href="https://t.me/adderly324" target="_blank" rel="noopener noreferrer">
+                <img src="icons/tg.png" alt="TG"> Telegram канал
+            </a>
+            <a href="https://boosty.to/adderly" target="_blank" rel="noopener noreferrer">
+                <img src="icons/boosty.png" alt="Boosty"> Поддержать на Boosty
+            </a>
+        </div>
+    </section>
+
+    <section class="youtube-section">
+        <div class="video-card">
+            <h2>Самое актуальное видео на YouTube канале</h2>
+            <div class="video-wrapper">
+                <iframe 
                     src="https://www.youtube.com/embed/videoseries?si=EL7VwKSGH9gmIKnk&amp;list=UULFsS9QFVkkxhF0zYwf1QP2ZA"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </section>
-    </main>
-
-</div>
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
 </main>
+
 <footer>
+    <div class="footer-socials">
         <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
             <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
         </a>
@@ -132,9 +191,10 @@
         <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
             <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
         </a>
-        <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
-    </footer>
+    </div>
+    <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
+
 <script src="burger.js"></script>
 </body>
-
 </html>
