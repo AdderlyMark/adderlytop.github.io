@@ -2,8 +2,11 @@
 <html lang="ru">
 
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adderly.Top - Результаты MakuTweaker Benchmark</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -11,215 +14,227 @@
         gtag('js', new Date());
         gtag('config', 'G-68MY39SKZ9');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta property="og:image" content="https://adderly.top/images/favicon.png">
     <link rel="icon" href="images/favicon.png">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="base.css">
-    <title>Результаты MakuTweaker Benchmark</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="Результаты MakuTweaker Benchmark">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, макутвикер, результаты">
+    <meta property="og:description" content="Результаты MakuTweaker Benchmark">
+    <meta name="description" content="Результаты MakuTweaker Benchmark от пользователей MakuTweaker">
+
     <style>
-        h2{display: flex;justify-content: center;align-items: center;}
-        table {
-            border-collapse: collapse;
-            margin: 0 auto 30px auto;
-            background-color: #868686;
-            table-layout: fixed;
-            width: 300px;
-            border-right: 2px solid #000;
-            min-width: 450px;
-        }
-        th, td {
-            border: 1px solid #868686;
-            padding: 8px;
-            text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            border-right: 2px solid #575757;
-        }
-        th.name, td.name {
-            text-align: left;
-            width: 257px;
-        }
-        th.score, td.score {
-            width: 173px;
-            cursor: pointer;
-        }
-        th.score:hover {
-            text-decoration: underline;
-        }
-        th.sorttable_sorted::after {
-            content: " ↓";
-            font-size: 14px;
-            margin-left: 5px;
-            color: #fff !important;
-        }
-        th.sorttable_sorted_reverse::after {
-            content: " ↑";
-            font-size: 14px;
-            margin-left: 5px;
-            color: #fff !important;
-        }
-        .search-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        #cpu-search {
-            padding: 10px;
-            width: 80%;
-            max-width: 580px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .similar-cpu-results {
-            margin: 20px auto;
-            max-width: 800px;
+        .floating-panel {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
             padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #333;
+            border-radius: 16px;
+            width: 210px;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .panel-header {
+            margin-bottom: 10px;
+            font-weight: 700;
             color: #fff;
+            font-size: 1.1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .floating-button {
+            display: block;
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            text-align: left;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        .floating-button:hover {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border-color: rgba(255,255,255,0.2);
+            transform: translateX(4px);
+        }
+
+        main h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 14px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            color: var(--text-main);
+        }
+
+        th {
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        th:hover { background: rgba(0,0,0,0.5); }
+        tbody tr { transition: background 0.2s ease; }
+        tbody tr:hover { background: rgba(168, 85, 247, 0.15); }
+        tbody tr:last-child td { border-bottom: none; }
+        th.name, td.name { font-weight: 500; color: #fff; }
+        th.sorttable_sorted::after { content: " ↓"; color: #a855f7; font-size: 14px; margin-left: 5px; }
+        th.sorttable_sorted_reverse::after { content: " ↑"; color: #a855f7; font-size: 14px; margin-left: 5px; }
+
+        .search-container { margin: 30px 0; text-align: center; }
+        #cpu-search {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid var(--border-color);
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        #cpu-search:focus {
+            border-color: #a855f7;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+        }
+
+        .search-container h6 {
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .similar-cpu-results {
+            margin: 20px auto 40px;
+            background: rgba(30, 15, 45, 0.8);
+            border: 1px solid #a855f7;
+            border-radius: 12px;
+            padding: 20px;
             display: none;
         }
-        .similar-cpu-results h3 {
-            margin-top: 0;
-            font-size: 1.2em;
-            color: #ff9800;
-        }
-        .similar-cpu-results table {
-            width: 100%;
-            margin: 10px 0 0 0;
-            background-color: #444;
-            table-layout: auto;
-        }
-        .similar-cpu-results th, .similar-cpu-results td {
-            border: 1px solid #666;
-            white-space: normal;
-        }
-        .similar-cpu-results .match-text {
-            color: #8bc34a;
-            font-weight: bold;
-        }
+        .similar-cpu-results h3 { margin-top: 0; color: #fff; font-size: 1.2rem; }
+        .match-text { color: #a855f7; font-weight: 700; }
+
+        @media (max-width: 1500px) {
         .floating-panel {
-    position: fixed;
-    top: 120px;
-    left: 20px;
-    background-color: rgba(240, 240, 240, 0.9); 
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 250px;
-}
+            left: 10px;
+            width: 140px;
+            padding: 12px;
+        }
+        .panel-header { width: 100%; border-bottom: none; margin-bottom: 5px; padding-bottom: 0; }
+        .floating-button {
+                padding: 8px 10px;
+                font-size: 0.8rem;
+            }            .floating-button:hover { transform: translateY(-2px); }
+        }
 
-.panel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    margin-bottom: 10px;
-}
-
-.panel-header span {
-    flex-grow: 1;
-    margin-left: 3px;
-    color: black;
-    white-space: nowrap;
-}
-
-.floating-panel button {
-    display: block;
-    width: 100%;
-    margin: 2px 0;
-    padding: 5px 10px;
-    background-color: #191919;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 12px;
-    text-align: left; 
-}
-.buttons-group{display: flex;justify-content: center;align-items: center;gap: 10px;}
-.download-button {
-    display: inline-block;
-    background-color: #191919;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    margin-top: 0px;
-    transition: 0.1s linear;
-    &:hover{box-shadow: 0 0 0 4px blue;}
-}
+        @media (max-width: 1300px) {
+        .floating-panel {
+            display: none !important;
+        }
+    }
     </style>
-        <meta property="og:title" content="Результаты MakuTweaker Benchmark">
-    <meta property="og:keywords"
-        content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер">
-    <meta property="og:description" content="Результаты MakuTweaker Benchmark">
-    <meta name="description" content="Результаты MakuTweaker Benchmark от подписчиков">
-    <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер">
-    <meta property="og:image" content="images/favicon.png">
 </head>
 
 <body>
     <div class="floating-panel">
-        <div class="panel-header">
-            <span>MakuTweaker Benchmark</span>
-        </div>
-        <button class="floating-button" onclick="scrollToSection('desktop_intel')">Настольные Intel Core процессоры</button>
-        <button class="floating-button" onclick="scrollToSection('desktop_amd')">Настольные AMD Ryzen процессоры</button>
-        <button class="floating-button" onclick="scrollToSection('laptop_intel')">Ноутбучные Intel Core процессоры</button>
-        <button class="floating-button" onclick="scrollToSection('laptop_amd')">Ноутбучные AMD Ryzen процессоры</button>
-        <button class="floating-button" onclick="scrollToSection('other_intel')">Прочие Intel процессоры</button>
-        <button class="floating-button" onclick="scrollToSection('xeon_intel')">Intel Xeon процессоры</button>
-        <button class="floating-button" onclick="scrollToSection('other_amd')">Прочие AMD процессоры</button>
+        <div class="panel-header">Категории</div>
+        <button class="floating-button" onclick="scrollToSection('desktop_intel')">Настольные Intel Core</button>
+        <button class="floating-button" onclick="scrollToSection('desktop_amd')">Настольные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToSection('laptop_intel')">Ноутбучные Intel Core</button>
+        <button class="floating-button" onclick="scrollToSection('laptop_amd')">Ноутбучные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToSection('other_intel')">Прочие Intel</button>
+        <button class="floating-button" onclick="scrollToSection('xeon_intel')">Intel Xeon</button>
+        <button class="floating-button" onclick="scrollToSection('other_amd')">Прочие AMD</button>
     </div>
 
 <header>
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
-        <nav>
-            <ul>
-                <li><a href="builds">Сборки</a></li>
-                <li><a href="makutweaker">MakuTweaker</a></li>
-                <li><a href="support">Поддержать</a></li>
-            </ul>
-        </nav>
-        <img src="icons/burger.svg" alt="Меню" id="burger">
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="support">Поддержать</a></li>
+        </ul>
+    </nav>
+    <img src="icons/burger.svg" alt="Меню" id="burger">
 </header>
-    <main>
-        <h1 style="text-align: center;padding-top: 30px;">Результаты тестов процессоров в MakuTweaker Benchmark</h1>
 
-        <div class="search-container">
-            <input type="text" id="cpu-search" placeholder="Введите название процессора для поиска похожих (например, 13700KF)">
-            <h6>Вы так же можете добавить в начале "/" чтобы сделать глобальный поиск.</h6>
-        </div>
+<main>
+    <h1>Результаты MakuTweaker Benchmark</h1>
 
-        <div id="similar-cpu-results" class="similar-cpu-results">
-            <h3>Результат поиска и похожие процессоры<br>в базе MakuTweaker Benchmark (~10% по обоим показателям):</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th class="name">Процессор</th>
-                        <th class="score">Одноядерный</th>
-                        <th class="score">Многопоточный</th>
-                        <th>Комментарий</th>
-                    </tr>
-                </thead>
-                <tbody id="similar-cpu-tbody">
-                    </tbody>
-            </table>
-        </div>
+    <div class="search-container">
+        <input type="text" id="cpu-search" placeholder="Введите название процессора (например, 13700KF)">
+        <h6>Добавьте в начале "/" чтобы сделать глобальный поиск.</h6>
+    </div>
 
-        <h2>Настольные Intel Core процессоры</h2>
-        <table id="desktop_intel" class="sortable">
+    <div id="similar-cpu-results" class="similar-cpu-results table-container">
+        <h3>Результат поиска и похожие процессоры:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th class="name">Процессор</th>
+                    <th class="score">Одноядерный</th>
+                    <th class="score">Многопоточный</th>
+                    <th>Комментарий</th>
+                </tr>
+            </thead>
+            <tbody id="similar-cpu-tbody"></tbody>
+        </table>
+    </div>
+
+    <h2 id="desktop_intel">Настольные Intel Core процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
             <thead>
                 <tr>
                     <th class="name">Процессор</th>
@@ -307,17 +322,19 @@
                 <tr><td class="name">Intel Core i3 540</td><td class="score sorttable_numeric">336</td><td class="score sorttable_numeric">1118</td></tr>
             </tbody>
         </table>
-        <h2>Настольные AMD Ryzen процессоры</h2>
-        <div id="desktop_amd" class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name">Процессор</th>
-                        <th class="score sorttable_numeric">Одноядерный</th>
-                        <th class="score sorttable_numeric">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody>
+    </div>
+
+    <h2 id="desktop_amd">Настольные AMD Ryzen процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name">Процессор</th>
+                    <th class="score sorttable_numeric">Одноядерный</th>
+                    <th class="score sorttable_numeric">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody>
                     <tr><td class="name">AMD Ryzen 9 9950X3D</td><td class="score sorttable_numeric">1287</td><td class="score sorttable_numeric">33918</td></tr>
                     <tr><td class="name">AMD Ryzen 9 7950X3D</td><td class="score sorttable_numeric">1268</td><td class="score sorttable_numeric">32468</td></tr>
                     <tr><td class="name">AMD Ryzen 9 9900X</td><td class="score sorttable_numeric">1264</td><td class="score sorttable_numeric">25445</td></tr>
@@ -357,21 +374,21 @@
 
                     <tr><td class="name">AMD Ryzen 3 3200G</td><td class="score sorttable_numeric">839</td><td class="score sorttable_numeric">3288</td></tr>
                     <tr><td class="name">AMD Ryzen 3 2200G</td><td class="score sorttable_numeric">712</td><td class="score sorttable_numeric">2851</td></tr>
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
+    </div>
 
-        <h2>Ноутбучные Intel Core процессоры</h2>
-        <div id="laptop_intel" class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name">Процессор</th>
-                        <th class="score sorttable_numeric">Одноядерный</th>
-                        <th class="score sorttable_numeric">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody>
+    <h2 id="laptop_intel">Ноутбучные Intel Core процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name">Процессор</th>
+                    <th class="score sorttable_numeric">Одноядерный</th>
+                    <th class="score sorttable_numeric">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody>
                     <tr><td class="name">Intel Core i9 14900HX</td><td class="score sorttable_numeric">1463</td><td class="score sorttable_numeric">20832</td></tr>
                     
                     <tr><td class="name">Intel Core Ultra 7 155H</td><td class="score sorttable_numeric">1292</td><td class="score sorttable_numeric">15468</td></tr>
@@ -445,21 +462,21 @@
                     <tr><td class="name">Intel Core i3 2330M</td><td class="score sorttable_numeric">320</td><td class="score sorttable_numeric">893</td></tr>
                     <tr><td class="name">Intel Core i3 380M</td><td class="score sorttable_numeric">302</td><td class="score sorttable_numeric">1028</td></tr>
                     <tr><td class="name">Intel Core i3 330M</td><td class="score sorttable_numeric">301</td><td class="score sorttable_numeric">769</td></tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <h2>Ноутбучные AMD Ryzen процессоры</h2>
-        <div id="laptop_amd" class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name">Процессор</th>
-                        <th class="score sorttable_numeric">Одноядерный</th>
-                        <th class="score sorttable_numeric">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="laptop_amd">Ноутбучные AMD Ryzen процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name">Процессор</th>
+                    <th class="score sorttable_numeric">Одноядерный</th>
+                    <th class="score sorttable_numeric">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody>
                     <tr><td class="name">AMD Ryzen AI 9 HX 370</td><td class="score sorttable_numeric">1184</td><td class="score sorttable_numeric">19520</td></tr>
                     <tr><td class="name">AMD Ryzen 7 260</td><td class="score sorttable_numeric">1160</td><td class="score sorttable_numeric">15524</td></tr>
                     <tr><td class="name">AMD Ryzen AI 9 365</td><td class="score sorttable_numeric">848</td><td class="score sorttable_numeric">14167</td></tr>
@@ -486,21 +503,21 @@
                     
                     <tr><td class="name">AMD Ryzen 3 3250U</td><td class="score sorttable_numeric">725</td><td class="score sorttable_numeric">1933</td></tr>
                     <tr><td class="name">AMD Ryzen 3 3200U</td><td class="score sorttable_numeric">682</td><td class="score sorttable_numeric">1774</td></tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <h2>Прочие Intel процессоры</h2>
-        <div id="other_intel" class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name">Процессор</th>
-                        <th class="score sorttable_numeric">Одноядерный</th>
-                        <th class="score sorttable_numeric">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="other_intel">Прочие Intel процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name">Процессор</th>
+                    <th class="score sorttable_numeric">Одноядерный</th>
+                    <th class="score sorttable_numeric">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody>
                     <tr><td class="name">Intel Pentium Gold G6400</td><td class="score sorttable_numeric">796</td><td class="score sorttable_numeric">2036</td></tr>
                     <tr><td class="name">Intel Pentium Gold 7505</td><td class="score sorttable_numeric">709</td><td class="score sorttable_numeric">2210</td></tr>
                     <tr><td class="name">Intel Pentium Gold G4400</td><td class="score sorttable_numeric">690</td><td class="score sorttable_numeric">1357</td></tr>
@@ -532,21 +549,21 @@
                     <tr><td class="name">Intel NVIDIA CC150</td><td class="score sorttable_numeric">839</td><td class="score sorttable_numeric">8680</td></tr>
                     <tr><td class="name">Intel N100</td><td class="score sorttable_numeric">657</td><td class="score sorttable_numeric">2052</td></tr>
                     <tr><td class="name">Intel N97</td><td class="score sorttable_numeric">696</td><td class="score sorttable_numeric">2225</td></tr>
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
+    </div>
 
-        <h2>Intel Xeon процессоры</h2>
-        <div id="xeon_intel" class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name">Процессор</th>
-                        <th class="score sorttable_numeric">Одноядерный</th>
-                        <th class="score sorttable_numeric">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody>
+    <h2 id="xeon_intel">Intel Xeon процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name">Процессор</th>
+                    <th class="score sorttable_numeric">Одноядерный</th>
+                    <th class="score sorttable_numeric">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody>
                     <tr><td class="name">Intel Xeon E3 1270 V3 (4 Ядра)</td><td class="score sorttable_numeric">891</td><td class="score sorttable_numeric">4339</td></tr>
                     <tr><td class="name">Intel Xeon E5 2690 V4 (14 Ядер)</td><td class="score sorttable_numeric">781</td><td class="score sorttable_numeric">13832</td></tr>
                     <tr><td class="name">Intel Xeon E5 2667 V4 (8 Ядер)</td><td class="score sorttable_numeric">865</td><td class="score sorttable_numeric">8703</td></tr>
@@ -567,21 +584,21 @@
                     <tr><td class="name">Intel Xeon E5 2620 V3 (6 Ядер)</td><td class="score sorttable_numeric">560</td><td class="score sorttable_numeric">4510</td></tr>
                     <tr><td class="name">Intel Xeon E5 2643 0 (4 Ядра)</td><td class="score sorttable_numeric">553</td><td class="score sorttable_numeric">2612</td></tr>
                     <tr><td class="name">Intel Xeon E5 2630 V2 (6 Ядер)</td><td class="score sorttable_numeric">540</td><td class="score sorttable_numeric">4240</td></tr>
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
+    </div>
 
-        <h2>Прочие AMD процессоры</h2>
-        <div id="other_amd" class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name">Процессор</th>
-                        <th class="score sorttable_numeric">Одноядерный</th>
-                        <th class="score sorttable_numeric">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody>
+    <h2 id="other_amd">Прочие AMD процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name">Процессор</th>
+                    <th class="score sorttable_numeric">Одноядерный</th>
+                    <th class="score sorttable_numeric">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody>
                     <tr><td class="name">AMD EPYC 9754</td><td class="score sorttable_numeric">424</td><td class="score sorttable_numeric">97004</td></tr>
                     <tr><td class="name">AMD EPYC 7452</td><td class="score sorttable_numeric">618</td><td class="score sorttable_numeric">46327</td></tr>
                     
@@ -607,53 +624,36 @@
                     
                     <tr><td class="name">AMD E-450</td><td class="score sorttable_numeric">109</td><td class="score sorttable_numeric">162</td></tr>
                     <tr><td class="name">AMD C-50</td><td class="score sorttable_numeric">91</td><td class="score sorttable_numeric">157</td></tr>
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
+    </div>
 
-        <h2>ARM процессоры</h2>
-        <div id="other_amd" class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name">Процессор</th>
-                        <th class="score sorttable_numeric">Одноядерный</th>
-                        <th class="score sorttable_numeric">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td class="name">Qualcomm Snapdragon 860</td><td class="score sorttable_numeric">257</td><td class="score sorttable_numeric">1131</td></tr>
-                    <tr><td class="name">Qualcomm Snapdragon 8cx Gen 3</td><td class="score sorttable_numeric">158</td><td class="score sorttable_numeric">1120</td></tr>
-                </tbody>
-            </table>
-        </div>
+    <h2 id="arm_cpu">ARM процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name">Процессор</th>
+                    <th class="score sorttable_numeric">Одноядерный</th>
+                    <th class="score sorttable_numeric">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Qualcomm Snapdragon 860</td><td class="score sorttable_numeric">257</td><td class="score sorttable_numeric">1131</td></tr>
+                <tr><td class="name">Qualcomm Snapdragon 8cx Gen 3</td><td class="score sorttable_numeric">158</td><td class="score sorttable_numeric">1120</td></tr>
+            </tbody>
+        </table>
+    </div>
 
+    <div class="buttons" style="margin-bottom: 60px;">
+        <a href="https://adderly.top/makutweaker" class="btn-primary">Скачать MakuTweaker</a>
+        <a href="https://t.me/adderly324/4460" class="btn-secondary" target="_blank" rel="noopener noreferrer">Отправить свои результаты</a>
+    </div>
 
-        <div class="buttons-group">
-            <a href="https://adderly.top/makutweaker" class="download-button" style="margin-bottom: 60px;">Скачать MakuTweaker</a>
-            <a href="https://t.me/adderly324/4460" class="download-button" style="margin-bottom: 60px;">Отправить свои результаты</a>
-        </div>
-        
-    </section>
 </main>
-<script src="burger.js"></script>
-<script src="sorttable.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        document.querySelectorAll('.sortable').forEach(table => {
-            const multiHeader = table.querySelector('thead tr th:nth-child(3)');
-            if (multiHeader) {
-                sorttable.innerSortFunction.apply(multiHeader, []);
-                sorttable.innerSortFunction.apply(multiHeader, []); 
-                multiHeader.classList.remove('sorttable_sorted');
-                multiHeader.classList.add('sorttable_sorted_reverse');
-            }
-        });
-    }, 50); 
-});
-</script>
-    <footer>
+
+<footer>
+    <div class="footer-socials">
         <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
             <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
         </a>
@@ -661,16 +661,36 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
         </a>
         <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/boosty.jpg" alt="Boosty Icon" class="social-icon">
+            <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
         </a>
-        <p>&copy; 2026 Adderly.Top // Марк Аддерли</p>
-    </footer>
+    </div>
+    <p id="trademark">&copy; 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
+
+<script src="burger.js"></script>
+<script src="sorttable.js"></script>
+<script>
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if(el) {
+            const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            document.querySelectorAll('.sortable').forEach(table => {
+                const multiHeader = table.querySelector('thead tr th:nth-child(3)');
+                if (multiHeader && sorttable.innerSortFunction) {
+                    sorttable.innerSortFunction.apply(multiHeader, []);
+                    sorttable.innerSortFunction.apply(multiHeader, []); 
+                    multiHeader.classList.remove('sorttable_sorted');
+                    multiHeader.classList.add('sorttable_sorted_reverse');
+                }
+            });
+        }, 50); 
+    });
+</script>
 </body>
-
 </html>
-
-
-
-
-
-
