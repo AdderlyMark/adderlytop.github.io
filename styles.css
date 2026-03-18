@@ -106,8 +106,6 @@ nav a {
 
 nav a:hover { color: #fff; }
 
-#burger { display: none; cursor: pointer; filter: invert(1); width: 28px;}
-
 main {
     max-width: 1100px;
     margin: 10px auto 40px; 
@@ -340,11 +338,88 @@ footer {
 }
 .lightbox-close:hover { color: #a855f7; }
 
+.menu-container {
+    position: fixed;
+    z-index: 1000;
+    background: rgba(20, 10, 30, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px;
+    min-width: 240px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-item {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding-left: 25px;
+}
+
+.menu-item.active-link {
+    color: #a855f7;
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.menu-item.highlight {
+    margin-top: 5px;
+    background: var(--primary-gradient);
+    color: #fff;
+    text-align: center;
+}
+
+.menu-item.highlight:hover {
+    padding-left: 20px;
+    box-shadow: 0 0 15px var(--primary-glow);
+    transform: scale(1.02);
+}
+
+#burger { 
+    display: none; 
+    cursor: pointer; 
+    width: 28px; 
+    filter: invert(1);
+    transition: transform 0.3s ease;
+    z-index: 101;
+}
+
+#burger.active {
+    transform: rotate(90deg);
+}
+
 @media (max-width: 768px) {
     header { 
         margin: 10px; 
         border-radius: 20px;
-        padding: 12px 20px; 
+        padding: 12px 30px;
     }
     nav { display: none; }
     #burger { display: block; }
