@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adderly.Top - MakuTweaker</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-    crossorigin="anonymous"></script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -13,320 +13,107 @@
         gtag('js', new Date());
         gtag('config', 'G-68MY39SKZ9');
     </script>
+    
     <meta property="og:image" content="https://adderly.top/images/favicon.png">
     <link rel="icon" href="images/favicon.png">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="base.css">
+    
+    <link rel="stylesheet" href="styles.css">
 
     <script>
         const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
         let existingNews = new Map();
     </script>
 
-
-
     <meta property="og:title" content="Скачать MakuTweaker">
     <meta property="og:keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс">
     <meta property="og:description" content="Скачать MakuTweaker от Марка Аддерли">
     <meta name="description" content="Скачать MakuTweaker от Марка Аддерли">
     <meta name="keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku cherrywave, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс">
-    <meta property="og:image" content="images/favicon.png">
-    <style>
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 5px;
-}
-
-h1 {
-    margin-top: 30px;
-    font-size: clamp(20px, 2.5vw, 32px);
-}
-
-h2 {
-    font-size: clamp(16px, 2vw, 24px);
-}
-
-p {
-    font-size: clamp(14px, 1.5vw, 18px);
-}
-
-.gallery-container {
-    width: 80%;
-    margin: 20px auto;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 5px;
-    background-color: #191919;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-}
-
-.gallery img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 0 3px #3c82f8;
-}
-
-@media (max-width: 768px) {
-    .gallery-container {
-        width: 95%;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-}
-
-.lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.25s ease;
-    z-index: 9999;
-}
-
-.lightbox.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.lightbox-img {
-    width: auto;
-    height: auto;
-    max-width: 98vw;
-    max-height: 98vh;
-    border-radius: 20px;
-    transform: scale(0.95);
-    transition: transform 0.25s ease;
-}
-
-.lightbox.active .lightbox-img {
-    transform: scale(1);
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-}
-
-.accordion-container {margin: 0 auto;width: 80%;max-width: 2000px;}
-
-.accordion {
-    background-color: #151540;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    border: none;
-    outline: none;
-    font-size: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.4s ease;
-    border-radius: 10px;
-    justify-content: center;
-    position: relative;
-
-}
-
-.accordion::after {
-    content: '\002B';
-    color: white;
-    right: 20px;
-    position: absolute;
-}
-
-.accordion.active::after {
-    content: "\2212";
-    color: white;
-}
-
-.panel {
-    border-radius: 10px;
-    background-color: #0c0c30;
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.panel.open {
-    max-height: 500px;
-    opacity: 1;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 350px));
-    margin-top: 3px;
-    margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.buttons a {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #151540;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    transition: 0.1s linear;
-    font-size: clamp(16px, 1.2vw, 18px);
-    padding: 0 20px;
-}
-
-.buttons a:hover {
-    box-shadow:
-        0 0 0 4px #3c82f8;
-}
-
-.buttons a:last-child:nth-child(odd) {
-    grid-column: 1 / 3;
-}
-
-
-
-.buttons a:last-child:nth-child(odd) {
-    grid-column: 1 / 3;
-}
-@media (max-width: 768px) {
-  .accordion-container{width: 95%;}
-    .accordion-container {
-        width: 95%;
-    }
-    
-    .buttons {
-        grid-template-columns: 1fr;
-        width: 90%;
-        gap: 10px;
-    }
-    
-    .buttons a {
-        height: 50px;
-        font-size: 14px;
-    }
-    
-    .buttons a:last-child:nth-child(odd) {
-        grid-column: 1;
-    }
-    
-    .accordion {
-        font-size: 18px;
-    }
-}
-    </style>
 </head>
 <body>
 <header>
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
-        <nav>
-            <ul>
-                <li><a href="builds">Сборки</a></li>
-                <li><a href="makutweaker">MakuTweaker</a></li>
-                <li><a href="support">Поддержать</a></li>
-            </ul>
-        </nav>
-        <img src="icons/burger.svg" alt="Меню" id="burger">
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="support">Поддержать</a></li>
+        </ul>
+    </nav>
+    <img src="icons/burger.svg" alt="Меню" id="burger">
 </header>
 
 <main>
     <h1>Скачать MakuTweaker</h1>
-    <p>MakuTweaker позволяет очень гибко и эластично настроить вашу систему под себя,<br>
-включая удаление неудаляемых приложений, а также различные параметры реестра,<br>
-которые недоступны простым пользователям!</p>
-<div class="gallery-container">
-  <div class="gallery">
-    <img src="images/makut/makut1.png">
-    <img src="images/makut/makut2.png">
-    <img src="images/makut/makut3.png">
-    <img src="images/makut/makut4.png">
-    <img src="images/makut/makut5.png">
-    <img src="images/makut/makut6.png">
-    <img src="images/makut/makut7.png">
-    <img src="images/makut/makut8.png">
-    <img src="images/makut/makut9.png">
-  </div>
-</div>
-<div class="accordion-container">
-    <button class="accordion">Системные требования</button>
-    <div class="panel">
-        <div style="text-align: left; padding-left: 20px;">
-            <h1>Системные требования</h1>
-                •  Для запуска программы нужна Windows 10 1809 (2018) и библиотека NET Core 8.0.<br>С февраля 2026 - установщик MakuTweaker устанавливает и библиотеку, при наличии интернета.<br>
-                •  Для полного функционала нужна Windows 11 22H2.<br><br><br>
-        </div>
-    </div>
-</div>
+    <p>Самый дружелюбный и полезный твикер для Windows.<br>
+В этой программе вы можете гибко настроить и персонализировать систему, а так же управлять процессами и посмотреть подробную информацию о характеристиках вашего ПК!
+Также, вы можете выполнить быструю настройку Windows, управлять системными компонентами и избавиться от системного мусора!
+В MakuTweaker доступно несколько тем оформления, благодаря которым вы можете настроить программу на свой вкус.</p>
 
-<div class="accordion-container">
-    <button class="accordion">Актуальное обновление MakuTweaker 5.3 (10 марта 2026)</button>
-    <div class="panel">
-        <div style="text-align: left; padding-left: 20px;">
-                <h1>Что нового в MakuTweaker 5.3?</h1><br>
-Новое масштабнейшее обновление MakuTweaker - 5.3!<br><br>
-• На вкладке "Информация о ПК" появился компактный режим! Открыть его, можно нажав на клавишу F3. В нём отображается: название и модель устройства, видеокарта с наибольшим объёмом видеопамяти, процессор, оперативная память, объединённый объём всех накопителей, материнская плата, версия BIOS и наличие модуля TPM! Через дробь указана дополнительная информация, например:<br>
-"название процессора // количество ядер // потоков".
-Помимо этого, в обычном режиме "Информации о ПК", в комбобоксах видеокарт и накопителей теперь имеется сортировка по количеству памяти от большего к меньшему. Если у вас несколько видеокарт, например встройка с 128 МБ, и дискретка с 8 ГБ - на первом месте теперь абсолютно всегда будет сразу же выводиться информация о дискретной видеокарте. Аналогично и с накопителями - основной самый большой SSD будет всегда первым.<br>
-Так же, на этой вкладке была добавлена подсказка о горячих клавишах.<br>
-<br>
-• Вкладка "Быстрая настройка Windows" впервые со времён выхода MakuTweaker получила огромное обновление!
-По многочисленным просьбам, теперь эта страница содержит в себе практически все твики из всех страниц, чтобы всё можно было настроить в одном месте! Автоматически выделены галочки которые рекомендуются как настройка MakuOS, типа включения скрытых файлов, или убирания задержки в контекстном меню. Фактически, эта вкладка теперь имеет в себе 90% функционала программы. Только самые продвинутые и не популярные функции не будут здесь находиться.<br>
-А ещё, применённые настройки теперь пропадают с красивой анимацией, чтобы на странице отображались только те параметры, которые ещё не были применены.<br>
-Так же, была добавлена кнопка "Снять все галочки" и "Активировать все галочки", что значительно сэкономит время на новую авто-настройку MakuTweaker!<br>
-<br>
-• Недавно вышедшая вкладка "Управление процессами" тоже была обновлена! Панель стала более компактной, и теперь в неё вмещается больше элементов. На этой странице тоже появилась подсказка возле заголовка, открывающая целую панельку со справкой о том, зачем эта страница нужна и кому будет полезна!<br>
-<br>
-• На вкладке "Windows Update" была полностью переделана функция "Отключить Windows Update"! Теперь она не только применяет пару параметров в реестре, но и прописывает сервера обновлений Microsoft в hosts файл, и настраивает службу запуска центра обновлений! Теперь, MakuTweaker 5.3 умеет отключать центр обновлений насмерть! Я себе первым же делом это и сделал :)<br>
-Функция возврата полностью зеркальная, и если у вас появится желание вернуть обновления - вы сможете снять галочку, перезагрузиться, и центр обновлений оживёт обратно.<br>
-<br>
-Из мелких но приятных юзер экспириенс нововведений:<br>
-• Добавлена подсказка для функции включения DirectPlay, и отключения Bing в меню Пуск<br>
-• Исправлен недочёт, когда на компьютерах отображалась функция "Сделать отчёт о характеристиках батареи"<br>
-• Была обновлена функция "Отключить V.B.S.", она теперь покрывает ещё больше параметров реестра и служб<br>
-• Таймер перезагрузки проводника был увеличен с 1 секунды до 2 секунд<br>
-• Командная строка больше не мелькает в некоторых функциях<br>
-• Используя функцию "Восстановить систему с помощью DISM, теперь окно закрываться не будет, чтобы пользователь знал о завершении прогресса<br>
-• На странице "Активация Windows" был удалён метод активации KMS, так как он устарел, и его полностью заменил метод HWID от Massgrave<br>
-• По просьбам пользователей из РФ, в MakuTweaker появилась функция "Включить обход ограничений раздачи интернета (TTL 65). Подробности можете узнать наведя курсор мыши на подсказку<br>
-<br>
-Как я уже говорил ранее, я провёл глобальную перепись кода MakuTweaker после моего друга и заодно обновил файлы локализации. Теперь в них нет дубликатов, несостыковок и неиспользуемых строк!<br>
-Всего локализация содержит около 250 строчек, поэтому если вы знаете другие языки помимо EN/RU/UA/CZ, напишите мне в ЛС (@makuadarii) и возможно, в MakuTweaker появится новый язык именно благодаря вам!<br><br><br>
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="images/makut/makut1.png" alt="Скриншот 1">
+            <img src="images/makut/makut2.png" alt="Скриншот 2">
+            <img src="images/makut/makut3.png" alt="Скриншот 3">
+            <img src="images/makut/makut4.png" alt="Скриншот 4">
+            <img src="images/makut/makut5.png" alt="Скриншот 5">
+            <img src="images/makut/makut6.png" alt="Скриншот 6">
+            <img src="images/makut/makut7.png" alt="Скриншот 7">
+            <img src="images/makut/makut8.png" alt="Скриншот 8">
+            <img src="images/makut/makut9.png" alt="Скриншот 9">
         </div>
     </div>
-</div>
+
+    <div class="accordion-container">
+        <button class="accordion">Системные требования</button>
+        <div class="panel">
+            <div class="panel-content">
+                <h1>Системные требования</h1>
+                <p>• Для запуска программы нужна Windows 10 1809 (2018) и библиотека NET Core 8.0.<br>С февраля 2026 - установщик MakuTweaker устанавливает и библиотеку, при наличии интернета.</p>
+                <p>• Для полного функционала нужна Windows 11 22H2.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-container">
+        <button class="accordion">Актуальное обновление MakuTweaker 5.3 (10 марта 2026)</button>
+        <div class="panel">
+            <div class="panel-content">
+                <h1>Что нового в MakuTweaker 5.3?</h1>
+                <p>Новое масштабнейшее обновление MakuTweaker - 5.3!</p>
+                <p>• На вкладке "Информация о ПК" появился компактный режим! Открыть его, можно нажав на клавишу F3. В нём отображается: название и модель устройства, видеокарта с наибольшим объёмом видеопамяти, процессор, оперативная память, объединённый объём всех накопителей, материнская плата, версия BIOS и наличие модуля TPM! Через дробь указана дополнительная информация, например:<br>
+                "название процессора // количество ядер // потоков".<br>
+                Помимо этого, в обычном режиме "Информации о ПК", в комбобоксах видеокарт и накопителей теперь имеется сортировка по количеству памяти от большего к меньшему. Если у вас несколько видеокарт, например встройка с 128 МБ, и дискретка с 8 ГБ - на первом месте теперь абсолютно всегда будет сразу же выводиться информация о дискретной видеокарте. Аналогично и с накопителями - основной самый большой SSD будет всегда первым.<br>
+                Так же, на этой вкладке была добавлена подсказка о горячих клавишах.</p>
+                
+                <p>• Вкладка "Быстрая настройка Windows" впервые со времён выхода MakuTweaker получила огромное обновление!<br>
+                По многочисленным просьбам, теперь эта страница содержит в себе практически все твики из всех страниц, чтобы всё можно было настроить в одном месте! Автоматически выделены галочки которые рекомендуются как настройка MakuOS, типа включения скрытых файлов, или убирания задержки в контекстном меню. Фактически, эта вкладка теперь имеет в себе 90% функционала программы. Только самые продвинутые и не популярные функции не будут здесь находиться.<br>
+                А ещё, применённые настройки теперь пропадают с красивой анимацией, чтобы на странице отображались только те параметры, которые ещё не были применены.<br>
+                Так же, была добавлена кнопка "Снять все галочки" и "Активировать все галочки", что значительно сэкономит время на новую авто-настройку MakuTweaker!</p>
+                
+                <p>• Недавно вышедшая вкладка "Управление процессами" тоже была обновлена! Панель стала более компактной, и теперь в неё вмещается больше элементов. На этой странице тоже появилась подсказка возле заголовка, открывающая целую панельку со справкой о том, зачем эта страница нужна и кому будет полезна!</p>
+                
+                <p>• На вкладке "Windows Update" была полностью переделана функция "Отключить Windows Update"! Теперь она не только применяет пару параметров в реестре, но и прописывает сервера обновлений Microsoft в hosts файл, и настраивает службу запуска центра обновлений! Теперь, MakuTweaker 5.3 умеет отключать центр обновлений насмерть! Я себе первым же делом это и сделал :)<br>
+                Функция возврата полностью зеркальная, и если у вас появится желание вернуть обновления - вы сможете снять галочку, перезагрузиться, и центр обновлений оживёт обратно.</p>
+                
+                <p>Из мелких но приятных юзер экспириенс нововведений:<br>
+                • Добавлена подсказка для функции включения DirectPlay, и отключения Bing в меню Пуск<br>
+                • Исправлен недочёт, когда на компьютерах отображалась функция "Сделать отчёт о характеристиках батареи"<br>
+                • Была обновлена функция "Отключить V.B.S.", она теперь покрывает ещё больше параметров реестра и служб<br>
+                • Таймер перезагрузки проводника был увеличен с 1 секунды до 2 секунд<br>
+                • Командная строка больше не мелькает в некоторых функциях<br>
+                • Используя функцию "Восстановить систему с помощью DISM, теперь окно закрываться не будет, чтобы пользователь знал о завершении прогресса<br>
+                • На странице "Активация Windows" был удалён метод активации KMS, так как он устарел, и его полностью заменил метод HWID от Massgrave<br>
+                • По просьбам пользователей из РФ, в MakuTweaker появилась функция "Включить обход ограничений раздачи интернета (TTL 65). Подробности можете узнать наведя курсор мыши на подсказку</p>
+                
+                <p>Как я уже говорил ранее, я провёл глобальную перепись кода MakuTweaker после моего друга и заодно обновил файлы локализации. Теперь в них нет дубликатов, несостыковок и неиспользуемых строк!<br>
+                Всего локализация содержит около 250 строчек, поэтому если вы знаете другие языки помимо EN/RU/UA/CZ, напишите мне в ЛС (@makuadarii) и возможно, в MakuTweaker появится новый язык именно благодаря вам!</p>
+            </div>
+        </div>
+    </div>
 
 <div class="accordion-container">
     <button class="accordion">Обновление MakuTweaker 5.2 (3 марта 2026)</button>
@@ -549,50 +336,61 @@ MakuTweaker 5.0.31 - Микрофикс<br>
     </div>
 </div>
 
-
-<h1 style="padding-top: 20px;">Скачать MakuTweaker</h1>
-<div class="buttons">
-  <a href="https://github.com/AdderlyMark/adderly.github.io/raw/main/soft/MakuTweaker%20Setup.exe">Скачать MakuTweaker</a>
-  <a href="https://pixeldrain.com/u/ER2kPZPM">Портативная версия</a>
-  <a href="https://adderly.top/makubench">Посмотреть результаты MakuBench</a>
-</div>
+    <h1 style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuTweaker</h1>
+    <div class="buttons" style="margin-top: 0; padding-top: 0;">
+        <a href="https://github.com/AdderlyMark/adderly.github.io/raw/main/soft/MakuTweaker%20Setup.exe" class="btn-primary">Скачать MakuTweaker</a>
+        <a href="https://pixeldrain.com/u/ER2kPZPM" class="btn-primary">Портативная версия</a>
+        <a href="https://adderly.top/makubench" class="btn-secondary">Посмотреть результаты MakuBench</a>
+    </div>
 
 </main>
+
 <footer>
+    <div class="footer-socials">
         <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
+            <img src="icons/tg.png" alt="Telegram" class="social-icon">
         </a>
         <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
+            <img src="icons/yt.png" alt="YouTube" class="social-icon">
         </a>
         <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
-            <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
+            <img src="icons/boosty.png" alt="Boosty" class="social-icon">
         </a>
-        <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
-    </footer>
-</div>
+    </div>
+    <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
+
 <script src="burger.js"></script>
 <script>
+    function updateAccordionHeights() {
+        document.querySelectorAll('.panel.open').forEach(panel => {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        });
+    }
+
     document.querySelectorAll('.accordion').forEach((accordion, index) => {
+        const panel = accordion.nextElementSibling;
+
         if (index === 0 || index === 1) {
-            const panel = accordion.nextElementSibling;
             accordion.classList.add('active');
             panel.classList.add('open');
-            panel.style.maxHeight = panel.scrollHeight + "px";
         }
         
         accordion.addEventListener('click', function() {
-            const panel = this.nextElementSibling;
-            panel.classList.toggle('open');
             this.classList.toggle('active');
+            panel.classList.toggle('open');
             
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
+            if (panel.classList.contains('open')) {
                 panel.style.maxHeight = panel.scrollHeight + "px";
+            } else {
+                panel.style.maxHeight = null;
             }
         });
     });
+
+    updateAccordionHeights();
+    window.addEventListener('load', updateAccordionHeights);
+    window.addEventListener('resize', updateAccordionHeights);
 </script>
 
 <div class="lightbox" id="lightbox">
@@ -601,35 +399,32 @@ MakuTweaker 5.0.31 - Микрофикс<br>
 </div>
 
 <script>
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.querySelector('.lightbox-close');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
 
-document.querySelectorAll('.gallery img').forEach(img => {
-    img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
+    document.querySelectorAll('.gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
     });
-});
 
-function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-closeBtn.addEventListener('click', closeLightbox);
-
-lightboxImg.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', closeLightbox);
-
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        closeLightbox();
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
     }
-});
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+    lightbox.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
 </script>
 </body>
-
 </html>
-
