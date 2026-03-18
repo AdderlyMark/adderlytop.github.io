@@ -3,209 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заявление о прекращении MakuOS</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-    crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-68MY39SKZ9');
-    </script>
-    <meta property="og:image" content="https://adderly.top/images/favicon.png">
+    <title>Заявление о прекращении MakuOS — Adderly.Top</title>
+    
     <link rel="icon" href="images/favicon.png">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            text-align: left;
+            max-width: 900px;
+            margin: 40px auto;
+        }
 
-    <script>
-        const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
-        let existingNews = new Map();
-    </script>
+        .article-card h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            line-height: 1.2;
+            background: linear-gradient(to right, #fff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
-            
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
+        .article-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
+        .article-content h2 {
+            color: #fff;
+            margin-top: 40px;
+            font-size: 1.8rem;
+            border-left: 4px solid #7c3aed;
+            padding-left: 20px;
+        }
 
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-        });
-    </script>
-
-    <meta property="og:title" content="Скачать сборки от Марка Аддерли">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, windows 11 24h2, windows 11, 24h2, 22h2, windows 10, makuos mini">
-    <meta property="og:description" content="Скачать сборки от Марка Аддерли">
-    <meta name="description" content="Скачать сборки от Марка Аддерли">
-    <meta name="keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, maku os, makuos 10, makuos 10 lite, makuos 11, windows 11 24h2, windows 11, 24h2, 22h2, windows 10, makuos mini">
-    <meta property="og:image" content="images/favicon.png">
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #0f1115;
-        font-family: 'Segoe UI', Arial, sans-serif;
-        color: #eaeaea;
-        line-height: 1.7;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: 60px auto;
-        padding: 40px;
-        background: #1a1d24;
-        border-radius: 14px;
-        box-shadow: 0 0 40px rgba(0,0,0,0.6);
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 32px;
-        margin-bottom: 30px;
-        color: #ffffff;
-    }
-
-    h2 {
-        margin-top: 50px;
-        color: #4da3ff;
-        font-size: 24px;
-    }
-
-    p {
-        margin-bottom: 20px;
-        font-size: 18px;
-        color: #d4d4d4;
-    }
-
-    .features {
-        background: #14171d;
-        padding: 25px;
-        border-radius: 12px;
-        margin-top: 25px;
-    }
-
-    .features ul {
-        padding-left: 20px;
-    }
-
-    .features li {
-        margin-bottom: 10px;
-        font-size: 17px;
-    }
-
-    .highlight {
-        background: linear-gradient(90deg, #4da3ff, #7a5cff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-    }
-
-    .footer {
-        margin-top: 60px;
-        text-align: center;
-        font-size: 16px;
-        color: #888;
-    }
-
-    .cta-button {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 16px 32px;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(90deg, #4da3ff, #7a5cff);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(77,163,255,0.3);
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(77,163,255,0.5);
-}
-
-.cta-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cta-wrapper + .cta-wrapper {
-    margin-top: -20px;
-}
-
-    @media (max-width: 768px) {
-        .container {
-            margin: 20px;
+        .features-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
             padding: 25px;
+            margin: 30px 0;
         }
 
-        h1 {
-            font-size: 24px;
+        .features-box ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
         }
 
-        p {
-            font-size: 16px;
+        .features-box li {
+            position: relative;
+            padding-left: 25px;
+            color: var(--text-main);
         }
-    }
-</style>
+
+        .features-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #a855f7;
+            font-weight: bold;
+        }
+
+        .highlight-text {
+            color: #a855f7;
+            font-weight: 600;
+        }
+
+        .article-footer-btns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .article-card { padding: 25px; margin: 20px; }
+            .article-card h1 { font-size: 1.8rem; }
+            .features-box ul { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 
 <body>
+<header>
+    <a href="index" class="logo">
+        <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
+    </a>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="support">Поддержать</a></li>
+        </ul>
+    </nav>
+    <img src="icons/burger.svg" alt="Меню" id="burger">
+</header>
 
-<div class="container">
-
-<h1>Я принял решение прекратить создание сборок MakuOS.</h1>
-
-<p>В последнее время я замечаю, что создание сборок Windows - это долгая, скучная и неблагодарная работа.</p>
-
-<p>Когда у недалёких людей, использующих мои сборки, происходят какие либо проблемы, будто бы значки на рабочем столе перемешаются из-за смены разрешения, или какая-нибудь программа не открывается - они обязательно обвиняют меня, а не Microsoft в проблемах кривизны Windows. Хотя очевидно, что проблемы будут и на оригинальной винде, на что я никак повлиять не могу.</p>
+<main>
+    <article class="article-card">
+        <h1>Я принял решение прекратить создание сборок MakuOS.</h1>
+        
+        <div class="article-content">
+<p>В последнее время я замечаю, что создание сборок Windows - это долгая, скучная и неблагодарная работа. Когда у недалёких людей, использующих мои сборки, происходят какие либо проблемы, будто бы значки на рабочем столе перемещаются из-за смены разрешения, или какая-нибудь программа не открывается - они обязательно обвиняют меня, а не Microsoft в проблемах кривизны Windows. Хотя очевидно, что проблемы будут и на оригинальной винде, на что я никак не повлияю.</p>
 
 <p>В какой-то момент я осознал, что моя программа <span class="highlight">MakuTweaker</span>, которую я активно разрабатываю уже третий год, полностью заменяет процесс создания и настройки каких либо сборок.</p>
 
-<h2>MakuTweaker - это универсальный инструмент, в котором можно:</h2>
-
-<div class="features">
-<ul>
-<li>Удалять системные UWP-приложения</li>
-<li>Настраивать проводник</li>
-<li>Отключать Центр обновления</li>
-<li>Управлять системными компонентами</li>
-<li>Активировать Windows</li>
-<li>Гибко персонализировать систему</li>
-<li>Управлять запущенными процессами</li>
-<li>Просматривать информацию о ПК</li>
-<li>Проводить бенчмарк процессора</li>
-</ul>
-</div>
+            <h2>MakuTweaker - это универсальный инструмент, в котором есть:</h2>
+            <div class="features-box">
+                <ul>
+                    <li>Удаление UWP-приложений</li>
+                    <li>Настройка системы</li>
+                    <li>Отключение обновлений</li>
+                    <li>Активация Windows</li>
+                    <li>Бенчмарк процессора</li>
+                    <li>Управление процессами</li>
+                    <li>Гибкая персонализация</li>
+                    <li>Просмотр информации о ПК</li>
+                </ul>
+            </div>
 
 <p>И это далеко не всё. Вкратце невозможно описать весь потенциал MakuTweaker. Он покрывает все популярнейшие хотелки, и я регулярно добавляю функционал каждые несколько месяцев. В нём намного больше функций, чем преднастроек в MakuOS. И самое главное - именно ВЫ, можете настроить полностью все пункты на ваше усмотрение!</p>
 
-<p>В марте я сделал большое обновление <span class="highlight">MakuTweaker 5.2</span>, в котором добавил новую вкладку "Производительность", где можно снизить мощность для увеличения автономности батареи, значительно переработал раздел "Информация о ПК", добавил всплывающие подсказки к функциям и ускорил работу удаления UWP-приложений.</p>
+<p>В марте я сделал большое обновление <span class="highlight">MakuTweaker 5.3</span>, в котором добавил новую вкладку "Производительность", где можно снизить мощность для увеличения автономности батареи, значительно переработал раздел "Информация о ПК", добавил всплывающие подсказки к функциям и ускорил работу удаления UWP-приложений.</p>
 
-<p>Каждый месяц в своем телеграм канале я провожу опросы и делаю новостные посты, где принимаю идеи от подписчиков. Если вам в MakuTweaker чего-то не хватает, и это в пределах разумного и моих возможностей, напишите мне в Telegram: <a href="https://t.me/makuadarii" target="_blank" class="highlight">@makuadarii</a>
+<p>В своем телеграм канале я регулярно провожу опросы и делаю новостные посты, где принимаю идеи от подписчиков. Если вам в MakuTweaker чего-то не хватает, и это в пределах разумного и моих возможностей, напишите мне в Telegram: <a href="https://t.me/makuadarii" target="_blank" class="highlight">@makuadarii</a>
 
 <p>Вместо MakuOS, на моём же сайте вы можете скачать оригинальные образы Windows. А вместо преднастроек моих сборок - вы можете пользоваться вкладкой "Быстрая настройка Windows" в MakuTweaker. Она досконально 1 в 1 повторяет те действия, которые были проделаны в моих сборках, да и к тому же, вы на своё усмотрение можете что нибудь там выключить.</p>
 
@@ -214,31 +147,48 @@
 <p>Ушла эпоха! Спасибо всем тем, кто пользовался моими сборками! Я знаю, что мои сборки очень популярны в Российских школах, поэтому подумываю сделать программу которая будет применять настройки из MakuOS в один клик. Если кому то будет это надобно - отпишите мне пожалуйста в телеграм, и я начну её разработку.</p>
 
 <p>Скоро выйдет ролик о MakuTweaker. Это не конец - это новое начало.</p>
+<p>По многочисленным просьбам, сборки будут доступны на сайте и дальше.<br>Перейдите на "Архив сборок MakuOS" чтобы скачать их.</p>
+        </div>
 
-<div class="cta-wrapper">
-    <a href="https://adderly.top/makutweaker" target="_blank" class="cta-button">
+<div class="buttons" style="margin-top: 50px;">
+    <a href="https://adderly.top/makutweaker" target="_blank" class="btn-primary" style="display: flex; align-items: center;">
+        <img src="icons/1.png" alt="MakuT" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
         Скачать MakuTweaker
     </a>
 
-    <a href="https://t.me/adderly324" target="_blank" class="cta-button">
+    <a href="https://t.me/adderly324" target="_blank" class="btn-secondary" style="display: flex; align-items: center;">
+        <img src="icons/tg.png" alt="Telegram" style="width: 24px; margin-right: 10px;"> 
         Telegram канал
     </a>
 
-        <a href="https://youtube.com/@makuadarii" target="_blank" class="cta-button">
+    <a href="https://youtube.com/@makuadarii" target="_blank" class="btn-secondary" style="display: flex; align-items: center;">
+        <img src="icons/yt.png" alt="YouTube" style="width: 24px; margin-right: 10px;"> 
         YouTube канал
     </a>
-</div>
-<div class="cta-wrapper">
-    <a href="https://adderly.top/makuos_legacy" target="_blank" class="cta-button">
+
+    <a href="https://adderly.top/makuos_legacy" target="_blank" class="btn-secondary" style="display: flex; align-items: center;">
+        <img src="icons/faviconnew.ico" alt="Archive" style="width: 24px; margin-right: 10px; opacity: 0.6;"> 
         Архив сборок MakuOS
     </a>
 </div>
+    </article>
+</main>
 
-<div class="footer">
-© 2026 Adderly.Top // Марк Аддерли
-</div>
+<footer>
+    <div class="footer-socials">
+        <a href="https://t.me/adderly324" class="social-link" target="_blank">
+            <img src="icons/tg.png" alt="TG" class="social-icon">
+        </a>
+        <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank">
+            <img src="icons/yt.png" alt="YT" class="social-icon">
+        </a>
+        <a href="https://www.boosty.to/adderly" class="social-link" target="_blank">
+            <img src="icons/boosty.png" alt="Boosty" class="social-icon">
+        </a>
+    </div>
+    <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
 
-</div>
-
+<script src="burger.js"></script>
 </body>
 </html>
