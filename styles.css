@@ -10,6 +10,11 @@
     --primary-glow: rgba(124, 58, 237, 0.5);
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -417,6 +422,7 @@ footer {
 
 @media (max-width: 768px) {
     header { 
+        width: calc(100% - 20px); 
         margin: 10px; 
         border-radius: 20px;
         padding: 12px 30px;
