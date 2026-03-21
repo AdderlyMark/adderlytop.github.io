@@ -19,23 +19,79 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 
     <script>
         const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
         let existingNews = new Map();
     </script>
 
-    <meta property="og:title" content="Скачать MakuTweaker">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс">
-    <meta property="og:description" content="Скачать MakuTweaker от Марка Аддерли">
-    <meta name="description" content="Скачать MakuTweaker от Марка Аддерли">
-    <meta name="keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс">
+    <meta property="og:title" content="Download MakuTweaker">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс, програми від аддерлі, макутвікер, твікер, твікери, твікер для віндовс, programs by adderly, makutweaker, tweaker, tweakers, windows tweaker, programas de adderly, tweaker para windows, programme von adderly, tweaker für windows, programy od adderly, tweakery, tweaker pro windows, adderly programmid, tweakerid, windowsi tweaker, adderly的程序, 优化工具, windows优化工具, adderlyのプログラム, ツイーカー, windows用ツイーカー, mga programa ni adderly, mga tweaker, tweaker para sa windows">
+    <meta property="og:description" content="Download MakuTweaker by Mark Adderly">
+    <meta name="description" content="Download MakuTweaker by Mark Adderly">
+    <meta name="keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс, програми від аддерлі, макутвікер, твікер, твікери, твікер для віндовс, programs by adderly, makutweaker, tweaker, tweakers, windows tweaker, programas de adderly, tweaker para windows, programme von adderly, tweaker für windows, programy od adderly, tweakery, tweaker pro windows, adderly programmid, tweakerid, windowsi tweaker, adderly的程序, 优化工具, windows优化工具, adderlyのプログラム, ツイーカー, windows用ツイーカー, mga programa ni adderly, mga tweaker, tweaker para sa windows">
+
+<style>
+    .lang-switcher {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: 4px; margin-left: 20px; align-items: center;
+    }
+
+    body {
+        font-family: 'Inter', system-ui, -apple-system, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    }
+    
+    .lang-switcher button {
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.2);
+        color: #aaa;
+        padding: 2px 6px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.65rem;
+        line-height: 1;
+        transition: 0.2s;
+    }
+
+    .lang-switcher button:hover {
+        color: #fff;
+        border-color: #fff;
+    }
+
+    @media (max-width: 850px) {
+        .lang-switcher {
+            display: none;
+        }
+
+        .lang-switcher button {
+            font-size: 0.6rem;
+            padding: 2px 4px;
+        }
+    }
+    </style>
+
 </head>
 <body>
 <header>
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
+
+    <div class="lang-switcher">
+        <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
+        <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
+        <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+        <button onclick="setLang('es')"><span class="fi fi-es"></span> ES</button>
+        <button onclick="setLang('de')"><span class="fi fi-de"></span> DE</button>
+        <button onclick="setLang('cs')"><span class="fi fi-cz"></span> CS</button>
+        <button onclick="setLang('et')"><span class="fi fi-ee"></span> ET</button>
+        <button onclick="setLang('zh')"><span class="fi fi-cn"></span> ZH</button>
+        <button onclick="setLang('ja')"><span class="fi fi-jp"></span> JA</button>
+        <button onclick="setLang('tl')"><span class="fi fi-ph"></span> TL</button>
+    </div>
+
     <nav id="nav-menu">
         <ul>
             <li><a href="builds">Сборки</a></li>
@@ -47,26 +103,25 @@
 </header>
 
 <main>
-    <h1>Скачать MakuTweaker</h1>
-    <p>Самый дружелюбный и полезный твикер для Windows.<br>
-В этой программе вы можете гибко настроить и персонализировать систему, а так же управлять процессами и посмотреть подробную информацию о характеристиках вашего ПК!
-Также, вы можете выполнить быструю настройку Windows, управлять системными компонентами и избавиться от системного мусора!
-В MakuTweaker доступно несколько тем оформления, благодаря которым вы можете настроить программу на свой вкус.</p>
+<h1 data-i18n="title">Скачать MakuTweaker</h1>
+    <p data-i18n="desc">Самый дружелюбный и полезный твикер для Windows.<br>
+    В этой программе вы можете гибко настроить и персонализировать систему, а так же управлять процессами и посмотреть подробную информацию о характеристиках вашего ПК!
+    Также, вы можете выполнить быструю настройку Windows, управлять системными компонентами и избавиться от системного мусора!
+    В MakuTweaker доступно несколько тем оформления, благодаря которым вы можете настроить программу на свой вкус.</p>
 
-    <div class="gallery-container">
+<div class="gallery-container">
         <div class="gallery">
-            <img src="images/makut/makut1.png" alt="Скриншот 1">
-            <img src="images/makut/makut2.png" alt="Скриншот 2">
-            <img src="images/makut/makut3.png" alt="Скриншот 3">
-            <img src="images/makut/makut4.png" alt="Скриншот 4">
-            <img src="images/makut/makut5.png" alt="Скриншот 5">
-            <img src="images/makut/makut6.png" alt="Скриншот 6">
-            <img src="images/makut/makut7.png" alt="Скриншот 7">
-            <img src="images/makut/makut8.png" alt="Скриншот 8">
-            <img src="images/makut/makut9.png" alt="Скриншот 9">
+            <img data-img="1" src="images/makutweaker/ru/1.png" alt="Скриншот 1">
+            <img data-img="2" src="images/makutweaker/ru/2.png" alt="Скриншот 2">
+            <img data-img="3" src="images/makutweaker/ru/3.png" alt="Скриншот 3">
+            <img data-img="4" src="images/makutweaker/ru/4.png" alt="Скриншот 4">
+            <img data-img="5" src="images/makutweaker/ru/5.png" alt="Скриншот 5">
+            <img data-img="6" src="images/makutweaker/ru/6.png" alt="Скриншот 6">
+            <img data-img="7" src="images/makutweaker/ru/7.png" alt="Скриншот 7">
+            <img data-img="8" src="images/makutweaker/ru/8.png" alt="Скриншот 8">
+            <img data-img="9" src="images/makutweaker/ru/9.png" alt="Скриншот 9">
         </div>
     </div>
-
     <div class="accordion-container">
         <button class="accordion">Системные требования</button>
         <div class="panel">
@@ -336,13 +391,12 @@ MakuTweaker 5.0.31 - Микрофикс<br>
     </div>
 </div>
 
-    <h1 style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuTweaker</h1>
+<h1 data-i18n="download_title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuTweaker</h1>
     <div class="buttons" style="margin-top: 0; padding-top: 0;">
-        <a href="https://github.com/AdderlyMark/adderly.github.io/raw/main/soft/MakuTweaker%20Setup.exe" class="btn-primary">Скачать MakuTweaker</a>
-        <a href="https://pixeldrain.com/u/ER2kPZPM" class="btn-primary">Портативная версия</a>
-        <a href="https://adderly.top/makubench" class="btn-secondary">Посмотреть результаты MakuBench</a>
+        <a href="https://github.com/AdderlyMark/adderly.github.io/raw/main/soft/MakuTweaker%20Setup.exe" class="btn-primary" data-i18n="download_btn">Скачать MakuTweaker</a>
+        <a href="https://pixeldrain.com/u/ER2kPZPM" class="btn-primary" data-i18n="portable_btn">Портативная версия</a>
+        <a href="https://adderly.top/makubench" class="btn-secondary" data-i18n="bench_btn">Посмотреть результаты MakuBench</a>
     </div>
-
 </main>
 
 <footer>
@@ -370,11 +424,6 @@ MakuTweaker 5.0.31 - Микрофикс<br>
 
     document.querySelectorAll('.accordion').forEach((accordion, index) => {
         const panel = accordion.nextElementSibling;
-
-        if (index === 0 || index === 1) {
-            accordion.classList.add('active');
-            panel.classList.add('open');
-        }
         
         accordion.addEventListener('click', function() {
             this.classList.toggle('active');
@@ -421,10 +470,154 @@ MakuTweaker 5.0.31 - Микрофикс<br>
     lightbox.addEventListener('click', closeLightbox);
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeLightbox();
-        }
+        if (e.key === 'Escape') closeLightbox();
     });
 </script>
+
+<script>
+const translations = {
+    ru: {
+        title: "Скачать MakuTweaker",
+        desc: `Самый дружелюбный и полезный твикер для Windows.<br>
+        В этой программе вы можете гибко настроить и персонализировать систему, а так же управлять процессами и посмотреть подробную информацию о характеристиках вашего ПК! Также, вы можете выполнить быструю настройку Windows, управлять системными компонентами и избавиться от системного мусора! В MakuTweaker доступно несколько тем оформления, благодаря которым вы можете настроить программу на свой вкус.`,
+        download_title: "Скачать MakuTweaker",
+        download_btn: "Скачать MakuTweaker",
+        portable_btn: "Портативная версия",
+        bench_btn: "Посмотреть результаты MakuBench"
+    },
+    uk: {
+        title: "Завантажити MakuTweaker",
+        desc: `Найзручніший і найкорисніший твікер для Windows.<br>
+        За допомогою цієї програми ви можете гнучко налаштувати та персоналізувати систему, керувати процесами і переглядати детальну інформацію про характеристики вашого ПК!<br>
+        Також ви можете виконати швидке налаштування Windows,<br>керувати встановленням компонентів системи та видаляти системне сміття.<br>
+        MakuTweaker пропонує кілька тем інтерфейсу, які дозволяють налаштувати програму на ваш смак.`,
+        download_title: "Завантажити MakuTweaker",
+        download_btn: "Завантажити MakuTweaker",
+        portable_btn: "Портативна версія",
+        bench_btn: "Переглянути результати MakuBench"
+    },
+    en: {
+        title: "Download MakuTweaker",
+        desc: `The most user-friendly and useful tweaker for Windows.<br>
+        With this program, you can flexibly configure and personalize the system, manage processes,<br>and view detailed information about your PC’s specifications!<br>
+        You can also perform a quick Windows setup, manage system components, and remove system bloatware.<br>
+        MakuTweaker offers several interface themes that allow you to customize the program to your taste.`,
+        download_title: "Download MakuTweaker",
+        download_btn: "Download MakuTweaker",
+        portable_btn: "Portable version",
+        bench_btn: "View MakuBench results"
+    },
+    es: {
+        title: "Descargar MakuTweaker",
+        desc: `El tweaker más útil y fácil de usar para Windows.<br>
+        Con este programa puedes configurar y personalizar el sistema de forma flexible, administrar procesos y ver información detallada sobre las características de tu PC!<br>
+        También puedes realizar una configuración rápida de Windows,<br>gestionar la instalación de componentes del sistema y eliminar archivos basura del sistema.<br>
+        MakuTweaker ofrece varios temas de interfaz que te permiten personalizar el programa a tu gusto.`,
+        download_title: "Descargar MakuTweaker",
+        download_btn: "Descargar MakuTweaker",
+        portable_btn: "Versión portátil",
+        bench_btn: "Ver resultados de MakuBench"
+    },
+    de: {
+        title: "MakuTweaker Herunterladen",
+        desc: `Der benutzerfreundlichste und nützlichste Tweaker für Windows.<br>
+        Mit diesem Programm können Sie Ihr System flexibel konfigurieren und personalisieren, Prozesse verwalten sowie detaillierte Informationen über die Spezifikationen Ihres PCs anzeigen!<br>
+        Außerdem können Sie eine schnelle Windows-Konfiguration durchführen, die Installation von Systemkomponenten verwalten und Systemmüll entfernen.<br>
+        MakuTweaker bietet mehrere Design-Themes, mit denen Sie das Programm nach Ihrem Geschmack anpassen können.`,
+        download_title: "MakuTweaker Herunterladen",
+        download_btn: "MakuTweaker Herunterladen",
+        portable_btn: "Portable Version",
+        bench_btn: "MakuBench-Ergebnisse ansehen"
+    },
+    cs: {
+        title: "Stáhnout MakuTweaker",
+        desc: `Nejužitečnější a uživatelsky nejpřívětivější tweaker pro Windows.<br>
+        S tímto programem můžete flexibilně konfigurovat a personalizovat systém, spravovat procesy a prohlížet si podrobné informace o specifikacích vašeho PC!<br>
+        Můžete také provést rychlé nastavení Windows,<br>spravovat instalaci systémových komponent a odstraňovat systémový odpad.<br>
+        MakuTweaker nabízí několik motivů rozhraní, které vám umožní přizpůsobit si program podle vašeho vkusu.`,
+        download_title: "Stáhnout MakuTweaker",
+        download_btn: "Stáhnout MakuTweaker",
+        portable_btn: "Přenosná verze",
+        bench_btn: "Zobrazit výsledky MakuBench"
+    },
+    et: {
+        title: "Laadi alla MakuTweaker",
+        desc: `Kõige kasutajasõbralikum ja kasulikum tweaker Windowsi jaoks.<br>
+        Selle programmiga saate paindlikult konfigureerida ja isikupärastada süsteemi, hallata protsesse ning vaadata üksikasjalikku teavet oma arvuti tehniliste andmete kohta!<br>
+        Samuti saate teha Windowsi kiirseadistuse, hallata süsteemikomponentide installimist ja eemaldada süsteemi rämpsfaile.<br>
+        MakuTweaker pakub mitmeid liidese teemasid, mis võimaldavad teil programmi oma maitse järgi kohandada.`,
+        download_title: "Laadi alla MakuTweaker",
+        download_btn: "Laadi alla MakuTweaker",
+        portable_btn: "Kaasaskantav versioon",
+        bench_btn: "Vaata MakuBenchi tulemusi"
+    },
+    zh: {
+        title: "下载 MakuTweaker",
+        desc: `最友好、最实用的 Windows 优化工具。<br>
+        通过该程序，您可以灵活地配置和个性化系统、管理进程，并查看有关您电脑硬件规格的详细信息！<br>
+        此外，您还可以快速配置 Windows、管理系统组件的安装，并清理系统垃圾。<br>
+        MakuTweaker 提供多种界面主题，让您可以根据自己的喜好自定义程序外观。`,
+        download_title: "下载 MakuTweaker",
+        download_btn: "下载 MakuTweaker",
+        portable_btn: "便携版",
+        bench_btn: "查看 MakuBench 结果"
+    },
+    ja: {
+        title: "MakuTweaker ダウンロード",
+        desc: `Windows 向けの最も使いやすく便利なチューニングツールです。<br>
+        このプログラムでは、システムを柔軟に設定・カスタマイズしたり、プロセスを管理したり、PC の仕様に関する詳細な情報を確認することができます！<br>
+        また、Windows のクイック設定の実行、システムコンポーネントのインストール管理<br>不要なシステムファイルの削除も可能です。<br>
+        MakuTweaker には複数のテーマが用意されており、好みに合わせてプログラムの外観をカスタマイズできます。`,
+        download_title: "MakuTweaker ダウンロード",
+        download_btn: "ダウンロード",
+        portable_btn: "ポータブル版",
+        bench_btn: "MakuBench の結果を見る"
+    },
+    tl: {
+        title: "I-download ang MakuTweaker",
+        desc: `Ang pinaka-madaling gamitin at kapaki-pakinabang na tweaker para sa Windows.<br>
+        Gamit ang programang ito, maaari mong flexible na i-configure at i-personalize ang sistema, pamahalaan ang mga proseso, at tingnan ang detalyadong impormasyon tungkol sa mga spec ng iyong PC!<br>
+        Maaari ka ring magsagawa ng mabilis na pag-setup ng Windows, pamahalaan ang pag-install ng mga bahagi ng sistema, at alisin ang mga basura sa sistema.<br>
+        Nag-aalok ang MakuTweaker ng ilang tema ng interface na nagbibigay-daan sa iyong i-customize ang programa ayon sa iyong panlasa.`,
+        download_title: "I-download ang MakuTweaker",
+        download_btn: "I-download",
+        portable_btn: "Portable na bersyon",
+        bench_btn: "Tingnan ang mga resulta ng MakuBench"
+    }
+};
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+    applyLang(lang);
+}
+
+function applyLang(lang) {
+    const t = translations[lang] || translations.ru;
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) el.innerHTML = t[key];
+    });
+
+    document.querySelectorAll("[data-img]").forEach(img => {
+        const num = img.dataset.img;
+        img.src = `images/makutweaker/${lang}/${num}.png`;
+    });
+}
+
+const savedLang = localStorage.getItem("lang");
+
+if (savedLang && translations[savedLang]) {
+    applyLang(savedLang);
+} else {
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+        applyLang(browserLang);
+    } else {
+        applyLang("ru");
+    }
+}
+</script>
+
 </body>
 </html>
