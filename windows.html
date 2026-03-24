@@ -19,6 +19,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 
     <script>
         const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
@@ -26,11 +27,41 @@
     </script>
 
     <meta property="og:title" content="Скачать официальные ISO образы Windows от Марка Аддерли">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderly fun, adderly top, adderlytop, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, сборки от марка аддерли, сборки виндовс, скачать сборки, windows bootlegs, скачать сборку виндовс, скачать windows lite, windows lite, adderlyos, сайт марка аддерли, сайт аддерли, makuos, windows 11 download, windows 11, windows 10 download, windows 10, скачать виндовс, download windows, скачать windows 10, скачать windows 11, официальную, официальный">
-    <meta property="og:description" content="Скачать официальные ISO образы Windows от Марка Аддерли">
-    <meta name="description" content="Здесь вы можете скачать официальные ISO образы Windows.">
+    <meta property="og:description" content="Скачать официальные ISO образы Windows напрямую и без обхода блокировок.">
+    <meta name="description" content="Здесь вы можете скачать официальные ISO образы Windows от Марка Аддерли.">
+    <meta property="og:keywords" content="adderly, adderly top, adderlytop, марк аддерли, марк аддерлі, mark adderly, аддерли, аддерлі, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, збірки від аддерлі, сборки от марка аддерли, сборки виндовс, збірки віндовс, скачать сборки, завантажити збірки, windows bootlegs, скачать сборку виндовс, скачать windows lite, завантажити windows lite, download windows lite, windows lite, сайт марка аддерли, сайт марка аддерлі, сайт аддерли, makuos, windows 11 download, windows 11, windows 10 download, windows 10, скачать виндовс, завантажити віндовс, download windows, скачать windows 10, скачать windows 11, официальную, офіційну, официальный, офіційний, official">
 
     <style>
+        .lang-switcher {
+            display: flex;
+            gap: 4px; 
+            margin-left: 10px; 
+            align-items: center;
+        }
+
+        .lang-switcher button {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #aaa;
+            padding: 2px 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.65rem;
+            line-height: 1;
+            transition: 0.2s;
+        }
+
+        .lang-switcher button:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        @media (max-width: 425px) {
+            .lang-switcher {
+                display: none;
+            }
+        }
+
         .os-title {
             color: #fff;
             font-size: 2rem;
@@ -92,104 +123,110 @@
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
+    
+    <div class="lang-switcher">
+        <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
+        <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
+        <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+    </div>
+
     <nav id="nav-menu">
         <ul>
-            <li><a href="builds">Сборки</a></li>
+            <li><a href="builds" data-i18n="nav_builds">Сборки</a></li>
             <li><a href="makutweaker">MakuTweaker</a></li>
-            <li><a href="support">Поддержать</a></li>
+            <li><a href="support" data-i18n="nav_support">Поддержать</a></li>
         </ul>
     </nav>
     <img src="icons/burger.svg" alt="Меню" id="burger">
 </header>
 
 <main>
-    <h1>Скачать официальные ISO образы Windows от Microsoft</h1>
-    <p>Вы можете загрузить официальные образы Windows напрямую с этой страницы и без обхода блокировок.<br>Все образы были выгружены из источников Microsoft, за исключением старых Windows 11 и Windows 10.<br>Так как они официально удалены, их нужно было собирать заново.<br>Образы полностью оригинальные, и без каких либо изменений.</p>
+    <h1 data-i18n="main_title">Скачать официальные ISO образы Windows от Microsoft</h1>
+    <p data-i18n="main_desc">Вы можете загрузить официальные образы Windows напрямую с этой страницы и без обхода блокировок.<br>Все образы были выгружены из источников Microsoft, за исключением старых Windows 11 и Windows 10.<br>Так как они официально удалены, их нужно было собирать заново.<br>Образы полностью оригинальные, и без каких либо изменений.</p>
     
     <h2 class="os-title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 0px;">Windows 11 25H2</h2>
     <div class="os-links">
-        <a href="https://pixeldrain.com/u/nRjp7Bnc" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/nRjp7Bnc" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/pixeldrain.png" alt="Google Диск" style="width: 24px; margin-right: 12px;"> 
-            Windows 11 25H2 (26200.6584) [RU - Все редакции]
+            Windows 11 25H2 (26200.6584) [RU]
         </a>
-        <a href="https://pixeldrain.com/u/pxCjGd1H" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/pxCjGd1H" target="_blank" rel="noopener noreferrer" data-os-lang="en">
             <img src="icons/pixeldrain.png" alt="Google Диск" style="width: 24px; margin-right: 12px;"> 
-            Windows 11 25H2 (26200.6584) [EN - Все редакции]
+            Windows 11 25H2 (26200.6584) [EN]
         </a>
     </div>
 
     <h2 class="os-title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 0px;">Windows 11 24H2</h2>
     <div class="os-links">
-        <a href="https://www.mediafire.com/file/mwdn4yj0r4nsinr/Win11_24H2_Russian_x64.iso/file" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.mediafire.com/file/mwdn4yj0r4nsinr/Win11_24H2_Russian_x64.iso/file" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/mediafire.png" alt="Mediafire" style="width: 24px; margin-right: 12px;"> 
-            Windows 11 24H2 (26100.1742) [RU - Все редакции]
+            Windows 11 24H2 (26100.1742) [RU]
         </a>
-        <a href="ССЫЛКА" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/3SHLA4jw" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 12px;"> 
-            Windows 11 24H2 (26100.1742) [RU - Все редакции]
+            Windows 11 24H2 (26100.1742) [RU]
         </a>
-        <a href="https://drive.google.com/file/d/1MpyXMlAZ7RMz5ESoBJfQMMl0bEsEoaoc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/1MpyXMlAZ7RMz5ESoBJfQMMl0bEsEoaoc/view?usp=sharing" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/googledrive.png" alt="Google Диск" style="width: 24px; margin-right: 12px;"> 
-            Windows 11 24H2 (26100.1742) [RU - Все редакции]
+            Windows 11 24H2 (26100.1742) [RU]
         </a>
     </div>
 
     <h2 class="os-title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 0px;">Windows 11 22H2</h2>
     <div class="os-links">
-        <a href="https://www.mediafire.com/file/bz7v8gwsz81ty69/Win11_22H2_1702_Russian_x64.ISO/file" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.mediafire.com/file/bz7v8gwsz81ty69/Win11_22H2_1702_Russian_x64.ISO/file" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/mediafire.png" alt="Mediafire" style="width: 24px; margin-right: 12px;"> 
-            Windows 11 22H2 (22621.1702) [RU - Все редакции]
+            Windows 11 22H2 (22621.1702) [RU]
         </a>
-        <a href="https://pixeldrain.com/u/3SHLA4jw" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/3SHLA4jw" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 12px;"> 
-            Windows 11 22H2 (22621.1702) [RU - Все редакции]
+            Windows 11 22H2 (22621.1702) [RU]
         </a>
-        <a href="https://drive.google.com/file/d/1cLONkFrpaPt0a9Kbwgaa3BaShp_wJTwW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/1cLONkFrpaPt0a9Kbwgaa3BaShp_wJTwW/view?usp=sharing" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/googledrive.png" alt="Google Диск" style="width: 24px; margin-right: 12px;"> 
-            Windows 11 22H2 (22621.1702) [RU - Все редакции]
+            Windows 11 22H2 (22621.1702) [RU]
         </a>
     </div>
-
 
     <h2 class="os-title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 0px;">Windows 10 22H2</h2>
     <div class="os-links">
-        <a href="https://pixeldrain.com/u/r51kRbGA" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/r51kRbGA" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/pixeldrain.png" alt="Pixeldrain" style="width: 24px; margin-right: 12px;"> 
-            Windows 10 22H2 (19045.2965) [RU - Все редакции]
+            Windows 10 22H2 (19045.2965) [RU]
         </a>
-        <a href="https://pixeldrain.com/u/1ZP7veTf" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/1ZP7veTf" target="_blank" rel="noopener noreferrer" data-os-lang="en">
             <img src="icons/pixeldrain.png" alt="Pixeldrain" style="width: 24px; margin-right: 12px;"> 
-            Windows 10 22H2 (19045.2965) [EN - Все редакции]
+            Windows 10 22H2 (19045.2965) [EN]
         </a>
-        <a href="https://drive.google.com/file/d/1png7XiEMI42Sn5upAljxFy9Hp5TZDXoY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/1png7XiEMI42Sn5upAljxFy9Hp5TZDXoY/view?usp=sharing" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/googledrive.png" alt="Google Диск" style="width: 24px; margin-right: 12px;"> 
-            Windows 10 22H2 (19045.2965) [RU - Все редакции]
+            Windows 10 22H2 (19045.2965) [RU]
         </a>
     </div>
 
-    <h2 class="os-title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 0px;">Старые Windows 10</h2>
+    <h2 class="os-title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 0px;" data-i18n="h2_old_win10">Старые Windows 10</h2>
     <div class="os-links" style="margin-top: 0; padding-top: 0;">
-        <a href="https://drive.google.com/file/d/1ZJuIzZTtlQ1c7-2VC1kxYj3kTH-Izm-J/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/1ZJuIzZTtlQ1c7-2VC1kxYj3kTH-Izm-J/view?usp=sharing" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/googledrive.png" alt="Google Диск" style="width: 24px; margin-right: 12px;"> 
             Windows 10 20H2 [RU - Pro/Home]
         </a>
-        <a href="https://pixeldrain.com/u/2RVDpBXk" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/2RVDpBXk" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 12px;"> 
             Windows 10 1809 [RU - Pro/Home]
         </a>
-        <a href="https://pixeldrain.com/u/tbysZcjJ" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/tbysZcjJ" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 12px;"> 
             Windows 10 1709 [RU - Pro/Home]
         </a>
-        <a href="https://www.mediafire.com/file/5yuj5wd0qklrxrq/Win10_1607_Russian_x64.iso/file" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.mediafire.com/file/5yuj5wd0qklrxrq/Win10_1607_Russian_x64.iso/file" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/mediafire.png" alt="Mediafire" style="width: 24px; margin-right: 12px;"> 
             Windows 10 1607 [RU - Pro/Home]
         </a>
-        <a href="https://pixeldrain.com/u/ivnsMPze" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/ivnsMPze" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 12px;"> 
             Windows 10 1607 [RU - Pro/Home]
         </a>
-        <a href="https://pixeldrain.com/u/8aftN8PF" target="_blank" rel="noopener noreferrer">
+        <a href="https://pixeldrain.com/u/8aftN8PF" target="_blank" rel="noopener noreferrer" data-os-lang="ru">
             <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 12px;"> 
             Windows 10 1507 [RU - Pro/Home]
         </a>
@@ -212,5 +249,84 @@
 </footer>
 
 <script src="burger.js"></script>
+
+<script>
+const translations = {
+    ru: {
+        page_title: "Adderly.Top - Официальные Windows",
+        nav_builds: "Сборки",
+        nav_support: "Поддержать",
+        main_title: "Скачать официальные ISO образы Windows от Microsoft",
+        main_desc: "Вы можете загрузить официальные образы Windows напрямую с этой страницы и без обхода блокировок.<br>Все образы были выгружены из источников Microsoft, за исключением старых Windows 11 и Windows 10.<br>Так как они официально удалены, их нужно было собирать заново.<br>Образы полностью оригинальные, и без каких либо изменений.",
+        h2_old_win10: "Старые Windows 10"
+    },
+    en: {
+        page_title: "Adderly.Top - Official Windows",
+        nav_builds: "Bootlegs",
+        nav_support: "Support",
+        main_title: "Download official Windows ISO images from Microsoft",
+        main_desc: "You can download official Windows images directly from this page without bypassing any blocks.<br>All images were extracted from Microsoft sources, except for older Windows 11 and Windows 10.<br>Since they were officially removed, they had to be rebuilt.<br>The images are completely original and without any modifications.",
+        h2_old_win10: "Old Windows 10"
+    },
+    uk: {
+        page_title: "Adderly.Top - Офіційні Windows",
+        nav_builds: "Збірки",
+        nav_support: "Підтримати",
+        main_title: "Завантажити офіційні ISO образи Windows від Microsoft",
+        main_desc: "Ви можете завантажити офіційні образи Windows безпосередньо з цієї сторінки.<br>Всі образи були вивантажені з джерел Microsoft, за винятком старих Windows 11 і Windows 10.<br>Оскільки вони офіційно видалені, їх потрібно було збирати наново.<br>Образи повністю оригінальні, і без будь-яких змін.",
+        h2_old_win10: "Старі Windows 10"
+    }
+};
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+    applyLang(lang);
+}
+
+function applyLang(lang) {
+    const t = translations[lang] || translations.ru;
+    document.documentElement.lang = lang;
+    if (t.page_title) document.title = t.page_title;
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) el.innerHTML = t[key];
+    });
+
+    const showRuLinks = (lang === 'ru' || lang === 'uk');
+    document.querySelectorAll('[data-os-lang="ru"]').forEach(link => {
+        link.style.display = showRuLinks ? '' : 'none'; 
+    });
+
+    document.querySelectorAll('.os-links').forEach(container => {
+        const visibleLinks = Array.from(container.querySelectorAll('a')).filter(a => a.style.display !== 'none');
+        const header = container.previousElementSibling;
+        
+        if (visibleLinks.length === 0) {
+            container.style.display = 'none';
+            if (header && header.classList.contains('os-title')) {
+                header.style.display = 'none';
+            }
+        } else {
+            container.style.display = '';
+            if (header && header.classList.contains('os-title')) {
+                header.style.display = '';
+            }
+        }
+    });
+}
+
+const savedLang = localStorage.getItem("lang");
+if (savedLang) {
+    applyLang(savedLang);
+} else {
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+        applyLang(browserLang);
+    } else {
+        applyLang("ru");
+    }
+}
+</script>
 </body>
 </html>
