@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="index" class="menu-item">Главная</a>
                 <a href="windows" class="menu-item">Скачать официальные Windows</a>
                 <a href="makutweaker" class="menu-item" id="makutweakerburger">Скачать MakuTweaker</a>
+                <a href="makuflash" class="menu-item">Скачать MakuFlash</a>
                 <a href="makubench" class="menu-item">MakuTweaker Benchmark</a>
                 <a href="makuyan" class="menu-item">Запрещатор Яндекса</a>
                 <a href="makupedia" class="menu-item">MakuPedia</a>
