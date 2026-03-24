@@ -19,50 +19,76 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 
     <script>
         const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
         let existingNews = new Map();
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') { e.preventDefault(); return false; }
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') { e.preventDefault(); return false; }
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') { e.preventDefault(); return false; }
-            if (e.ctrlKey && e.key === 'u') { e.preventDefault(); return false; }
-        });
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
-
     <meta property="og:title" content="Скачать Windows PE от Марка Аддерли">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, Windows PE, Windows PE от Марка Аддерли, от марка аддерли, винпе скачать, виндовс пе, винпе, winpe, WinPE, MakuPE, макупе">
     <meta property="og:description" content="Скачать Windows PE от Марка Аддерли">
     <meta name="description" content="Скачать Windows PE от Марка Аддерли">
-    <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, Windows PE, Windows PE от Марка Аддерли, от марка аддерли, винпе скачать, виндовс пе, винпе, winpe, WinPE, MakuPE, макупе">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, марк аддерли, марк аддерлі, mark adderly, аддерли, аддерлі, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, збірки від аддерлі, makutweaker, makutyper, makuadarii, Windows PE, Windows PE от Марка Аддерли, від марка аддерлі, by mark adderly, винпе скачать, завантажити вінпе, winpe download, виндовс пе, віндовс пе, винпе, вінпе, winpe, WinPE, MakuPE, макупе">
+    <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, марк аддерли, марк аддерлі, mark adderly, аддерли, аддерлі, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, збірки від аддерлі, makutweaker, makutyper, makuadarii, Windows PE, Windows PE от Марка Аддерли, від марка аддерлі, by mark adderly, винпе скачать, завантажити вінпе, winpe download, виндовс пе, віндовс пе, винпе, вінпе, winpe, WinPE, MakuPE, макупе">
+
+    <style>
+        .lang-switcher {
+            display: flex;
+            gap: 4px; 
+            margin-left: 10px; 
+            align-items: center;
+        }
+
+        .lang-switcher button {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #aaa;
+            padding: 2px 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.65rem;
+            line-height: 1;
+            transition: 0.2s;
+        }
+
+        .lang-switcher button:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        @media (max-width: 425px) {
+            .lang-switcher {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
+
+    <div class="lang-switcher">
+        <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
+        <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
+        <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+    </div>
+
     <nav id="nav-menu">
         <ul>
-            <li><a href="builds">Сборки</a></li>
+            <li><a href="builds" data-i18n="nav_builds">Сборки</a></li>
             <li><a href="makutweaker">MakuTweaker</a></li>
-            <li><a href="support">Поддержать</a></li>
+            <li><a href="support" data-i18n="nav_support">Поддержать</a></li>
         </ul>
     </nav>
     <img src="icons/burger.svg" alt="Меню" id="burger">
 </header>
 
 <main>
-    <h1>Скачать MakuPE</h1>
-    <p>MakuPE - это удобная и быстрая среда восстановления Windows, которая помогает вернуть систему к жизни в случае сбоев. С её помощью вы сможете получить доступ к файлам, даже если основная ОС не загружается. Образ содержит набор необходимых инструментов для диагностики, восстановления и обслуживания компьютера. Просто запишите образ на маленькую флешку, например до двух гигабайт и держите всегда под рукой надёжный инструмент для восстановления системы.</p>
+    <h1 data-i18n="main_title">Скачать MakuPE</h1>
+    <p data-i18n="main_desc">MakuPE - это удобная и быстрая среда восстановления Windows, которая помогает вернуть систему к жизни в случае сбоев. С её помощью вы сможете получить доступ к файлам, даже если основная ОС не загружается. Образ содержит набор необходимых инструментов для диагностики, восстановления и обслуживания компьютера. Просто запишите образ на маленькую флешку, например до двух гигабайт и держите всегда под рукой надёжный инструмент для восстановления системы.</p>
     
     <div class="gallery-container">
         <div class="gallery">
@@ -76,20 +102,20 @@
     </div>
 
     <div class="accordion-container">
-        <button class="accordion">Приложения в WindowsPE // MakuPE</button>
+        <button class="accordion" data-i18n="acc_1_title">Приложения в WindowsPE // MakuPE</button>
         <div class="panel">
             <div class="panel-content">
-                <p>Браузер Chrome, Telegram, 7-Zip, AnyDesk, Recuva, EasyBCD, WinNTSetup, CPU-Z, GPU-Z, CrystalDiskInfo, Unlocker, Victoria, Everything, System Informer, Speccy, Explorer++, Bootice, Q-Dir, HDD Low Level, Notepad++, Mini Tool Partition Wizard, Hex Editor...</p>
+                <p data-i18n="acc_1_desc">Браузер Chrome, Telegram, 7-Zip, AnyDesk, Recuva, EasyBCD, WinNTSetup, CPU-Z, GPU-Z, CrystalDiskInfo, Unlocker, Victoria, Everything, System Informer, Speccy, Explorer++, Bootice, Q-Dir, HDD Low Level, Notepad++, Mini Tool Partition Wizard, Hex Editor...</p>
             </div>
         </div>
     </div>
 
     <div class="accordion-container">
-        <button class="accordion">Остальные преимущества</button>
+        <button class="accordion" data-i18n="acc_2_title">Остальные преимущества</button>
         <div class="panel">
             <div class="panel-content">
-                <p>В MakuPE есть встроенные интернет драйвера, что позволит выйти в интернет с помощью браузера Ungoogled Chromium, и даже зайти в Telegram.<br>
-                Так же по желанию, можно будет попросить помощь у друга или родственника и дать доступ к своему ПК с помощью AnyDesk.<br>
+                <p data-i18n="acc_2_desc">В MakuPE есть встроенные интернет драйвера, что позволит выйти в интернет с помощью браузера Ungoogled Chromium, и даже зайти в Telegram.<br>
+                Так же по желанию, можно будет попросить помощь у друга или родственника<br>и дать доступ к своему ПК с помощью AnyDesk.<br>
                 Образ теперь основан на Windows 10 1809, что делает его на пару сотен мегабайт легче, и он поместится даже на 2 ГБ флешку.<br>
                 И самое главное, MakuPE поддерживает GPT и UEFI, что без проблем позволит запустить её на современном ПК.</p>
             </div>
@@ -97,13 +123,13 @@
     </div>
 
     <div class="accordion-container">
-        <button class="accordion">Как установить?</button>
+        <button class="accordion" data-i18n="acc_3_title">Как установить?</button>
         <div class="panel">
             <div class="panel-content">
-                <p>Windows PE нельзя установить как обычную систему. Этот образ создан для записи на флешку, чтобы можно было запускать портативную Windows напрямую из под USB накопителя. Зачастую это полезно для временного доступа к файлам на компьютере, и особенно - восстановления системы.</p>
+                <p data-i18n="acc_3_p1">Windows PE нельзя установить как обычную систему. Этот образ создан для записи на флешку, чтобы можно было запускать портативную Windows напрямую из под USB накопителя. Зачастую это полезно для временного доступа к файлам на компьютере, и особенно - восстановления системы.</p>
                 
-                <h1>Образ просто нужно записать на флешку для последующего запуска.</h1>
-                <p>Перейдите на сайт <a href="https://rufus.ie" style="text-decoration: underline; color: #a855f7;">rufus.ie</a>, и <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" style="text-decoration: underline; color: #c0a8e6;">скачайте программу</a>.<br>
+                <h1 data-i18n="acc_3_h1_1">Образ просто нужно записать на флешку для последующего запуска.</h1>
+                <p data-i18n="acc_3_p2">Перейдите на сайт <a href="https://rufus.ie" style="text-decoration: underline; color: #a855f7;">rufus.ie</a>, и <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" style="text-decoration: underline; color: #c0a8e6;">скачайте программу</a>.<br>
                 Далее, в пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
                 В пункте "Метод загрузки", справа есть кнопка "Выбрать". Выберите ISO образ MakuPE.<br>
                 Далее, в "Схема раздела" вам нужно указать таблицу разделов вашего SSD. - <a href="https://lifehacker.ru/kak-uznat-gpt-ili-mbr/" style="text-decoration: underline; color: #c0a8e6;">Как узнать схему раздела?</a><br>
@@ -111,31 +137,34 @@
                 Для начала записи на флешку, нажмите "СТАРТ", и согласитесь на форматирование.<br>
                 Когда прогрессбар дойдёт до 100% и будет "Готов", закройте окно.</p>
 
-                <h1>Второй способ - Ventoy, но лучше используйте первый вариант.</h1>
-                <p>Перейдите на сайт <a href="https://www.ventoy.net/" style="text-decoration: underline; color: #a855f7;">ventoy.net</a>, и <a href="https://sourceforge.net/projects/ventoy/files/latest/download" style="text-decoration: underline; color: #c0a8e6;">скачайте программу</a>.<br>
+                <h1 data-i18n="acc_3_h1_2">Второй способ - Ventoy, но лучше используйте первый вариант.</h1>
+                <p data-i18n="acc_3_p3">Перейдите на сайт <a href="https://www.ventoy.net/" style="text-decoration: underline; color: #a855f7;">ventoy.net</a>, и <a href="https://sourceforge.net/projects/ventoy/files/latest/download" style="text-decoration: underline; color: #c0a8e6;">скачайте программу</a>.<br>
                 Далее, распакуйте архив куда-либо и запустите файл <strong><em>Ventoy2Disk.exe</em></strong>.<br>
                 В пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
                 Сверху на вкладке "Настройки" обязательно поставьте галочку на Secure Boot Support если он у вас включён. <a href="https://remontka.pro/enable-secure-boot/" style="text-decoration: underline; color: #c0a8e6;">Как узнать, включён ли Secure Boot?</a><br>
                 Осталось нажать кнопку "Установить", и согласиться на форматирование флешки. После этого, вам останется просто перекинуть ISO файл на уже чистую флешку.</p>
 
-                <h1>После записи образа на флешку</h1>
-                <p>Для входа в MakuPE вам достаточно перезагрузиться с флешки.<br>
+                <h1 data-i18n="acc_3_h1_3">После записи образа на флешку</h1>
+                <p data-i18n="acc_3_p4">Для входа в MakuPE вам достаточно перезагрузиться с флешки.<br>
                 Для этого, откройте меню Пуск, зажмите клавишу Shift, и перезагрузитесь.<br>
                 Затем, выберите USB FDD, или что либо связанное с USB.</p>
             </div>
         </div>
     </div>
 
-    <h1 style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuPE</h1>
+    <h1 data-i18n="download_title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuPE</h1>
     <div class="buttons" style="margin-top: 0; padding-top: 0;">
-        <a href="https://www.mediafire.com/file/i7lm360jq643v24/MakuPE+V2.iso/file" class="btn-primary" style="display: flex; align-items: center;">
-            <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px;"> Скачать с MediaFire
+        <a href="https://pixeldrain.com/u/XTTsfjLy" class="btn-primary" style="display: flex; align-items: center;">
+            <img src="icons/pixeldrain.png" alt="Telegram" style="width: 24px; margin-right: 10px;"> PixelDrain
         </a>
-        <a href="https://t.me/Maku_Library/81" class="btn-secondary" style="display: flex; align-items: center;">
-            <img src="icons/tg.png" alt="Telegram" style="width: 24px; margin-right: 10px;"> Скачать с Telegram
+        <a href="https://www.mediafire.com/file/i7lm360jq643v24/MakuPE+V2.iso/file" class="btn-secondary" style="display: flex; align-items: center;">
+            <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px;"> MediaFire
+        </a>
+        <a href="https://t.me/MakuLab" class="btn-secondary" style="display: flex; align-items: center;">
+            <img src="icons/tg.png" alt="Telegram" style="width: 24px; margin-right: 10px;"> Telegram
         </a>
         <a href="https://drive.google.com/file/d/1d9eyBsGK7Xesd7opNYdex5MshSVQABy5/view?usp=sharing" class="btn-secondary" style="display: flex; align-items: center;">
-            <img src="icons/googledrive.png" alt="Google Drive" style="width: 24px; margin-right: 10px;"> Скачать с Google Диска
+            <img src="icons/googledrive.png" alt="Google Drive" style="width: 24px; margin-right: 10px;"> <span data-i18n="btn_gdrive">Google Диск</span>
         </a>
     </div>
 
@@ -220,6 +249,148 @@
             closeLightbox();
         }
     });
+</script>
+
+<script>
+const translations = {
+    ru: {
+        page_title: "Adderly.Top - MakuPE",
+        nav_builds: "Сборки",
+        nav_support: "Поддержать",
+        main_title: "Скачать MakuPE",
+        main_desc: "MakuPE - это удобная и быстрая среда восстановления Windows, которая помогает вернуть систему к жизни в случае сбоев. С её помощью вы сможете получить доступ к файлам, даже если основная ОС не загружается. Образ содержит набор необходимых инструментов для диагностики, восстановления и обслуживания компьютера. Просто запишите образ на маленькую флешку, например до двух гигабайт и держите всегда под рукой надёжный инструмент для восстановления системы.",
+        acc_1_title: "Приложения в WindowsPE // MakuPE",
+        acc_1_desc: "Браузер Chrome, Telegram, 7-Zip, AnyDesk, Recuva, EasyBCD, WinNTSetup, CPU-Z, GPU-Z, CrystalDiskInfo, Unlocker, Victoria, Everything, System Informer, Speccy, Explorer++, Bootice, Q-Dir, HDD Low Level, Notepad++, Mini Tool Partition Wizard, Hex Editor...",
+        acc_2_title: "Остальные преимущества",
+        acc_2_desc: `В MakuPE есть встроенные интернет драйвера, что позволит выйти в интернет с помощью браузера Ungoogled Chromium, и даже зайти в Telegram.<br>
+        Так же по желанию, можно будет попросить помощь у друга или родственника<br>и дать доступ к своему ПК с помощью AnyDesk.<br>
+        Образ теперь основан на Windows 10 1809, что делает его на пару сотен мегабайт легче,<br>и он поместится даже на 2 ГБ флешку.<br>
+        И самое главное, MakuPE поддерживает GPT и UEFI, что без проблем позволит запустить её на современном ПК.`,
+        acc_3_title: "Как установить?",
+        acc_3_p1: "Windows PE нельзя установить как обычную систему. Этот образ создан для записи на флешку, чтобы можно было запускать портативную Windows напрямую из под USB накопителя. Зачастую это полезно для временного доступа к файлам на компьютере, и особенно - восстановления системы.",
+        acc_3_h1_1: "Образ просто нужно записать на флешку для последующего запуска.",
+        acc_3_p2: `Перейдите на сайт <a href="https://rufus.ie" style="text-decoration: underline; color: #a855f7;">rufus.ie</a>, и <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" style="text-decoration: underline; color: #c0a8e6;">скачайте программу</a>.<br>
+        Далее, в пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
+        В пункте "Метод загрузки", справа есть кнопка "Выбрать". Выберите ISO образ MakuPE.<br>
+        Далее, в "Схема раздела" вам нужно указать таблицу разделов вашего SSD. - <a href="https://lifehacker.ru/kak-uznat-gpt-ili-mbr/" style="text-decoration: underline; color: #c0a8e6;">Как узнать схему раздела?</a><br>
+        Зачастую, "Целевую систему" и "Файловую систему" можно не трогать. Никакие галочки не нажимайте, и при каких либо диалогах снимайте их.<br>
+        Для начала записи на флешку, нажмите "СТАРТ", и согласитесь на форматирование.<br>
+        Когда прогрессбар дойдёт до 100% и будет "Готов", закройте окно.`,
+        acc_3_h1_2: "Второй способ - Ventoy, но лучше используйте первый вариант.",
+        acc_3_p3: `Перейдите на сайт <a href="https://www.ventoy.net/" style="text-decoration: underline; color: #a855f7;">ventoy.net</a>, и <a href="https://sourceforge.net/projects/ventoy/files/latest/download" style="text-decoration: underline; color: #c0a8e6;">скачайте программу</a>.<br>
+        Далее, распакуйте архив куда-либо и запустите файл <strong><em>Ventoy2Disk.exe</em></strong>.<br>
+        В пункте "Устройство" выберите вашу флешку, на 8 ГБ и выше.<br>
+        Сверху на вкладке "Настройки" обязательно поставьте галочку на Secure Boot Support если он у вас включён. <a href="https://remontka.pro/enable-secure-boot/" style="text-decoration: underline; color: #c0a8e6;">Как узнать, включён ли Secure Boot?</a><br>
+        Осталось нажать кнопку "Установить", и согласиться на форматирование флешки. После этого, вам останется просто перекинуть ISO файл на уже чистую флешку.`,
+        acc_3_h1_3: "После записи образа на флешку",
+        acc_3_p4: `Для входа в MakuPE вам достаточно перезагрузиться с флешки.<br>
+        Для этого, откройте меню Пуск, зажмите клавишу Shift, и перезагрузитесь.<br>
+        Затем, выберите USB FDD, или что либо связанное с USB.`,
+        download_title: "Скачать MakuPE",
+        btn_gdrive: "Google Диск"
+    },
+    en: {
+        page_title: "Adderly.Top - MakuPE",
+        nav_builds: "Bootlegs",
+        nav_support: "Support",
+        main_title: "Download MakuPE",
+        main_desc: "MakuPE is a convenient and fast Windows recovery environment that helps bring your system back to life in case of failures. With it, you can access your files even if the main OS won't boot. The image contains a set of essential tools for diagnosing, restoring, and maintaining your PC. Just burn the image to a small flash drive (e.g., up to 2GB) and keep a reliable system recovery tool handy at all times.",
+        acc_1_title: "Applications in WindowsPE // MakuPE",
+        acc_1_desc: "Chrome Browser, Telegram, 7-Zip, AnyDesk, Recuva, EasyBCD, WinNTSetup, CPU-Z, GPU-Z, CrystalDiskInfo, Unlocker, Victoria, Everything, System Informer, Speccy, Explorer++, Bootice, Q-Dir, HDD Low Level, Notepad++, Mini Tool Partition Wizard, Hex Editor...",
+        acc_2_title: "Other advantages",
+        acc_2_desc: `MakuPE has built-in internet drivers, allowing you to go online using the Ungoogled Chromium browser and even use Telegram.<br>
+        If needed, you can ask a friend or relative for help and give them access to your PC via AnyDesk.<br>
+        The image is now based on Windows 10 1809, making it a couple of hundred megabytes lighter, so it fits even on a 2GB flash drive.<br>
+        Most importantly, MakuPE supports GPT and UEFI, allowing it to run smoothly on modern PCs.`,
+        acc_3_title: "How to install?",
+        acc_3_p1: "Windows PE cannot be installed like a regular operating system. This image is designed to be burned to a flash drive so you can boot a portable Windows directly from a USB drive. This is often useful for temporary access to files on your computer and especially for system recovery.",
+        acc_3_h1_1: "Simply burn the image to a flash drive to boot it later.",
+        acc_3_p2: `Go to <a href="https://rufus.ie" style="text-decoration: underline; color: #a855f7;">rufus.ie</a> and <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" style="text-decoration: underline; color: #c0a8e6;">download the program</a>.<br>
+        Next, under "Device", select your flash drive (8GB or larger).<br>
+        Next to "Boot selection", click the "Select" button and choose the MakuPE ISO image.<br>
+        Under "Partition scheme", you need to match your SSD's partition table. - <a href="https://lifehacker.ru/kak-uznat-gpt-ili-mbr/" style="text-decoration: underline; color: #c0a8e6;">How to check your partition scheme?</a> (RU link)<br>
+        Usually, you can leave "Target system" and "File system" as they are. Do not check any extra boxes, and uncheck them if any dialogs appear.<br>
+        To start burning to the flash drive, click "START" and agree to format it.<br>
+        When the progress bar reaches 100% and says "Ready", close the window.`,
+        acc_3_h1_2: "The second way is Ventoy, but it's better to use the first option.",
+        acc_3_p3: `Go to <a href="https://www.ventoy.net/" style="text-decoration: underline; color: #a855f7;">ventoy.net</a> and <a href="https://sourceforge.net/projects/ventoy/files/latest/download" style="text-decoration: underline; color: #c0a8e6;">download the program</a>.<br>
+        Extract the archive anywhere and run <strong><em>Ventoy2Disk.exe</em></strong>.<br>
+        Under "Device", select your flash drive (8GB or larger).<br>
+        At the top, under the "Option" tab, make sure to check "Secure Boot Support" if it is enabled on your PC. <a href="https://remontka.pro/enable-secure-boot/" style="text-decoration: underline; color: #c0a8e6;">How to know if Secure Boot is enabled?</a> (RU link)<br>
+        Now click "Install" and agree to format the flash drive. After that, simply copy the ISO file onto the clean flash drive.`,
+        acc_3_h1_3: "After burning the image to the flash drive",
+        acc_3_p4: `To enter MakuPE, you just need to boot from the flash drive.<br>
+        To do this, open the Start menu, hold down the Shift key, and click Restart.<br>
+        Then, choose "USB FDD" or anything related to USB.`,
+        download_title: "Download MakuPE",
+        btn_gdrive: "Google Drive"
+    },
+    uk: {
+        page_title: "Adderly.Top - MakuPE",
+        nav_builds: "Збірки",
+        nav_support: "Підтримати",
+        main_title: "Завантажити MakuPE",
+        main_desc: "MakuPE - це зручне і швидке середовище відновлення Windows, яке допомагає повернути систему до життя у разі збоїв. З його допомогою ви зможете отримати доступ до файлів, навіть якщо основна ОС не завантажується. Образ містить набір необхідних інструментів для діагностики, відновлення та обслуговування комп'ютера. Просто запишіть образ на маленьку флешку, наприклад до двох гігабайт і тримайте надійний інструмент для відновлення системи завжди під рукою.",
+        acc_1_title: "Програми в WindowsPE // MakuPE",
+        acc_1_desc: "Браузер Chrome, Telegram, 7-Zip, AnyDesk, Recuva, EasyBCD, WinNTSetup, CPU-Z, GPU-Z, CrystalDiskInfo, Unlocker, Victoria, Everything, System Informer, Speccy, Explorer++, Bootice, Q-Dir, HDD Low Level, Notepad++, Mini Tool Partition Wizard, Hex Editor...",
+        acc_2_title: "Інші переваги",
+        acc_2_desc: `MakuPE має вбудовані інтернет-драйвери, що дозволить вийти в інтернет за допомогою браузера Ungoogled Chromium і навіть зайти в Telegram.<br>
+        Також за бажанням можна буде попросити допомогу у друга чи родича та надати доступ до свого ПК за допомогою AnyDesk.<br>
+        Образ тепер базується на Windows 10 1809, що робить його на пару сотень мегабайт легшим, і він поміститься навіть на 2 ГБ флешку.<br>
+        І найголовніше, MakuPE підтримує GPT і UEFI, що без проблем дозволить запустити його на сучасному ПК.`,
+        acc_3_title: "Як встановити?",
+        acc_3_p1: "Windows PE не можна встановити як звичайну систему. Цей образ створений для запису на флешку, щоб можна було запускати портативну Windows безпосередньо з USB-накопичувача. Найчастіше це корисно для тимчасового доступу до файлів на комп'ютері і особливо - для відновлення системи.",
+        acc_3_h1_1: "Образ просто потрібно записати на флешку для подальшого запуску.",
+        acc_3_p2: `Перейдіть на сайт <a href="https://rufus.ie" style="text-decoration: underline; color: #a855f7;">rufus.ie</a> та <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe" style="text-decoration: underline; color: #c0a8e6;">завантажте програму</a>.<br>
+        Далі в пункті "Пристрій" виберіть вашу флешку, на 8 ГБ або більше.<br>
+        У пункті "Метод завантаження", праворуч є кнопка "Вибрати". Виберіть ISO образ MakuPE.<br>
+        Далі в "Схема розділу" вам потрібно вказати таблицю розділів вашого SSD. - <a href="https://lifehacker.ru/kak-uznat-gpt-ili-mbr/" style="text-decoration: underline; color: #c0a8e6;">Як дізнатися схему розділу?</a> (RU посилання)<br>
+        Зазвичай "Цільову систему" та "Файлову систему" можна не чіпати. Ніякі галочки не натискайте, а при будь-яких діалогах знімайте їх.<br>
+        Для початку запису на флешку натисніть "СТАРТ" і погодьтеся на форматування.<br>
+        Коли прогрес-бар дійде до 100% і буде "Готовий", закрийте вікно.`,
+        acc_3_h1_2: "Другий спосіб - Ventoy, але краще використовуйте перший варіант.",
+        acc_3_p3: `Перейдіть на сайт <a href="https://www.ventoy.net/" style="text-decoration: underline; color: #a855f7;">ventoy.net</a> та <a href="https://sourceforge.net/projects/ventoy/files/latest/download" style="text-decoration: underline; color: #c0a8e6;">завантажте програму</a>.<br>
+        Далі розпакуйте архів куди-небудь і запустіть файл <strong><em>Ventoy2Disk.exe</em></strong>.<br>
+        У пункті "Пристрій" виберіть вашу флешку, на 8 ГБ або більше.<br>
+        Зверху на вкладці "Налаштування" обов'язково поставте галочку на Secure Boot Support, якщо він у вас увімкнений. <a href="https://remontka.pro/enable-secure-boot/" style="text-decoration: underline; color: #c0a8e6;">Як дізнатися, чи увімкнений Secure Boot?</a> (RU посилання)<br>
+        Залишилося натиснути кнопку "Встановити" і погодитися на форматування флешки. Після цього вам залишиться просто перекинути ISO файл на вже чисту флешку.`,
+        acc_3_h1_3: "Після запису образу на флешку",
+        acc_3_p4: `Для входу в MakuPE вам достатньо перезавантажитися з флешки.<br>
+        Для цього відкрийте меню Пуск, затисніть клавішу Shift і перезавантажтеся.<br>
+        Потім виберіть USB FDD або щось пов'язане з USB.`,
+        download_title: "Завантажити MakuPE",
+        btn_gdrive: "Google Диск"
+    }
+};
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+    applyLang(lang);
+}
+
+function applyLang(lang) {
+    const t = translations[lang] || translations.ru;
+    document.documentElement.lang = lang;
+    if (t.page_title) document.title = t.page_title;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) el.innerHTML = t[key];
+    });
+
+    updateAccordionHeights();
+}
+
+const savedLang = localStorage.getItem("lang");
+if (savedLang) {
+    applyLang(savedLang);
+} else {
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+        applyLang(browserLang);
+    } else {
+        applyLang("ru");
+    }
+}
 </script>
 </body>
 </html>
