@@ -108,10 +108,10 @@ body {
 </div>
 
     <nav id="nav-menu">
-        <ul>
-            <li><a href="builds">Сборки</a></li>
+<ul>
+            <li><a href="builds" data-i18n="nav_builds">Сборки</a></li>
             <li><a href="makutweaker">MakuTweaker</a></li>
-            <li><a href="support">Поддержать</a></li>
+            <li><a href="support" data-i18n="nav_support">Поддержать</a></li>
         </ul>
     </nav>
     <img src="icons/burger.svg" alt="Меню" id="burger">
@@ -227,6 +227,8 @@ body {
 const translations = {
     ru: {
         title: "Скачать MakuFlash",
+        nav_builds: "Сборки",
+        nav_support: "Поддержать",
         desc: `Красивое и дружелюбное переосмысление программы для записи Windows на флешку.<br>
         Благодаря технологии двойной буферизации, программа записывает ISO образы на 40% быстрее своих аналогов.<br>
         Эксклюзивно в MakuFlash присутствует функция интеграции твиков в будущую систему: от обхода проверок на системные требования железа до полного отключения Центра обновления Windows и изоляции ядра.<br>
@@ -237,6 +239,8 @@ const translations = {
     },
     en: {
         title: "Download MakuFlash",
+        nav_builds: "Bootlegs",
+        nav_support: "Support",
         desc: `MakuFlash is a beautiful and user-friendly reimagining of writing Windows to a USB drive.<br>
         Thanks to double buffering technology, the program writes ISO images 40% faster than its counterparts.<br>
         Exclusively in MakuFlash, there is a feature for integrating tweaks into the future system: from bypassing hardware requirement checks to completely disabling Windows Update and core isolation.
@@ -247,6 +251,8 @@ const translations = {
     },
     es: {
         title: "Descargar MakuFlash",
+        nav_builds: "Versiones",
+        nav_support: "Apoyar",
         desc: `MakuFlash es una reinvención hermosa y fácil de usar para grabar Windows en una memoria USB.<br>
         Gracias a la tecnología de doble búfer, el programa graba imágenes ISO un 40% más rápido que sus alternativas.<br>
         Exclusivamente en MakuFlash, existe una función para integrar ajustes en el sistema futuro: desde omitir verificaciones de requisitos de hardware hasta desactivar completamente Windows Update y el aislamiento del núcleo.
@@ -257,6 +263,8 @@ const translations = {
     },
     pt: {
         title: "Baixar MakuFlash",
+        nav_builds: "Versões",
+        nav_support: "Apoiar",
         desc: `MakuFlash é uma reimaginação bonita e fácil de usar para gravar o Windows em um pendrive.<br>
         Graças à tecnologia de buffer duplo, o programa grava imagens ISO 40% mais rápido que seus concorrentes.<br>
         Exclusivamente no MakuFlash, há uma função de integração de ajustes no sistema futuro: desde ignorar verificações de requisitos de hardware até desativar completamente o Windows Update e o isolamento do núcleo.
@@ -267,6 +275,8 @@ const translations = {
     },
     fr: {
         title: "Télécharger MakuFlash",
+        nav_builds: "Versions",
+        nav_support: "Soutenir",
         desc: `MakuFlash est une réinvention élégante et conviviale de l’écriture de Windows sur une clé USB.<br>
         Grâce à la technologie de double tampon, le programme écrit les images ISO 40% plus rapidement que ses concurrents.<br>
         Exclusivement dans MakuFlash, une fonctionnalité permet d’intégrer des tweaks dans le futur système : du contournement des vérifications des exigences matérielles à la désactivation complète de Windows Update et de l’isolation du noyau.
@@ -277,6 +287,8 @@ const translations = {
     },
     de: {
         title: "MakuFlash herunterladen",
+        nav_builds: "Bootlegs",
+        nav_support: "Unterstützen",
         desc: `MakuFlash ist eine schöne und benutzerfreundliche Neuinterpretation des Schreibens von Windows auf einen USB-Stick.<br>
         Dank der Double-Buffering-Technologie schreibt das Programm ISO-Images 40% schneller als vergleichbare Lösungen.<br>
         Exklusiv in MakuFlash gibt es eine Funktion zur Integration von Tweaks in das zukünftige System: vom Umgehen von Hardwareanforderungsprüfungen bis hin zur vollständigen Deaktivierung von Windows Update und der Kernisolierung.
@@ -287,6 +299,8 @@ const translations = {
     },
     it: {
         title: "Scarica MakuFlash",
+        nav_builds: "Versioni",
+        nav_support: "Supportare",
         desc: `MakuFlash è una reinterpretazione elegante e intuitiva della scrittura di Windows su una chiavetta USB.<br>
         Grazie alla tecnologia di doppio buffering, il programma scrive immagini ISO il 40%<br>più velocemente rispetto alle alternative.<br>
         Esclusivamente in MakuFlash è presente una funzione per integrare tweak nel sistema futuro: dal bypass dei controlli dei requisiti hardware alla completa disattivazione di Windows Update e dell’isolamento del kernel.
@@ -297,6 +311,8 @@ const translations = {
     },
     zh: {
         title: "下载 MakuFlash",
+        nav_builds: "系统版本",
+        nav_support: "支持",
         desc: `MakuFlash 是一款美观且易于使用的 Windows 写入 U 盘工具的全新诠释。<br>
         得益于双缓冲技术，该程序写入 ISO 镜像的速度比同类产品快 40%。<br>
         MakuFlash 独家提供将优化设置集成到未来系统中的功能：从绕过硬件要求检查到完全禁用 Windows 更新和核心隔离。<br>
@@ -307,6 +323,8 @@ const translations = {
     },
     ja: {
         title: "MakuFlash ダウンロード",
+        nav_builds: "ビルド",
+        nav_support: "サポート",
         desc: `MakuFlash は、Windows を USB ドライブに書き込むための美しく使いやすい新しいアプローチです。<br>
         ダブルバッファリング技術により、ISO イメージを他のツールよりも 40% 高速に書き込みます。<br>
         MakuFlash では、将来のシステムに調整を統合する機能を独自に提供しています。ハードウェア要件チェックの回避から Windows Update やコア分離の完全無効化まで対応しています。
@@ -317,6 +335,8 @@ const translations = {
     },
     hi: {
         title: "MakuFlash डाउनलोड",
+        nav_builds: "बिल्ड्स",
+        nav_support: "समर्थन",
         desc: `MakuFlash Windows को USB ड्राइव पर लिखने का एक सुंदर और उपयोगकर्ता-अनुकूल पुनर्विचार है।<br>
         डबल बफरिंग तकनीक के कारण, यह प्रोग्राम ISO इमेज को अन्य विकल्पों की तुलना में 40% तेज लिखता है।<br>
         MakuFlash में विशेष रूप से भविष्य के सिस्टम में ट्वीक जोड़ने की सुविधा है: हार्डवेयर आवश्यकताओं की जांच को बायपास करने से लेकर Windows Update और कोर आइसोलेशन को पूरी तरह अक्षम करने तक।
@@ -327,6 +347,8 @@ const translations = {
     },
     ko: {
         title: "MakuFlash 다운로드",
+        nav_builds: "빌드",
+        nav_support: "지원",
         desc: `MakuFlash는 Windows를 USB 드라이브에 기록하는 작업을 아름답고 사용자 친화적으로 재해석한 프로그램입니다.<br>
         이중 버퍼링 기술 덕분에 ISO 이미지를 다른 도구보다 40% 더 빠르게 기록합니다.<br>
         MakuFlash에는 미래 시스템에 트윅을 통합하는 기능이 독점적으로 포함되어 있습니다: 하드웨어 요구 사항 검사 우회부터 Windows 업데이트 및 코어 격리 완전 비활성화까지 가능합니다.
@@ -337,6 +359,8 @@ const translations = {
     },
     tr: {
         title: "MakuFlash indir",
+        nav_builds: "Sürümler",
+        nav_support: "Destek",
         desc: `MakuFlash, Windows’u USB belleğe yazma işleminin güzel ve kullanıcı dostu bir yeniden yorumudur.<br>
         Çift tamponlama teknolojisi sayesinde ISO kalıplarını rakiplerine göre %40 daha hızlı yazar.<br>
         MakuFlash’ta, gelecekteki sisteme ince ayarlar entegre etme özelliği özel olarak sunulur: donanım gereksinimi kontrollerini atlamaktan Windows Update ve çekirdek izolasyonunu tamamen devre dışı bırakmaya kadar.
@@ -347,6 +371,8 @@ const translations = {
     },
     id: {
         title: "Unduh MakuFlash",
+        nav_builds: "Bootlegs",
+        nav_support: "Dukungan",
         desc: `MakuFlash adalah reinterpretasi yang indah dan ramah pengguna untuk menulis Windows ke flash drive.<br>
         Berkat teknologi double buffering, program ini menulis image ISO 40% lebih cepat dibandingkan alternatifnya.<br>
         Secara eksklusif di MakuFlash, terdapat fitur untuk mengintegrasikan tweak ke sistem masa depan: mulai dari melewati pemeriksaan persyaratan perangkat keras hingga menonaktifkan Windows Update dan isolasi inti sepenuhnya.
@@ -357,6 +383,8 @@ const translations = {
     },
     vi: {
         title: "Tải MakuFlash",
+        nav_builds: "Bản dựng",
+        nav_support: "Hỗ trợ",
         desc: `MakuFlash là một cách tiếp cận mới đẹp mắt và thân thiện với người dùng để ghi Windows vào USB.<br>
         Nhờ công nghệ bộ đệm kép, chương trình ghi file ISO nhanh hơn 40% so với các công cụ khác.<br>
         Độc quyền trong MakuFlash là tính năng tích hợp các tinh chỉnh vào hệ thống tương lai: từ việc bỏ qua kiểm tra yêu cầu phần cứng đến tắt hoàn toàn Windows Update và cách ly lõi.
@@ -367,6 +395,8 @@ const translations = {
     },
     uk: {
         title: "Завантажити MakuFlash",
+        nav_builds: "Збірки",
+        nav_support: "Підтримати",
         desc: `Красиве та зручне переосмислення програми для запису Windows на флешку.<br>
         Завдяки технології подвійного буферування програма записує ISO-образи на 40% швидше за аналоги.<br>
         Ексклюзивно в MakuFlash є функція інтеграції твиків у майбутню систему: від обходу перевірок системних вимог<br>до повного вимкнення Центру оновлення Windows та ізоляції ядра.<br>
@@ -377,6 +407,8 @@ const translations = {
     },
     cs: {
         title: "Stáhnout MakuFlash",
+        nav_builds: "Sestavy",
+        nav_support: "Podpořit",
         desc: `Krásné a uživatelsky přívětivé přepracování programu pro zápis Windows na USB.<br>
         Díky technologii dvojitého bufferu zapisuje ISO obrazy o 40% rychleji než konkurence.<br>
         Exkluzivně v MakuFlash je funkce integrace tweaků do budoucího systému: od obejití kontrol systémových požadavků až po úplné vypnutí Windows Update a izolace jádra.<br>
@@ -387,6 +419,8 @@ const translations = {
     },
     pl: {
         title: "Pobierz MakuFlash",
+        nav_builds: "Kompilacje",
+        nav_support: "Wsparcie",
         desc: `Piękne i przyjazne dla użytkownika przeprojektowanie programu do nagrywania Windows na pendrive.<br>
         Dzięki technologii podwójnego buforowania program zapisuje obrazy ISO o 40% szybciej niż konkurencja.<br>
         Wyłącznie w MakuFlash dostępna jest funkcja integracji tweaków z przyszłym systemem: od omijania wymagań sprzętowych po całkowite wyłączenie Windows Update i izolacji rdzenia.<br>
@@ -397,6 +431,8 @@ const translations = {
     },
     et: {
         title: "Laadi alla MakuFlash",
+        nav_builds: "Versioonid",
+        nav_support: "Toeta",
         desc: `Kaunis ja kasutajasõbralik Windowsi USB-le kirjutamise tööriista uus versioon.<br>
         Topeltpuhvri tehnoloogia võimaldab ISO-faile kirjutada 40% kiiremini kui teised lahendused.<br>
         Ainult MakuFlashis on funktsioon tweak’ide integreerimiseks tulevasse süsteemi: alates riistvaranõuete kontrolli vahelejätmisest kuni Windows Update’i ja tuuma isolatsiooni täieliku keelamiseni.<br>
@@ -407,6 +443,8 @@ const translations = {
     },
     az: {
         title: "MakuFlash yüklə",
+        nav_builds: "Yığımlar",
+        nav_support: "Dəstək",
         desc: `Windows-u флешкаya yazmaq üçün gözəl və istifadəçi dostu proqramın yenidən hazırlanmış versiyasıdır.<br>
         İkiqat bufer texnologiyası sayəsində proqram ISO fayllarını analoqlardan 40% daha sürətli yazır.<br>
         MakuFlash-da eksklüziv olaraq tweak-lərin gələcək sistemə inteqrasiyası mövcuddur: sistem tələblərinin yoxlanmasını keçməkdən Windows Update və nüvə izolyasiyasını tam söndürməyə qədər.<br>
@@ -417,6 +455,8 @@ const translations = {
     },
     tl: {
         title: "I-download ang MakuFlash",
+        nav_builds: "Mga Build",
+        nav_support: "Suportahan",
         desc: `Isang maganda at madaling gamitin na bersyon ng tool para sa paglalagay ng Windows sa USB.<br>
         Dahil sa double buffering technology, 40% mas mabilis ang pagsusulat ng ISO kumpara sa iba.<br>
         Eksklusibo sa MakuFlash ang integration ng tweaks: mula sa pag-bypass ng hardware requirements hanggang sa ganap na pag-disable ng Windows Update at core isolation.<br>
@@ -447,7 +487,6 @@ function applyLang(lang) {
 }
 
 const savedLang = localStorage.getItem("lang");
-
 if (savedLang) {
     applyLang(savedLang);
 } else {
@@ -460,7 +499,5 @@ if (savedLang) {
     }
 }
 </script>
-
-
 </body>
 </html>
