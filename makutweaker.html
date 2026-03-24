@@ -92,11 +92,11 @@
         <button onclick="setLang('tl')"><span class="fi fi-ph"></span> TL</button>
     </div>
 
-    <nav id="nav-menu">
+<nav id="nav-menu">
         <ul>
-            <li><a href="builds">Сборки</a></li>
+            <li><a href="builds" data-i18n="nav_builds">Сборки</a></li>
             <li><a href="makutweaker">MakuTweaker</a></li>
-            <li><a href="support">Поддержать</a></li>
+            <li><a href="support" data-i18n="nav_support">Поддержать</a></li>
         </ul>
     </nav>
     <img src="icons/burger.svg" alt="Меню" id="burger">
@@ -477,6 +477,8 @@ MakuTweaker 5.0.31 - Микрофикс<br>
 <script>
 const translations = {
     ru: {
+        nav_builds: "Сборки",
+        nav_support: "Поддержать",
         title: "Скачать MakuTweaker",
         desc: `Самый дружелюбный и полезный твикер для Windows.<br>
         В этой программе вы можете гибко настроить и персонализировать систему, а так же управлять процессами и посмотреть подробную информацию о характеристиках вашего ПК! Также, вы можете выполнить быструю настройку Windows, управлять системными компонентами и избавиться от системного мусора! В MakuTweaker доступно несколько тем оформления, благодаря которым вы можете настроить программу на свой вкус.`,
@@ -486,6 +488,8 @@ const translations = {
         bench_btn: "Посмотреть результаты MakuBench"
     },
     uk: {
+        nav_builds: "Збірки",
+        nav_support: "Підтримати",
         title: "Завантажити MakuTweaker",
         desc: `Найзручніший і найкорисніший твікер для Windows.<br>
         За допомогою цієї програми ви можете гнучко налаштувати та персоналізувати систему, керувати процесами і переглядати детальну інформацію про характеристики вашого ПК!<br>
@@ -497,6 +501,8 @@ const translations = {
         bench_btn: "Переглянути результати MakuBench"
     },
     en: {
+        nav_builds: "Bootlegs",
+        nav_support: "Support",
         title: "Download MakuTweaker",
         desc: `The most user-friendly and useful tweaker for Windows.<br>
         With this program, you can flexibly configure and personalize the system, manage processes,<br>and view detailed information about your PC’s specifications!<br>
@@ -508,6 +514,8 @@ const translations = {
         bench_btn: "View MakuBench results"
     },
     es: {
+        nav_builds: "Versiones",
+        nav_support: "Apoyar",
         title: "Descargar MakuTweaker",
         desc: `El tweaker más útil y fácil de usar para Windows.<br>
         Con este programa puedes configurar y personalizar el sistema de forma flexible, administrar procesos y ver información detallada sobre las características de tu PC!<br>
@@ -519,6 +527,8 @@ const translations = {
         bench_btn: "Ver resultados de MakuBench"
     },
     de: {
+        nav_builds: "Bootlegs",
+        nav_support: "Unterstützen",
         title: "MakuTweaker Herunterladen",
         desc: `Der benutzerfreundlichste und nützlichste Tweaker für Windows.<br>
         Mit diesem Programm können Sie Ihr System flexibel konfigurieren und personalisieren, Prozesse verwalten sowie detaillierte Informationen über die Spezifikationen Ihres PCs anzeigen!<br>
@@ -530,6 +540,8 @@ const translations = {
         bench_btn: "MakuBench-Ergebnisse ansehen"
     },
     cs: {
+        nav_builds: "Sestavy",
+        nav_support: "Podpořit",
         title: "Stáhnout MakuTweaker",
         desc: `Nejužitečnější a uživatelsky nejpřívětivější tweaker pro Windows.<br>
         S tímto programem můžete flexibilně konfigurovat a personalizovat systém, spravovat procesy a prohlížet si podrobné informace o specifikacích vašeho PC!<br>
@@ -541,6 +553,8 @@ const translations = {
         bench_btn: "Zobrazit výsledky MakuBench"
     },
     et: {
+        nav_builds: "Versioonid",
+        nav_support: "Toeta",
         title: "Laadi alla MakuTweaker",
         desc: `Kõige kasutajasõbralikum ja kasulikum tweaker Windowsi jaoks.<br>
         Selle programmiga saate paindlikult konfigureerida ja isikupärastada süsteemi, hallata protsesse ning vaadata üksikasjalikku teavet oma arvuti tehniliste andmete kohta!<br>
@@ -552,6 +566,8 @@ const translations = {
         bench_btn: "Vaata MakuBenchi tulemusi"
     },
     zh: {
+        nav_builds: "系统版本",
+        nav_support: "支持",
         title: "下载 MakuTweaker",
         desc: `最友好、最实用的 Windows 优化工具。<br>
         通过该程序，您可以灵活地配置和个性化系统、管理进程，并查看有关您电脑硬件规格的详细信息！<br>
@@ -563,6 +579,8 @@ const translations = {
         bench_btn: "查看 MakuBench 结果"
     },
     ja: {
+        nav_builds: "ビルド",
+        nav_support: "サポート",
         title: "MakuTweaker ダウンロード",
         desc: `Windows 向けの最も使いやすく便利なチューニングツールです。<br>
         このプログラムでは、システムを柔軟に設定・カスタマイズしたり、プロセスを管理したり、PC の仕様に関する詳細な情報を確認することができます！<br>
@@ -574,6 +592,8 @@ const translations = {
         bench_btn: "MakuBench の結果を見る"
     },
     tl: {
+        nav_builds: "Mga Build",
+        nav_support: "Suportahan",
         title: "I-download ang MakuTweaker",
         desc: `Ang pinaka-madaling gamitin at kapaki-pakinabang na tweaker para sa Windows.<br>
         Gamit ang programang ito, maaari mong flexible na i-configure at i-personalize ang sistema, pamahalaan ang mga proseso, at tingnan ang detalyadong impormasyon tungkol sa mga spec ng iyong PC!<br>
