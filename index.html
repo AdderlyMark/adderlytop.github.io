@@ -19,6 +19,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 
     <script>
         const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
@@ -26,11 +27,41 @@
     </script>
 
     <meta property="og:title" content="Сайт Марка Аддерли">
-    <meta property="og:keywords" content="adderly, adderlytop, adderly top, марк аддерли, аддерли, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10, скачать макутвикер, макутвикер, маку твикер, download makutweaker, makutweaker download">
+    <meta property="og:keywords" content="adderly, adderlytop, adderly top, марк аддерли, аддерли, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10, скачать макутвикер, макутвикер, маку твикер, download makutweaker, makutweaker download, mark adderly, adderly, mark, makuflash">
     <meta property="og:description" content="Главная страница сайта Марка Аддерли">
     <meta name="description" content="Главная страница сайта Марка Аддерли, сборки, блог и новости.">
 
     <style>
+        .lang-switcher {
+            display: flex;
+            gap: 4px; 
+            margin-left: 10px; 
+            align-items: center;
+        }
+
+        .lang-switcher button {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #aaa;
+            padding: 2px 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.65rem;
+            line-height: 1;
+            transition: 0.2s;
+        }
+
+        .lang-switcher button:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        @media (max-width: 1100px) {
+            .lang-switcher {
+                display: none;
+            }
+        }
+
         .home-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -128,11 +159,18 @@
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
+
+    <div class="lang-switcher">
+        <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
+        <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
+        <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+    </div>
+
     <nav id="nav-menu">
         <ul>
-            <li><a href="builds">Сборки</a></li>
+            <li><a href="builds" data-i18n="nav_builds">Сборки</a></li>
             <li><a href="makutweaker">MakuTweaker</a></li>
-            <li><a href="support">Поддержать</a></li>
+            <li><a href="support" data-i18n="nav_support">Поддержать</a></li>
         </ul>
     </nav>
     <img src="icons/burger.svg" alt="Меню" id="burger">
@@ -140,36 +178,37 @@
 
 <main>
     <section>
-        <h1 id="welcome">Добро пожаловать на Adderly.Top!</h1>
-        <p id="discription">Это сайт Марка Аддерли - техноблогера на YouTube.<br>
+        <h1 id="welcome" data-i18n="welcome_title">Добро пожаловать на Adderly.Top!</h1>
+        <p id="discription" data-i18n="welcome_desc">Это сайт Марка Аддерли - техноблогера на YouTube.<br>
         Здесь вы можете скачать мои сборки Windows, оригинальные ISO, MakuTweaker и многое другое!<br>
         На сайте есть реклама. Если вы выключите адблокер, вы поможете мне продолжать свою деятельность!</p>
     </section>
 
     <section class="button-menu-section">
         <div class="home-grid">
-            <a href="windows">Скачать официальные Windows</a>
-            <a href="makuflash">Скачать MakuFlash</a>
-            <a href="makutweaker">Скачать MakuTweaker</a>
-            <a href="makubench">MakuTweaker Benchmark</a>
-            <a href="win_pe">Windows PE от Аддерли</a>
-            <a href="makuyan">Запрещатор Яндекса</a>
+            <a href="windows" data-i18n="btn_win">Скачать официальные Windows</a>
+            <a href="makuflash" data-i18n="btn_makuflash">Скачать MakuFlash</a>
+            <a href="makutweaker" data-i18n="btn_makutweaker">Скачать MakuTweaker</a>
+            <a href="makubench" data-i18n="btn_makubench">MakuTweaker Benchmark</a>
+            <a href="win_pe" data-i18n="btn_winpe">Windows PE от Аддерли</a>
+            <a href="makuyan" data-i18n="btn_makuyan">Запрещатор Яндекса</a>
             
             <a href="https://t.me/adderly324" target="_blank" rel="noopener noreferrer">
-                <img src="icons/tg.png" alt="TG"> Telegram канал
+                <img src="icons/tg.png" alt="TG"> <span data-i18n="btn_tg">Telegram канал</span>
             </a>
             <a href="https://boosty.to/adderly" target="_blank" rel="noopener noreferrer">
-                <img src="icons/boosty.png" alt="Boosty"> Поддержать на Boosty
+                <img src="icons/boosty.png" alt="Boosty"> <span data-i18n="btn_boosty">Поддержать на Boosty</span>
             </a>
 
-<a href="builds" style="grid-column: 1 / -1; width: auto;">
-    Сборки от Аддерли
-</a></div>
+            <a href="builds" style="grid-column: 1 / -1; width: auto;" data-i18n="btn_builds">
+                Сборки от Аддерли
+            </a>
+        </div>
     </section>
 
     <section class="youtube-section">
         <div class="video-card">
-            <h2>Самое актуальное видео на YouTube канале</h2>
+            <h2 data-i18n="video_title">Самое актуальное видео на YouTube канале</h2>
             <div class="video-wrapper">
                 <iframe 
                     src="https://www.youtube.com/embed/videoseries?si=EL7VwKSGH9gmIKnk&amp;list=UULFsS9QFVkkxhF0zYwf1QP2ZA"
@@ -198,5 +237,91 @@
 </footer>
 
 <script src="burger.js"></script>
+
+<script>
+const translations = {
+    ru: {
+        page_title: "Adderly.Top - Главная",
+        nav_builds: "Сборки",
+        nav_support: "Поддержать",
+        welcome_title: "Добро пожаловать на Adderly.Top!",
+        welcome_desc: "Это сайт Марка Аддерли - техноблогера на YouTube.<br>Здесь вы можете скачать мои сборки Windows, оригинальные ISO, MakuTweaker и многое другое!<br>На сайте есть реклама. Если вы выключите адблокер, вы поможете мне продолжать свою деятельность!",
+        btn_win: "Скачать официальные Windows",
+        btn_makuflash: "Скачать MakuFlash",
+        btn_makutweaker: "Скачать MakuTweaker",
+        btn_makubench: "MakuTweaker Benchmark",
+        btn_winpe: "Windows PE от Аддерли",
+        btn_makuyan: "Запрещатор Яндекса",
+        btn_tg: "Telegram канал",
+        btn_boosty: "Поддержать на Boosty",
+        btn_builds: "Сборки от Аддерли",
+        video_title: "Самое актуальное видео на YouTube канале"
+    },
+    en: {
+        page_title: "Adderly.Top - Home",
+        nav_builds: "Bootlegs",
+        nav_support: "Support",
+        welcome_title: "Welcome to Adderly.Top!",
+        welcome_desc: "This is the website of Mark Adderly - a tech blogger on YouTube.<br>Here you can download my Windows Bootlegs, original ISOs, MakuTweaker, and much more!<br>There are ads on the site. If you disable your adblocker, you will help me continue my work!",
+        btn_win: "Download Official Windows",
+        btn_makuflash: "Download MakuFlash",
+        btn_makutweaker: "Download MakuTweaker",
+        btn_makubench: "MakuTweaker Benchmark",
+        btn_winpe: "Windows PE by Adderly",
+        btn_makuyan: "Yandex Blocker",
+        btn_tg: "Telegram Channel",
+        btn_boosty: "Support on Boosty",
+        btn_builds: "Bootlegs by Adderly",
+        video_title: "Latest video on the YouTube channel"
+    },
+    uk: {
+        page_title: "Adderly.Top - Головна",
+        nav_builds: "Збірки",
+        nav_support: "Підтримати",
+        welcome_title: "Ласкаво просимо на Adderly.Top!",
+        welcome_desc: "Це сайт Марка Аддерлі - техноблогера на YouTube.<br>Тут ви можете завантажити мої збірки Windows, оригінальні ISO, MakuTweaker та багато іншого!<br>На сайті є реклама. Якщо ви вимкнете адблокер, ви допоможете мені продовжувати свою діяльність!",
+        btn_win: "Завантажити офіційні Windows",
+        btn_makuflash: "Завантажити MakuFlash",
+        btn_makutweaker: "Завантажити MakuTweaker",
+        btn_makubench: "MakuTweaker Benchmark",
+        btn_winpe: "Windows PE від Аддерлі",
+        btn_makuyan: "Блокувальник Яндекса",
+        btn_tg: "Telegram канал",
+        btn_boosty: "Підтримати на Boosty",
+        btn_builds: "Збірки від Аддерлі",
+        video_title: "Найактуальніше відео на YouTube каналі"
+    }
+};
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+    applyLang(lang);
+}
+
+function applyLang(lang) {
+    const t = translations[lang] || translations.ru;
+
+    if (t.page_title) {
+        document.title = t.page_title;
+    }
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) el.innerHTML = t[key];
+    });
+}
+
+const savedLang = localStorage.getItem("lang");
+if (savedLang) {
+    applyLang(savedLang);
+} else {
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+        applyLang(browserLang);
+    } else {
+        applyLang("ru");
+    }
+}
+</script>
 </body>
 </html>
