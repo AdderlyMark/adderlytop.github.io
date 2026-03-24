@@ -19,12 +19,38 @@
     <link rel="icon" href="images/favicon.png">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+    
     <meta property="og:title" content="Результаты MakuTweaker Benchmark">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, макутвикер, результаты">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, результати тестів, результати, бенчмарк, макутвікер, test results, results, benchmark, resultados de pruebas, resultados, testergebnisse, ergebnisse, výsledky testů, výsledky, testi tulemused, tulemused, 测试结果, 结果, 基准测试, makutweaker基准测试, テスト結果, 結果, ベンチマーク, makutweakerベンチマーク, mga resulta ng pagsubok, mga resulta">
     <meta property="og:description" content="Результаты MakuTweaker Benchmark">
     <meta name="description" content="Результаты MakuTweaker Benchmark от пользователей MakuTweaker">
+    <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, результати тестів, результати, бенчмарк, макутвікер, test results, results, benchmark, resultados de pruebas, resultados, testergebnisse, ergebnisse, výsledky testů, výsledky, testi tulemused, tulemused, 测试结果, 结果, 基准测试, makutweaker基准测试, テスト結果, 結果, ベンチマーク, makutweakerベンチマーク, mga resulta ng pagsubok, mga resulta">
 
     <style>
+        .lang-switcher {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            gap: 4px; margin-left: 20px; align-items: center;
+        }
+
+        .lang-switcher button {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #aaa;
+            padding: 2px 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.65rem;
+            line-height: 1;
+            transition: 0.2s;
+        }
+
+        .lang-switcher button:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
         .floating-panel {
             position: fixed;
             top: 50%;
@@ -163,83 +189,93 @@
         .match-text { color: #a855f7; font-weight: 700; }
 
         @media (max-width: 1500px) {
-        .floating-panel {
-            left: 10px;
-            width: 140px;
-            padding: 12px;
-        }
-        .panel-header { width: 100%; border-bottom: none; margin-bottom: 5px; padding-bottom: 0; }
-        .floating-button {
-                padding: 8px 10px;
-                font-size: 0.8rem;
-            }            .floating-button:hover { transform: translateY(-2px); }
+            .floating-panel { left: 10px; width: 140px; padding: 12px; }
+            .panel-header { width: 100%; border-bottom: none; margin-bottom: 5px; padding-bottom: 0; }
+            .floating-button { padding: 8px 10px; font-size: 0.8rem; }
+            .floating-button:hover { transform: translateY(-2px); }
         }
 
         @media (max-width: 1300px) {
-        .floating-panel {
-            display: none !important;
+            .floating-panel { display: none !important; }
         }
-    }
+
+        @media (max-width: 850px) {
+            .lang-switcher { display: none; }
+        }
     </style>
 </head>
 
 <body>
     <div class="floating-panel">
-        <div class="panel-header">Категории</div>
-        <button class="floating-button" onclick="scrollToSection('desktop_intel')">Настольные Intel Core</button>
-        <button class="floating-button" onclick="scrollToSection('desktop_amd')">Настольные AMD Ryzen</button>
-        <button class="floating-button" onclick="scrollToSection('laptop_intel')">Ноутбучные Intel Core</button>
-        <button class="floating-button" onclick="scrollToSection('laptop_amd')">Ноутбучные AMD Ryzen</button>
-        <button class="floating-button" onclick="scrollToSection('other_intel')">Прочие Intel</button>
-        <button class="floating-button" onclick="scrollToSection('xeon_intel')">Intel Xeon</button>
-        <button class="floating-button" onclick="scrollToSection('other_amd')">Прочие AMD</button>
+        <div class="panel-header" data-i18n="cat_title">Категории</div>
+        <button class="floating-button" onclick="scrollToSection('desktop_intel')" data-i18n="cat_desk_intel">Настольные Intel Core</button>
+        <button class="floating-button" onclick="scrollToSection('desktop_amd')" data-i18n="cat_desk_amd">Настольные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToSection('laptop_intel')" data-i18n="cat_lap_intel">Ноутбучные Intel Core</button>
+        <button class="floating-button" onclick="scrollToSection('laptop_amd')" data-i18n="cat_lap_amd">Ноутбучные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToSection('other_intel')" data-i18n="cat_other_intel">Прочие Intel</button>
+        <button class="floating-button" onclick="scrollToSection('xeon_intel')" data-i18n="cat_xeon">Intel Xeon</button>
+        <button class="floating-button" onclick="scrollToSection('other_amd')" data-i18n="cat_other_amd">Прочие AMD</button>
     </div>
 
 <header>
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
+
+    <div class="lang-switcher">
+        <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
+        <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
+        <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+        <button onclick="setLang('es')"><span class="fi fi-es"></span> ES</button>
+        <button onclick="setLang('de')"><span class="fi fi-de"></span> DE</button>
+        <button onclick="setLang('cs')"><span class="fi fi-cz"></span> CS</button>
+        <button onclick="setLang('et')"><span class="fi fi-ee"></span> ET</button>
+        <button onclick="setLang('zh')"><span class="fi fi-cn"></span> ZH</button>
+        <button onclick="setLang('ja')"><span class="fi fi-jp"></span> JA</button>
+        <button onclick="setLang('tl')"><span class="fi fi-ph"></span> TL</button>
+    </div>
+
     <nav id="nav-menu">
         <ul>
-            <li><a href="builds">Сборки</a></li>
+            <li><a href="builds" data-i18n="nav_builds">Сборки</a></li>
             <li><a href="makutweaker">MakuTweaker</a></li>
-            <li><a href="support">Поддержать</a></li>
+            <li><a href="support" data-i18n="nav_support">Поддержать</a></li>
         </ul>
     </nav>
     <img src="icons/burger.svg" alt="Меню" id="burger">
 </header>
 
 <main>
-    <h1>Результаты MakuTweaker Benchmark</h1>
+    <h1 data-i18n="h1_main">Результаты MakuTweaker Benchmark</h1>
 
     <div class="search-container">
-        <input type="text" id="cpu-search" placeholder="Введите название процессора (например, 13700KF)">
-        <h6>Добавьте в начале "/" чтобы сделать глобальный поиск.</h6>
+        <input type="text" id="cpu-search" placeholder="Введите название процессора (например, 13700KF)" data-i18n="search_placeholder">
+        <h6 data-i18n="search_hint">Добавьте в начале "/" чтобы сделать глобальный поиск.</h6>
     </div>
 
     <div id="similar-cpu-results" class="similar-cpu-results table-container">
-        <h3>Результат поиска и похожие процессоры:</h3>
+        <h3 data-i18n="search_results_title">Результат поиска и похожие процессоры:</h3>
         <table>
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score">Одноядерный</th>
-                    <th class="score">Многопоточный</th>
-                    <th>Комментарий</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score" data-i18n="th_single">Одноядерный</th>
+                    <th class="score" data-i18n="th_multi">Многопоточный</th>
+                    <th data-i18n="th_comment">Комментарий</th>
                 </tr>
             </thead>
             <tbody id="similar-cpu-tbody"></tbody>
         </table>
     </div>
 
-    <h2 id="desktop_intel">Настольные Intel Core процессоры</h2>
+    <h2 id="desktop_intel" data-i18n="h2_desk_intel">Настольные Intel Core процессоры</h2>
     <div class="table-container">
         <table class="sortable">
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score sorttable_numeric">Одноядерный</th>
-                    <th class="score sorttable_numeric">Многопоточный</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                 </tr>
             </thead>
             <tbody>
@@ -324,14 +360,14 @@
         </table>
     </div>
 
-    <h2 id="desktop_amd">Настольные AMD Ryzen процессоры</h2>
+    <h2 id="desktop_amd" data-i18n="h2_desk_amd">Настольные AMD Ryzen процессоры</h2>
     <div class="table-container">
         <table class="sortable">
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score sorttable_numeric">Одноядерный</th>
-                    <th class="score sorttable_numeric">Многопоточный</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                 </tr>
             </thead>
             <tbody>
@@ -378,14 +414,14 @@
         </table>
     </div>
 
-    <h2 id="laptop_intel">Ноутбучные Intel Core процессоры</h2>
+    <h2 id="laptop_intel" data-i18n="h2_lap_intel">Ноутбучные Intel Core процессоры</h2>
     <div class="table-container">
         <table class="sortable">
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score sorttable_numeric">Одноядерный</th>
-                    <th class="score sorttable_numeric">Многопоточный</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                 </tr>
             </thead>
             <tbody>
@@ -466,14 +502,14 @@
         </table>
     </div>
 
-    <h2 id="laptop_amd">Ноутбучные AMD Ryzen процессоры</h2>
+    <h2 id="laptop_amd" data-i18n="h2_lap_amd">Ноутбучные AMD Ryzen процессоры</h2>
     <div class="table-container">
         <table class="sortable">
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score sorttable_numeric">Одноядерный</th>
-                    <th class="score sorttable_numeric">Многопоточный</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                 </tr>
             </thead>
             <tbody>
@@ -507,14 +543,14 @@
         </table>
     </div>
 
-    <h2 id="other_intel">Прочие Intel процессоры</h2>
+    <h2 id="other_intel" data-i18n="h2_other_intel">Прочие Intel процессоры</h2>
     <div class="table-container">
         <table class="sortable">
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score sorttable_numeric">Одноядерный</th>
-                    <th class="score sorttable_numeric">Многопоточный</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                 </tr>
             </thead>
             <tbody>
@@ -549,18 +585,18 @@
                     <tr><td class="name">Intel NVIDIA CC150</td><td class="score sorttable_numeric">839</td><td class="score sorttable_numeric">8680</td></tr>
                     <tr><td class="name">Intel N100</td><td class="score sorttable_numeric">657</td><td class="score sorttable_numeric">2052</td></tr>
                     <tr><td class="name">Intel N97</td><td class="score sorttable_numeric">696</td><td class="score sorttable_numeric">2225</td></tr>
-            </tbody>
+                </tbody>
         </table>
     </div>
 
-    <h2 id="xeon_intel">Intel Xeon процессоры</h2>
+    <h2 id="xeon_intel" data-i18n="h2_xeon">Intel Xeon процессоры</h2>
     <div class="table-container">
         <table class="sortable">
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score sorttable_numeric">Одноядерный</th>
-                    <th class="score sorttable_numeric">Многопоточный</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                 </tr>
             </thead>
             <tbody>
@@ -584,18 +620,18 @@
                     <tr><td class="name">Intel Xeon E5 2620 V3 (6 Ядер)</td><td class="score sorttable_numeric">560</td><td class="score sorttable_numeric">4510</td></tr>
                     <tr><td class="name">Intel Xeon E5 2643 0 (4 Ядра)</td><td class="score sorttable_numeric">553</td><td class="score sorttable_numeric">2612</td></tr>
                     <tr><td class="name">Intel Xeon E5 2630 V2 (6 Ядер)</td><td class="score sorttable_numeric">540</td><td class="score sorttable_numeric">4240</td></tr>
-            </tbody>
+                </tbody>
         </table>
     </div>
 
-    <h2 id="other_amd">Прочие AMD процессоры</h2>
+    <h2 id="other_amd" data-i18n="h2_other_amd">Прочие AMD процессоры</h2>
     <div class="table-container">
         <table class="sortable">
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score sorttable_numeric">Одноядерный</th>
-                    <th class="score sorttable_numeric">Многопоточный</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                 </tr>
             </thead>
             <tbody>
@@ -624,18 +660,18 @@
                     
                     <tr><td class="name">AMD E-450</td><td class="score sorttable_numeric">109</td><td class="score sorttable_numeric">162</td></tr>
                     <tr><td class="name">AMD C-50</td><td class="score sorttable_numeric">91</td><td class="score sorttable_numeric">157</td></tr>
-            </tbody>
+                </tbody>
         </table>
     </div>
 
-    <h2 id="arm_cpu">ARM процессоры</h2>
+    <h2 id="arm_cpu" data-i18n="h2_arm">ARM процессоры</h2>
     <div class="table-container">
         <table class="sortable">
             <thead>
                 <tr>
-                    <th class="name">Процессор</th>
-                    <th class="score sorttable_numeric">Одноядерный</th>
-                    <th class="score sorttable_numeric">Многопоточный</th>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                 </tr>
             </thead>
             <tbody>
@@ -646,8 +682,8 @@
     </div>
 
     <div class="buttons" style="margin-bottom: 60px;">
-        <a href="https://adderly.top/makutweaker" class="btn-primary">Скачать MakuTweaker</a>
-        <a href="https://t.me/adderly324/4460" class="btn-secondary" target="_blank" rel="noopener noreferrer">Отправить свои результаты</a>
+        <a href="https://adderly.top/makutweaker" class="btn-primary" data-i18n="btn_dl">Скачать MakuTweaker</a>
+        <a href="https://t.me/adderly324/4460" class="btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="btn_submit">Отправить свои результаты</a>
     </div>
 
 </main>
@@ -669,6 +705,7 @@
 
 <script src="burger.js"></script>
 <script src="sorttable.js"></script>
+
 <script>
     function scrollToSection(id) {
         const el = document.getElementById(id);
@@ -691,6 +728,357 @@
             });
         }, 50); 
     });
+</script>
+
+<script>
+const translations = {
+    ru: {
+        page_title: "Adderly.Top - Результаты MakuTweaker Benchmark",
+        nav_builds: "Сборки",
+        nav_support: "Поддержать",
+        cat_title: "Категории",
+        cat_desk_intel: "Настольные Intel Core",
+        cat_desk_amd: "Настольные AMD Ryzen",
+        cat_lap_intel: "Ноутбучные Intel Core",
+        cat_lap_amd: "Ноутбучные AMD Ryzen",
+        cat_other_intel: "Прочие Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Прочие AMD",
+        h1_main: "Результаты MakuTweaker Benchmark",
+        search_placeholder: "Введите название процессора (например, 13700KF)",
+        search_hint: "Добавьте в начале \"/\" чтобы сделать глобальный поиск.",
+        search_results_title: "Результат поиска и похожие процессоры:",
+        th_cpu: "Процессор",
+        th_single: "Одноядерный",
+        th_multi: "Многопоточный",
+        th_comment: "Комментарий",
+        h2_desk_intel: "Настольные Intel Core процессоры",
+        h2_desk_amd: "Настольные AMD Ryzen процессоры",
+        h2_lap_intel: "Ноутбучные Intel Core процессоры",
+        h2_lap_amd: "Ноутбучные AMD Ryzen процессоры",
+        h2_other_intel: "Прочие Intel процессоры",
+        h2_xeon: "Intel Xeon процессоры",
+        h2_other_amd: "Прочие AMD процессоры",
+        h2_arm: "ARM процессоры",
+        btn_dl: "Скачать MakuTweaker",
+        btn_submit: "Отправить свои результаты"
+    },
+    en: {
+        page_title: "Adderly.Top - MakuTweaker Benchmark Results",
+        nav_builds: "Builds",
+        nav_support: "Support",
+        cat_title: "Categories",
+        cat_desk_intel: "Desktop Intel Core",
+        cat_desk_amd: "Desktop AMD Ryzen",
+        cat_lap_intel: "Laptop Intel Core",
+        cat_lap_amd: "Laptop AMD Ryzen",
+        cat_other_intel: "Other Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Other AMD",
+        h1_main: "MakuTweaker Benchmark Results",
+        search_placeholder: "Enter processor name (e.g., 13700KF)",
+        search_hint: "Add \"/\" at the beginning for a global search.",
+        search_results_title: "Search result and similar processors:",
+        th_cpu: "Processor",
+        th_single: "Single-core",
+        th_multi: "Multi-core",
+        th_comment: "Comment",
+        h2_desk_intel: "Desktop Intel Core Processors",
+        h2_desk_amd: "Desktop AMD Ryzen Processors",
+        h2_lap_intel: "Laptop Intel Core Processors",
+        h2_lap_amd: "Laptop AMD Ryzen Processors",
+        h2_other_intel: "Other Intel Processors",
+        h2_xeon: "Intel Xeon Processors",
+        h2_other_amd: "Other AMD Processors",
+        h2_arm: "ARM Processors",
+        btn_dl: "Download MakuTweaker",
+        btn_submit: "Submit your results"
+    },
+    uk: {
+        page_title: "Adderly.Top - Результати MakuTweaker Benchmark",
+        nav_builds: "Збірки",
+        nav_support: "Підтримати",
+        cat_title: "Категорії",
+        cat_desk_intel: "Настільні Intel Core",
+        cat_desk_amd: "Настільні AMD Ryzen",
+        cat_lap_intel: "Ноутбучні Intel Core",
+        cat_lap_amd: "Ноутбучні AMD Ryzen",
+        cat_other_intel: "Інші Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Інші AMD",
+        h1_main: "Результати MakuTweaker Benchmark",
+        search_placeholder: "Введіть назву процесора (наприклад, 13700KF)",
+        search_hint: "Додайте на початку \"/\" щоб зробити глобальний пошук.",
+        search_results_title: "Результат пошуку та схожі процесори:",
+        th_cpu: "Процесор",
+        th_single: "Одноядерний",
+        th_multi: "Багатопотоковий",
+        th_comment: "Коментар",
+        h2_desk_intel: "Настільні процесори Intel Core",
+        h2_desk_amd: "Настільні процесори AMD Ryzen",
+        h2_lap_intel: "Ноутбучні процесори Intel Core",
+        h2_lap_amd: "Ноутбучні процесори AMD Ryzen",
+        h2_other_intel: "Інші процесори Intel",
+        h2_xeon: "Процесори Intel Xeon",
+        h2_other_amd: "Інші процесори AMD",
+        h2_arm: "Процесори ARM",
+        btn_dl: "Завантажити MakuTweaker",
+        btn_submit: "Відправити свої результати"
+    },
+    es: {
+        page_title: "Adderly.Top - Resultados de MakuTweaker Benchmark",
+        nav_builds: "Versiones",
+        nav_support: "Apoyar",
+        cat_title: "Categorías",
+        cat_desk_intel: "Intel Core de Escritorio",
+        cat_desk_amd: "AMD Ryzen de Escritorio",
+        cat_lap_intel: "Intel Core de Laptop",
+        cat_lap_amd: "AMD Ryzen de Laptop",
+        cat_other_intel: "Otros Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Otros AMD",
+        h1_main: "Resultados de MakuTweaker Benchmark",
+        search_placeholder: "Ingrese el nombre del procesador (ej. 13700KF)",
+        search_hint: "Agregue \"/\" al principio para una búsqueda global.",
+        search_results_title: "Resultado de búsqueda y procesadores similares:",
+        th_cpu: "Procesador",
+        th_single: "Un solo núcleo",
+        th_multi: "Multinúcleo",
+        th_comment: "Comentario",
+        h2_desk_intel: "Procesadores Intel Core de Escritorio",
+        h2_desk_amd: "Procesadores AMD Ryzen de Escritorio",
+        h2_lap_intel: "Procesadores Intel Core de Laptop",
+        h2_lap_amd: "Procesadores AMD Ryzen de Laptop",
+        h2_other_intel: "Otros Procesadores Intel",
+        h2_xeon: "Procesadores Intel Xeon",
+        h2_other_amd: "Otros Procesadores AMD",
+        h2_arm: "Procesadores ARM",
+        btn_dl: "Descargar MakuTweaker",
+        btn_submit: "Enviar sus resultados"
+    },
+    de: {
+        page_title: "Adderly.Top - MakuTweaker Benchmark Ergebnisse",
+        nav_builds: "Builds",
+        nav_support: "Unterstützen",
+        cat_title: "Kategorien",
+        cat_desk_intel: "Desktop Intel Core",
+        cat_desk_amd: "Desktop AMD Ryzen",
+        cat_lap_intel: "Laptop Intel Core",
+        cat_lap_amd: "Laptop AMD Ryzen",
+        cat_other_intel: "Andere Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Andere AMD",
+        h1_main: "MakuTweaker Benchmark Ergebnisse",
+        search_placeholder: "Prozessorname eingeben (z.B. 13700KF)",
+        search_hint: "Fügen Sie am Anfang ein \"/\" für eine globale Suche hinzu.",
+        search_results_title: "Suchergebnis und ähnliche Prozessoren:",
+        th_cpu: "Prozessor",
+        th_single: "Single-Core",
+        th_multi: "Multi-Core",
+        th_comment: "Kommentar",
+        h2_desk_intel: "Desktop Intel Core Prozessoren",
+        h2_desk_amd: "Desktop AMD Ryzen Prozessoren",
+        h2_lap_intel: "Laptop Intel Core Prozessoren",
+        h2_lap_amd: "Laptop AMD Ryzen Prozessoren",
+        h2_other_intel: "Andere Intel Prozessoren",
+        h2_xeon: "Intel Xeon Prozessoren",
+        h2_other_amd: "Andere AMD Prozessoren",
+        h2_arm: "ARM Prozessoren",
+        btn_dl: "MakuTweaker Herunterladen",
+        btn_submit: "Senden Sie Ihre Ergebnisse"
+    },
+    cs: {
+        page_title: "Adderly.Top - Výsledky MakuTweaker Benchmark",
+        nav_builds: "Sestavy",
+        nav_support: "Podpořit",
+        cat_title: "Kategorie",
+        cat_desk_intel: "Stolní Intel Core",
+        cat_desk_amd: "Stolní AMD Ryzen",
+        cat_lap_intel: "Notebookové Intel Core",
+        cat_lap_amd: "Notebookové AMD Ryzen",
+        cat_other_intel: "Ostatní Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Ostatní AMD",
+        h1_main: "Výsledky MakuTweaker Benchmark",
+        search_placeholder: "Zadejte název procesoru (např. 13700KF)",
+        search_hint: "Přidejte na začátek \"/\" pro globální vyhledávání.",
+        search_results_title: "Výsledek hledání a podobné procesory:",
+        th_cpu: "Procesor",
+        th_single: "Jednojádrový",
+        th_multi: "Vícejádrový",
+        th_comment: "Komentář",
+        h2_desk_intel: "Stolní procesory Intel Core",
+        h2_desk_amd: "Stolní procesory AMD Ryzen",
+        h2_lap_intel: "Notebookové procesory Intel Core",
+        h2_lap_amd: "Notebookové procesory AMD Ryzen",
+        h2_other_intel: "Ostatní procesory Intel",
+        h2_xeon: "Procesory Intel Xeon",
+        h2_other_amd: "Ostatní procesory AMD",
+        h2_arm: "Procesory ARM",
+        btn_dl: "Stáhnout MakuTweaker",
+        btn_submit: "Odeslat své výsledky"
+    },
+    et: {
+        page_title: "Adderly.Top - MakuTweaker Benchmarki Tulemused",
+        nav_builds: "Versioonid",
+        nav_support: "Toeta",
+        cat_title: "Kategooriad",
+        cat_desk_intel: "Lauaarvuti Intel Core",
+        cat_desk_amd: "Lauaarvuti AMD Ryzen",
+        cat_lap_intel: "Sülearvuti Intel Core",
+        cat_lap_amd: "Sülearvuti AMD Ryzen",
+        cat_other_intel: "Muud Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Muud AMD",
+        h1_main: "MakuTweaker Benchmarki Tulemused",
+        search_placeholder: "Sisestage protsessori nimi (nt 13700KF)",
+        search_hint: "Globaalseks otsinguks lisage algusesse \"/\".",
+        search_results_title: "Otsingutulemus ja sarnased protsessorid:",
+        th_cpu: "Protsessor",
+        th_single: "Ühetuumaline",
+        th_multi: "Mitmetuumaline",
+        th_comment: "Kommentaar",
+        h2_desk_intel: "Lauaarvuti Intel Core Protsessorid",
+        h2_desk_amd: "Lauaarvuti AMD Ryzen Protsessorid",
+        h2_lap_intel: "Sülearvuti Intel Core Protsessorid",
+        h2_lap_amd: "Sülearvuti AMD Ryzen Protsessorid",
+        h2_other_intel: "Muud Intel Protsessorid",
+        h2_xeon: "Intel Xeon Protsessorid",
+        h2_other_amd: "Muud AMD Protsessorid",
+        h2_arm: "ARM Protsessorid",
+        btn_dl: "Laadi alla MakuTweaker",
+        btn_submit: "Esita oma tulemused"
+    },
+    zh: {
+        page_title: "Adderly.Top - MakuTweaker 基准测试结果",
+        nav_builds: "系统版本",
+        nav_support: "支持",
+        cat_title: "类别",
+        cat_desk_intel: "台式机 Intel Core",
+        cat_desk_amd: "台式机 AMD Ryzen",
+        cat_lap_intel: "笔记本 Intel Core",
+        cat_lap_amd: "笔记本 AMD Ryzen",
+        cat_other_intel: "其他 Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "其他 AMD",
+        h1_main: "MakuTweaker 基准测试结果",
+        search_placeholder: "输入处理器名称（例如 13700KF）",
+        search_hint: "在开头添加 \"/\" 进行全局搜索。",
+        search_results_title: "搜索结果及类似处理器：",
+        th_cpu: "处理器",
+        th_single: "单核",
+        th_multi: "多核",
+        th_comment: "评论",
+        h2_desk_intel: "台式机 Intel Core 处理器",
+        h2_desk_amd: "台式机 AMD Ryzen 处理器",
+        h2_lap_intel: "笔记本 Intel Core 处理器",
+        h2_lap_amd: "笔记本 AMD Ryzen 处理器",
+        h2_other_intel: "其他 Intel 处理器",
+        h2_xeon: "Intel Xeon 处理器",
+        h2_other_amd: "其他 AMD 处理器",
+        h2_arm: "ARM 处理器",
+        btn_dl: "下载 MakuTweaker",
+        btn_submit: "提交您的结果"
+    },
+    ja: {
+        page_title: "Adderly.Top - MakuTweaker ベンチマーク結果",
+        nav_builds: "ビルド",
+        nav_support: "サポート",
+        cat_title: "カテゴリ",
+        cat_desk_intel: "デスクトップ Intel Core",
+        cat_desk_amd: "デスクトップ AMD Ryzen",
+        cat_lap_intel: "ノートPC Intel Core",
+        cat_lap_amd: "ノートPC AMD Ryzen",
+        cat_other_intel: "その他 Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "その他 AMD",
+        h1_main: "MakuTweaker ベンチマーク結果",
+        search_placeholder: "プロセッサ名を入力 (例: 13700KF)",
+        search_hint: "グローバル検索を行うには、先頭に「/」を追加します。",
+        search_results_title: "検索結果と類似のプロセッサ:",
+        th_cpu: "プロセッサ",
+        th_single: "シングルコア",
+        th_multi: "マルチコア",
+        th_comment: "コメント",
+        h2_desk_intel: "デスクトップ Intel Core プロセッサ",
+        h2_desk_amd: "デスクトップ AMD Ryzen プロセッサ",
+        h2_lap_intel: "ノートPC Intel Core プロセッサ",
+        h2_lap_amd: "ノートPC AMD Ryzen プロセッサ",
+        h2_other_intel: "その他 Intel プロセッサ",
+        h2_xeon: "Intel Xeon プロセッサ",
+        h2_other_amd: "その他 AMD プロセッサ",
+        h2_arm: "ARM プロセッサ",
+        btn_dl: "MakuTweakerをダウンロード",
+        btn_submit: "結果を送信する"
+    },
+    tl: {
+        page_title: "Adderly.Top - Mga Resulta ng MakuTweaker Benchmark",
+        nav_builds: "Mga Build",
+        nav_support: "Suportahan",
+        cat_title: "Mga Kategorya",
+        cat_desk_intel: "Desktop Intel Core",
+        cat_desk_amd: "Desktop AMD Ryzen",
+        cat_lap_intel: "Laptop Intel Core",
+        cat_lap_amd: "Laptop AMD Ryzen",
+        cat_other_intel: "Iba pang Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Iba pang AMD",
+        h1_main: "Mga Resulta ng MakuTweaker Benchmark",
+        search_placeholder: "Ilagay ang pangalan ng processor (hal., 13700KF)",
+        search_hint: "Magdagdag ng \"/\" sa simula para sa pangkalahatang paghahanap.",
+        search_results_title: "Resulta ng paghahanap at mga katulad na processor:",
+        th_cpu: "Processor",
+        th_single: "Single-core",
+        th_multi: "Multi-core",
+        th_comment: "Komento",
+        h2_desk_intel: "Mga Desktop Intel Core Processor",
+        h2_desk_amd: "Mga Desktop AMD Ryzen Processor",
+        h2_lap_intel: "Mga Laptop Intel Core Processor",
+        h2_lap_amd: "Mga Laptop AMD Ryzen Processor",
+        h2_other_intel: "Iba pang Intel Processor",
+        h2_xeon: "Mga Intel Xeon Processor",
+        h2_other_amd: "Iba pang AMD Processor",
+        h2_arm: "Mga ARM Processor",
+        btn_dl: "I-download ang MakuTweaker",
+        btn_submit: "Ipadala ang iyong mga resulta"
+    }
+};
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+    applyLang(lang);
+}
+
+function applyLang(lang) {
+    const t = translations[lang] || translations.ru; 
+
+    if (t.page_title) {
+        document.title = t.page_title;
+    }
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) {
+            if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+                el.placeholder = t[key];
+            } else {
+                el.innerHTML = t[key];
+            }
+        }
+    });
+}
+
+const savedLang = localStorage.getItem("lang");
+if (savedLang) {
+    applyLang(savedLang);
+} else {
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+        applyLang(browserLang);
+    } else {
+        applyLang("ru");
+    }
+}
 </script>
 </body>
 </html>
