@@ -163,8 +163,8 @@
     <h1>MakuOS 11 24H2 LTSC V2<br>(Windows 11 24H2, 26100.1742) </h1>
     <p>Windows Defender на выбор // Русский язык</p>
 
-    <div class="gallery-container">
-        <div class="gallery" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+    <div class="gallery-container flash-container" style="max-width: 100%;">
+    <div class="gallery-row flash-row">
             <img src="images/bootlegs/makuos11_1.png" alt="Рабочий стол MakuOS 10 1">
             <img src="images/bootlegs/makuos11_2.png" alt="Рабочий стол MakuOS 10 2">
         </div>
@@ -409,7 +409,7 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    document.querySelectorAll('.gallery img').forEach(img => {
+    document.querySelectorAll('.gallery-row img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');

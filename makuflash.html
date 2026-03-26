@@ -58,14 +58,6 @@ body {
         border-color: #fff;
     }
 
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
     @media (max-width: 1100px) {
     .lang-switcher {
         display: none;
@@ -120,23 +112,33 @@ body {
 <main>
 <h1 data-i18n="title">Скачать MakuFlash</h1>
 <p data-i18n="desc">Красивое и дружелюбное переосмысление программы для записи Windows на флешку.<br>
-Благодаря технологии двойной буферизации, программа записывает ISO образы на 40% быстрее своих аналогов.<br>
+Благодаря технологии двойной буферизации, программа записывает ISO образы до 40% быстрее своих аналогов.<br>
 Эксклюзивно в MakuFlash присутствует функция интеграции твиков в будущую систему: от обхода проверок на системные требования железа до полного отключения Центра обновления Windows и изоляции ядра.<br>
 Благодаря автоматическому определению таблицы разделов вы больше никогда не перепутаете, какой именно режим необходим для установки системы на ваш ПК.
 Современный дизайн, отсутствие лишних функций и перевод на 27 языков открывают возможность переустановить Windows красиво и максимально просто для каждого.</p>
 
-    <div class="gallery-container">
-        <div class="gallery">
+    <div class="gallery-container flash-container">
+    <div class="gallery-row flash-row">
             <img data-img="1" src="images/makuflash/ru/1.png">
             <img data-img="2" src="images/makuflash/ru/2.png">
+        </div>
+    <div class="gallery-row flash-row">
             <img data-img="3" src="images/makuflash/ru/3.png">
             <img data-img="4" src="images/makuflash/ru/4.png">
         </div>
     </div>
 
-    <h1 data-i18n="download_title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuFlash</h1>
+    <h1 data-i18n="title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuFlash</h1>
     <div class="buttons" style="margin-top: 0; padding-top: 0;">
-        <a href="https://t.me/adderly324/4784" class="btn-primary" data-i18n="download_btn">Скачать MakuFlash (пока не доступно)</a>
+        <a href="https://pixeldrain.com/u/u1tRcFhV" class="btn-primary" style="display: flex; align-items: center;">
+            <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> PixelDrain
+        </a>
+        <a href="https://www.mediafire.com/file/jl6pjijt41vgc2v/MakuFlash.exe/file" class="btn-secondary" style="display: flex; align-items: center;">
+            <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px;"> MediaFire
+        </a>
+        <a href="https://t.me/MakuLab" class="btn-secondary" style="display: flex; align-items: center;">
+            <img src="icons/tg.png" alt="Telegram" style="width: 24px; margin-right: 10px;"> Telegram
+        </a>
     </div>
 
 </main>
@@ -199,7 +201,7 @@ body {
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    document.querySelectorAll('.gallery img').forEach(img => {
+    document.querySelectorAll('.gallery-row img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
@@ -230,24 +232,20 @@ const translations = {
         nav_builds: "Сборки",
         nav_support: "Поддержать",
         desc: `Красивое и дружелюбное переосмысление программы для записи Windows на флешку.<br>
-        Благодаря технологии двойной буферизации, программа записывает ISO образы на 40% быстрее своих аналогов.<br>
+        Благодаря технологии двойной буферизации, программа записывает ISO образы до 40% быстрее своих аналогов.<br>
         Эксклюзивно в MakuFlash присутствует функция интеграции твиков в будущую систему: от обхода проверок на системные требования железа до полного отключения Центра обновления Windows и изоляции ядра.<br>
         Благодаря автоматическому определению таблицы разделов вы больше никогда не перепутаете режим установки.<br>
         Современный дизайн, отсутствие лишних функций и перевод на 27 языков делают процесс максимально простым.`,
-        download_title: "Скачать MakuFlash",
-        download_btn: "Скачать MakuFlash (Скоро)"
     },
     en: {
         title: "Download MakuFlash",
         nav_builds: "Bootlegs",
         nav_support: "Support",
         desc: `MakuFlash is a beautiful and user-friendly reimagining of writing Windows to a USB drive.<br>
-        Thanks to double buffering technology, the program writes ISO images 40% faster than its counterparts.<br>
+        Thanks to double buffering technology, the program writes ISO images up to 40% faster than its counterparts.<br>
         Exclusively in MakuFlash, there is a feature for integrating tweaks into the future system: from bypassing hardware requirement checks to completely disabling Windows Update and core isolation.
         With automatic partition scheme detection, you will never again confuse which mode is required to install the system on your PC.
         A modern design, no unnecessary features, and support for 27 languages make reinstalling Windows beautiful and simple for everyone.`,        
-        download_title: "Download MakuFlash",
-        download_btn: "Download (coming soon)"
     },
     es: {
         title: "Descargar MakuFlash",
@@ -258,8 +256,6 @@ const translations = {
         Exclusivamente en MakuFlash, existe una función para integrar ajustes en el sistema futuro: desde omitir verificaciones de requisitos de hardware hasta desactivar completamente Windows Update y el aislamiento del núcleo.
         Gracias a la detección automática del esquema de particiones, nunca volverás a confundirte sobre qué modo es necesario para instalar el sistema en tu PC.
         Un diseño moderno, sin funciones innecesarias y compatibilidad con 27 idiomas hacen que reinstalar Windows sea bonito y lo más sencillo posible para todos.`,
-        download_title: "Descargar",
-        download_btn: "Próximamente"
     },
     pt: {
         title: "Baixar MakuFlash",
@@ -270,8 +266,6 @@ const translations = {
         Exclusivamente no MakuFlash, há uma função de integração de ajustes no sistema futuro: desde ignorar verificações de requisitos de hardware até desativar completamente o Windows Update e o isolamento do núcleo.
         Com a detecção automática do esquema de partição, você nunca mais confundirá qual modo é necessário para instalar o sistema no seu PC.
         Um design moderno, sem recursos desnecessários e suporte a 27 idiomas tornam a reinstalação do Windows bonita e o mais simples possível para todos.`,
-        download_title: "Baixar",
-        download_btn: "Em breve"
     },
     fr: {
         title: "Télécharger MakuFlash",
@@ -282,8 +276,6 @@ const translations = {
         Exclusivement dans MakuFlash, une fonctionnalité permet d’intégrer des tweaks dans le futur système : du contournement des vérifications des exigences matérielles à la désactivation complète de Windows Update et de l’isolation du noyau.
         Grâce à la détection automatique du schéma de partition, vous ne vous tromperez plus jamais sur le mode nécessaire pour installer le système sur votre PC.
         Un design moderne, l’absence de fonctions inutiles et la prise en charge de 27 langues rendent la réinstallation de Windows élégante et aussi simple que possible pour tous.`,
-        download_title: "Télécharger",
-        download_btn: "Bientôt"
     },
     de: {
         title: "MakuFlash herunterladen",
@@ -294,8 +286,6 @@ const translations = {
         Exklusiv in MakuFlash gibt es eine Funktion zur Integration von Tweaks in das zukünftige System: vom Umgehen von Hardwareanforderungsprüfungen bis hin zur vollständigen Deaktivierung von Windows Update und der Kernisolierung.
         Dank der automatischen Erkennung des Partitionsschemas werden Sie nie wieder den falschen Modus für die Installation auf Ihrem PC wählen.
         Modernes Design, keine unnötigen Funktionen und Unterstützung für 27 Sprachen machen die Neuinstallation von Windows schön und максимально einfach für jeden.`,
-        download_title: "Download",
-        download_btn: "Bald"
     },
     it: {
         title: "Scarica MakuFlash",
@@ -306,8 +296,6 @@ const translations = {
         Esclusivamente in MakuFlash è presente una funzione per integrare tweak nel sistema futuro: dal bypass dei controlli dei requisiti hardware alla completa disattivazione di Windows Update e dell’isolamento del kernel.
         Grazie al rilevamento automatico dello schema di partizione, non confonderai mai più quale modalità è necessaria per installare il sistema sul tuo PC.
         Un design moderno, l’assenza di funzioni inutili e il supporto per 27 lingue rendono la reinstallazione di Windows bella e il più semplice possibile per tutti.`,
-        download_title: "Scarica",
-        download_btn: "Presto"
     },
     zh: {
         title: "下载 MakuFlash",
@@ -318,8 +306,6 @@ const translations = {
         MakuFlash 独家提供将优化设置集成到未来系统中的功能：从绕过硬件要求检查到完全禁用 Windows 更新和核心隔离。<br>
         通过自动检测分区方案，您将不再混淆在您的 PC 上安装系统所需的模式。<br>
         现代化设计、无多余功能以及支持 27 种语言，使重新安装 Windows 变得美观且尽可能简单。`,
-        download_title: "下载",
-        download_btn: "即将推出"
     },
     ja: {
         title: "MakuFlash ダウンロード",
@@ -330,8 +316,6 @@ const translations = {
         MakuFlash では、将来のシステムに調整を統合する機能を独自に提供しています。ハードウェア要件チェックの回避から Windows Update やコア分離の完全無効化まで対応しています。
         パーティション方式の自動検出により、PC にシステムをインストールする際に必要なモードを間違えることはありません。
         モダンなデザイン、不要な機能の排除、そして 27 言語対応により、Windows の再インストールを美しく、誰にでも簡単に行えます。`,
-        download_title: "ダウンロード",
-        download_btn: "近日公開"
     },
     hi: {
         title: "MakuFlash डाउनलोड",
@@ -342,8 +326,6 @@ const translations = {
         MakuFlash में विशेष रूप से भविष्य के सिस्टम में ट्वीक जोड़ने की सुविधा है: हार्डवेयर आवश्यकताओं की जांच को बायपास करने से लेकर Windows Update और कोर आइसोलेशन को पूरी तरह अक्षम करने तक।
         पार्टिशन स्कीम की स्वचालित पहचान के कारण, आप कभी भी गलत मोड नहीं चुनेंगे।
         आधुनिक डिज़ाइन, अनावश्यक सुविधाओं की अनुपस्थिति और 27 भाषाओं का समर्थन Windows को फिर से इंस्टॉल करना सुंदर और सभी के लिए आसान बनाता है।`,
-        download_title: "डाउनलोड",
-        download_btn: "जल्द"
     },
     ko: {
         title: "MakuFlash 다운로드",
@@ -354,8 +336,6 @@ const translations = {
         MakuFlash에는 미래 시스템에 트윅을 통합하는 기능이 독점적으로 포함되어 있습니다: 하드웨어 요구 사항 검사 우회부터 Windows 업데이트 및 코어 격리 완전 비활성화까지 가능합니다.
         파티션 방식 자동 감지로 설치에 필요한 모드를 다시는 혼동하지 않게 됩니다。
         현대적인 디자인, 불필요한 기능 제거 및 27개 언어 지원으로 Windows 재설치를 더욱 쉽고 아름답게 만듭니다.`,
-        download_title: "다운로드",
-        download_btn: "곧"
     },
     tr: {
         title: "MakuFlash indir",
@@ -366,8 +346,6 @@ const translations = {
         MakuFlash’ta, gelecekteki sisteme ince ayarlar entegre etme özelliği özel olarak sunulur: donanım gereksinimi kontrollerini atlamaktan Windows Update ve çekirdek izolasyonunu tamamen devre dışı bırakmaya kadar.
         Bölüm şemasının otomatik algılanması sayesinde hangi modun gerekli olduğunu artık asla karıştırmazsınız.
         Modern tasarım, gereksiz özelliklerin olmaması ve 27 dil desteği Windows’u yeniden yüklemeyi herkes için güzel ve mümkün olan en basit hale getirir.`,
-        download_title: "İndir",
-        download_btn: "Yakında"
     },
     id: {
         title: "Unduh MakuFlash",
@@ -378,8 +356,6 @@ const translations = {
         Secara eksklusif di MakuFlash, terdapat fitur untuk mengintegrasikan tweak ke sistem masa depan: mulai dari melewati pemeriksaan persyaratan perangkat keras hingga menonaktifkan Windows Update dan isolasi inti sepenuhnya.
         Dengan deteksi skema partisi otomatis, Anda tidak akan pernah lagi bingung menentukan mode yang diperlukan untuk menginstal sistem di PC Anda.
         Desain modern, tanpa fitur yang tidak perlu, dan dukungan 27 bahasa membuat instal ulang Windows menjadi indah dan semudah mungkin bagi semua orang.`,
-        download_title: "Unduh",
-        download_btn: "Segera"
     },
     vi: {
         title: "Tải MakuFlash",
@@ -390,20 +366,16 @@ const translations = {
         Độc quyền trong MakuFlash là tính năng tích hợp các tinh chỉnh vào hệ thống tương lai: từ việc bỏ qua kiểm tra yêu cầu phần cứng đến tắt hoàn toàn Windows Update và cách ly lõi.
         Nhờ tự động phát hiện sơ đồ phân vùng, bạn sẽ không bao giờ nhầm lẫn chế độ cần thiết để cài đặt hệ thống trên PC của mình.
         Thiết kế hiện đại, không có tính năng dư thừa và hỗ trợ 27 ngôn ngữ giúp việc cài lại Windows trở nên đẹp mắt và đơn giản nhất cho mọi người.`,
-        download_title: "Tải xuống",
-        download_btn: "Sắp có"
     },
     uk: {
         title: "Завантажити MakuFlash",
         nav_builds: "Збірки",
         nav_support: "Підтримати",
         desc: `Красиве та зручне переосмислення програми для запису Windows на флешку.<br>
-        Завдяки технології подвійного буферування програма записує ISO-образи на 40% швидше за аналоги.<br>
+        Завдяки технології подвійного буферування програма записує ISO-образи до 40% швидше за аналоги.<br>
         Ексклюзивно в MakuFlash є функція інтеграції твиків у майбутню систему: від обходу перевірок системних вимог<br>до повного вимкнення Центру оновлення Windows та ізоляції ядра.<br>
         Завдяки автоматичному визначенню таблиці розділів ви більше ніколи не переплутаєте режим встановлення.<br>
         Сучасний дизайн, відсутність зайвих функцій і переклад на 27 мов роблять процес максимально простим.`,
-        download_title: "Завантажити MakuFlash",
-        download_btn: "Завантажити (скоро)"
     },
     cs: {
         title: "Stáhnout MakuFlash",
@@ -414,8 +386,6 @@ const translations = {
         Exkluzivně v MakuFlash je funkce integrace tweaků do budoucího systému: od obejití kontrol systémových požadavků až po úplné vypnutí Windows Update a izolace jádra.<br>
         Díky automatické detekci tabulky oddílů už nikdy nespletete režim instalace.<br>
         Moderní design, absence zbytečných funkcí a podpora 27 jazyků činí proces maximálně jednoduchým.`,
-        download_title: "Stáhnout MakuFlash",
-        download_btn: "Brzy k dispozici"
     },
     pl: {
         title: "Pobierz MakuFlash",
@@ -426,8 +396,6 @@ const translations = {
         Wyłącznie w MakuFlash dostępna jest funkcja integracji tweaków z przyszłym systemem: od omijania wymagań sprzętowych po całkowite wyłączenie Windows Update i izolacji rdzenia.<br>
         Dzięki automatycznemu wykrywaniu schematu partycji już nigdy nie pomylisz trybu instalacji.<br>
         Nowoczesny design, brak zbędnych funkcji i obsługa 27 języków sprawiają, że proces jest maksymalnie prosty.`,
-        download_title: "Pobierz MakuFlash",
-        download_btn: "Wkrótce dostępne"
     },
     et: {
         title: "Laadi alla MakuFlash",
@@ -438,8 +406,6 @@ const translations = {
         Ainult MakuFlashis on funktsioon tweak’ide integreerimiseks tulevasse süsteemi: alates riistvaranõuete kontrolli vahelejätmisest kuni Windows Update’i ja tuuma isolatsiooni täieliku keelamiseni.<br>
         Automaatne partitsioonitabeli tuvastamine aitab vältida vale paigaldusrežiimi valikut.<br>
         Kaasaegne disain, liigsete funktsioonide puudumine ja 27 keele tugi muudavad protsessi maksimaalselt lihtsaks.`,
-        download_title: "Laadi alla",
-        download_btn: "Peagi saadaval"
     },
     az: {
         title: "MakuFlash yüklə",
@@ -450,8 +416,6 @@ const translations = {
         MakuFlash-da eksklüziv olaraq tweak-lərin gələcək sistemə inteqrasiyası mövcuddur: sistem tələblərinin yoxlanmasını keçməkdən Windows Update və nüvə izolyasiyasını tam söndürməyə qədər.<br>
         Bölmə cədvəlinin avtomatik təyini sayəsində artıq quraşdırma rejimini səhv salmayacaqsınız.<br>
         Müasir dizayn, lazımsız funksiyaların olmaması və 27 dil dəstəyi prosesi maksimum sadə edir.`,
-        download_title: "Yüklə",
-        download_btn: "Tezliklə"
     },
     tl: {
         title: "I-download ang MakuFlash",
@@ -462,8 +426,6 @@ const translations = {
         Eksklusibo sa MakuFlash ang integration ng tweaks: mula sa pag-bypass ng hardware requirements hanggang sa ganap na pag-disable ng Windows Update at core isolation.<br>
         Sa awtomatikong pagtukoy ng partition scheme, hindi ka na magkakamali sa pagpili ng tamang mode.<br>
         Ang modernong disenyo, walang sobrang features, at suporta sa 27 wika ay nagpapadali sa buong proseso.`,
-        download_title: "I-download",
-        download_btn: "Malapit na"
     }
 };
 

@@ -176,8 +176,8 @@
     <h1>MakuOS 10 22H2<br>(Windows 10 22H2 19045.6456)</h1>
     <p>Windows Defender на выбор // Pro редакция // Русский + Английский + Украинский языки</p>
 
-    <div class="gallery-container">
-        <div class="gallery" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+    <div class="gallery-container flash-container" style="max-width: 100%;">
+        <div class="gallery-row flash-row">
             <img src="images/bootlegs/makuos10pro_1.png" alt="Рабочий стол MakuOS 10 Pro 1">
             <img src="images/bootlegs/makuos10pro_2.png" alt="Рабочий стол MakuOS 10 Pro 2">
         </div>
@@ -282,7 +282,6 @@
 <script src="burger.js"></script>
 
 <script>
-    // Обновление высоты аккордеонов
     function updateAccordionHeights() {
         document.querySelectorAll('.panel.open').forEach(panel => {
             panel.style.maxHeight = panel.scrollHeight + "px";
@@ -291,7 +290,6 @@
 
     document.querySelectorAll('.accordion').forEach((accordion, index) => {
         const panel = accordion.nextElementSibling;
-        // Открываем первый аккордеон по умолчанию
         if (index === 0) {
             accordion.classList.add('active');
             panel.classList.add('open');
@@ -310,8 +308,6 @@
 
     window.addEventListener('load', updateAccordionHeights);
     window.addEventListener('resize', updateAccordionHeights);
-
-    // Логика Попапа с таймером
     let downloadLink = null;
     let timerInterval = null;
 
@@ -391,7 +387,7 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    document.querySelectorAll('.gallery img').forEach(img => {
+    document.querySelectorAll('.gallery-row img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');

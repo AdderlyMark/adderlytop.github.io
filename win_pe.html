@@ -90,8 +90,8 @@
     <h1 data-i18n="main_title">Скачать MakuPE</h1>
     <p data-i18n="main_desc">MakuPE - это удобная и быстрая среда восстановления Windows, которая помогает вернуть систему к жизни в случае сбоев. С её помощью вы сможете получить доступ к файлам, даже если основная ОС не загружается. Образ содержит набор необходимых инструментов для диагностики, восстановления и обслуживания компьютера. Просто запишите образ на маленькую флешку, например до двух гигабайт и держите всегда под рукой надёжный инструмент для восстановления системы.</p>
     
-    <div class="gallery-container">
-        <div class="gallery">
+    <div class="gallery-container tweaker-container">
+        <div class="gallery-row tweaker-row">
             <img src="images/winpe/winpe1.png" alt="Скриншот 1">
             <img src="images/winpe/winpe2.png" alt="Скриншот 2">
             <img src="images/winpe/winpe3.png" alt="Скриншот 3">
@@ -99,6 +99,7 @@
             <img src="images/winpe/winpe5.png" alt="Скриншот 5">
             <img src="images/winpe/winpe6.png" alt="Скриншот 6">
         </div>
+        <br>
     </div>
 
     <div class="accordion-container">
@@ -227,7 +228,7 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    document.querySelectorAll('.gallery img').forEach(img => {
+    document.querySelectorAll('.gallery-row img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');

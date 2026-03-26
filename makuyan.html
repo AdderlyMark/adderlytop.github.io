@@ -65,8 +65,8 @@
     <h1>Скачать запрещатор Яндекса - MakuYan</h1>
     <p>MakuYan - программа которая заблокирует Яндекс, Мессенджер Max и все их IP адреса!</p>
 
-    <div class="gallery-container">
-        <div class="gallery" style="grid-template-columns: repeat(2, 1fr); margin: 0 auto;">
+    <div class="gallery-container flash-container" style="max-width: 100%;">
+        <div class="gallery-row flash-row">
             <img src="images/soft/11.png" alt="Скриншот MakuYan 1">
             <img src="images/soft/12.png" alt="Скриншот MakuYan 2">
         </div>
@@ -107,7 +107,7 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    document.querySelectorAll('.gallery img').forEach(img => {
+    document.querySelectorAll('.gallery-row img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');

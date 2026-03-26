@@ -109,19 +109,25 @@
     Также, вы можете выполнить быструю настройку Windows, управлять системными компонентами и избавиться от системного мусора!
     В MakuTweaker доступно несколько тем оформления, благодаря которым вы можете настроить программу на свой вкус.</p>
 
-<div class="gallery-container">
-        <div class="gallery">
+    <div class="gallery-container tweaker-container">
+        <div class="gallery-row tweaker-row">
             <img data-img="1" src="images/makutweaker/ru/1.png" alt="Скриншот 1">
             <img data-img="2" src="images/makutweaker/ru/2.png" alt="Скриншот 2">
             <img data-img="3" src="images/makutweaker/ru/3.png" alt="Скриншот 3">
+        </div>
+        <div class="gallery-row tweaker-row">
             <img data-img="4" src="images/makutweaker/ru/4.png" alt="Скриншот 4">
             <img data-img="5" src="images/makutweaker/ru/5.png" alt="Скриншот 5">
             <img data-img="6" src="images/makutweaker/ru/6.png" alt="Скриншот 6">
+        </div>
+        <div class="gallery-row tweaker-row">
             <img data-img="7" src="images/makutweaker/ru/7.png" alt="Скриншот 7">
             <img data-img="8" src="images/makutweaker/ru/8.png" alt="Скриншот 8">
             <img data-img="9" src="images/makutweaker/ru/9.png" alt="Скриншот 9">
         </div>
+        <br>
     </div>
+    
     <div class="accordion-container">
         <button class="accordion">Системные требования</button>
         <div class="panel">
@@ -458,7 +464,7 @@ MakuTweaker 5.0.31 - Микрофикс<br>
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    document.querySelectorAll('.gallery img').forEach(img => {
+    document.querySelectorAll('.gallery-row img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');

@@ -162,8 +162,8 @@
     <h1>MakuOS 11 24H2<br>(Windows 11 24H2 26100.7015)</h1>
     <p>Windows Defender на выбор // Pro редакция // Русский + Английский + Украинский языки</p>
 
-    <div class="gallery-container">
-        <div class="gallery" style="grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 0 auto;">
+    <div class="gallery-container flash-container" style="max-width: 100%;">
+        <div class="gallery-row flash-row">
             <img src="images/bootlegs/makuos11pro_1.png" alt="Рабочий стол MakuOS 1">
             <img src="images/bootlegs/makuos11pro_2.png" alt="Рабочий стол MakuOS 2">
         </div>
@@ -210,7 +210,7 @@
         </a>
     </div>
 
-<h1 style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 0px;">Скачать MakuOS 11 без Windows Defender</h1>
+<h1 style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 0px;">Скачать MakuOS 11 с Windows Defender</h1>
     <div class="buttons" style="margin-top: 0; padding-top: 0;">
         <a href="#" onclick="event.preventDefault(); openPopup('https://www.mediafire.com/file/vde089as995p0hz/MakuOS+11+Pro+24H2+Defenderless.iso/file')" class="btn-primary" style="display: flex; align-items: center;">
             <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px;"> Скачать с MediaFire
@@ -378,7 +378,7 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    document.querySelectorAll('.gallery img').forEach(img => {
+    document.querySelectorAll('.gallery-row img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
