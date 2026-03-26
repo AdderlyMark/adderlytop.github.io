@@ -467,6 +467,14 @@ footer {
     transform: rotate(90deg);
 }
 
+.gallery-row > *:not(img) {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
 @media (max-width: 768px) {
     header { 
         width: calc(100% - 20px); 
