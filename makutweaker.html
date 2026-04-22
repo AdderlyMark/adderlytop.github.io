@@ -32,17 +32,16 @@
     <meta name="description" content="Download MakuTweaker by Mark Adderly">
     <meta name="keywords" content="adderly, adderlyfun, adderly top, adderly fun, аддерли топ, аддерлитоп, марк аддерли, аддерли, аддерли фан, сборки от аддерли, makutweaker, MakuTweaker, makuadarii, софт от аддерли, программы аддерли, maku, программы от аддерли, макутвикер, твикер, твикеры, твикер для виндовс, програми від аддерлі, макутвікер, твікер, твікери, твікер для віндовс, programs by adderly, makutweaker, tweaker, tweakers, windows tweaker, programas de adderly, tweaker para windows, programme von adderly, tweaker für windows, programy od adderly, tweakery, tweaker pro windows, adderly programmid, tweakerid, windowsi tweaker, adderly的程序, 优化工具, windows优化工具, adderlyのプログラム, ツイーカー, windows用ツイーカー, mga programa ni adderly, mga tweaker, tweaker para sa windows, adderlyn ohjelmat, makutweaker, tweakeri, tweakerit, tweaker windowsille, adderly programmas, makutweaker, tvīkeris, tvīkeri, windows tvīkeris, праграмы ад аддэрлі, макутвікер, твікер, твікеры, твікер для віндовс, programmes par adderly, makutweaker, tweaker, tweakers, tweaker pour windows, programmi di adderly, makutweaker, tweaker, tweakers, tweaker per windows, programas de adderly, makutweaker, tweaker, tweakers, tweaker para windows, adderly 的程式, makutweaker, 優化工具, windows 優化工具, โปรแกรมโดย adderly, makutweaker, ทวีกเกอร์, ทวีกเกอร์สำหรับ windows, chương trình của adderly, makutweaker, bộ tinh chỉnh, trình tinh chỉnh cho windows, adderly의 프로그램, 마쿠트위커, 트위커, 윈도우 트위커, program oleh adderly, makutweaker, tweaker, penyesuai windows, एडरली द्वारा कार्यक्रम, माकुट्वीकर, ट्वीकर, विंडोज ट्वीकर, аддерли бағдарламалары, макутвикер, твикер, твикерлер, виндовсқа арналған твикер, adderly tərəfindən proqramlar, makutviker, tviker, tvikerlər, windows üçün tviker, adderly programları, makutweaker, tweaker, tweakerlar, windows tweaker">
 
-<style>
+    <style>
     .lang-switcher {
         display: grid;
-        grid-template-columns: repeat(5, auto);
-        gap: 4px; margin-left: 20px; align-items: center;
+        grid-template-columns:repeat(10, auto);
+        gap: 4px; margin-left: 10px; align-items: center;
     }
 
     body {
         font-family: 'Inter', system-ui, -apple-system, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
     }
-    
     .lang-switcher button {
         background: transparent;
         border: 1px solid rgba(255,255,255,0.2);
@@ -60,18 +59,17 @@
         border-color: #fff;
     }
 
-    @media (max-width: 850px) {
-        .lang-switcher {
-            display: none;
-        }
-
-        .lang-switcher button {
-            font-size: 0.6rem;
-            padding: 2px 4px;
-        }
+    @media (max-width: 1100px) {
+    .lang-switcher {
+        display: none;
     }
-    </style>
 
+    .lang-switcher button {
+        font-size: 0.6rem;
+        padding: 2px 4px;
+    }
+}
+    </style>
 </head>
 <body>
 <header>
@@ -79,17 +77,27 @@
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
 
-    <div class="lang-switcher">
+<div class="lang-switcher">
         <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
         <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
         <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
         <button onclick="setLang('es')"><span class="fi fi-es"></span> ES</button>
+        <button onclick="setLang('pt')"><span class="fi fi-pt"></span> PT</button>
         <button onclick="setLang('de')"><span class="fi fi-de"></span> DE</button>
+        <button onclick="setLang('fr')"><span class="fi fi-fr"></span> FR</button>
+        <button onclick="setLang('it')"><span class="fi fi-it"></span> IT</button>
         <button onclick="setLang('cs')"><span class="fi fi-cz"></span> CS</button>
-        <button onclick="setLang('et')"><span class="fi fi-ee"></span> ET</button>
+        <button onclick="setLang('pl')"><span class="fi fi-pl"></span> PL</button>
         <button onclick="setLang('zh')"><span class="fi fi-cn"></span> ZH</button>
         <button onclick="setLang('ja')"><span class="fi fi-jp"></span> JA</button>
+        <button onclick="setLang('ko')"><span class="fi fi-kr"></span> KO</button>
+        <button onclick="setLang('vi')"><span class="fi fi-vn"></span> VI</button>
+        <button onclick="setLang('id')"><span class="fi fi-id"></span> ID</button>
         <button onclick="setLang('tl')"><span class="fi fi-ph"></span> TL</button>
+        <button onclick="setLang('hi')"><span class="fi fi-in"></span> HI</button>
+        <button onclick="setLang('et')"><span class="fi fi-ee"></span> ET</button>
+        <button onclick="setLang('tr')"><span class="fi fi-tr"></span> TR</button>
+        <button onclick="setLang('az')"><span class="fi fi-az"></span> AZ</button>
     </div>
 
 <nav id="nav-menu">
@@ -109,7 +117,7 @@
     Также, вы можете выполнить быструю настройку Windows, управлять системными компонентами и избавиться от системного мусора!
     В MakuTweaker доступно несколько тем оформления, благодаря которым вы можете настроить программу на свой вкус.</p>
 
-    <div class="gallery-container tweaker-container">
+<div class="gallery-container tweaker-container">
         <div class="gallery-row tweaker-row">
             <img data-img="1" src="images/makutweaker/ru/1.png" alt="Скриншот 1">
             <img data-img="2" src="images/makutweaker/ru/2.png" alt="Скриншот 2">
@@ -120,12 +128,6 @@
             <img data-img="4" src="images/makutweaker/ru/4.png" alt="Скриншот 4">
             <img data-img="5" src="images/makutweaker/ru/5.png" alt="Скриншот 5">
             <img data-img="6" src="images/makutweaker/ru/6.png" alt="Скриншот 6">
-        </div>
-        
-        <div class="gallery-row tweaker-row">
-            <img data-img="7" src="images/makutweaker/ru/7.png" alt="Скриншот 7">
-            <img data-img="8" src="images/makutweaker/ru/8.png" alt="Скриншот 8">
-            <img data-img="9" src="images/makutweaker/ru/9.png" alt="Скриншот 9">
         </div>
         <br>
     </div>
@@ -338,7 +340,7 @@
             <img src="icons/1.png" alt="MakuT" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
             <span data-i18n="download_btn">Скачать MakuTweaker</span>
         </a>
-    <a href="https://pixeldrain.com/u/MzAaGo6p" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://pixeldrain.com/u/TR5ERyeY" class="btn-primary" style="display: flex; align-items: center;">
             <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
             <span data-i18n="portable_btn">Портативная версия</span>
         </a>
@@ -580,6 +582,166 @@ const translations = {
         sys_req_title: "Mga Kinakailangan sa Sistema",
         sys_req_p1: "• Upang patakbuhin ang programa, kinakailangan ang Windows 10 1809 (2018) at ang NET Core 8.0 library.<br>Mula noong Pebrero 2026, ini-install din ng MakuTweaker installer ang library kung may koneksyon sa internet.",
         sys_req_p2: "• Para sa buong paggana, kinakailangan ang Windows 11 22H2."
+    },
+    pt: {
+        nav_builds: "Versões",
+        nav_support: "Apoiar",
+        title: "Baixar MakuTweaker",
+        desc: `O tweaker mais amigável e útil para Windows.<br>
+        Neste programa, você pode configurar e personalizar o sistema de forma flexível, gerenciar processos e visualizar informações detalhadas sobre as especificações do seu PC!<br>
+        Além disso, você pode realizar uma configuração rápida do Windows, gerenciar componentes do sistema e se livrar do lixo do sistema.<br>
+        Vários temas de interface estão disponíveis no MakuTweaker, permitindo que você personalize o programa ao seu gosto.`,
+        download_title: "Baixar MakuTweaker",
+        download_btn: "Baixar MakuTweaker",
+        portable_btn: "Versão portátil",
+        bench_btn: "Ver resultados do MakuBench",
+        sys_req_title: "Requisitos do sistema",
+        sys_req_p1: "• Para executar o programa é necessário o Windows 10 1809 (2018) e a biblioteca NET Core 8.0.<br>A partir de fevereiro de 2026, o instalador do MakuTweaker também instala a biblioteca se houver conexão com a internet.",
+        sys_req_p2: "• Para funcionalidade completa, é necessário o Windows 11 22H2."
+    },
+    fr: {
+        nav_builds: "Versions",
+        nav_support: "Soutenir",
+        title: "Télécharger MakuTweaker",
+        desc: `Le tweaker le plus convivial et utile pour Windows.<br>
+        Dans ce programme, vous pouvez configurer et personnaliser le système de manière flexible, gérer les processus et afficher des informations détaillées sur les spécifications de votre PC !<br>
+        De plus, vous pouvez effectuer une configuration rapide de Windows, gérer les composants du système et vous débarrasser des fichiers indésirables du système.<br>
+        Plusieurs thèmes d'interface sont disponibles dans MakuTweaker, vous permettant de personnaliser le programme à votre guise.`,
+        download_title: "Télécharger MakuTweaker",
+        download_btn: "Télécharger MakuTweaker",
+        portable_btn: "Version portable",
+        bench_btn: "Voir les résultats MakuBench",
+        sys_req_title: "Configuration requise",
+        sys_req_p1: "• Pour exécuter le programme, Windows 10 1809 (2018) et la bibliothèque NET Core 8.0 sont requis.<br>Depuis février 2026, l'installateur de MakuTweaker installe également la bibliothèque si une connexion Internet est disponible.",
+        sys_req_p2: "• Pour une fonctionnalité complète, Windows 11 22H2 est requis."
+    },
+    it: {
+        nav_builds: "Build",
+        nav_support: "Supporta",
+        title: "Scarica MakuTweaker",
+        desc: `Il tweaker più intuitivo e utile per Windows.<br>
+        In questo programma puoi configurare e personalizzare in modo flessibile il sistema, gestire i processi e visualizzare informazioni dettagliate sulle specifiche del tuo PC!<br>
+        Inoltre, puoi eseguire una configurazione rapida di Windows, gestire i componenti di sistema e sbarazzarti dei file spazzatura del sistema.<br>
+        In MakuTweaker sono disponibili diversi temi di interfaccia, che ti permettono di personalizzare il programma a tuo piacimento.`,
+        download_title: "Scarica MakuTweaker",
+        download_btn: "Scarica MakuTweaker",
+        portable_btn: "Versione portatile",
+        bench_btn: "Visualizza i risultati di MakuBench",
+        sys_req_title: "Requisiti di sistema",
+        sys_req_p1: "• Per eseguire il programma sono necessari Windows 10 1809 (2018) e la libreria NET Core 8.0.<br>Da febbraio 2026, il programma di installazione di MakuTweaker installa anche la libreria se è disponibile una connessione Internet.",
+        sys_req_p2: "• Per la piena funzionalità, è necessario Windows 11 22H2."
+    },
+    pl: {
+        nav_builds: "Kompilacje",
+        nav_support: "Wesprzyj",
+        title: "Pobierz MakuTweaker",
+        desc: `Najbardziej przyjazny i użyteczny tweaker dla Windows.<br>
+        W tym programie możesz elastycznie konfigurować i personalizować system, zarządzać procesami i przeglądać szczegółowe informacje o specyfikacji swojego komputera!<br>
+        Ponadto możesz przeprowadzić szybką konfigurację systemu Windows, zarządzać komponentami systemu i pozbyć się śmieci systemowych.<br>
+        W MakuTweaker dostępnych jest kilka motywów interfejsu, co pozwala dostosować program do własnych upodobań.`,
+        download_title: "Pobierz MakuTweaker",
+        download_btn: "Pobierz MakuTweaker",
+        portable_btn: "Wersja przenośna",
+        bench_btn: "Zobacz wyniki MakuBench",
+        sys_req_title: "Wymagania systemowe",
+        sys_req_p1: "• Do uruchomienia programu wymagany jest system Windows 10 1809 (2018) oraz biblioteka NET Core 8.0.<br>Od lutego 2026 r. instalator MakuTweaker instaluje również bibliotekę, jeśli dostępne jest połączenie z Internetem.",
+        sys_req_p2: "• Do pełnej funkcjonalności wymagany jest system Windows 11 22H2."
+    },
+    ko: {
+        nav_builds: "빌드",
+        nav_support: "지원하기",
+        title: "MakuTweaker 다운로드",
+        desc: `Windows를 위한 가장 사용자 친화적이고 유용한 트위커입니다.<br>
+        이 프로그램에서는 시스템을 유연하게 구성 및 개인화하고, 프로세스를 관리하며, PC 사양에 대한 자세한 정보를 볼 수 있습니다!<br>
+        또한 빠른 Windows 설정을 수행하고 시스템 구성 요소를 관리하며 시스템 정크 파일을 제거할 수 있습니다.<br>
+        MakuTweaker에는 여러 인터페이스 테마가 제공되어 취향에 맞게 프로그램을 사용자 정의할 수 있습니다.`,
+        download_title: "MakuTweaker 다운로드",
+        download_btn: "MakuTweaker 다운로드",
+        portable_btn: "포터블 버전",
+        bench_btn: "MakuBench 결과 보기",
+        sys_req_title: "시스템 요구 사항",
+        sys_req_p1: "• 프로그램을 실행하려면 Windows 10 1809(2018) 및 NET Core 8.0 라이브러리가 필요합니다.<br>2026년 2월부터 MakuTweaker 설치 관리자는 인터넷에 연결된 경우 라이브러리도 함께 설치합니다.",
+        sys_req_p2: "• 전체 기능을 사용하려면 Windows 11 22H2가 필요합니다."
+    },
+    vi: {
+        nav_builds: "Bản dựng",
+        nav_support: "Hỗ trợ",
+        title: "Tải xuống MakuTweaker",
+        desc: `Phần mềm tinh chỉnh thân thiện và hữu ích nhất dành cho Windows.<br>
+        Trong chương trình này, bạn có thể linh hoạt cấu hình và cá nhân hóa hệ thống, quản lý các tiến trình và xem thông tin chi tiết về thông số kỹ thuật của PC!<br>
+        Ngoài ra, bạn có thể thực hiện thiết lập Windows nhanh chóng, quản lý các thành phần hệ thống và loại bỏ các tệp rác hệ thống.<br>
+        MakuTweaker cung cấp một số giao diện chủ đề, cho phép bạn tùy chỉnh chương trình theo sở thích của mình.`,
+        download_title: "Tải xuống MakuTweaker",
+        download_btn: "Tải xuống MakuTweaker",
+        portable_btn: "Phiên bản Portable",
+        bench_btn: "Xem kết quả MakuBench",
+        sys_req_title: "Yêu cầu hệ thống",
+        sys_req_p1: "• Để chạy chương trình, cần có Windows 10 1809 (2018) và thư viện NET Core 8.0.<br>Kể từ tháng 2 năm 2026, trình cài đặt MakuTweaker cũng sẽ cài đặt thư viện này nếu có kết nối internet.",
+        sys_req_p2: "• Để có đầy đủ chức năng, cần có Windows 11 22H2."
+    },
+    id: {
+        nav_builds: "Rilis",
+        nav_support: "Dukung",
+        title: "Unduh MakuTweaker",
+        desc: `Tweaker yang paling ramah pengguna dan berguna untuk Windows.<br>
+        Dalam program ini, Anda dapat secara fleksibel mengonfigurasi dan mempersonalisasi sistem, mengelola proses, dan melihat informasi terperinci tentang spesifikasi PC Anda!<br>
+        Selain itu, Anda dapat melakukan pengaturan Windows cepat, mengelola komponen sistem, dan menyingkirkan file sampah sistem.<br>
+        MakuTweaker menawarkan beberapa tema antarmuka, memungkinkan Anda menyesuaikan program dengan selera Anda.`,
+        download_title: "Unduh MakuTweaker",
+        download_btn: "Unduh MakuTweaker",
+        portable_btn: "Versi Portabel",
+        bench_btn: "Lihat hasil MakuBench",
+        sys_req_title: "Persyaratan Sistem",
+        sys_req_p1: "• Untuk menjalankan program, diperlukan Windows 10 1809 (2018) dan pustaka NET Core 8.0.<br>Mulai Februari 2026, penginstal MakuTweaker juga menginstal pustaka jika koneksi internet tersedia.",
+        sys_req_p2: "• Untuk fungsionalitas penuh, diperlukan Windows 11 22H2."
+    },
+    hi: {
+        nav_builds: "बिल्ड्स",
+        nav_support: "समर्थन करें",
+        title: "MakuTweaker डाउनलोड करें",
+        desc: `विंडोज के लिए सबसे उपयोगकर्ता के अनुकूल और उपयोगी ट्वीकर।<br>
+        इस प्रोग्राम में, आप सिस्टम को लचीले ढंग से कॉन्फ़िगर और वैयक्तिकृत कर सकते हैं, प्रक्रियाओं का प्रबंधन कर सकते हैं, और अपने पीसी विनिर्देशों के बारे में विस्तृत जानकारी देख सकते हैं!<br>
+        इसके अलावा, आप त्वरित विंडोज सेटअप कर सकते हैं, सिस्टम घटकों का प्रबंधन कर सकते हैं, और सिस्टम जंक से छुटकारा पा सकते हैं।<br>
+        MakuTweaker में कई इंटरफ़ेस थीम उपलब्ध हैं, जिससे आप प्रोग्राम को अपने स्वाद के अनुसार अनुकूलित कर सकते हैं।`,
+        download_title: "MakuTweaker डाउनलोड करें",
+        download_btn: "MakuTweaker डाउनलोड करें",
+        portable_btn: "पोर्टेबल संस्करण",
+        bench_btn: "MakuBench परिणाम देखें",
+        sys_req_title: "सिस्टम आवश्यकताएं",
+        sys_req_p1: "• प्रोग्राम को चलाने के लिए, Windows 10 1809 (2018) और NET Core 8.0 लाइब्रेरी की आवश्यकता है।<br>फ़रवरी 2026 से, यदि इंटरनेट कनेक्शन उपलब्ध है तो MakuTweaker इंस्टॉलर लाइब्रेरी भी स्थापित करता है।",
+        sys_req_p2: "• पूर्ण कार्यक्षमता के लिए, Windows 11 22H2 आवश्यक है।"
+    },
+    tr: {
+        nav_builds: "Sürümler",
+        nav_support: "Destekle",
+        title: "MakuTweaker İndir",
+        desc: `Windows için en kullanıcı dostu ve kullanışlı tweaker.<br>
+        Bu programda, sistemi esnek bir şekilde yapılandırabilir ve kişiselleştirebilir, işlemleri yönetebilir ve bilgisayarınızın özellikleriyle ilgili ayrıntılı bilgileri görüntüleyebilirsiniz!<br>
+        Ayrıca, hızlı bir Windows kurulumu gerçekleştirebilir, sistem bileşenlerini yönetebilir ve sistem çöplerinden kurtulabilirsiniz.<br>
+        MakuTweaker'da çeşitli arayüz temaları mevcuttur ve programı zevkinize göre özelleştirmenize olanak tanır.`,
+        download_title: "MakuTweaker İndir",
+        download_btn: "MakuTweaker İndir",
+        portable_btn: "Taşınabilir sürüm",
+        bench_btn: "MakuBench sonuçlarını görüntüle",
+        sys_req_title: "Sistem Gereksinimleri",
+        sys_req_p1: "• Programı çalıştırmak için Windows 10 1809 (2018) ve NET Core 8.0 kitaplığı gereklidir.<br>Şubat 2026'dan itibaren MakuTweaker yükleyicisi, internet bağlantısı varsa kitaplığı da yükler.",
+        sys_req_p2: "• Tam işlevsellik için Windows 11 22H2 gereklidir."
+    },
+    az: {
+        nav_builds: "Versiyalar",
+        nav_support: "Dəstəklə",
+        title: "MakuTweaker Yüklə",
+        desc: `Windows üçün ən istifadəçi dostu və faydalı tviker.<br>
+        Bu proqramda siz sistemi çevik şəkildə konfiqurasiya edə və fərdiləşdirə, prosesləri idarə edə və kompüterinizin xüsusiyyətləri haqqında ətraflı məlumatlara baxa bilərsiniz!<br>
+        Həmçinin, siz sürətli Windows quraşdırılmasını həyata keçirə, sistem komponentlərini idarə edə və sistem zibilindən xilas ola bilərsiniz.<br>
+        MakuTweaker-də bir neçə interfeys mövzusu mövcuddur ki, bu da proqramı zövqünüzə görə fərdiləşdirməyə imkan verir.`,
+        download_title: "MakuTweaker Yüklə",
+        download_btn: "MakuTweaker Yüklə",
+        portable_btn: "Portativ versiya",
+        bench_btn: "MakuBench nəticələrinə baxın",
+        sys_req_title: "Sistem tələbləri",
+        sys_req_p1: "• Proqramı işə salmaq üçün Windows 10 1809 (2018) və NET Core 8.0 kitabxanası lazımdır.<br>Fevral 2026-cı ildən etibarən MakuTweaker quraşdırıcısı internet bağlantısı mövcud olduqda kitabxananı da quraşdırır.",
+        sys_req_p2: "• Tam funksionallıq üçün Windows 11 22H2 tələb olunur."
     }
 };
 

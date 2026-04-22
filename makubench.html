@@ -30,8 +30,8 @@
     <style>
         .lang-switcher {
             display: grid;
-            grid-template-columns: repeat(5, auto);
-            gap: 4px; margin-left: 20px; align-items: center;
+            grid-template-columns:repeat(10, auto);
+            gap: 4px; margin-left: 10px; align-items: center;
         }
 
         .lang-switcher button {
@@ -199,8 +199,13 @@
             .floating-panel { display: none !important; }
         }
 
-        @media (max-width: 850px) {
+        @media (max-width: 1100px) {
             .lang-switcher { display: none; }
+            
+            .lang-switcher button {
+                font-size: 0.6rem;
+                padding: 2px 4px;
+            }
         }
     </style>
 </head>
@@ -222,17 +227,27 @@
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
 
-    <div class="lang-switcher">
+<div class="lang-switcher">
         <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
         <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
         <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
         <button onclick="setLang('es')"><span class="fi fi-es"></span> ES</button>
+        <button onclick="setLang('pt')"><span class="fi fi-pt"></span> PT</button>
         <button onclick="setLang('de')"><span class="fi fi-de"></span> DE</button>
+        <button onclick="setLang('fr')"><span class="fi fi-fr"></span> FR</button>
+        <button onclick="setLang('it')"><span class="fi fi-it"></span> IT</button>
         <button onclick="setLang('cs')"><span class="fi fi-cz"></span> CS</button>
-        <button onclick="setLang('et')"><span class="fi fi-ee"></span> ET</button>
+        <button onclick="setLang('pl')"><span class="fi fi-pl"></span> PL</button>
         <button onclick="setLang('zh')"><span class="fi fi-cn"></span> ZH</button>
         <button onclick="setLang('ja')"><span class="fi fi-jp"></span> JA</button>
+        <button onclick="setLang('ko')"><span class="fi fi-kr"></span> KO</button>
+        <button onclick="setLang('vi')"><span class="fi fi-vn"></span> VI</button>
+        <button onclick="setLang('id')"><span class="fi fi-id"></span> ID</button>
         <button onclick="setLang('tl')"><span class="fi fi-ph"></span> TL</button>
+        <button onclick="setLang('hi')"><span class="fi fi-in"></span> HI</button>
+        <button onclick="setLang('et')"><span class="fi fi-ee"></span> ET</button>
+        <button onclick="setLang('tr')"><span class="fi fi-tr"></span> TR</button>
+        <button onclick="setLang('az')"><span class="fi fi-az"></span> AZ</button>
     </div>
 
     <nav id="nav-menu">
@@ -1043,6 +1058,316 @@ const translations = {
         h2_arm: "Mga ARM Processor",
         btn_dl: "I-download ang MakuTweaker",
         btn_submit: "Ipadala ang iyong mga resulta"
+    },
+    pt: {
+        page_title: "Adderly.Top - Resultados do MakuTweaker Benchmark",
+        nav_builds: "Versões",
+        nav_support: "Apoiar",
+        cat_title: "Categorias",
+        cat_desk_intel: "Intel Core de Mesa",
+        cat_desk_amd: "AMD Ryzen de Mesa",
+        cat_lap_intel: "Intel Core de Notebook",
+        cat_lap_amd: "AMD Ryzen de Notebook",
+        cat_other_intel: "Outros Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Outros AMD",
+        h1_main: "Resultados do MakuTweaker Benchmark",
+        search_placeholder: "Digite o nome do processador (ex: 13700KF)",
+        search_hint: "Adicione \"/\" no início para uma pesquisa global.",
+        search_results_title: "Resultado da pesquisa e processadores semelhantes:",
+        th_cpu: "Processador",
+        th_single: "Single-core",
+        th_multi: "Multi-core",
+        th_comment: "Comentário",
+        h2_desk_intel: "Processadores Intel Core de Mesa",
+        h2_desk_amd: "Processadores AMD Ryzen de Mesa",
+        h2_lap_intel: "Processadores Intel Core de Notebook",
+        h2_lap_amd: "Processadores AMD Ryzen de Notebook",
+        h2_other_intel: "Outros Processadores Intel",
+        h2_xeon: "Processadores Intel Xeon",
+        h2_other_amd: "Outros Processadores AMD",
+        h2_arm: "Processadores ARM",
+        btn_dl: "Baixar MakuTweaker",
+        btn_submit: "Enviar seus resultados"
+    },
+    fr: {
+        page_title: "Adderly.Top - Résultats MakuTweaker Benchmark",
+        nav_builds: "Versions",
+        nav_support: "Soutenir",
+        cat_title: "Catégories",
+        cat_desk_intel: "Intel Core de Bureau",
+        cat_desk_amd: "AMD Ryzen de Bureau",
+        cat_lap_intel: "Intel Core PC Portable",
+        cat_lap_amd: "AMD Ryzen PC Portable",
+        cat_other_intel: "Autres Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Autres AMD",
+        h1_main: "Résultats MakuTweaker Benchmark",
+        search_placeholder: "Entrez le nom du processeur (ex: 13700KF)",
+        search_hint: "Ajoutez \"/\" au début pour une recherche globale.",
+        search_results_title: "Résultat de la recherche et processeurs similaires :",
+        th_cpu: "Processeur",
+        th_single: "Single-core",
+        th_multi: "Multi-core",
+        th_comment: "Commentaire",
+        h2_desk_intel: "Processeurs Intel Core de Bureau",
+        h2_desk_amd: "Processeurs AMD Ryzen de Bureau",
+        h2_lap_intel: "Processeurs Intel Core PC Portable",
+        h2_lap_amd: "Processeurs AMD Ryzen PC Portable",
+        h2_other_intel: "Autres Processeurs Intel",
+        h2_xeon: "Processeurs Intel Xeon",
+        h2_other_amd: "Autres Processeurs AMD",
+        h2_arm: "Processeurs ARM",
+        btn_dl: "Télécharger MakuTweaker",
+        btn_submit: "Soumettre vos résultats"
+    },
+    it: {
+        page_title: "Adderly.Top - Risultati MakuTweaker Benchmark",
+        nav_builds: "Build",
+        nav_support: "Supporta",
+        cat_title: "Categorie",
+        cat_desk_intel: "Intel Core Desktop",
+        cat_desk_amd: "AMD Ryzen Desktop",
+        cat_lap_intel: "Intel Core Laptop",
+        cat_lap_amd: "AMD Ryzen Laptop",
+        cat_other_intel: "Altri Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Altri AMD",
+        h1_main: "Risultati MakuTweaker Benchmark",
+        search_placeholder: "Inserisci il nome del processore (es. 13700KF)",
+        search_hint: "Aggiungi \"/\" all'inizio per una ricerca globale.",
+        search_results_title: "Risultato della ricerca e processori simili:",
+        th_cpu: "Processore",
+        th_single: "Single-core",
+        th_multi: "Multi-core",
+        th_comment: "Commento",
+        h2_desk_intel: "Processori Intel Core Desktop",
+        h2_desk_amd: "Processori AMD Ryzen Desktop",
+        h2_lap_intel: "Processori Intel Core Laptop",
+        h2_lap_amd: "Processori AMD Ryzen Laptop",
+        h2_other_intel: "Altri Processori Intel",
+        h2_xeon: "Processori Intel Xeon",
+        h2_other_amd: "Altri Processori AMD",
+        h2_arm: "Processori ARM",
+        btn_dl: "Scarica MakuTweaker",
+        btn_submit: "Invia i tuoi risultati"
+    },
+    pl: {
+        page_title: "Adderly.Top - Wyniki MakuTweaker Benchmark",
+        nav_builds: "Kompilacje",
+        nav_support: "Wesprzyj",
+        cat_title: "Kategorie",
+        cat_desk_intel: "Desktop Intel Core",
+        cat_desk_amd: "Desktop AMD Ryzen",
+        cat_lap_intel: "Laptop Intel Core",
+        cat_lap_amd: "Laptop AMD Ryzen",
+        cat_other_intel: "Inne Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Inne AMD",
+        h1_main: "Wyniki MakuTweaker Benchmark",
+        search_placeholder: "Wpisz nazwę procesora (np. 13700KF)",
+        search_hint: "Dodaj \"/\" na początku, aby wyszukać globalnie.",
+        search_results_title: "Wyniki wyszukiwania i podobne procesory:",
+        th_cpu: "Procesor",
+        th_single: "Jednordzeniowy",
+        th_multi: "Wielordzeniowy",
+        th_comment: "Komentarz",
+        h2_desk_intel: "Procesory Desktop Intel Core",
+        h2_desk_amd: "Procesory Desktop AMD Ryzen",
+        h2_lap_intel: "Procesory Laptop Intel Core",
+        h2_lap_amd: "Procesory Laptop AMD Ryzen",
+        h2_other_intel: "Inne Procesory Intel",
+        h2_xeon: "Procesory Intel Xeon",
+        h2_other_amd: "Inne Procesory AMD",
+        h2_arm: "Procesory ARM",
+        btn_dl: "Pobierz MakuTweaker",
+        btn_submit: "Prześlij swoje wyniki"
+    },
+    ko: {
+        page_title: "Adderly.Top - MakuTweaker 벤치마크 결과",
+        nav_builds: "빌드",
+        nav_support: "지원하기",
+        cat_title: "카테고리",
+        cat_desk_intel: "데스크탑 Intel Core",
+        cat_desk_amd: "데스크탑 AMD Ryzen",
+        cat_lap_intel: "노트북 Intel Core",
+        cat_lap_amd: "노트북 AMD Ryzen",
+        cat_other_intel: "기타 Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "기타 AMD",
+        h1_main: "MakuTweaker 벤치마크 결과",
+        search_placeholder: "프로세서 이름 입력 (예: 13700KF)",
+        search_hint: "전체 검색을 하려면 시작 부분에 \"/\"를 추가하세요.",
+        search_results_title: "검색 결과 및 유사한 프로세서:",
+        th_cpu: "프로세서",
+        th_single: "싱글 코어",
+        th_multi: "멀티 코어",
+        th_comment: "코멘트",
+        h2_desk_intel: "데스크탑 Intel Core 프로세서",
+        h2_desk_amd: "데스크탑 AMD Ryzen 프로세서",
+        h2_lap_intel: "노트북 Intel Core 프로세서",
+        h2_lap_amd: "노트북 AMD Ryzen 프로세서",
+        h2_other_intel: "기타 Intel 프로세서",
+        h2_xeon: "Intel Xeon 프로세서",
+        h2_other_amd: "기타 AMD 프로세서",
+        h2_arm: "ARM 프로세서",
+        btn_dl: "MakuTweaker 다운로드",
+        btn_submit: "내 결과 제출하기"
+    },
+    vi: {
+        page_title: "Adderly.Top - Kết quả MakuTweaker Benchmark",
+        nav_builds: "Bản dựng",
+        nav_support: "Hỗ trợ",
+        cat_title: "Danh mục",
+        cat_desk_intel: "Intel Core Desktop",
+        cat_desk_amd: "AMD Ryzen Desktop",
+        cat_lap_intel: "Intel Core Laptop",
+        cat_lap_amd: "AMD Ryzen Laptop",
+        cat_other_intel: "Intel Khác",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "AMD Khác",
+        h1_main: "Kết quả MakuTweaker Benchmark",
+        search_placeholder: "Nhập tên bộ xử lý (ví dụ: 13700KF)",
+        search_hint: "Thêm \"/\" vào đầu để tìm kiếm toàn cầu.",
+        search_results_title: "Kết quả tìm kiếm và các bộ xử lý tương tự:",
+        th_cpu: "Bộ xử lý",
+        th_single: "Đơn nhân",
+        th_multi: "Đa nhân",
+        th_comment: "Bình luận",
+        h2_desk_intel: "Bộ xử lý Intel Core Desktop",
+        h2_desk_amd: "Bộ xử lý AMD Ryzen Desktop",
+        h2_lap_intel: "Bộ xử lý Intel Core Laptop",
+        h2_lap_amd: "Bộ xử lý AMD Ryzen Laptop",
+        h2_other_intel: "Các bộ xử lý Intel khác",
+        h2_xeon: "Bộ xử lý Intel Xeon",
+        h2_other_amd: "Các bộ xử lý AMD khác",
+        h2_arm: "Bộ xử lý ARM",
+        btn_dl: "Tải xuống MakuTweaker",
+        btn_submit: "Gửi kết quả của bạn"
+    },
+    id: {
+        page_title: "Adderly.Top - Hasil MakuTweaker Benchmark",
+        nav_builds: "Rilis",
+        nav_support: "Dukung",
+        cat_title: "Kategori",
+        cat_desk_intel: "Desktop Intel Core",
+        cat_desk_amd: "Desktop AMD Ryzen",
+        cat_lap_intel: "Laptop Intel Core",
+        cat_lap_amd: "Laptop AMD Ryzen",
+        cat_other_intel: "Intel Lainnya",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "AMD Lainnya",
+        h1_main: "Hasil MakuTweaker Benchmark",
+        search_placeholder: "Masukkan nama prosesor (mis., 13700KF)",
+        search_hint: "Tambahkan \"/\" di awal untuk pencarian global.",
+        search_results_title: "Hasil pencarian dan prosesor serupa:",
+        th_cpu: "Prosesor",
+        th_single: "Single-core",
+        th_multi: "Multi-core",
+        th_comment: "Komentar",
+        h2_desk_intel: "Prosesor Desktop Intel Core",
+        h2_desk_amd: "Prosesor Desktop AMD Ryzen",
+        h2_lap_intel: "Prosesor Laptop Intel Core",
+        h2_lap_amd: "Prosesor Laptop AMD Ryzen",
+        h2_other_intel: "Prosesor Intel Lainnya",
+        h2_xeon: "Prosesor Intel Xeon",
+        h2_other_amd: "Prosesor AMD Lainnya",
+        h2_arm: "Prosesor ARM",
+        btn_dl: "Unduh MakuTweaker",
+        btn_submit: "Kirim hasil Anda"
+    },
+    hi: {
+        page_title: "Adderly.Top - MakuTweaker Benchmark परिणाम",
+        nav_builds: "बिल्ड्स",
+        nav_support: "समर्थन करें",
+        cat_title: "श्रेणियाँ",
+        cat_desk_intel: "डेस्कटॉप Intel Core",
+        cat_desk_amd: "डेस्कटॉप AMD Ryzen",
+        cat_lap_intel: "लैपटॉप Intel Core",
+        cat_lap_amd: "लैपटॉप AMD Ryzen",
+        cat_other_intel: "अन्य Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "अन्य AMD",
+        h1_main: "MakuTweaker Benchmark परिणाम",
+        search_placeholder: "प्रोसेसर का नाम दर्ज करें (उदा. 13700KF)",
+        search_hint: "ग्लोबल सर्च के लिए शुरुआत में \"/\" जोड़ें।",
+        search_results_title: "खोज परिणाम और समान प्रोसेसर:",
+        th_cpu: "प्रोसेसर",
+        th_single: "सिंगल-कोर",
+        th_multi: "मल्टी-कोर",
+        th_comment: "टिप्पणी",
+        h2_desk_intel: "डेस्कटॉप Intel Core प्रोसेसर",
+        h2_desk_amd: "डेस्कटॉप AMD Ryzen प्रोसेसर",
+        h2_lap_intel: "लैपटॉप Intel Core प्रोसेसर",
+        h2_lap_amd: "लैपटॉप AMD Ryzen प्रोसेसर",
+        h2_other_intel: "अन्य Intel प्रोसेसर",
+        h2_xeon: "Intel Xeon प्रोसेसर",
+        h2_other_amd: "अन्य AMD प्रोसेसर",
+        h2_arm: "ARM प्रोसेसर",
+        btn_dl: "MakuTweaker डाउनलोड करें",
+        btn_submit: "अपने परिणाम भेजें"
+    },
+    tr: {
+        page_title: "Adderly.Top - MakuTweaker Benchmark Sonuçları",
+        nav_builds: "Sürümler",
+        nav_support: "Destekle",
+        cat_title: "Kategoriler",
+        cat_desk_intel: "Masaüstü Intel Core",
+        cat_desk_amd: "Masaüstü AMD Ryzen",
+        cat_lap_intel: "Dizüstü Intel Core",
+        cat_lap_amd: "Dizüstü AMD Ryzen",
+        cat_other_intel: "Diğer Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Diğer AMD",
+        h1_main: "MakuTweaker Benchmark Sonuçları",
+        search_placeholder: "İşlemci adını girin (örn. 13700KF)",
+        search_hint: "Genel arama için başa \"/\" ekleyin.",
+        search_results_title: "Arama sonucu ve benzer işlemciler:",
+        th_cpu: "İşlemci",
+        th_single: "Tek çekirdek",
+        th_multi: "Çoklu çekirdek",
+        th_comment: "Yorum",
+        h2_desk_intel: "Masaüstü Intel Core İşlemciler",
+        h2_desk_amd: "Masaüstü AMD Ryzen İşlemciler",
+        h2_lap_intel: "Dizüstü Intel Core İşlemciler",
+        h2_lap_amd: "Dizüstü AMD Ryzen İşlemciler",
+        h2_other_intel: "Diğer Intel İşlemciler",
+        h2_xeon: "Intel Xeon İşlemciler",
+        h2_other_amd: "Diğer AMD İşlemciler",
+        h2_arm: "ARM İşlemciler",
+        btn_dl: "MakuTweaker İndir",
+        btn_submit: "Sonuçlarınızı gönderin"
+    },
+    az: {
+        page_title: "Adderly.Top - MakuTweaker Benchmark Nəticələri",
+        nav_builds: "Versiyalar",
+        nav_support: "Dəstəklə",
+        cat_title: "Kateqoriyalar",
+        cat_desk_intel: "Masaüstü Intel Core",
+        cat_desk_amd: "Masaüstü AMD Ryzen",
+        cat_lap_intel: "Noutbuk Intel Core",
+        cat_lap_amd: "Noutbuk AMD Ryzen",
+        cat_other_intel: "Digər Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Digər AMD",
+        h1_main: "MakuTweaker Benchmark Nəticələri",
+        search_placeholder: "Prosessorun adını daxil edin (məs. 13700KF)",
+        search_hint: "Qlobal axtarış üçün əvvələ \"/\" əlavə edin.",
+        search_results_title: "Axtarış nəticəsi və oxşar prosessorlar:",
+        th_cpu: "Prosessor",
+        th_single: "Tək nüvəli",
+        th_multi: "Çox nüvəli",
+        th_comment: "Şərh",
+        h2_desk_intel: "Masaüstü Intel Core Prosessorları",
+        h2_desk_amd: "Masaüstü AMD Ryzen Prosessorları",
+        h2_lap_intel: "Noutbuk Intel Core Prosessorları",
+        h2_lap_amd: "Noutbuk AMD Ryzen Prosessorları",
+        h2_other_intel: "Digər Intel Prosessorları",
+        h2_xeon: "Intel Xeon Prosessorları",
+        h2_other_amd: "Digər AMD Prosessorları",
+        h2_arm: "ARM Prosessorları",
+        btn_dl: "MakuTweaker Yüklə",
+        btn_submit: "Nəticələrinizi göndərin"
     }
 };
 
