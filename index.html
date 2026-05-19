@@ -27,7 +27,7 @@
     </script>
 
     <meta property="og:title" content="Сайт Марка Аддерли">
-    <meta property="og:keywords" content="adderly, adderlytop, adderly top, марк аддерли, аддерли, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10, скачать макутвикер, макутвикер, маку твикер, download makutweaker, makutweaker download, mark adderly, adderly, mark, makuflash">
+    <meta property="og:keywords" content="adderly, adderlytop, adderly top, марк аддерли, аддерли, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10, скачать макутвикер, макутвикер, маку твикер, download makutweaker, makutweaker download, mark adderly, adderly, mark, makuflash, makutyper, макутайпер, блокнот, скачать блокнот, MakuTyper">
     <meta property="og:description" content="Главная страница сайта Марка Аддерли">
     <meta name="description" content="Главная страница сайта Марка Аддерли, сборки, блог и новости.">
 
@@ -62,12 +62,78 @@
             }
         }
 
+        .top-software-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px auto 20px;
+            max-width: 900px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .software-card {
+            background: var(--card-bg, rgba(30, 15, 45, 0.6));
+            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+            box-sizing: border-box;
+        }
+
+        .software-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #a855f7;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(168, 85, 247, 0.15);
+        }
+
+        .software-card .icon-wrapper {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .software-card .icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .software-card:hover .icon-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .software-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 10px 0;
+        }
+
+        .software-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #ccc;
+            margin: 0;
+        }
+
         .home-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
-            margin: 40px auto;
-            max-width: 800px;
+            margin: 20px auto 40px;
+            max-width: 900px;
         }
         
         .home-grid a {
@@ -108,7 +174,7 @@
             padding: 24px;
             backdrop-filter: blur(12px);
             margin: 40px auto 20px;
-            max-width: 800px;
+            max-width: 850px;
             transition: all 0.3s ease;
         }
 
@@ -144,6 +210,11 @@
         }
 
         @media (max-width: 768px) {
+            .top-software-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 0 10px;
+            }
             .home-grid {
                 grid-template-columns: 1fr;
             }
@@ -180,15 +251,34 @@
     <section>
         <h1 id="welcome" data-i18n="welcome_title">Добро пожаловать на Adderly.Top!</h1>
         <p id="discription" data-i18n="welcome_desc">Это сайт Марка Аддерли - техноблогера на YouTube.<br>
-        Здесь вы можете скачать мои сборки Windows, оригинальные ISO, MakuTweaker и многое другое!<br>
+        Здесь вы можете скачать мои программы для Windows, оригинальные ISO, MakuTweaker и многое другое!<br>
         На сайте есть реклама. Если вы выключите адблокер, вы поможете мне продолжать свою деятельность!</p>
+    </section>
+
+    <section class="top-software-section">
+        <h2 data-i18n="software_title" style="text-align: center; margin-top: 40px; margin-bottom: -30px; color: #fff; font-weight: 700; font-size: 1.5rem;">Скачать программы от Марка Аддерли:</h2>
+        <div class="top-software-grid">
+            <a href="makutweaker" class="software-card">
+                <div class="icon-wrapper"><img src="icons/1.png" alt="MakuTweaker"></div>
+                <h3>MakuTweaker</h3>
+                <p data-i18n="card_tweaker_desc">Самый дружелюбный и полезный твикер для Windows.</p>
+            </a>
+            <a href="makutyper" class="software-card">
+                <div class="icon-wrapper"><img src="icons/2.png" alt="MakuTyper"></div>
+                <h3>MakuTyper</h3>
+                <p data-i18n="card_typer_desc">Современный и полезный блокнот, идеально дополняющий дизайн Windows 11.</p>
+            </a>
+            <a href="makuflash" class="software-card">
+                <div class="icon-wrapper"><img src="icons/3.png" alt="MakuFlash"></div>
+                <h3>MakuFlash</h3>
+                <p data-i18n="card_flash_desc">Красивое и дружелюбное переосмысление программы для записи Windows на флешку.</p>
+            </a>
+        </div>
     </section>
 
     <section class="button-menu-section">
         <div class="home-grid">
             <a href="windows" data-i18n="btn_win">Скачать официальные Windows</a>
-            <a href="makuflash" data-i18n="btn_makuflash">Скачать MakuFlash</a>
-            <a href="makutweaker" data-i18n="btn_makutweaker">Скачать MakuTweaker</a>
             <a href="makubench" data-i18n="btn_makubench">MakuTweaker Benchmark</a>
             <a href="win_pe" data-i18n="btn_winpe">Windows PE от Аддерли</a>
             <a href="makuyan" data-i18n="btn_makuyan">Запрещатор Яндекса</a>
@@ -250,10 +340,12 @@ const translations = {
         nav_builds: "Сборки",
         nav_support: "Поддержать",
         welcome_title: "Добро пожаловать на Adderly.Top!",
-        welcome_desc: "Это сайт Марка Аддерли - техноблогера на YouTube.<br>Здесь вы можете скачать мои сборки Windows, оригинальные ISO, MakuTweaker и многое другое!<br>На сайте есть реклама. Если вы выключите адблокер, вы поможете мне продолжать свою деятельность!",
+        welcome_desc: "Это сайт Марка Аддерли - техноблогера на YouTube.<br>Здесь вы можете скачать мои программы для Windows, оригинальные ISO, MakuTweaker и многое другое!<br>На сайте есть реклама. Если вы выключите адблокер, вы поможете мне продолжать свою деятельность!",
+        software_title: "Скачать программы от Марка Аддерли:",
+        card_tweaker_desc: "Самый дружелюбный и полезный твикер для Windows.",
+        card_typer_desc: "Современный и полезный блокнот, идеально дополняющий дизайн Windows 11.",
+        card_flash_desc: "Красивое и дружелюбное переосмысление программы для записи Windows на флешку.",
         btn_win: "Скачать официальные Windows",
-        btn_makuflash: "Скачать MakuFlash",
-        btn_makutweaker: "Скачать MakuTweaker",
         btn_makubench: "MakuTweaker Benchmark",
         btn_winpe: "Windows PE от Аддерли",
         btn_makuyan: "Запрещатор Яндекса",
@@ -267,10 +359,12 @@ const translations = {
         nav_builds: "Bootlegs",
         nav_support: "Support",
         welcome_title: "Welcome to Adderly.Top!",
-        welcome_desc: "This is the website of Mark Adderly - a tech blogger on YouTube.<br>Here you can download my Windows Bootlegs, original ISOs, MakuTweaker, and much more!<br>There are ads on the site. If you disable your adblocker, you will help me continue my work!",
+        welcome_desc: "This is the website of Mark Adderly - a tech blogger on YouTube.<br>Here you can download my Windows software, original ISOs, MakuTweaker, and much more!<br>There are ads on the site. If you disable your adblocker, you will help me continue my work!",
+        software_title: "Download Mark Adderly's Programs:",
+        card_tweaker_desc: "The most friendly and useful tweaker for Windows.",
+        card_typer_desc: "A modern and useful notepad that perfectly complements the design of Windows 11.",
+        card_flash_desc: "A beautiful and user-friendly reimagining of the tool for burning Windows onto a USB drive.",
         btn_win: "Download Official Windows",
-        btn_makuflash: "Download MakuFlash",
-        btn_makutweaker: "Download MakuTweaker",
         btn_makubench: "MakuTweaker Benchmark",
         btn_winpe: "Windows PE by Adderly",
         btn_makuyan: "Yandex Blocker",
@@ -284,10 +378,12 @@ const translations = {
         nav_builds: "Збірки",
         nav_support: "Підтримати",
         welcome_title: "Ласкаво просимо на Adderly.Top!",
-        welcome_desc: "Це сайт Марка Аддерлі - техноблогера на YouTube.<br>Тут ви можете завантажити мої збірки Windows, оригінальні ISO, MakuTweaker та багато іншого!<br>На сайті є реклама. Якщо ви вимкнете адблокер, ви допоможете мені продовжувати свою діяльність!",
+        welcome_desc: "Це сайт Марка Аддерлі - техноблогера на YouTube.<br>Тут ви можете завантажити мої програми для Windows, оригінальні ISO, MakuTweaker та багато іншого!<br>На сайті є реклама. Если ви вимкнете адблокер, ви допоможете мені продовжувати свою діяльність!",
+        software_title: "Завантажити програми Марка Аддерлі:",
+        card_tweaker_desc: "Найбільш дружній та корисний твікер для Windows.",
+        card_typer_desc: "Сучасний та корисний блокнот, який ідеально доповнює дизайн Windows 11.",
+        card_flash_desc: "Красиве та зручне переосмислення програми для запису Windows на флешку.",
         btn_win: "Завантажити офіційні Windows",
-        btn_makuflash: "Завантажити MakuFlash",
-        btn_makutweaker: "Завантажити MakuTweaker",
         btn_makubench: "MakuTweaker Benchmark",
         btn_winpe: "Windows PE від Аддерлі",
         btn_makuyan: "Блокувальник Яндекса",
