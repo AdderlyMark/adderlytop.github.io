@@ -11,8 +11,9 @@
 }
 
 html, body {
-    overflow-x: hidden;
+    width: 100%;
     max-width: 100%;
+    overflow-x: clip;
     background-color: var(--bg-color);
 }
 
@@ -27,6 +28,7 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
     display: grid;
+    position: relative;
     grid-template-rows: auto 1fr auto;
 }
 
@@ -400,8 +402,7 @@ footer {
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 10px;
-    min-width: 200px;
-    max-width: 90vw;
+    min-width: 240px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     display: block;
     opacity: 0;
@@ -478,24 +479,45 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header { 
-        width: calc(100% - 20px); 
-        margin: 10px; 
+
+    header {
+        width: calc(100% - 20px);
+        margin: 10px;
+
+        padding: 12px 20px;
         border-radius: 20px;
-        padding: 12px 15px;
+
+        box-sizing: border-box;
     }
+
     nav { display: none; }
-    #burger { display: block; }
-    h1 { font-size: 2.2rem; }
-    main { margin-top: 20px; } 
-    
+
+    #burger {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
     .gallery-row {
         grid-template-columns: 1fr;
     }
 
-    .buttons { flex-direction: column; }
-    .buttons a { width: 100%; box-sizing: border-box; text-align: center; }
-    
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons a {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
     footer {
         flex-direction: column;
         gap: 10px;
