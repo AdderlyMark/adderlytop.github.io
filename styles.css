@@ -399,7 +399,8 @@ footer {
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 10px;
-    min-width: 240px;
+    min-width: 200px;
+    max-width: 90vw;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     display: block;
     opacity: 0;
@@ -480,7 +481,7 @@ footer {
         width: calc(100% - 20px); 
         margin: 10px; 
         border-radius: 20px;
-        padding: 12px 30px;
+        padding: 12px 15px;
     }
     nav { display: none; }
     #burger { display: block; }
