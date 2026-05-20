@@ -63,16 +63,18 @@
         }
 
         .top-software-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
             margin: 40px auto 20px;
-            max-width: 900px;
+            max-width: 920px;
             width: 100%;
             box-sizing: border-box;
         }
 
         .software-card {
+            flex: 0 0 calc(33.333% - 14px);
             background: var(--card-bg, rgba(30, 15, 45, 0.6));
             border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
             border-radius: 16px;
@@ -222,6 +224,11 @@
                 padding: 15px;
             }
         }
+        @media (max-width: 680px) {
+        .software-card {
+                flex: 0 0 100%;
+            }
+        }
     </style>
 </head>
 
@@ -287,6 +294,7 @@
     </section>
 
     <section class="button-menu-section">
+        <h2 data-i18n="other_pages" style="text-align: center; color: #fff; margin-bottom: -15px;">Прочие страницы</h2>
         <div class="home-grid">
             <a href="windows" data-i18n="btn_win">Скачать официальные Windows</a>
             <a href="makubench" data-i18n="btn_makubench">MakuTweaker Benchmark</a>
@@ -354,6 +362,7 @@ const translations = {
         card_flash_desc: "Красивое и дружелюбное переосмысление программы для записи Windows на флешку.",
         card_ytd_desc: "Красивая и удобная реализация yt-dlp с предпросмотром загружаемого видео.",
         card_makuyan_desc: "Отдельная программа для блокировки Яндекс Браузера и Мессенджера Max.",
+        other_pages: "Прочие страницы",
         btn_win: "Скачать официальные Windows",
         btn_makubench: "MakuTweaker Benchmark",
         btn_winpe: "Windows PE от Аддерли",
@@ -374,6 +383,7 @@ const translations = {
         card_flash_desc: "A beautiful and user-friendly reimagining of the tool for burning Windows onto a USB drive.",
         card_ytd_desc: "A beautiful and user-friendly implementation of yt-dlp, featuring a preview of the video being downloaded.",
         card_makuyan_desc: "A standalone program for blocking Yandex Browser and Max Messenger.",
+        other_pages: "Other Pages",
         btn_win: "Download Official Windows",
         btn_makubench: "MakuTweaker Benchmark",
         btn_winpe: "Windows PE by Adderly",
@@ -394,6 +404,7 @@ const translations = {
         card_flash_desc: "Красиве та зручне переосмислення програми для запису Windows на флешку.",
         card_ytd_desc: "Красива та зручна реалізація yt-dlp з переглядом відео, що завантажується.",
         card_makuyan_desc: "Окрема програма для блокування Яндекс Браузера.",
+        other_pages: "Інші сторінки",
         btn_win: "Завантажити офіційні Windows",
         btn_makubench: "MakuTweaker Benchmark",
         btn_winpe: "Windows PE від Аддерлі",
