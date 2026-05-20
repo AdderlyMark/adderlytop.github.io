@@ -112,6 +112,8 @@
 
         .table-container {
             width: 100%;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
             overflow-x: auto;
             margin-bottom: 30px;
             border-radius: 12px;
@@ -151,10 +153,25 @@
         th.sorttable_sorted::after { content: " ↓"; color: #a855f7; font-size: 14px; margin-left: 5px; }
         th.sorttable_sorted_reverse::after { content: " ↑"; color: #a855f7; font-size: 14px; margin-left: 5px; }
 
+        th.name {
+        width: 50%;
+        }
+
+        th.score {
+            width: 15%;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        td.score {
+            text-align: center;
+        }
+
         .search-container { margin: 30px 0; text-align: center; }
         #cpu-search {
-            width: 100%;
+            width: 95%;
             max-width: 600px;
+            box-sizing: border-box;
             padding: 15px 20px;
             border-radius: 12px;
             background: rgba(0,0,0,0.4);
@@ -184,9 +201,22 @@
             border-radius: 12px;
             padding: 20px;
             display: none;
+            max-width: 900px;
+            width: 95%; 
+            box-sizing: border-box;
         }
         .similar-cpu-results h3 { margin-top: 0; color: #fff; font-size: 1.2rem; }
         .match-text { color: #a855f7; font-weight: 700; }
+
+        #similar-cpu-results th.name {
+            width: 30%;
+        }
+
+        #similar-cpu-results th:last-child, 
+        #similar-cpu-results td:last-child {
+            width: 15%;
+            line-height: 1.4;
+        }
 
         @media (max-width: 1500px) {
             .floating-panel { left: 10px; width: 140px; padding: 12px; }
@@ -205,6 +235,36 @@
             .lang-switcher button {
                 font-size: 0.6rem;
                 padding: 2px 4px;
+            }
+        }
+        @media (max-width: 650px) {
+            table {
+                min-width: 100%;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.85rem;
+            }
+            
+            th.score {
+                font-size: 0.7rem;
+                white-space: normal;
+            }
+
+            th.sorttable_sorted::after, 
+            th.sorttable_sorted_reverse::after {
+                display: none;
+            }
+
+            main h2 {
+                font-size: 1.4rem;
+                margin-top: 30px;
+            }
+
+            #cpu-search {
+                font-size: 0.9rem;
+                padding: 12px 15px;
             }
         }
     </style>
@@ -417,6 +477,7 @@
                     <tr><td class="name">AMD Ryzen 5 5500</td><td class="score sorttable_numeric">965</td><td class="score sorttable_numeric">9788</td></tr>
                     <tr><td class="name">AMD Ryzen 5 4500</td><td class="score sorttable_numeric">956</td><td class="score sorttable_numeric">8512</td></tr>
                     <tr><td class="name">AMD Ryzen 5 3600</td><td class="score sorttable_numeric">936</td><td class="score sorttable_numeric">8070</td></tr>
+                    <tr><td class="name">AMD Ryzen 5 3500</td><td class="score sorttable_numeric">931</td><td class="score sorttable_numeric">5547</td></tr>
                     <tr><td class="name">AMD Ryzen 5 1600X</td><td class="score sorttable_numeric">872</td><td class="score sorttable_numeric">6695</td></tr>
                     <tr><td class="name">AMD Ryzen 5 3400G</td><td class="score sorttable_numeric">862</td><td class="score sorttable_numeric">4653</td></tr>
                     <tr><td class="name">AMD Ryzen 5 2400G</td><td class="score sorttable_numeric">790</td><td class="score sorttable_numeric">4304</td></tr>
@@ -456,6 +517,7 @@
                     <tr><td class="name">Intel Core i7 1165G7</td><td class="score sorttable_numeric">1115</td><td class="score sorttable_numeric">6172</td></tr>
                     <tr><td class="name">Intel Core i7 10750H</td><td class="score sorttable_numeric">1120</td><td class="score sorttable_numeric">8471</td></tr>
                     <tr><td class="name">Intel Core i7 9750HF</td><td class="score sorttable_numeric">1018</td><td class="score sorttable_numeric">7567</td></tr>
+                    <tr><td class="name">Intel Core i7 8550U</td><td class="score sorttable_numeric">903</td><td class="score sorttable_numeric">3636</td></tr>
                     <tr><td class="name">Intel Core i7 9750H</td><td class="score sorttable_numeric">993</td><td class="score sorttable_numeric">5620</td></tr>
                     <tr><td class="name">Intel Core i7 6700HQ</td><td class="score sorttable_numeric">796</td><td class="score sorttable_numeric">4064</td></tr>
                     <tr><td class="name">Intel Core i7 7700HQ</td><td class="score sorttable_numeric">700</td><td class="score sorttable_numeric">3397</td></tr>
@@ -533,10 +595,12 @@
             <tbody>
                     <tr><td class="name">AMD Ryzen AI 9 HX 370</td><td class="score sorttable_numeric">1184</td><td class="score sorttable_numeric">19520</td></tr>
                     <tr><td class="name">AMD Ryzen 7 260</td><td class="score sorttable_numeric">1160</td><td class="score sorttable_numeric">15524</td></tr>
+                    <tr><td class="name">AMD Ryzen 7 H 255</td><td class="score sorttable_numeric">1118</td><td class="score sorttable_numeric">14478</td></tr>
                     <tr><td class="name">AMD Ryzen AI 9 365</td><td class="score sorttable_numeric">848</td><td class="score sorttable_numeric">14167</td></tr>
                     <tr><td class="name">AMD Ryzen 9 7945HX</td><td class="score sorttable_numeric">1223</td><td class="score sorttable_numeric">30664</td></tr>
                     <tr><td class="name">AMD Ryzen 9 7845HX</td><td class="score sorttable_numeric">1168</td><td class="score sorttable_numeric">23386</td></tr>
                     <tr><td class="name">AMD Ryzen 9 7940HS</td><td class="score sorttable_numeric">1184</td><td class="score sorttable_numeric">15244</td></tr>
+                    <tr><td class="name">AMD Ryzen 9 6900HS</td><td class="score sorttable_numeric">721</td><td class="score sorttable_numeric">13321</td></tr>
 
                     <tr><td class="name">AMD Ryzen 7 8845H</td><td class="score sorttable_numeric">1158</td><td class="score sorttable_numeric">15223</td></tr>
                     <tr><td class="name">AMD Ryzen 7 8840HS</td><td class="score sorttable_numeric">1143</td><td class="score sorttable_numeric">12286</td></tr>
@@ -575,6 +639,7 @@
                     <tr><td class="name">Intel Pentium Gold G6400</td><td class="score sorttable_numeric">796</td><td class="score sorttable_numeric">2036</td></tr>
                     <tr><td class="name">Intel Pentium Gold 7505</td><td class="score sorttable_numeric">709</td><td class="score sorttable_numeric">2210</td></tr>
                     <tr><td class="name">Intel Pentium Gold G4400</td><td class="score sorttable_numeric">690</td><td class="score sorttable_numeric">1357</td></tr>
+                    <tr><td class="name">Intel Pentium G2020</td><td class="score sorttable_numeric">549</td><td class="score sorttable_numeric">1114</td></tr>
                     <tr><td class="name">Intel Pentium G620</td><td class="score sorttable_numeric">473</td><td class="score sorttable_numeric">925</td></tr>
                     <tr><td class="name">Intel Pentium 5405U</td><td class="score sorttable_numeric">466</td><td class="score sorttable_numeric">1312</td></tr>
                     <tr><td class="name">Intel Pentium 4417U</td><td class="score sorttable_numeric">426</td><td class="score sorttable_numeric">1207</td></tr>
@@ -664,6 +729,7 @@
                     <tr><td class="name">AMD A10 6700</td><td class="score sorttable_numeric">545</td><td class="score sorttable_numeric">1859</td></tr>
                     <tr><td class="name">AMD A10 9700</td><td class="score sorttable_numeric">500</td><td class="score sorttable_numeric">1932</td></tr>
                     <tr><td class="name">AMD A8 5600K</td><td class="score sorttable_numeric">486</td><td class="score sorttable_numeric">1545</td></tr>
+                    <tr><td class="name">AMD A8 4500M</td><td class="score sorttable_numeric">279</td><td class="score sorttable_numeric">1002</td></tr>
                     <tr><td class="name">AMD A6 3420M</td><td class="score sorttable_numeric">300</td><td class="score sorttable_numeric">741</td></tr>
                     <tr><td class="name">AMD A4 6300</td><td class="score sorttable_numeric">416</td><td class="score sorttable_numeric">884</td></tr>
                     <tr><td class="name">AMD A4 3305M</td><td class="score sorttable_numeric">219</td><td class="score sorttable_numeric">418</td></tr>
@@ -677,6 +743,7 @@
                     <tr><td class="name">AMD Athlon 64 X2 4400+</td><td class="score sorttable_numeric">242</td><td class="score sorttable_numeric">477</td></tr>
                     
                     <tr><td class="name">AMD E-450</td><td class="score sorttable_numeric">109</td><td class="score sorttable_numeric">162</td></tr>
+                    <tr><td class="name">AMD 3020e</td><td class="score sorttable_numeric">92</td><td class="score sorttable_numeric">961</td></tr>
                     <tr><td class="name">AMD C-50</td><td class="score sorttable_numeric">91</td><td class="score sorttable_numeric">157</td></tr>
                 </tbody>
         </table>
