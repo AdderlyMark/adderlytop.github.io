@@ -112,7 +112,7 @@
 
         .table-container {
             width: 100%;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto 30px auto;
             overflow-x: auto;
             margin-bottom: 30px;
@@ -218,6 +218,37 @@
             line-height: 1.4;
         }
 
+        table {
+            counter-reset: rowRank;
+        }
+
+        tbody tr {
+            counter-increment: rowRank;
+        }
+
+        th.name, td.name {
+            position: relative;
+            padding-left: 70px;
+        }
+
+        th.name::before {
+            content: "#";
+            position: absolute;
+            left: 20px;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        td.name::before {
+            content: counter(rowRank);
+            position: absolute;
+            left: 20px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
         @media (max-width: 1500px) {
             .floating-panel { left: 10px; width: 140px; padding: 12px; }
             .panel-header { width: 100%; border-bottom: none; margin-bottom: 5px; padding-bottom: 0; }
@@ -265,6 +296,13 @@
             #cpu-search {
                 font-size: 0.9rem;
                 padding: 12px 15px;
+            }
+
+            th.name, td.name {
+                padding-left: 30px;
+            }
+            th.name::before, td.name::before {
+                left: 8px;
             }
         }
     </style>
