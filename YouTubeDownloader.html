@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adderly.Top - YouTube Downloader</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68MY39SKZ9');
+    </script>
+    
+    <meta property="og:image" content="https://adderly.top/images/favicon.png">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+
+    <script>
+        const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
+        let existingNews = new Map();
+    </script>
+
+    <meta property="og:title" content="Download YouTube Downloader">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderly top, марк аддерли, youtube downloader, download video from youtube, yt-dlp gui, скачать видео с ютуб, загрузчик ютуб, descargar video de youtube, baixar video do youtube, telecharger video youtube, youtube video herunterladen, scaricare video youtube, youtube下载器, 下载youtube视频, youtubeダウンローダー, youtube動画ダウンロード, youtube डाउनलोडर, youtube 비디오 다운로드, youtube 다운로더, youtube indirici, youtube video indir, pengunduh youtube, unduh video youtube, โหลดวิดีโอ youtube, ดาวน์โหลด youtube, trình tải youtube, tải video youtube, descărcător youtube, descărcare video youtube, best youtube downloader, fast youtube download">
+    <meta property="og:description" content="Download YouTube Downloader by Mark Adderly">
+    <meta name="description" content="The Best YouTube Video Downloader with a beautiful GUI.">
+    <meta name="keywords" content="adderly, adderlyfun, adderly top, марк аддерли, youtube downloader, download video from youtube, yt-dlp gui, скачать видео с ютуб, загрузчик ютуб, descargar video de youtube, baixar video do youtube, telecharger video youtube, youtube video herunterladen, scaricare video youtube, youtube下载器, 下载youtube视频, youtubeダウンローダー, youtube動画ダウンロード, youtube डाउनलोडर, youtube 비디오 다운로드, youtube 다운로더, youtube indirici, youtube video indir, pengunduh youtube, unduh video youtube, โหลดวิดีโอ youtube, ดาวน์โหลด youtube, trình tải youtube, tải video youtube, descărcător youtube, descărcare video youtube, best youtube downloader, fast youtube download">
+
+    <style>
+    .lang-switcher {
+        display: grid;
+        grid-template-columns:repeat(5, auto);
+        gap: 4px; margin-left: 10px; align-items: center;
+    }
+
+    body {
+        font-family: 'Inter', system-ui, -apple-system, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    }
+    .lang-switcher button {
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.2);
+        color: #aaa;
+        padding: 2px 6px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.65rem;
+        line-height: 1;
+        transition: 0.2s;
+    }
+
+    .lang-switcher button:hover {
+        color: #fff;
+        border-color: #fff;
+    }
+
+    @media (max-width: 1100px) {
+        .lang-switcher {
+            display: none;
+        }
+
+        .lang-switcher button {
+            font-size: 0.6rem;
+            padding: 2px 4px;
+        }
+    }
+
+    .screenshot-container {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .screenshot-container img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <a href="index" class="logo">
+        <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
+    </a>
+
+<div class="lang-switcher">
+        <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
+        <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
+        <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+        <button onclick="setLang('es')"><span class="fi fi-es"></span> ES</button>
+        <button onclick="setLang('de')"><span class="fi fi-de"></span> DE</button>
+        <button onclick="setLang('zh')"><span class="fi fi-cn"></span> ZH</button>
+        <button onclick="setLang('ja')"><span class="fi fi-jp"></span> JA</button>
+        <button onclick="setLang('tl')"><span class="fi fi-ph"></span> TL</button>
+        <button onclick="setLang('hi')"><span class="fi fi-in"></span> HI</button>
+        <button onclick="setLang('tr')"><span class="fi fi-tr"></span> TR</button>
+    </div>
+
+<nav id="nav-menu">
+        <ul>
+            <li><a href="builds" data-i18n="nav_builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="support" data-i18n="nav_support">Поддержать</a></li>
+        </ul>
+    </nav>
+    <img src="icons/burger.svg" alt="Меню" id="burger">
+</header>
+
+<main>
+    <h1 data-i18n="title">Лучший загрузчик видео с YouTube.</h1>
+    <p data-i18n="desc">Красивая и удобная реализация графического интерфейса (GUI) для yt-dlp с элегантным предпросмотром загружаемого видео...</p>
+
+    <div class="screenshot-container">
+        <img id="main-screenshot" src="images/ytdlpgui/ru.png" alt="YouTube Downloader Screenshot">
+    </div>
+    
+<div class="accordion-container">
+    <button class="accordion active" data-i18n="sys_req_title">Системные требования</button>
+    
+    <div class="panel open">
+        <div class="panel-content">
+            <h1 data-i18n="sys_req_title">Системные требования</h1>
+            <p data-i18n="sys_req_p1">• Для запуска программы нужна библиотека NET Core 8.0.</p>
+            <p data-i18n="sys_req_p2">• Для поддержки эффектов нужна любая версия Windows 11.</p>
+        </div>
+    </div>
+</div>
+
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9240026161894199" data-ad-slot="5804092339" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+<h1 data-i18n="download_title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать YouTube Downloader</h1>
+<div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
+    <a href="https://www.mediafire.com/file/kyytpr48x3ltrcg/YouTubeDownloader.Setup.exe/file" class="btn-primary" style="display: flex; align-items: center;">
+        <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
+        <span>MediaFire</span>
+    </a>
+    <a href="https://pixeldrain.com/u/sTZCRLYv" class="btn-primary" style="display: flex; align-items: center;">
+        <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
+        <span>PixelDrain</span>
+    </a>
+</div>
+
+</main>
+
+<footer>
+    <div class="footer-socials">
+        <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/tg.png" alt="Telegram" class="social-icon">
+        </a>
+        <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/yt.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/boosty.png" alt="Boosty" class="social-icon">
+        </a>
+    </div>
+    <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
+
+<script src="burger.js"></script>
+<script>
+    function updateAccordionHeights() {
+        document.querySelectorAll('.panel.open').forEach(panel => {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        });
+    }
+
+    document.querySelectorAll('.accordion').forEach((accordion, index) => {
+        const panel = accordion.nextElementSibling;
+        
+        accordion.addEventListener('click', function() {
+            this.classList.toggle('active');
+            panel.classList.toggle('open');
+            
+            if (panel.classList.contains('open')) {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } else {
+                panel.style.maxHeight = null;
+            }
+        });
+    });
+
+    updateAccordionHeights();
+    window.addEventListener('load', updateAccordionHeights);
+    window.addEventListener('resize', updateAccordionHeights);
+</script>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const mainScreenshot = document.getElementById('main-screenshot');
+
+    if(mainScreenshot) {
+        mainScreenshot.addEventListener('click', () => {
+            lightboxImg.src = mainScreenshot.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+    lightbox.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+
+<script>
+const translations = {
+    en: {
+        nav_builds: "Builds",
+        nav_support: "Support",
+        title: "The Best YouTube Video Downloader.",
+        desc: "A beautiful and user-friendly implementation of yt-dlp, featuring a preview of the video being downloaded. With its clean design and no unnecessary features, you can download your favorite videos quickly and efficiently - without wasting time. Translations into the world's most popular languages ​​ensure accessibility for the widest possible user base.",
+        download_title: "Download YouTube Downloader",
+        sys_req_title: "System Requirements",
+        sys_req_p1: "• The NET Core 8.0 library is required to run the program.",
+        sys_req_p2: "• Any version of Windows 11 is required to support effects."
+    },
+    ru: {
+        nav_builds: "Сборки",
+        nav_support: "Поддержать",
+        title: "Лучший загрузчик видео с YouTube.",
+        desc: "Красивая и удобная реализация yt-dlp с предпросмотром загружаемого видео. Благодаря лаконичному дизайну и отсутствию лишних функций вы сможете скачивать любимые видео быстро и эффективно, не теряя времени. Перевод на самые популярные языки мира обеспечивает доступность для максимально широкого круга пользователей.",
+        download_title: "Скачать YouTube Downloader",
+        sys_req_title: "Системные требования",
+        sys_req_p1: "• Для запуска программы нужна библиотека NET Core 8.0.",
+        sys_req_p2: "• Для поддержки эффектов нужна любая версия Windows 11.<br><br>ВНИМАНИЕ! По очевидным причинам, для загрузки видео из России потребуется обход блокировки YouTube."
+    },
+    uk: {
+        nav_builds: "Збірки",
+        nav_support: "Підтримати",
+        title: "Найкращий завантажувач відео з YouTube.",
+        desc: "Красива та зручна реалізація yt-dlp з переглядом відео, що завантажується. Завдяки лаконічному дизайну та відсутності зайвих функцій ви зможете завантажувати улюблені відео швидко та ефективно, не гаючи часу. Переклад на найпопулярніші мови світу забезпечує доступність для максимально широкого кола користувачів.",
+        download_title: "Завантажити YouTube Downloader",
+        sys_req_title: "Системні вимоги",
+        sys_req_p1: "• Для запуску програми потрібна бібліотека NET Core 8.0.",
+        sys_req_p2: "• Для підтримки ефектів потрібна будь-яка версія Windows 11."
+    },
+    es: {
+        nav_builds: "Versiones",
+        nav_support: "Apoyar",
+        title: "El mejor descargador de videos de YouTube.",
+        desc: "Una implementación de interfaz gráfica (GUI) de yt-dlp, hermosa y fácil de usar, que incluye una vista previa elegante del video en descarga. Con su diseño limpio y sin funciones innecesarias, puedes descargar tus videos favoritos de manera rápida y eficiente, sin perder el tiempo. Las traducciones a los idiomas más populares del mundo garantizan la accesibilidad para la mayor base de usuarios posible.",
+        download_title: "Descargar YouTube Downloader",
+        sys_req_title: "Requisitos del sistema",
+        sys_req_p1: "• Se requiere la biblioteca NET Core 8.0 para ejecutar el programa.",
+        sys_req_p2: "• Se requiere cualquier versión de Windows 11 para soportar efectos."
+    },
+    tl: {
+        nav_builds: "Mga Build",
+        nav_support: "Suportahan",
+        title: "Ang Pinakamahusay na YouTube Video Downloader.",
+        desc: "Isang maganda at user-friendly na GUI implementation ng yt-dlp, na may kasamang eleganteng preview ng video na dina-download. Sa malinis na disenyo nito at walang mga hindi kinakailangang feature, maaari mong i-download ang iyong mga paboritong video nang mabilis at mahusay - nang hindi nagsasayang ng oras. Ang mga pagsasalin sa mga pinakasikat na wika sa mundo ay nagsisiguro ng accessibility para sa pinakamalawak na posibleng user base.",
+        download_title: "I-download ang YouTube Downloader",
+        sys_req_title: "Mga Kinakailangan sa Sistema",
+        sys_req_p1: "• Ang NET Core 8.0 library ay kinakailangan upang patakbuhin ang program.",
+        sys_req_p2: "• Anumang bersyon ng Windows 11 ay kinakailangan upang suportahan ang mga effect."
+    },
+    pt: {
+        nav_builds: "Versões",
+        nav_support: "Apoiar",
+        title: "O melhor baixador de vídeos do YouTube.",
+        desc: "Uma implementação de interface gráfica (GUI) do yt-dlp, bonita e intuitiva, com uma prévia elegante do vídeo que está sendo baixado. Com seu design limpo e sem recursos desnecessários, você pode baixar seus vídeos favoritos de forma rápida e eficiente — sem perder tempo. Traduções para os idiomas mais falados do mundo garantem acessibilidade para a maior base de usuários possível.",
+        download_title: "Baixar YouTube Downloader",
+        sys_req_title: "Requisitos do sistema",
+        sys_req_p1: "• A biblioteca NET Core 8.0 é necessária para executar o programa.",
+        sys_req_p2: "• Qualquer versão do Windows 11 é necessária para suportar efeitos."
+    },
+    fr: {
+        nav_builds: "Versions",
+        nav_support: "Soutenir",
+        title: "Le meilleur téléchargeur de vidéos YouTube.",
+        desc: "Une interface graphique (GUI) pour yt-dlp, magnifique et conviviale, offrant un aperçu élégant de la vidéo en cours de téléchargement. Grâce à son design épuré et à l’absence de fonctionnalités superflues, vous pouvez télécharger vos vidéos préférées rapidement et efficacement, sans perdre de temps. Des traductions dans les langues les plus parlées au monde garantissent une accessibilité optimale au plus grand nombre d'utilisateurs.",
+        download_title: "Télécharger YouTube Downloader",
+        sys_req_title: "Configuration requise",
+        sys_req_p1: "• La bibliothèque NET Core 8.0 est requise pour exécuter le programme.",
+        sys_req_p2: "• N'importe quelle version de Windows 11 est requise pour prendre en charge les effets."
+    },
+    de: {
+        nav_builds: "Versionen",
+        nav_support: "Unterstützen",
+        title: "Der beste YouTube-Video-Downloader.",
+        desc: "Eine wunderschöne und benutzerfreundliche GUI-Implementierung von yt-dlp mit einer eleganten Vorschau des heruntergeladenen Videos. Mit seinem klaren Design und ohne unnötige Funktionen können Sie Ihre Lieblingsvideos schnell und effizient herunterladen – ohne Zeitverschwendung. Übersetzungen in die gängigsten Sprachen der Welt gewährleisten die Zugänglichkeit für eine größtmögliche Benutzerbasis.",
+        download_title: "YouTube Downloader Herunterladen",
+        sys_req_title: "Systemanforderungen",
+        sys_req_p1: "• Zum Ausführen des Programms wird die NET Core 8.0-Bibliothek benötigt.",
+        sys_req_p2: "• Jede Version von Windows 11 ist erforderlich, um Effekte zu unterstützen."
+    },
+    it: {
+        nav_builds: "Build",
+        nav_support: "Supporta",
+        title: "Il miglior downloader di video da YouTube.",
+        desc: "Un'interfaccia grafica (GUI) di yt-dlp, bella e intuitiva, con un'elegante anteprima del video in fase di scaricamento. Grazie al suo design pulito e all'assenza di funzioni superflue, puoi scaricare i tuoi video preferiti in modo rapido ed efficiente, senza perdere tempo. Le traduzioni nelle lingue più diffuse al mondo garantiscono l'accessibilità alla più vasta base di utenti possibile.",
+        download_title: "Scarica YouTube Downloader",
+        sys_req_title: "Requisiti di sistema",
+        sys_req_p1: "• Per eseguire il programma è richiesta la libreria NET Core 8.0.",
+        sys_req_p2: "• Qualsiasi versione di Windows 11 è richiesta per supportare gli effetti."
+    },
+    zh: {
+        nav_builds: "版本",
+        nav_support: "支持",
+        title: "优秀的 YouTube 视频下载器",
+        desc: "一个美观且用户友好的 yt-dlp 图形界面 (GUI) 实现，具有正在下载视频的精美预览功能。 凭借其整洁的设计和精简的功能，您可以快速高效地下载喜爱的视频，无需浪费时间。 支持全球多种主流语言的翻译，确保了极广泛的用户群体的易用性。",
+        download_title: "下载 YouTube Downloader",
+        sys_req_title: "系统要求",
+        sys_req_p1: "• 运行该程序需要 NET Core 8.0 库。",
+        sys_req_p2: "• 需要任何版本的 Windows 11 才能支持效果。"
+    },
+    ja: {
+        nav_builds: "ビルド",
+        nav_support: "サポート",
+        title: "最高のYouTubeビデオダウンローダー",
+        desc: "美しく使いやすいyt-dlpのGUI実装。ダウンロード中のビデオをスマートにプレビューできます。洗練されたデザインと無駄のない機能により、時間を無駄にすることなく、お気に入りのビデオを迅速かつ効率的にダウンロードできます。世界中の主要な言語に対応しており、幅広いユーザーが利用可能です。",
+        download_title: "ダウンロード YouTube Downloader",
+        sys_req_title: "システム要件",
+        sys_req_p1: "• プログラムを実行するには、NET Core 8.0 ライブラリが必要です。",
+        sys_req_p2: "• エフェクトをサポートするには、任意のバージョンの Windows 11 が必要です。"
+    },
+    hi: {
+        nav_builds: "बिल्ड्स",
+        nav_support: "समर्थन करें",
+        title: "सबसे अच्छा YouTube वीडियो डाउनलोडर।",
+        desc: "yt-dlp का एक सुंदर और उपयोगकर्ता के अनुकूल GUI कार्यान्वयन, जिसमें डाउनलोड किए जा रहे वीडियो का एक शानदार पूर्वावलोकन (preview) है। इसके स्पष्ट डिज़ाइन और बिना किसी अनावश्यक सुविधाओं के, आप अपने पसंदीदा वीडियो को बिना समय बर्बाद किए जल्दी और कुशलता से डाउनलोड कर सकते हैं। दुनिया की सबसे लोकप्रिय भाषाओं में अनुवाद, व्यापक उपयोगकर्ता आधार के लिए सुलभता सुनिश्चित करते हैं।",
+        download_title: "YouTube Downloader डाउनलोड करें",
+        sys_req_title: "सिस्टम आवश्यकताएं",
+        sys_req_p1: "• प्रोग्राम को चलाने के लिए NET Core 8.0 लाइब्रेरी की आवश्यकता है।",
+        sys_req_p2: "• प्रभाव का समर्थन करने के लिए Windows 11 के किसी भी संस्करण की आवश्यकता है।"
+    },
+    ko: {
+        nav_builds: "빌드",
+        nav_support: "지원하기",
+        title: "최고의 YouTube 비디오 다운로더.",
+        desc: "아름답고 사용자 친화적인 yt-dlp용 GUI 구현체로, 다운로드 중인 비디오의 세련된 미리보기 기능을 제공합니다. 깔끔한 디자인과 불필요한 기능 없는 구성으로, 시간 낭비 없이 좋아하는 비디오를 빠르고 효율적으로 다운로드할 수 있습니다. 세계 주요 언어로 번역되어 전 세계 수많은 사용자가 편리하게 접근할 수 있습니다.",
+        download_title: "YouTube Downloader 다운로드",
+        sys_req_title: "시스템 요구 사항",
+        sys_req_p1: "• 프로그램을 실행하려면 NET Core 8.0 라이브러리가 필요합니다.",
+        sys_req_p2: "• 효과를 지원하려면 모든 버전의 Windows 11이 필요합니다."
+    },
+    tr: {
+        nav_builds: "Sürümler",
+        nav_support: "Destekle",
+        title: "En İyi YouTube Video İndirici.",
+        desc: "İndirilen videonun şık bir önizlemesini sunan, yt-dlp'nin güzel ve kullanıcı dostu bir GUI uygulaması. Sade tasarımı ve gereksiz özelliklerden arındırılmış yapısı sayesinde, en sevdiğiniz videoları zaman kaybetmeden hızlı ve verimli bir şekilde indirebilirsiniz. Dünyanın en popüler dillerine yapılan çeviriler, mümkün olan en geniş kullanıcı kitlesi için erişilebilirlik sağlar.",
+        download_title: "YouTube Downloader İndir",
+        sys_req_title: "Sistem Gereksinimleri",
+        sys_req_p1: "• Programı çalıştırmak için NET Core 8.0 kitaplığı gereklidir.",
+        sys_req_p2: "• Efektleri desteklemek için herhangi bir Windows 11 sürümü gereklidir."
+    },
+    id: {
+        nav_builds: "Rilis",
+        nav_support: "Dukung",
+        title: "Pengunduh Video YouTube Terbaik.",
+        desc: "Implementasi GUI yt-dlp yang indah dan ramah pengguna, menampilkan pratinjau video yang sedang diunduh dengan elegan. Dengan desain yang bersih dan tanpa fitur yang tidak perlu, Anda dapat mengunduh video favorit dengan cepat dan efisien — tanpa membuang waktu. Terjemahan ke dalam berbagai bahasa terpopuler di dunia memastikan aksesibilitas bagi basis pengguna seluas mungkin.",
+        download_title: "Unduh YouTube Downloader",
+        sys_req_title: "Persyaratan Sistem",
+        sys_req_p1: "• Untuk menjalankan program, diperlukan pustaka NET Core 8.0.",
+        sys_req_p2: "• Semua versi Windows 11 diperlukan untuk mendukung efek."
+    },
+    th: {
+        nav_builds: "บิลด์",
+        nav_support: "สนับสนุน",
+        title: "โปรแกรมดาวน์โหลดวิดีโอ YouTube ที่ดีที่สุด",
+        desc: "การนำ yt-dlp มาพัฒนาในรูปแบบ GUI ที่สวยงามและใช้งานง่าย พร้อมการแสดงตัวอย่างวิดีโอที่กำลังดาวน์โหลดอย่างมีสไตล์ ด้วยการออกแบบที่เรียบง่ายและไม่มีฟีเจอร์ที่ไม่จำเป็น คุณจึงสามารถดาวน์โหลดวิดีโอโปรดได้อย่างรวดเร็วและมีประสิทธิภาพโดยไม่เสียเวลา การแปลเป็นภาษาหลักต่างๆ ของโลกช่วยให้มั่นใจได้ว่าผู้ใช้งานจำนวนมากจะสามารถเข้าถึงได้",
+        download_title: "ดาวน์โหลด YouTube Downloader",
+        sys_req_title: "ความต้องการของระบบ",
+        sys_req_p1: "• ในการรันโปรแกรม จำเป็นต้องมีไลบรารี NET Core 8.0",
+        sys_req_p2: "• จำเป็นต้องมี Windows 11 เวอร์ชันใดก็ได้เพื่อรองรับเอฟเฟกต์"
+    },
+    vi: {
+        nav_builds: "Bản dựng",
+        nav_support: "Hỗ trợ",
+        title: "Trình tải video YouTube tốt nhất.",
+        desc: "Một bản triển khai giao diện đồ họa (GUI) đẹp mắt và thân thiện với người dùng của yt-dlp, có tính năng xem trước video đang tải xuống đầy tinh tế. Với thiết kế tối giản và không có các tính năng dư thừa, bạn có thể tải xuống các video yêu thích một cách nhanh chóng và hiệu quả mà không lãng phí thời gian. Bản dịch sang các ngôn ngữ phổ biến nhất thế giới đảm bảo khả năng tiếp cận cho lượng người dùng lớn nhất có thể.",
+        download_title: "Tải xuống YouTube Downloader",
+        sys_req_title: "Yêu cầu hệ thống",
+        sys_req_p1: "• Để chạy chương trình, cần có thư viện NET Core 8.0.",
+        sys_req_p2: "• Cần có bất kỳ phiên bản Windows 11 nào để hỗ trợ các hiệu ứng."
+    },
+    ro: {
+        nav_builds: "Versiuni",
+        nav_support: "Susține",
+        title: "Cel mai bun program de descărcat videoclipuri de pe YouTube.",
+        desc: "O implementare GUI frumoasă și ușor de utilizat pentru yt-dlp, oferind o previzualizare elegantă a videoclipului care se descarcă. Cu designul său curat și fără funcții inutile, poți descărca videoclipurile preferate rapid și eficient, fără a pierde timpul. Traducerile în cele mai populare limbi din lume asigură accesibilitatea pentru cea mai largă bază de utilizatori posibilă.",
+        download_title: "Descarcă YouTube Downloader",
+        sys_req_title: "Cerințe de sistem",
+        sys_req_p1: "• Pentru a rula programul este necesară biblioteca NET Core 8.0.",
+        sys_req_p2: "• Orice versiune de Windows 11 este necesară pentru a sprijini efectele."
+    },
+    cs: {
+        nav_builds: "Sestavy",
+        nav_support: "Podpořit",
+        title: "Nejlepší stahovač videí z YouTube.",
+        desc: "Krásná a uživatelsky přívětivá implementace GUI pro yt-dlp, která nabízí elegantní náhled stahovaného videa. Díky čistému designu a absenci zbytečných funkcí můžete stahovat svá oblíbená videa rychle a efektivně – bez ztráty času. Překlady do nejoblíbenějších světových jazyků zajišťují dostupnost pro co nejširší základnu uživatelů.",
+        download_title: "Stáhnout YouTube Downloader",
+        sys_req_title: "Systémové požadavky",
+        sys_req_p1: "• Ke spuštění programu je vyžadována knihovna NET Core 8.0.",
+        sys_req_p2: "• Pro podporu efektů je vyžadována jakákoli verze Windows 11."
+    },
+    et: {
+        nav_builds: "Versioonid",
+        nav_support: "Toeta",
+        title: "Parim YouTube'i videote allalaadija.",
+        desc: "Kaunis ja kasutajasõbralik yt-dlp GUI implementatsioon, mis pakub stiilset eelvaadet allalaaditavast videost. Tänu puhtale disainile ja ebavajalike funktsioonide puudumisele saate oma lemmikvideoid kiiresti ja tõhusalt alla laadida – ilma aega raiskamata. Tõlked maailma kõige populaarsematesse keeltesse tagavad ligipääsetavuse võimalikult laiale kasutajaskonnale.",
+        download_title: "Laadi alla YouTube Downloader",
+        sys_req_title: "Süsteeminõuded",
+        sys_req_p1: "• Programmi käivitamiseks on vajalik NET Core 8.0 teek.",
+        sys_req_p2: "• Efektide toetamiseks on vajalik Windows 11 mis tahes versioon."
+    },
+    az: {
+        nav_builds: "Versiyalar",
+        nav_support: "Dəstəklə",
+        title: "Ən yaxşı YouTube video yükləyicisi.",
+        desc: "yt-dlp-nin gözəl və istifadəçi dostu GUI tətbiqi, yüklənən videonun şık önizləməsini təqdim edir. Təmiz dizaynı və lazımsız funksiyaları olmaması sayəsində sevimli videolarınızı vaxt itirmədən tez və səmərəli şəkildə yükləyə bilərsiniz. Dünyanın ən populyar dillərinə edilən tərcümələr mümkün olan ən geniş istifadəçi bazası üçün əlçatanlığı təmin edir.",
+        download_title: "YouTube Downloader Yüklə",
+        sys_req_title: "Sistem tələbləri",
+        sys_req_p1: "• Proqramı işə salmaq üçün NET Core 8.0 kitabxanası tələb olunur.",
+        sys_req_p2: "• Effektləri dəstəkləmək üçün Windows 11-in istənilən versiyası tələb olunur."
+    },
+};
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+    applyLang(lang);
+}
+
+function applyLang(lang) {
+    const t = translations[lang] || translations.en;
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) el.innerHTML = t[key];
+    });
+
+    const mainScreenshot = document.getElementById('main-screenshot');
+    if (mainScreenshot) {
+        let imgLang = lang;
+        if (lang === 'zh') imgLang = 'cn';
+        if (!translations[lang]) {
+             if (lang === 'uk') imgLang = 'ru';
+             else imgLang = 'en';
+        }
+        mainScreenshot.src = `images/ytdlpgui/${imgLang}.png`;
+    }
+}
+
+const savedLang = localStorage.getItem("lang");
+
+if (savedLang) {
+    applyLang(savedLang);
+} else {
+    const browserLang = navigator.language.slice(0, 2);
+    applyLang(browserLang);
+}
+</script>
+
+</body>
+</html>
