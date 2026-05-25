@@ -139,14 +139,54 @@
     <div class="panel open">
         <div class="panel-content">
             <h1 data-i18n="sys_req_title">Системные требования</h1>
-            <p data-i18n="sys_req_p1">• Для запуска программы нужна Windows 10 1809 (2018) и библиотека NET Core 8.0.<br>С февраля 2026 - установщик MakuTweaker устанавливает и библиотеку, при наличии интернета.</p>
+            <p data-i18n="sys_req_p1">• Для запуска программы нужна Windows 10 1809 (2018) и библиотека NET Core 8.0.</p>
             <p data-i18n="sys_req_p2">• Для полного функционала нужна Windows 11 22H2.</p>
         </div>
     </div>
 </div>
 
 <div class="accordion-container ru-update-only">
-    <button class="accordion">Актуальное обновление MakuTweaker 5.6 (10 мая 2026)</button>
+    <button class="accordion">Новое актуальное обновление - MakuTweaker 5.7 (25 мая 2026)</button>
+    <div class="panel">
+        <div class="panel-content">
+            <h1>Новое обновление - MakuTweaker 5.7!</h1>
+            <p>Через месяц - третья годовщина моей программы. За это время она успела получить 3 редизайна, быть переписана с нуля несколько раз, и теперь мы пришли к огромному функционалу, заменяющему многие программы.</p>
+
+            <p>Это обновление стало продолжением большой переработки страницы "Управление процессами". Теперь программа может полностью заменить диспетчер задач Windows.</p>
+
+            <p>Появился эксклюзивный режим, благодаря которому скрывается боковое меню вкладок, что создаёт полноценный фокус только на процессах. В этом режиме появляется возможность менять размеры окна, а при использовании функции "Запускать программу в эксклюзивном режиме" - позиция и размеры будут запоминаться при следующем открытии программы.<br>
+            А для того, чтобы MakuTweaker стал полной заменой Диспетчера задач Windows, в настройках появилась новая функция - Заменить диспетчер задач страницей "Управление процессами". Она перезапишет taskmgr, что позволит открывать эту вкладку по тому же сочетанию Ctrl+Shift+Escape, либо через панель задач.</p>
+
+            <h2>Управление процессами и настройки:</h2>
+            <ul>
+                <li>Появилась возможность выделять несколько процессов чтобы массово завершить их или скрыть из списка.</li>
+                <li>Страница "Исключения процессов" была переименована в "Настройки". Там появилась возможность настраивать стиль отображения процессов, выбрав дружелюбный для отображения официальных названий, системный, чтобы отображались названия процессов, и "оба варианта", чтобы их скомбинировать.</li>
+                <li>Был переработан перечень скрытых процессов для отображения. В него вошли папки Drivers/DriverStore/WinSxS и прочие системные папки. Microsoft Edge больше не скрывается.</li>
+                <li>Была исправлена светлая тема. Теперь элементы отображаются корректно и в белых цветах.<br>Настройки и "Блокировщик процессов" теперь наследуют MicaAlt тему программы.</li>
+                <li>Был исправлен баг, когда при использовании режима "Поверх всех окон" основное окно перекрывало настройки и блокировщик.</li>
+                <li>Появилась возможность написать в поиске "блокировка", чтобы сразу же открыть окно "Блокировка приложений".</li>
+            </ul>
+
+            <h2>Оптимизация интерфейса и твики:</h2>
+            <ul>
+                <li>Страница "Удаление UWP-приложений" теперь скрывается, если осталось удалить меньше 5 UWP приложений, что позволит убрать лишнюю вкладку после её применения. То же самое касается и страницы "Быстая настройка Windows". Количество галочек для скрытия увеличилось с 2 до 5.</li>
+                <li>Исправлен баг, когда галочка "Скрыть просмотр задач и виджеты" не скрывалась сразу после применения на странице быстрых настроек.</li>
+            </ul>
+
+            <h2>Страница "О программе" и интеграция:</h2>
+            <p>На страницу "О программе" была добавлена благодарность моему другу, который изначально и положил начало обновлению вкладки "Управление процессами".<br>
+            Там же появилась новая, очень полезная функция - "Добавить запуск программы в Win+R". Включив её, вы сможете открывать MakuTweaker, просто написав maku, mt или makut в окне "Выполнить".<br>
+            В добавок вы можете добавлять аргументы запуска: /s для запуска страницы "Таймер выключения", /p для "Производительность", /u для "Windows Update", и /pc для открытия "Информации о ПК".</p>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
+
+            <p>Спасибо большое тем, кто вносил вклад в MakuTweaker, отправкой своих результатов бенчмарков процессора, указанием на баги, вылеты или ошибки, а также тем, кто предлагал идеи для программы! Это были замечательные 3 года, и я рад, что моя программа разрослась в полноценный инструментарий для Windows, который рекомендуют на форумах и в интернете.</p>
+        </div>
+    </div>
+</div>
+
+<div class="accordion-container ru-update-only">
+    <button class="accordion">Обновление MakuTweaker 5.6 (10 мая 2026)</button>
     <div class="panel">
         <div class="panel-content">
             <h1>Что нового в MakuTweaker 5.6?</h1>
@@ -303,11 +343,31 @@
         </script>
 
 <h1 data-i18n="download_title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuTweaker</h1>
-<div class="buttons" style="margin-top: 0; padding-top: 0;">
-    <a href="https://www.mediafire.com/file/h5kn0rzvb2efyn5/MakuTweaker_Setup.exe/file" class="btn-primary" style="display: flex; align-items: center;">
-        <img src="icons/mediafire.png" alt="Alt" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
-        <span data-i18n="alt_variant_btn">Скачать MakuTweaker</span>
+<div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
+    <a href="https://www.mediafire.com/file/pzbfsxa55dwv849/MakuTweaker+5.7+Setup.exe/file" class="btn-primary" style="display: flex; align-items: center;">
+        <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
+        <span>MediaFire</span>
     </a>
+    <a href="https://pixeldrain.com/u/HVWwULNf" class="btn-primary" style="display: flex; align-items: center;">
+        <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
+        <span>PixelDrain</span>
+    </a>
+</div>
+
+<h1 data-i18n="portable_btn" style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 5px;">Портативная версия</h1>
+<div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
+    <a href="https://www.mediafire.com/file/2ncz5jct9ac3hjb/MakuTweaker+5.7.exe/file" class="btn-primary" style="display: flex; align-items: center;">
+        <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
+        <span>MediaFire</span>
+    </a>
+    <a href="https://pixeldrain.com/u/V5ftsNeJ" class="btn-primary" style="display: flex; align-items: center;">
+        <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
+        <span>PixelDrain</span>
+    </a>
+</div>
+
+<h1 data-i18n="other_resources_title" style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 5px;">Прочие ресурсы MakuTweaker</h1>
+<div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
     <a href="https://adderly.top/makubench" class="btn-secondary" data-i18n="bench_btn">Посмотреть результаты MakuBench</a>
 </div>
 </main>
@@ -397,11 +457,12 @@ const translations = {
         В этой программе вы можете гибко настроить и персонализировать систему, а так же управлять процессами и посмотреть подробную информацию о характеристиках вашего ПК! Также, вы можете выполнить быструю настройку Windows, управлять системными компонентами и избавиться от системного мусора! В MakuTweaker доступно несколько тем оформления, благодаря которым вы можете настроить программу на свой вкус.`,
         download_title: "Скачать MakuTweaker",
         download_btn: "Скачать MakuTweaker",
-        alt_variant_btn: "Скачать MakuTweaker",
+        alt_variant_btn: "Альтернативная ссылка",
         portable_btn: "Портативная версия",
+        other_resources_title: "Прочие ресурсы MakuTweaker",
         bench_btn: "Посмотреть результаты MakuBench",
         sys_req_title: "Системные требования",
-        sys_req_p1: "• Для запуска программы нужна Windows 10 1809 (2018) и библиотека NET Core 8.0.<br>С февраля 2026 - установщик MakuTweaker устанавливает и библиотеку, при наличии интернета.",
+        sys_req_p1: "• Для запуска программы нужна Windows 10 1809 (2018) и библиотека NET Core 8.0.",
         sys_req_p2: "• Для полного функционала нужна Windows 11 22H2."
     },
     uk: {
@@ -414,11 +475,12 @@ const translations = {
         MakuTweaker пропонує кілька тем інтерфейсу, які дозволяють налаштувати програму на ваш смак.`,
         download_title: "Завантажити MakuTweaker",
         download_btn: "Завантажити MakuTweaker",
-        alt_variant_btn: "Завантажити MakuTweaker",
+        alt_variant_btn: "Альтернативне посилання",
         portable_btn: "Портативна версія",
+        other_resources_title: "Інші ресурси MakuTweaker",
         bench_btn: "Переглянути результати MakuBench",
         sys_req_title: "Системні вимоги",
-        sys_req_p1: "• Для запуску програми потрібна Windows 10 1809 (2018) та бібліотека NET Core 8.0.<br>З лютого 2026 року інсталятор MakuTweaker встановлює і бібліотеку, за наявності інтернету.",
+        sys_req_p1: "• Для запуску програми потрібна Windows 10 1809 (2018) та бібліотека NET Core 8.0.",
         sys_req_p2: "• Для повного функціоналу потрібна Windows 11 22H2."
     },
     en: {
@@ -431,11 +493,12 @@ const translations = {
         MakuTweaker offers several interface themes that allow you to customize the program to your taste.`,
         download_title: "Download MakuTweaker",
         download_btn: "Download MakuTweaker",
-        alt_variant_btn: "Download MakuTweaker",
+        alt_variant_btn: "Alternative Link",
         portable_btn: "Portable Version",
+        other_resources_title: "Other MakuTweaker Resources",
         bench_btn: "View MakuBench Results",
         sys_req_title: "System Requirements",
-        sys_req_p1: "• To run the program, Windows 10 1809 (2018) and the NET Core 8.0 library are required.<br>Since February 2026, the MakuTweaker installer also installs the library if an internet connection is available.",
+        sys_req_p1: "• To run the program, Windows 10 1809 (2018) and the NET Core 8.0 library are required.",
         sys_req_p2: "• For full functionality, Windows 11 22H2 is required."
     },
     es: {
@@ -450,9 +513,10 @@ const translations = {
         download_btn: "Descargar MakuTweaker",
         alt_variant_btn: "Enlace alternativo",
         portable_btn: "Versión portátil",
+        other_resources_title: "Otros recursos de MakuTweaker",
         bench_btn: "Ver resultados de MakuBench",
         sys_req_title: "Requisitos del sistema",
-        sys_req_p1: "• Para ejecutar el programa se necesita Windows 10 1809 (2018) y la biblioteca NET Core 8.0.<br>Desde febrero de 2026, el instalador de MakuTweaker también instala la biblioteca si hay conexión a Internet.",
+        sys_req_p1: "• Para ejecutar el programa se necesita Windows 10 1809 (2018) y la biblioteca NET Core 8.0.",
         sys_req_p2: "• Para una funcionalidad completa se requiere Windows 11 22H2."
     },
     de: {
@@ -467,9 +531,10 @@ const translations = {
         download_btn: "MakuTweaker Herunterladen",
         alt_variant_btn: "Alternativer Link",
         portable_btn: "Portable Version",
+        other_resources_title: "Weitere MakuTweaker-Ressourcen",
         bench_btn: "MakuBench-Ergebnisse ansehen",
         sys_req_title: "Systemanforderungen",
-        sys_req_p1: "• Zum Ausführen des Programms werden Windows 10 1809 (2018) und die NET Core 8.0-Bibliothek benötigt.<br>Seit Februar 2026 installiert der MakuTweaker-Installer bei bestehender Internetverbindung auch die Bibliothek.",
+        sys_req_p1: "• Zum Ausführen des Programms werden Windows 10 1809 (2018) und die NET Core 8.0-Bibliothek benötigt.",
         sys_req_p2: "• Für den vollen Funktionsumfang ist Windows 11 22H2 erforderlich."
     },
     cs: {
@@ -484,9 +549,10 @@ const translations = {
         download_btn: "Stáhnout MakuTweaker",
         alt_variant_btn: "Alternativní odkaz",
         portable_btn: "Přenosná verze",
+        other_resources_title: "Další zdroje MakuTweaker",
         bench_btn: "Zobrazit výsledky MakuBench",
         sys_req_title: "Systémové požadavky",
-        sys_req_p1: "• Ke spuštění programu je vyžadován systém Windows 10 1809 (2018) a knihovna NET Core 8.0.<br>Od února 2026 instalátor MakuTweaker instaluje také knihovnu, pokud je k dispozici připojení k internetu.",
+        sys_req_p1: "• Ke spuštění programu je vyžadován systém Windows 10 1809 (2018) a knihovna NET Core 8.0.",
         sys_req_p2: "• Pro plnou funkčnost je vyžadován systém Windows 11 22H2."
     },
     et: {
@@ -501,9 +567,10 @@ const translations = {
         download_btn: "Laadi alla MakuTweaker",
         alt_variant_btn: "Alternatiivne link",
         portable_btn: "Kaasaskantav versioon",
+        other_resources_title: "Muud MakuTweakeri ressursid",
         bench_btn: "Vaata MakuBenchi tulemusi",
         sys_req_title: "Süsteeminõuded",
-        sys_req_p1: "• Programmi käivitamiseks on vajalik Windows 10 1809 (2018) ja NET Core 8.0 teek.<br>Alates 2026. aasta veebruarist paigaldab MakuTweakeri installer internetiühenduse olemasolul ka teegi.",
+        sys_req_p1: "• Programmi käivitamiseks on vajalik Windows 10 1809 (2018) ja NET Core 8.0 teek.",
         sys_req_p2: "• Täieliku funktsionaalsuse tagamiseks on vajalik Windows 11 22H2."
     },
     zh: {
@@ -518,9 +585,10 @@ const translations = {
         download_btn: "下载 MakuTweaker",
         alt_variant_btn: "备用链接",
         portable_btn: "便携版",
+        other_resources_title: "其他 MakuTweaker 资源",
         bench_btn: "查看 MakuBench 结果",
         sys_req_title: "系统要求",
-        sys_req_p1: "• 运行该程序需要 Windows 10 1809 (2018) 和 NET Core 8.0 库。<br>自2026年2月起，如果连接了互联网，MakuTweaker安装程序也会安装该库。",
+        sys_req_p1: "• 运行该程序需要 Windows 10 1809 (2018) 和 NET Core 8.0 库。",
         sys_req_p2: "• 要获得完整功能，需要 Windows 11 22H2。"
     },
     ja: {
@@ -535,9 +603,10 @@ const translations = {
         download_btn: "ダウンロード",
         alt_variant_btn: "代替リンク",
         portable_btn: "ポータブル版",
+        other_resources_title: "MakuTweaker のその他のリソース",
         bench_btn: "MakuBench の結果を見る",
         sys_req_title: "システム要件",
-        sys_req_p1: "• プログラムを実行するには、Windows 10 1809 (2018) と NET Core 8.0 ライブラリが必要です。<br>2026年2月以降、インターネット接続がある場合、MakuTweakerのインストーラーはライブラリもインストールします。",
+        sys_req_p1: "• プログラムを実行するには、Windows 10 1809 (2018) と NET Core 8.0 ライブラリが必要です。",
         sys_req_p2: "• すべての機能を利用するには、Windows 11 22H2 が必要です。"
     },
     tl: {
@@ -552,9 +621,10 @@ const translations = {
         download_btn: "I-download",
         alt_variant_btn: "Alternatibong link",
         portable_btn: "Portable na bersyon",
+        other_resources_title: "Iba pang Resource ng MakuTweaker",
         bench_btn: "Tingnan ang mga resulta ng MakuBench",
         sys_req_title: "Mga Kinakailangan sa Sistema",
-        sys_req_p1: "• Upang patakbuhin ang programa, kinakailangan ang Windows 10 1809 (2018) at ang NET Core 8.0 library.<br>Mula noong Pebrero 2026, ini-install din ng MakuTweaker installer ang library kung may koneksyon sa internet.",
+        sys_req_p1: "• Upang patakbuhin ang programa, kinakailangan ang Windows 10 1809 (2018) at ang NET Core 8.0 library.",
         sys_req_p2: "• Para sa buong paggana, kinakailangan ang Windows 11 22H2."
     },
     pt: {
@@ -569,9 +639,10 @@ const translations = {
         download_btn: "Baixar MakuTweaker",
         alt_variant_btn: "Link alternativo",
         portable_btn: "Versão portátil",
+        other_resources_title: "Outros recursos do MakuTweaker",
         bench_btn: "Ver resultados do MakuBench",
         sys_req_title: "Requisitos do sistema",
-        sys_req_p1: "• Para executar o programa é necessário o Windows 10 1809 (2018) e a biblioteca NET Core 8.0.<br>A partir de fevereiro de 2026, o instalador do MakuTweaker também instala a biblioteca se houver conexão com a internet.",
+        sys_req_p1: "• Para executar o programa é necessário o Windows 10 1809 (2018) e a biblioteca NET Core 8.0.",
         sys_req_p2: "• Para funcionalidade completa, é necessário o Windows 11 22H2."
     },
     fr: {
@@ -586,9 +657,10 @@ const translations = {
         download_btn: "Télécharger MakuTweaker",
         alt_variant_btn: "Lien alternatif",
         portable_btn: "Version portable",
+        other_resources_title: "Autres ressources MakuTweaker",
         bench_btn: "Voir les résultats MakuBench",
         sys_req_title: "Configuration requise",
-        sys_req_p1: "• Pour exécuter le programme, Windows 10 1809 (2018) et la bibliothèque NET Core 8.0 sont requis.<br>Depuis février 2026, l'installateur de MakuTweaker installe également la bibliothèque si une connexion Internet est disponible.",
+        sys_req_p1: "• Pour exécuter le programme, Windows 10 1809 (2018) et la bibliothèque NET Core 8.0 sont requis.",
         sys_req_p2: "• Pour une fonctionnalité complète, Windows 11 22H2 est requis."
     },
     it: {
@@ -603,9 +675,10 @@ const translations = {
         download_btn: "Scarica MakuTweaker",
         alt_variant_btn: "Link alternativo",
         portable_btn: "Versione portatile",
+        other_resources_title: "Altre risorse di MakuTweaker",
         bench_btn: "Visualizza i risultati di MakuBench",
         sys_req_title: "Requisiti di sistema",
-        sys_req_p1: "• Per eseguire il programma sono necessari Windows 10 1809 (2018) e la libreria NET Core 8.0.<br>Da febbraio 2026, il programma di installazione di MakuTweaker installa anche la libreria se è disponibile una connessione Internet.",
+        sys_req_p1: "• Per eseguire il programma sono necessari Windows 10 1809 (2018) e la libreria NET Core 8.0.",
         sys_req_p2: "• Per la piena funzionalità, è necessario Windows 11 22H2."
     },
     pl: {
@@ -620,9 +693,10 @@ const translations = {
         download_btn: "Pobierz MakuTweaker",
         alt_variant_btn: "Alternatywny link",
         portable_btn: "Wersja przenośna",
+        other_resources_title: "Inne zasoby MakuTweaker",
         bench_btn: "Zobacz wyniki MakuBench",
         sys_req_title: "Wymagania systemowe",
-        sys_req_p1: "• Do uruchomienia programu wymagany jest system Windows 10 1809 (2018) oraz biblioteka NET Core 8.0.<br>Od lutego 2026 r. instalator MakuTweaker instaluje również bibliotekę, jeśli dostępne jest połączenie z Internetem.",
+        sys_req_p1: "• Do uruchomienia programu wymagany jest system Windows 10 1809 (2018) oraz biblioteka NET Core 8.0.",
         sys_req_p2: "• Do pełnej funkcjonalności wymagany jest system Windows 11 22H2."
     },
     ko: {
@@ -637,9 +711,10 @@ const translations = {
         download_btn: "MakuTweaker 다운로드",
         alt_variant_btn: "대체 링크",
         portable_btn: "포터블 버전",
+        other_resources_title: "기타 MakuTweaker 리소스",
         bench_btn: "MakuBench 결과 보기",
         sys_req_title: "시스템 요구 사항",
-        sys_req_p1: "• 프로그램을 실행하려면 Windows 10 1809(2018) 및 NET Core 8.0 라이브러리가 필요합니다.<br>2026년 2월부터 MakuTweaker 설치 관리자는 인터넷에 연결된 경우 라이브러리도 함께 설치합니다.",
+        sys_req_p1: "• 프로그램을 실행하려면 Windows 10 1809(2018) 및 NET Core 8.0 라이브러리가 필요합니다.",
         sys_req_p2: "• 전체 기능을 사용하려면 Windows 11 22H2가 필요합니다."
     },
     vi: {
@@ -654,9 +729,10 @@ const translations = {
         download_btn: "Tải xuống MakuTweaker",
         alt_variant_btn: "Liên kết thay thế",
         portable_btn: "Phiên bản Portable",
+        other_resources_title: "Các tài nguyên khác của MakuTweaker",
         bench_btn: "Xem kết quả MakuBench",
         sys_req_title: "Yêu cầu hệ thống",
-        sys_req_p1: "• Để chạy chương trình, cần có Windows 10 1809 (2018) và thư viện NET Core 8.0.<br>Kể từ tháng 2 năm 2026, trình cài đặt MakuTweaker cũng sẽ cài đặt thư viện này nếu có kết nối internet.",
+        sys_req_p1: "• Để chạy chương trình, cần có Windows 10 1809 (2018) và thư viện NET Core 8.0.",
         sys_req_p2: "• Để có đầy đủ chức năng, cần có Windows 11 22H2."
     },
     id: {
@@ -671,9 +747,10 @@ const translations = {
         download_btn: "Unduh MakuTweaker",
         alt_variant_btn: "Tautan alternatif",
         portable_btn: "Versi Portabel",
+        other_resources_title: "Sumber daya MakuTweaker lainnya",
         bench_btn: "Lihat hasil MakuBench",
         sys_req_title: "Persyaratan Sistem",
-        sys_req_p1: "• Untuk menjalankan program, diperlukan Windows 10 1809 (2018) dan pustaka NET Core 8.0.<br>Mulai Februari 2026, penginstal MakuTweaker juga menginstal pustaka jika koneksi internet tersedia.",
+        sys_req_p1: "• Untuk menjalankan program, diperlukan Windows 10 1809 (2018) dan pustaka NET Core 8.0.",
         sys_req_p2: "• Untuk fungsionalitas penuh, diperlukan Windows 11 22H2."
     },
     hi: {
@@ -688,9 +765,10 @@ const translations = {
         download_btn: "MakuTweaker डाउनलोड करें",
         alt_variant_btn: "वैकल्पिक लिंक",
         portable_btn: "पोर्टेबल संस्करण",
+        other_resources_title: "अन्य MakuTweaker संसाधन",
         bench_btn: "MakuBench परिणाम देखें",
         sys_req_title: "सिस्टम आवश्यकताएं",
-        sys_req_p1: "• प्रोग्राम को चलाने के लिए, Windows 10 1809 (2018) और NET Core 8.0 लाइब्रेरी की आवश्यकता है।<br>फ़रवरी 2026 से, यदि इंटरनेट कनेक्शन उपलब्ध है तो MakuTweaker इंस्टॉलर लाइब्रेरी भी स्थापित करता है।",
+        sys_req_p1: "• प्रोग्राम को चलाने के लिए, Windows 10 1809 (2018) और NET Core 8.0 लाइब्रेरी की आवश्यकता है।",
         sys_req_p2: "• पूर्ण कार्यक्षमता के लिए, Windows 11 22H2 आवश्यक है।"
     },
     tr: {
@@ -705,9 +783,10 @@ const translations = {
         download_btn: "MakuTweaker İndir",
         alt_variant_btn: "Alternatif bağlantı",
         portable_btn: "Taşınabilir sürüm",
+        other_resources_title: "Diğer MakuTweaker Kaynakları",
         bench_btn: "MakuBench sonuçlarını görüntüle",
         sys_req_title: "Sistem Gereksinimleri",
-        sys_req_p1: "• Programı çalıştırmak için Windows 10 1809 (2018) ve NET Core 8.0 kitaplığı gereklidir.<br>Şubat 2026'dan itibaren MakuTweaker yükleyicisi, internet bağlantısı varsa kitaplığı da yükler.",
+        sys_req_p1: "• Programı çalıştırmak için Windows 10 1809 (2018) ve NET Core 8.0 kitaplığı gereklidir.",
         sys_req_p2: "• Tam işlevsellik için Windows 11 22H2 gereklidir."
     },
     az: {
@@ -722,9 +801,10 @@ const translations = {
         download_btn: "MakuTweaker Yüklə",
         alt_variant_btn: "Alternativ link",
         portable_btn: "Portativ versiya",
+        other_resources_title: "Digər MakuTweaker resursları",
         bench_btn: "MakuBench nəticələrinə baxın",
         sys_req_title: "Sistem tələbləri",
-        sys_req_p1: "• Proqramı işə salmaq üçün Windows 10 1809 (2018) və NET Core 8.0 kitabxanası lazımdır.<br>Fevral 2026-cı ildən etibarən MakuTweaker quraşdırıcısı internet bağlantısı mövcud olduqda kitabxananı da quraşdırır.",
+        sys_req_p1: "• Proqramı işə salmaq üçün Windows 10 1809 (2018) və NET Core 8.0 kitabxanası lazımdır.",
         sys_req_p2: "• Tam funksionallıq üçün Windows 11 22H2 tələb olunur."
     }
 };
