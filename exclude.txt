@@ -1,0 +1,85 @@
+Intel(R) Core(TM) i5-14600K
+13th Gen Intel(R) Core(TM) i7-1355U
+13th Gen Intel(R) Core(TM) i7-13620H
+Intel(R) Core(TM) Ultra 9 275HX
+Intel(R) Core(TM) Ultra 7 255H
+13th Gen Intel(R) Core(TM) i5-13450HX
+AMD Ryzen 5 7500F 6-Core Processor
+11th Gen Intel(R) Core(TM) i9-11900H
+12th Gen Intel(R) Core(TM) i5-12400F
+AMD Ryzen 7 255 w/ Radeon 780M Graphics
+11th Gen Intel(R) Core(TM) i7-11800H
+AMD Ryzen 7 8845HS w/ Radeon 780M Graphics
+AMD Ryzen 5 8400F 6-Core Processor
+12th Gen Intel(R) Core(TM) i5-12500H
+AMD Ryzen 7 7445HS w/ Radeon 740M Graphics
+AMD Ryzen 7 7800X3D 8-Core Processor
+12th Gen Intel(R) Core(TM) i7-12700H
+AMD Ryzen 7 5700X 8-Core Processor
+12th Gen Intel(R) Core(TM) i5-12450H
+AMD Ryzen 5 5600G with Radeon Graphics
+AMD Ryzen 5 5600 6-Core Processor
+AMD Ryzen 7 8745H with Radeon 780M Graphics
+Intel(R) Core(TM) i5-10200H CPU
+AMD Ryzen 5 7535HS with Radeon Graphics
+AMD Ryzen 5 5500
+AMD Ryzen 5 5600X 6-Core Processor
+AMD Ryzen 5 4500 6-Core Processor
+Intel(R) Core(TM) i5-10210U CPU
+AMD Ryzen 7 5700X3D 8-Core Processor
+AMD Ryzen 7 7435HS
+AMD Ryzen 5 5500X3D 6-Core Processor
+AMD Ryzen 5 3600 6-Core Processor
+12th Gen Intel(R) Core(TM) i5-1240P
+12th Gen Intel(R) Core(TM) i5-1235U
+Intel(R) Core(TM) i5-1035G1 CPU
+AMD Ryzen 5 6600H with Radeon Graphics
+Intel(R) Core(TM) i7-4790 CPU
+Intel(R) Core(TM) i5-8300H CPU
+AMD Ryzen 5 7430U with Radeon Graphics
+AMD Ryzen 5 3400G with Radeon Vega Graphics
+AMD Ryzen 5 5600U with Radeon Graphics
+Intel(R) Core(TM) i5-9300H CPU
+Intel(R) Core(TM) i3-4160 CPU
+Intel(R) Core(TM) i3-1005G1 CPU
+AMD Ryzen 5 2600 Six-Core Processor
+Intel(R) Core(TM) i5-4310M CPU
+Intel(R) Core(TM) i5-4570 CPU
+Intel(R) Core(TM) i5-6500 CPU
+Intel(R) Xeon(R) CPU E5-2643 v3
+Intel(R) Core(TM) i7-3770K CPU
+Intel(R) Xeon(R) CPU E5-2680 v3
+Intel(R) Core(TM) i3-10100F CPU
+AMD Ryzen 5 1500X Quad-Core Processor
+AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx
+Intel(R) Core(TM) i7-3770 CPU
+Intel(R) Core(TM) i5-5350U CPU
+13th Gen Intel(R) Core(TM) i5-13420H
+Intel(R) N150
+Intel(R) Core(TM) i3-4170 CPU
+Intel(R) Core(TM) i3-3220 CPU
+Intel(R) Pentium(R) CPU G4560
+Intel(R) Core(TM) i5-3230M CPU
+Intel(R) Xeon(R) CPU E31270
+Intel(R) Pentium(R) Silver N6000
+Intel(R) Core(TM) i5 CPU       M 560
+Intel(R) Core(TM) i3-7100U CPU
+Intel(R) Celeron(R) N5095
+Intel(R) Xeon(R) CPU E5-2660 v2
+Intel(R) Core(TM) i5-2540M CPU
+Intel(R) Core(TM) i3-3110M CPU
+AMD FX(tm)-4100 Quad-Core Processor
+Intel(R) Celeron(R) J4125 CPU
+Intel(R) Core(TM) i5-8250U CPU
+Intel(R) Core(TM) i3-2350M CPU
+Intel(R) Core(TM) i3-3217U CPU
+Intel(R) Core(TM) i7 CPU         870
+virt-10.0
+Intel(R) Core(TM) i7-7700HQ CPU
+Pentium(R) Dual-Core CPU       T4400
+Intel(R) Core(TM) i3-4005U CPU
+Intel(R) Core(TM)2 Duo CPU     T5800
+Intel(R) Pentium(R) CPU  N3710
+Intel(R) Pentium(R) CPU  N3700
+AMD E-450 APU with Radeon(tm) HD Graphics
+Snapdragon 845
