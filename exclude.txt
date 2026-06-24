@@ -275,7 +275,6 @@ AMD Athlon 3000G
 AMD Athlon X4 760K
 AMD Athlon 64 X2 5600+
 AMD Athlon 64 X2 4400+
-AMD E-450
 AMD 3020e
 AMD C-50
 Qualcomm Snapdragon 860
