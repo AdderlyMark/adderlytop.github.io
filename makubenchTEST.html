@@ -22,10 +22,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
     
     <meta property="og:title" content="Результаты MakuTweaker Benchmark">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, результати тестів, результати, бенчмарк, макутвікер, test results, results, benchmark, resultados de pruebas, resultados, testergebnisse, ergebnisse, výsledky testů, výsledky, testi tulemused, tulemused, 测试结果, 结果, 基准测试, makutweaker基准测试, 测试结果, 結果, ベンチマーク, makutweakerベンチマーク, mga resulta ng pagsubok, mga resulta">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, результати тестів, результати, бенчмарк, макутвікер, test results, results, benchmark, resultados de pruebas, resultados, testergebnisse, ergebnisse, výsledky testů, výsledky, testi tulemused, tulemused, 测试结果, 结果, 基准测试, makutweaker基准测试, テスト結果, 結果, ベンチマーク, makutweakerベンチマーク, mga resulta ng pagsubok, mga resulta">
     <meta property="og:description" content="Результаты MakuTweaker Benchmark">
     <meta name="description" content="Результаты MakuTweaker Benchmark от пользователей MakuTweaker">
-    
+    <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, результати тестів, результати, бенчмарк, макутвікер, test results, results, benchmark, resultados de pruebas, resultados, testergebnisse, ergebnisse, výsledky testů, výsledky, testi tulemused, tulemused, 测试结果, 结果, 基准测试, makutweaker基准测试, テスト結果, 結果, ベンチマーク, makutweakerベンチマーク, mga resulta ng pagsubok, mga resulta">
+
     <style>
         .lang-switcher {
             display: grid;
@@ -101,6 +102,32 @@
             transform: translateX(4px);
         }
 
+        .floating-button.active {
+            background: rgba(168, 85, 247, 0.2);
+            color: #fff;
+            border-color: rgba(168, 85, 247, 0.5);
+        }
+
+        .floating-button.overall-btn {
+            background: rgba(168, 85, 247, 0.1);
+            color: #c084fc;
+            border-color: rgba(168, 85, 247, 0.3);
+            font-weight: 600;
+        }
+
+        .floating-button.overall-btn:hover,
+        .floating-button.overall-btn.active {
+            background: rgba(168, 85, 247, 0.3);
+            color: #fff;
+            border-color: rgba(168, 85, 247, 0.7);
+        }
+
+        .panel-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 4px 0;
+        }
+
         main h2 {
             margin-top: 50px;
             margin-bottom: 20px;
@@ -152,9 +179,19 @@
         th.sorttable_sorted::after { content: " ↓"; color: #a855f7; font-size: 14px; margin-left: 5px; }
         th.sorttable_sorted_reverse::after { content: " ↑"; color: #a855f7; font-size: 14px; margin-left: 5px; }
 
-        th.name { width: 50%; }
-        th.score { width: 15%; white-space: nowrap; text-align: center; }
-        td.score { text-align: center; }
+        th.name {
+        width: 50%;
+        }
+
+        th.score {
+            width: 15%;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        td.score {
+            text-align: center;
+        }
 
         .search-container { margin: 30px 0; text-align: center; }
         #cpu-search {
@@ -197,14 +234,37 @@
         .similar-cpu-results h3 { margin-top: 0; color: #fff; font-size: 1.2rem; }
         .match-text { color: #a855f7; font-weight: 700; }
 
-        #similar-cpu-results th.name { width: 30%; }
-        #similar-cpu-results th:last-child, #similar-cpu-results td:last-child { width: 15%; line-height: 1.4; }
+        #similar-cpu-results th.name {
+            width: 30%;
+        }
 
-        table { counter-reset: rowRank; }
-        tbody tr { counter-increment: rowRank; }
+        #similar-cpu-results th:last-child, 
+        #similar-cpu-results td:last-child {
+            width: 15%;
+            line-height: 1.4;
+        }
 
-        th.name, td.name { position: relative; padding-left: 70px; }
-        th.name::before { content: "#"; position: absolute; left: 20px; color: #fff; font-weight: 800; }
+        table {
+            counter-reset: rowRank;
+        }
+
+        tbody tr {
+            counter-increment: rowRank;
+        }
+
+        th.name, td.name {
+            position: relative;
+            padding-left: 70px;
+        }
+
+        th.name::before {
+            content: "#";
+            position: absolute;
+            left: 20px;
+            color: #fff;
+            font-weight: 800;
+        }
+
         td.name::before {
             content: counter(rowRank);
             position: absolute;
@@ -215,6 +275,27 @@
             opacity: 0.7;
         }
 
+        /* Overall rating section */
+        #overall-section {
+            display: none;
+        }
+
+        #overall-section h2 {
+            background: linear-gradient(135deg, #a855f7, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Category badge in overall table */
+        .cpu-category-badge {
+            font-size: 0.7rem;
+            color: #a855f7;
+            opacity: 0.8;
+            display: block;
+            margin-top: 2px;
+        }
+
         @media (max-width: 1250px) {
             .floating-panel { left: 10px; width: 140px; padding: 12px; }
             .panel-header { width: 100%; border-bottom: none; margin-bottom: 5px; padding-bottom: 0; }
@@ -222,21 +303,51 @@
             .floating-button:hover { transform: translateY(-2px); }
         }
 
+
         @media (max-width: 1100px) {
             .lang-switcher { display: none; }
             .floating-panel { display: none !important; }
-            .lang-switcher button { font-size: 0.6rem; padding: 2px 4px; }
+            .lang-switcher button {
+                font-size: 0.6rem;
+                padding: 2px 4px;
+            }
         }
-        
         @media (max-width: 650px) {
-            table { min-width: 100%; }
-            th, td { padding: 10px 8px; font-size: 0.85rem; }
-            th.score { font-size: 0.7rem; white-space: normal; }
-            th.sorttable_sorted::after, th.sorttable_sorted_reverse::after { display: none; }
-            main h2 { font-size: 1.4rem; margin-top: 30px; }
-            #cpu-search { font-size: 0.9rem; padding: 12px 15px; }
-            th.name, td.name { padding-left: 30px; }
-            th.name::before, td.name::before { left: 8px; }
+            table {
+                min-width: 100%;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.85rem;
+            }
+            
+            th.score {
+                font-size: 0.7rem;
+                white-space: normal;
+            }
+
+            th.sorttable_sorted::after, 
+            th.sorttable_sorted_reverse::after {
+                display: none;
+            }
+
+            main h2 {
+                font-size: 1.4rem;
+                margin-top: 30px;
+            }
+
+            #cpu-search {
+                font-size: 0.9rem;
+                padding: 12px 15px;
+            }
+
+            th.name, td.name {
+                padding-left: 30px;
+            }
+            th.name::before, td.name::before {
+                left: 8px;
+            }
         }
     </style>
 </head>
@@ -244,15 +355,15 @@
 <body>
     <div class="floating-panel">
         <div class="panel-header" data-i18n="cat_title">Категории</div>
-        <button class="floating-button" onclick="switchView('all')" data-i18n="cat_all">Общий рейтинг</button>
-        <button class="floating-button" onclick="switchView('desktop_intel')" data-i18n="cat_desk_intel">Настольные Intel Core</button>
-        <button class="floating-button" onclick="switchView('desktop_amd')" data-i18n="cat_desk_amd">Настольные AMD Ryzen</button>
-        <button class="floating-button" onclick="switchView('laptop_intel')" data-i18n="cat_lap_intel">Ноутбучные Intel Core</button>
-        <button class="floating-button" onclick="switchView('laptop_amd')" data-i18n="cat_lap_amd">Ноутбучные AMD Ryzen</button>
-        <button class="floating-button" onclick="switchView('other_intel')" data-i18n="cat_other_intel">Прочие Intel</button>
-        <button class="floating-button" onclick="switchView('xeon_intel')" data-i18n="cat_xeon">Intel Xeon</button>
-        <button class="floating-button" onclick="switchView('other_amd')" data-i18n="cat_other_amd">Прочие AMD</button>
-        <button class="floating-button" onclick="switchView('arm_cpu')" data-i18n="cat_arm">ARM процессоры</button>
+        <button class="floating-button overall-btn" id="btn-overall" onclick="showOverall()" data-i18n="cat_overall">Общий рейтинг</button>
+        <div class="panel-divider"></div>
+        <button class="floating-button" onclick="scrollToCategory('desktop_intel')" data-i18n="cat_desk_intel">Настольные Intel Core</button>
+        <button class="floating-button" onclick="scrollToCategory('desktop_amd')" data-i18n="cat_desk_amd">Настольные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToCategory('laptop_intel')" data-i18n="cat_lap_intel">Ноутбучные Intel Core</button>
+        <button class="floating-button" onclick="scrollToCategory('laptop_amd')" data-i18n="cat_lap_amd">Ноутбучные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToCategory('other_intel')" data-i18n="cat_other_intel">Прочие Intel</button>
+        <button class="floating-button" onclick="scrollToCategory('xeon_intel')" data-i18n="cat_xeon">Intel Xeon</button>
+        <button class="floating-button" onclick="scrollToCategory('other_amd')" data-i18n="cat_other_amd">Прочие AMD</button>
     </div>
 
 <header>
@@ -260,7 +371,7 @@
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
 
-    <div class="lang-switcher">
+<div class="lang-switcher">
         <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
         <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
         <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
@@ -301,10 +412,11 @@
         </table>
     </div>
 
-    <div id="view_all">
-        <h2 id="all_cpus" data-i18n="h2_all">Общий рейтинг процессоров</h2>
+    <!-- Overall rating section -->
+    <div id="overall-section">
+        <h2 id="overall_rating" data-i18n="h2_overall">Общий рейтинг процессоров</h2>
         <div class="table-container">
-            <table class="sortable">
+            <table class="sortable" id="overall-table">
                 <thead>
                     <tr>
                         <th class="name" data-i18n="th_cpu">Процессор</th>
@@ -312,12 +424,13 @@
                         <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody id="overall-tbody"></tbody>
             </table>
         </div>
     </div>
 
-    <div id="view_categorized" style="display: none;">
+    <!-- Category sections -->
+    <div id="categories-section">
         <h2 id="desktop_intel" data-i18n="h2_desk_intel">Настольные Intel Core процессоры</h2>
         <div class="table-container">
             <table class="sortable">
@@ -454,453 +567,209 @@
 </footer>
 
 <script src="burger.js"></script>
+<script src="sorttable.js"></script>
 
 <script>
-    let allCpus = [];
+    // ── Global benchmark data ──────────────────────────────────────────────
+    let allBenchmarkData = {};   // { categoryId: [{name, single, multi}, ...] }
+    let isOverallMode = false;
 
-    function switchView(targetId) {
-        const viewAll = document.getElementById('view_all');
-        const viewCat = document.getElementById('view_categorized');
+    // ── Scroll helpers ─────────────────────────────────────────────────────
+    function smoothScrollTo(el) {
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
 
-        if (targetId === 'all') {
-            viewAll.style.display = 'block';
-            viewCat.style.display = 'none';
-            const el = document.getElementById('all_cpus');
-            if(el) {
-                const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
-                window.scrollTo({top: y, behavior: 'smooth'});
-            }
+    // ── Category navigation ────────────────────────────────────────────────
+    // Called when user clicks a category button from the panel
+    function scrollToCategory(id) {
+        if (isOverallMode) {
+            // Exit overall mode first, then scroll
+            hideOverall(function() {
+                const el = document.getElementById(id);
+                if (el) smoothScrollTo(el);
+            });
         } else {
-            viewAll.style.display = 'none';
-            viewCat.style.display = 'block';
-            
-            setTimeout(() => {
-                const el = document.getElementById(targetId);
-                if(el) {
-                    const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
-                    window.scrollTo({top: y, behavior: 'smooth'});
-                }
-            }, 20);
+            const el = document.getElementById(id);
+            if (el) smoothScrollTo(el);
         }
     }
 
+    // Legacy alias used in old markup (kept for safety)
+    function scrollToSection(id) {
+        scrollToCategory(id);
+    }
+
+    // ── Overall rating mode ────────────────────────────────────────────────
+    function showOverall() {
+        if (isOverallMode) return;
+        isOverallMode = true;
+
+        // Build combined sorted table (by multi desc)
+        const allCpus = [];
+        for (const [catId, cpus] of Object.entries(allBenchmarkData)) {
+            cpus.forEach(cpu => allCpus.push({ ...cpu, _cat: catId }));
+        }
+        allCpus.sort((a, b) => b.multi - a.multi);
+
+        const tbody = document.getElementById('overall-tbody');
+        tbody.innerHTML = allCpus.map(cpu =>
+            `<tr>
+                <td class="name">${cpu.name}</td>
+                <td class="score sorttable_numeric">${cpu.single}</td>
+                <td class="score sorttable_numeric">${cpu.multi}</td>
+            </tr>`
+        ).join('');
+
+        // Re-init sorttable for the overall table
+        if (window.sorttable) sorttable.makeSortable(document.getElementById('overall-table'));
+
+        // Show overall, hide categories
+        document.getElementById('overall-section').style.display = 'block';
+        document.getElementById('categories-section').style.display = 'none';
+
+        // Mark button active
+        document.getElementById('btn-overall').classList.add('active');
+
+        // Scroll to overall heading
+        const heading = document.getElementById('overall_rating');
+        smoothScrollTo(heading);
+    }
+
+    function hideOverall(callback) {
+        isOverallMode = false;
+        document.getElementById('overall-section').style.display = 'none';
+        document.getElementById('categories-section').style.display = 'block';
+        document.getElementById('btn-overall').classList.remove('active');
+        // Give DOM a frame to render before scrolling
+        requestAnimationFrame(function() {
+            requestAnimationFrame(function() {
+                if (callback) callback();
+            });
+        });
+    }
+
+    // ── Load benchmark data ────────────────────────────────────────────────
     fetch('benchmarks.json')
         .then(response => response.json())
         .then(data => {
-            let allCpusHtml = '';
-            
+            allBenchmarkData = data;
+
             for (const [categoryId, cpus] of Object.entries(data)) {
                 const header = document.getElementById(categoryId);
                 if (header) {
-                    const tbody = header.nextElementSibling.querySelector('tbody');
-                    if (tbody) {
-                        let html = '';
-                        cpus.forEach(cpu => {
-                            html += `<tr><td class="name">${cpu.name}</td><td class="score sorttable_numeric">${cpu.single}</td><td class="score sorttable_numeric">${cpu.multi}</td></tr>`;
-                            allCpus.push({ name: cpu.name, single: cpu.single, multi: cpu.multi });
-                        });
-                        tbody.innerHTML = html;
+                    const tbody = header.closest
+                        ? header.parentElement.querySelector('#' + categoryId + ' ~ .table-container tbody')
+                        : null;
+
+                    // nextElementSibling of h2 is the .table-container
+                    const container = header.nextElementSibling;
+                    if (container) {
+                        const tb = container.querySelector('tbody');
+                        if (tb) {
+                            tb.innerHTML = cpus.map(cpu =>
+                                `<tr><td class="name">${cpu.name}</td><td class="score sorttable_numeric">${cpu.single}</td><td class="score sorttable_numeric">${cpu.multi}</td></tr>`
+                            ).join('');
+                        }
                     }
                 }
             }
 
-            allCpus.sort((a, b) => b.multi - a.multi);
-            
-            allCpus.forEach(cpu => {
-                allCpusHtml += `<tr><td class="name">${cpu.name}</td><td class="score sorttable_numeric">${cpu.single}</td><td class="score sorttable_numeric">${cpu.multi}</td></tr>`;
-            });
-
-            const allTbody = document.querySelector('#view_all tbody');
-            if (allTbody) {
-                allTbody.innerHTML = allCpusHtml;
-            }
-
+            // Sort each category table by multi-core descending
             setTimeout(() => {
-                document.querySelectorAll('.sortable').forEach(table => {
-                    if (typeof sorttable !== 'undefined' && sorttable.makeSortable) {
-                        sorttable.makeSortable(table);
-                    }
+                document.querySelectorAll('#categories-section .sortable').forEach(table => {
                     const multiHeader = table.querySelector('thead tr th:nth-child(3)');
-                    if (multiHeader && sorttable.innerSortFunction) {
+                    if (multiHeader && window.sorttable && sorttable.innerSortFunction) {
                         sorttable.innerSortFunction.apply(multiHeader, []);
-                        sorttable.innerSortFunction.apply(multiHeader, []); 
+                        sorttable.innerSortFunction.apply(multiHeader, []);
                         multiHeader.classList.remove('sorttable_sorted');
                         multiHeader.classList.add('sorttable_sorted_reverse');
                     }
                 });
-            }, 50); 
+            }, 50);
         })
         .catch(error => console.error("Ошибка при загрузке бенчмарков:", error));
 
+    // ── Search ─────────────────────────────────────────────────────────────
     const searchInput = document.getElementById('cpu-search');
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            searchCpu(e.target.value.trim());
-        });
-    }
+    const searchResults = document.getElementById('similar-cpu-results');
+    const searchTbody = document.getElementById('similar-cpu-tbody');
 
-    const searchCpu = (query) => {
-        const resultsDiv = document.getElementById('similar-cpu-results');
-        const resultsTableBody = document.getElementById('similar-cpu-tbody');
-        resultsTableBody.innerHTML = ''; 
-        resultsDiv.style.display = 'none';
+    searchInput.addEventListener('input', function() {
+        const raw = this.value.trim();
 
-        if (query.length < 1) { return; }
-        
-        const isGlobalSearch = query.startsWith('/');
-        let cleanQuery = query;
-
-        if (isGlobalSearch) { cleanQuery = query.substring(1).trim(); }
-        if (cleanQuery.length < 1) { return; }
-        const lowerCleanQuery = cleanQuery.toLowerCase().replace(/-/g, '');
-
-        let foundCpus = [];
-        let matchedCpu = null;
-
-        if (isGlobalSearch) {
-            foundCpus = allCpus.filter(cpu => 
-                cpu.name.toLowerCase().replace(/-/g, '').includes(lowerCleanQuery)
-            ).sort((a, b) => b.multi - a.multi);
-        } else {
-            matchedCpu = allCpus.find(cpu => cpu.name.toLowerCase().replace(/-/g, '').includes(lowerCleanQuery));
-
-            if (!matchedCpu) {
-                resultsDiv.style.display = 'block';
-                const errorRow = document.createElement('tr');
-                const errorCell = document.createElement('td');
-                errorCell.setAttribute('colspan', '4');
-                errorCell.textContent = `Процессор "${query}" не найден в базе.`; 
-                errorRow.appendChild(errorCell);
-                resultsTableBody.appendChild(errorRow);
-                return;
-            }
-            
-            const singleTolerance = matchedCpu.single * 0.10;
-            const multiTolerance = matchedCpu.multi * 0.10;
-
-            const similarCpus = allCpus
-                .filter(cpu => cpu.name !== matchedCpu.name)
-                .filter(cpu => {
-                    const isSimilarSingle = Math.abs(cpu.single - matchedCpu.single) <= singleTolerance;
-                    const isSimilarMulti = Math.abs(cpu.multi - matchedCpu.multi) <= multiTolerance;
-                    return isSimilarSingle && isSimilarMulti;
-                })
-                .sort((a, b) => {
-                    const diffA = Math.abs(a.single - matchedCpu.single) + Math.abs(a.multi - matchedCpu.multi);
-                    const diffB = Math.abs(b.single - matchedCpu.single) + Math.abs(b.multi - matchedCpu.multi);
-                    return diffA - diffB;
-                })
-                .slice(0, 10);
-                
-            foundCpus.push(matchedCpu);
-            foundCpus.push(...similarCpus);
-        }
-        
-        if (foundCpus.length === 0) {
-            resultsDiv.style.display = 'block';
-            const notFoundRow = document.createElement('tr');
-            const notFoundCell = document.createElement('td');
-            notFoundCell.setAttribute('colspan', '4');
-            notFoundCell.textContent = `По вашему запросу "${query}" ничего не найдено.`;
-            notFoundRow.appendChild(notFoundCell);
-            resultsTableBody.appendChild(notFoundRow);
+        if (!raw) {
+            searchResults.style.display = 'none';
+            searchTbody.innerHTML = '';
             return;
         }
-        
-        resultsDiv.style.display = 'block';
-        const titleElement = document.querySelector('.similar-cpu-results h3');
-        if (isGlobalSearch) {
-            titleElement.textContent = `Результаты глобального поиска по "${cleanQuery}" (отсортировано по Многопоточному):`;
-        } else {
-            titleElement.textContent = `Результат поиска и похожие процессоры (~10% по обоим показателям):`;
+
+        // "/" prefix = global search (all categories); otherwise search current view
+        const isGlobal = raw.startsWith('/');
+        const query = isGlobal ? raw.slice(1).trim() : raw;
+
+        if (!query) {
+            searchResults.style.display = 'none';
+            searchTbody.innerHTML = '';
+            return;
         }
 
-        foundCpus.forEach((cpu, index) => {
-            let comment = '';
-            let matchClass = '';
+        const queryLower = query.toLowerCase();
 
-            if (!isGlobalSearch) {
-                if (index === 0) {
-                    comment = '(Найденный процессор)';
-                    matchClass = 'match-text';
-                } else {
-                    comment = '~10% по обоим показателям';
-                }
-            } else {
-                comment = 'Глоб. Поиск';
-            }
-
-            const row = document.createElement('tr');
-            
-            const nameCell = document.createElement('td');
-            nameCell.classList.add('name');
-            if (matchClass) nameCell.classList.add(matchClass);
-            nameCell.textContent = cpu.name;
-            row.appendChild(nameCell);
-
-            const singleCell = document.createElement('td');
-            singleCell.classList.add('score', 'sorttable_numeric');
-            if (matchClass) singleCell.classList.add(matchClass);
-            singleCell.textContent = cpu.single;
-            row.appendChild(singleCell);
-
-            const multiCell = document.createElement('td');
-            multiCell.classList.add('score', 'sorttable_numeric');
-            if (matchClass) multiCell.classList.add(matchClass);
-            multiCell.textContent = cpu.multi;
-            row.appendChild(multiCell);
-
-            const commentCell = document.createElement('td');
-            commentCell.style.color = matchClass ? '#ff9800' : 'inherit';
-            commentCell.textContent = comment;
-            row.appendChild(commentCell);
-
-            resultsTableBody.appendChild(row);
-        });
-        
-        if (typeof sorttable !== 'undefined' && sorttable.makeSortable) {
-            const searchTable = resultsDiv.querySelector('table');
-            if (searchTable) {
-                searchTable.classList.remove('sortable'); 
-                searchTable.classList.add('sortable');
-                sorttable.makeSortable(searchTable);
-
-                const multiThreadHeader = searchTable.querySelector('thead tr th:nth-child(3)');
-                if (multiThreadHeader && sorttable.innerSortFunction) {
-                    sorttable.innerSortFunction.apply(multiThreadHeader, []);
-                    sorttable.innerSortFunction.apply(multiThreadHeader, []);
-                    multiThreadHeader.classList.remove('sorttable_sorted');
-                    multiThreadHeader.classList.add('sorttable_sorted_reverse');
-                }
-            }
+        // Collect all CPUs from allBenchmarkData
+        const allCpus = [];
+        for (const [catId, cpus] of Object.entries(allBenchmarkData)) {
+            cpus.forEach(cpu => allCpus.push({ ...cpu, _cat: catId }));
         }
-    };
-    
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if(header) {
-            header.classList.toggle('scrolled', window.pageYOffset > 50);
+
+        // Score matches: exact substring = higher priority
+        const matches = allCpus
+            .map(cpu => {
+                const nameLower = cpu.name.toLowerCase();
+                let score = 0;
+                if (nameLower === queryLower) score = 3;
+                else if (nameLower.includes(queryLower)) score = 2;
+                else if (queryLower.split(' ').every(w => nameLower.includes(w))) score = 1;
+                return { ...cpu, _score: score };
+            })
+            .filter(cpu => cpu._score > 0)
+            .sort((a, b) => b._score - a._score || b.multi - a.multi);
+
+        if (matches.length === 0) {
+            searchTbody.innerHTML = `<tr><td colspan="4" style="text-align:center;color:var(--text-muted);padding:20px;">Ничего не найдено</td></tr>`;
+            searchResults.style.display = 'block';
+            return;
         }
+
+        searchTbody.innerHTML = matches.map(cpu => {
+            const highlighted = cpu.name.replace(
+                new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'),
+                '<span class="match-text">$1</span>'
+            );
+            return `<tr>
+                <td class="name">${highlighted}</td>
+                <td class="score">${cpu.single}</td>
+                <td class="score">${cpu.multi}</td>
+                <td style="color:var(--text-muted);font-size:0.85rem;">${getCategoryLabel(cpu._cat)}</td>
+            </tr>`;
+        }).join('');
+
+        searchResults.style.display = 'block';
     });
-</script>
 
-<script>
-// Встроенная чистая библиотека SortTable
-var stIsIE = false;
-sorttable = {
-  init: function() {
-    if (arguments.callee.done) return;
-    arguments.callee.done = true;
-    if (_timer) clearInterval(_timer);
-    if (!document.createElement || !document.getElementsByTagName) return;
-    sorttable.DATE_RE = /^(\d\d?)[\/\.-](\d\d?)[\/\.-]((\d\d)?\d\d)$/;
-    forEach(document.getElementsByTagName('table'), function(table) {
-      if (table.className.search(/\bsortable\b/) != -1) {
-        sorttable.makeSortable(table);
-      }
-    });
-  },
-  makeSortable: function(table) {
-    if (table.getElementsByTagName('thead').length == 0) {
-      the = document.createElement('thead');
-      the.appendChild(table.rows[0]);
-      table.insertBefore(the,table.firstChild);
+    function getCategoryLabel(catId) {
+        const labels = {
+            desktop_intel: 'Desktop Intel',
+            desktop_amd: 'Desktop AMD',
+            laptop_intel: 'Laptop Intel',
+            laptop_amd: 'Laptop AMD',
+            other_intel: 'Other Intel',
+            xeon_intel: 'Xeon',
+            other_amd: 'Other AMD',
+            arm_cpu: 'ARM'
+        };
+        return labels[catId] || catId;
     }
-    if (table.tHead == null) table.tHead = table.getElementsByTagName('thead')[0];
-    if (table.tHead.rows.length != 1) return;
-    
-    sortbottomrows = [];
-    for (var i=0; i<table.rows.length; i++) {
-      if (table.rows[i].className.search(/\bsortbottom\b/) != -1) {
-        sortbottomrows[sortbottomrows.length] = table.rows[i];
-      }
-    }
-    if (sortbottomrows.length > 0) {
-      if (table.tFoot == null) {
-        tfo = document.createElement('tfoot');
-        table.appendChild(tfo);
-      }
-      for (var i=0; i<sortbottomrows.length; i++) {
-        tfo.appendChild(sortbottomrows[i]);
-      }
-      delete sortbottomrows;
-    }
-    
-    headrow = table.tHead.rows[0].cells;
-    for (var i=0; i<headrow.length; i++) {
-      if (!headrow[i].className.match(/\bsorttable_nosort\b/)) {
-        mtch = headrow[i].className.match(/\bsorttable_([a-z0-9]+)\b/);
-        if (mtch) { override = mtch[1]; }
-        if (mtch && typeof sorttable["sort_"+override] == 'function') {
-          headrow[i].sorttable_sortfunction = sorttable["sort_"+override];
-        } else {
-          headrow[i].sorttable_sortfunction = sorttable.guessType(table,i);
-        }
-        headrow[i].sorttable_columnindex = i;
-        headrow[i].sorttable_tbody = table.tBodies[0];
-        dean_addEvent(headrow[i],"click", sorttable.innerSortFunction = function(e) {
-          if (this.className.search(/\bsorttable_sorted\b/) != -1) {
-            sorttable.reverse(this.sorttable_tbody);
-            this.className = this.className.replace('sorttable_sorted','sorttable_sorted_reverse');
-            this.removeChild(document.getElementById('sorttable_sortfwdind'));
-            sortrevind = document.createElement('span');
-            sortrevind.id = "sorttable_sortrevind";
-            sortrevind.innerHTML = '&nbsp;&#x25B4;';
-            this.appendChild(sortrevind);
-            return;
-          }
-          if (this.className.search(/\bsorttable_sorted_reverse\b/) != -1) {
-            sorttable.reverse(this.sorttable_tbody);
-            this.className = this.className.replace('sorttable_sorted_reverse','sorttable_sorted');
-            this.removeChild(document.getElementById('sorttable_sortrevind'));
-            sortfwdind = document.createElement('span');
-            sortfwdind.id = "sorttable_sortfwdind";
-            sortfwdind.innerHTML = '&nbsp;&#x25BE;';
-            this.appendChild(sortfwdind);
-            return;
-          }
-          theadrow = this.parentNode;
-          forEach(theadrow.childNodes, function(cell) {
-            if (cell.nodeType == 1) {
-              cell.className = cell.className.replace('sorttable_sorted_reverse','');
-              cell.className = cell.className.replace('sorttable_sorted','');
-            }
-          });
-          sortfwdind = document.getElementById('sorttable_sortfwdind');
-          if (sortfwdind) { sortfwdind.parentNode.removeChild(sortfwdind); }
-          sortrevind = document.getElementById('sorttable_sortrevind');
-          if (sortrevind) { sortrevind.parentNode.removeChild(sortrevind); }
-
-          this.className += ' sorttable_sorted';
-          sortfwdind = document.createElement('span');
-          sortfwdind.id = "sorttable_sortfwdind";
-          sortfwdind.innerHTML = '&nbsp;&#x25BE;';
-          this.appendChild(sortfwdind);
-
-          row_array = [];
-          col = this.sorttable_columnindex;
-          rows = this.sorttable_tbody.rows;
-          for (var j=0; j<rows.length; j++) {
-            row_array[row_array.length] = [sorttable.getInnerText(rows[j].cells[col]), rows[j]];
-          }
-          row_array.sort(this.sorttable_sortfunction);
-          tb = this.sorttable_tbody;
-          for (var j=0; j<row_array.length; j++) {
-            tb.appendChild(row_array[j][1]);
-          }
-          delete row_array;
-        });
-      }
-    }
-  },
-  guessType: function(table, column) {
-    sortfn = sorttable.sort_alpha;
-    for (var i=0; i<table.tBodies[0].rows.length; i++) {
-      text = sorttable.getInnerText(table.tBodies[0].rows[i].cells[column]);
-      if (text != '') {
-        if (text.match(/^-?[\d,.]+%?$/)) {
-          return sorttable.sort_numeric;
-        }
-        possdate = text.match(sorttable.DATE_RE)
-        if (possdate) {
-          first = parseInt(possdate[1]);
-          second = parseInt(possdate[2]);
-          if (first > 12) { return sorttable.sort_ddmm; } 
-          else if (second > 12) { return sorttable.sort_mmdd; } 
-          else { sortfn = sorttable.sort_ddmm; }
-        }
-      }
-    }
-    return sortfn;
-  },
-  getInnerText: function(node) {
-    if (!node) return "";
-    hasInputs = (typeof node.getElementsByTagName == 'function') && node.getElementsByTagName('input').length;
-    if (node.getAttribute("sorttable_customkey") != null) { return node.getAttribute("sorttable_customkey"); }
-    else if (typeof node.textContent != 'undefined' && !hasInputs) { return node.textContent.replace(/^\s+|\s+$/g, ''); }
-    else if (typeof node.innerText != 'undefined' && !hasInputs) { return node.innerText.replace(/^\s+|\s+$/g, ''); }
-    else if (typeof node.text != 'undefined' && !hasInputs) { return node.text.replace(/^\s+|\s+$/g, ''); }
-    else {
-      switch (node.nodeType) {
-        case 3: if (node.nodeName.toLowerCase() == 'input') { return node.value.replace(/^\s+|\s+$/g, ''); }
-        case 4: return node.nodeValue.replace(/^\s+|\s+$/g, ''); break;
-        case 1:
-        case 11:
-          var innerText = '';
-          for (var i = 0; i < node.childNodes.length; i++) { innerText += sorttable.getInnerText(node.childNodes[i]); }
-          return innerText.replace(/^\s+|\s+$/g, ''); break;
-        default: return '';
-      }
-    }
-  },
-  reverse: function(tbody) {
-    newrows = [];
-    for (var i=0; i<tbody.rows.length; i++) { newrows[newrows.length] = tbody.rows[i]; }
-    for (var i=newrows.length-1; i>=0; i--) { tbody.appendChild(newrows[i]); }
-    delete newrows;
-  },
-  sort_numeric: function(a,b) {
-    aa = parseFloat(a[0].replace(/[^0-9.-]/g,'')); if (isNaN(aa)) aa = 0;
-    bb = parseFloat(b[0].replace(/[^0-9.-]/g,'')); if (isNaN(bb)) bb = 0;
-    return aa-bb;
-  },
-  sort_alpha: function(a,b) { if (a[0]==b[0]) return 0; if (a[0]<b[0]) return -1; return 1; }
-};
-
-function dean_addEvent(element, type, handler) {
-  if (element.addEventListener) { element.addEventListener(type, handler, false); } 
-  else {
-    if (!handler.$$guid) handler.$$guid = dean_addEvent.guid++;
-    if (!element.events) element.events = {};
-    var handlers = element.events[type];
-    if (!handlers) {
-      handlers = element.events[type] = {};
-      if (element["on" + type]) { handlers[0] = element["on" + type]; }
-    }
-    handlers[handler.$$guid] = handler;
-    element["on" + type] = handleEvent;
-  }
-};
-dean_addEvent.guid = 1;
-
-function handleEvent(event) {
-  var returnValue = true;
-  event = event || fixEvent(((this.ownerDocument || this.document || this).parentWindow || window).event);
-  var handlers = this.events[event.type];
-  for (var i in handlers) {
-    this.$$handleEvent = handlers[i];
-    if (this.$$handleEvent(event) === false) { returnValue = false; }
-  }
-  return returnValue;
-};
-function fixEvent(event) { event.preventDefault = fixEvent.preventDefault; event.stopPropagation = fixEvent.stopPropagation; return event; };
-fixEvent.preventDefault = function() { this.returnValue = false; };
-fixEvent.stopPropagation = function() { this.cancelBubble = true; };
-
-if (!Array.forEach) {
-  Array.forEach = function(array, block, context) {
-    for (var i = 0; i < array.length; i++) { block.call(context, array[i], i, array); }
-  };
-}
-Function.prototype.forEach = function(object, block, context) {
-  for (var key in object) { if (typeof this.prototype[key] == "undefined") { block.call(context, object[key], key, object); } }
-};
-String.forEach = function(string, block, context) {
-  Array.forEach(string.split(""), function(chr, index) { block.call(context, chr, index, string); });
-};
-var forEach = function(object, block, context) {
-  if (object) {
-    var resolve = Object;
-    if (object instanceof Function) { resolve = Function; } 
-    else if (object.forEach instanceof Function) { object.forEach(block, context); return; } 
-    else if (typeof object == "string") { resolve = String; } 
-    else if (typeof object.length == "number") { resolve = Array; }
-    resolve.forEach(object, block, context);
-  }
-};
-
-if (document.addEventListener) { document.addEventListener("DOMContentLoaded", sorttable.init, false); }
-window.onload = sorttable.init;
 </script>
 
 <script>
@@ -910,7 +779,7 @@ const translations = {
         nav_builds: "Сборки",
         nav_support: "Поддержать",
         cat_title: "Категории",
-        cat_all: "Общий рейтинг",
+        cat_overall: "⭐ Общий рейтинг",
         cat_desk_intel: "Настольные Intel Core",
         cat_desk_amd: "Настольные AMD Ryzen",
         cat_lap_intel: "Ноутбучные Intel Core",
@@ -918,7 +787,6 @@ const translations = {
         cat_other_intel: "Прочие Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "Прочие AMD",
-        cat_arm: "ARM процессоры",
         h1_main: "Результаты MakuTweaker Benchmark",
         search_placeholder: "Введите название процессора (например, 13700KF)",
         search_hint: "Добавьте в начале \"/\" чтобы сделать глобальный поиск.",
@@ -927,7 +795,7 @@ const translations = {
         th_single: "Одноядерный",
         th_multi: "Многопоточный",
         th_comment: "Комментарий",
-        h2_all: "Общий рейтинг процессоров",
+        h2_overall: "Общий рейтинг процессоров",
         h2_desk_intel: "Настольные Intel Core процессоры",
         h2_desk_amd: "Настольные AMD Ryzen процессоры",
         h2_lap_intel: "Ноутбучные Intel Core процессоры",
@@ -944,7 +812,7 @@ const translations = {
         nav_builds: "Bootlegs",
         nav_support: "Support",
         cat_title: "Categories",
-        cat_all: "Overall Rating",
+        cat_overall: "⭐ Overall Ranking",
         cat_desk_intel: "Desktop Intel Core",
         cat_desk_amd: "Desktop AMD Ryzen",
         cat_lap_intel: "Laptop Intel Core",
@@ -952,7 +820,6 @@ const translations = {
         cat_other_intel: "Other Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "Other AMD",
-        cat_arm: "ARM Processors",
         h1_main: "MakuTweaker Benchmark Results",
         search_placeholder: "Enter processor name (e.g., 13700KF)",
         search_hint: "Add \"/\" at the beginning for a global search.",
@@ -961,7 +828,7 @@ const translations = {
         th_single: "Single-core",
         th_multi: "Multi-core",
         th_comment: "Comment",
-        h2_all: "Overall Processor Rating",
+        h2_overall: "Overall Processor Ranking",
         h2_desk_intel: "Desktop Intel Core Processors",
         h2_desk_amd: "Desktop AMD Ryzen Processors",
         h2_lap_intel: "Laptop Intel Core Processors",
@@ -978,7 +845,7 @@ const translations = {
         nav_builds: "Збірки",
         nav_support: "Підтримати",
         cat_title: "Категорії",
-        cat_all: "Загальний рейтинг",
+        cat_overall: "⭐ Загальний рейтинг",
         cat_desk_intel: "Настільні Intel Core",
         cat_desk_amd: "Настільні AMD Ryzen",
         cat_lap_intel: "Ноутбучні Intel Core",
@@ -986,16 +853,15 @@ const translations = {
         cat_other_intel: "Інші Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "Інші AMD",
-        cat_arm: "Процесори ARM",
         h1_main: "Результати MakuTweaker Benchmark",
         search_placeholder: "Введіть назву процесора (наприклад, 13700KF)",
-        search_hint: "Додайте на початку \"/\" щоб зробити глобальный пошук.",
+        search_hint: "Додайте на початку \"/\" щоб зробити глобальний пошук.",
         search_results_title: "Результат пошуку та схожі процесори:",
         th_cpu: "Процесор",
         th_single: "Одноядерний",
         th_multi: "Багатопотоковий",
         th_comment: "Коментар",
-        h2_all: "Загальний рейтинг процесорів",
+        h2_overall: "Загальний рейтинг процесорів",
         h2_desk_intel: "Настільні процесори Intel Core",
         h2_desk_amd: "Настільні процесори AMD Ryzen",
         h2_lap_intel: "Ноутбучні процесори Intel Core",
@@ -1012,7 +878,7 @@ const translations = {
         nav_builds: "系统版本",
         nav_support: "支持",
         cat_title: "类别",
-        cat_all: "总评",
+        cat_overall: "⭐ 总体排名",
         cat_desk_intel: "台式机 Intel Core",
         cat_desk_amd: "台式机 AMD Ryzen",
         cat_lap_intel: "笔记本 Intel Core",
@@ -1020,7 +886,6 @@ const translations = {
         cat_other_intel: "其他 Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "其他 AMD",
-        cat_arm: "ARM 处理器",
         h1_main: "MakuTweaker 基准测试结果",
         search_placeholder: "输入处理器名称（例如 13700KF）",
         search_hint: "在开头添加 \"/\" 进行全局搜索。",
@@ -1029,7 +894,7 @@ const translations = {
         th_single: "单核",
         th_multi: "多核",
         th_comment: "评论",
-        h2_all: "处理器总评",
+        h2_overall: "处理器总体排名",
         h2_desk_intel: "台式机 Intel Core 处理器",
         h2_desk_amd: "台式机 AMD Ryzen 处理器",
         h2_lap_intel: "笔记本 Intel Core 处理器",
@@ -1046,7 +911,7 @@ const translations = {
         nav_builds: "ビルド",
         nav_support: "サポート",
         cat_title: "カテゴリ",
-        cat_all: "総合評価",
+        cat_overall: "⭐ 総合ランキング",
         cat_desk_intel: "デスクトップ Intel Core",
         cat_desk_amd: "デスクトップ AMD Ryzen",
         cat_lap_intel: "ノートPC Intel Core",
@@ -1054,16 +919,15 @@ const translations = {
         cat_other_intel: "その他 Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "その他 AMD",
-        cat_arm: "ARM プロセッサ",
         h1_main: "MakuTweaker ベンチマーク結果",
         search_placeholder: "プロセッサ名を入力 (例: 13700KF)",
         search_hint: "グローバル検索を行うには、先頭に「/」を追加します。",
-        search_results_title: "検索結果と類似의 プロセッサ:",
+        search_results_title: "検索結果と類似のプロセッサ:",
         th_cpu: "プロセッサ",
         th_single: "シングルコア",
         th_multi: "マルチコア",
         th_comment: "コメント",
-        h2_all: "プロセッサ総合評価",
+        h2_overall: "プロセッサ総合ランキング",
         h2_desk_intel: "デスクトップ Intel Core プロセッサ",
         h2_desk_amd: "デスクトップ AMD Ryzen プロセッサ",
         h2_lap_intel: "ノートPC Intel Core プロセッサ",
@@ -1085,7 +949,9 @@ function setLang(lang) {
 function applyLang(lang) {
     const t = translations[lang] || translations.ru; 
 
-    if (t.page_title) { document.title = t.page_title; }
+    if (t.page_title) {
+        document.title = t.page_title;
+    }
 
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.dataset.i18n;
@@ -1100,11 +966,15 @@ function applyLang(lang) {
 }
 
 const savedLang = localStorage.getItem("lang");
-if (savedLang) { applyLang(savedLang); } 
-else {
+if (savedLang) {
+    applyLang(savedLang);
+} else {
     const browserLang = navigator.language.slice(0, 2);
-    if (translations[browserLang]) { applyLang(browserLang); } 
-    else { applyLang("ru"); }
+    if (translations[browserLang]) {
+        applyLang(browserLang);
+    } else {
+        applyLang("ru");
+    }
 }
 </script>
 </body>
