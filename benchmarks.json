@@ -444,6 +444,11 @@
             "name": "Intel Core i7 870",
             "single": 349,
             "multi": 1921
+        },
+        {
+            "name": "virt 10.0",
+            "single": 310,
+            "multi": 1591
         }
     ],
     "desktop_amd": [
