@@ -516,6 +516,7 @@
 
     <div class="buttons" style="margin-bottom: 60px;">
         <a href="https://adderly.top/makutweaker" class="btn-primary" data-i18n="btn_dl">Скачать MakuTweaker</a>
+        <a href="https://t.me/adderly324/4460" class="btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="btn_submit">Отправить свои результаты</a>
     </div>
 
 </main>
@@ -625,19 +626,19 @@
         .catch(function(e) { console.error('Ошибка загрузки бенчмарков:', e); });
 
     var CAT_LABELS = (function() {
-        var lang = localStorage.getItem('lang') || navigator.language.slice(0,2);
-        var t = translations[lang] || translations['ru'];
-        return {
-            desktop_intel: t.cat_desk_intel,
-            desktop_amd:   t.cat_desk_amd,
-            laptop_intel:  t.cat_lap_intel,
-            laptop_amd:    t.cat_lap_amd,
-            other_intel:   t.cat_other_intel,
-            xeon_intel:    t.cat_xeon,
-            other_amd:     t.cat_other_amd,
-            arm_cpu:       'ARM'
-        };
-    })();
+    var lang = localStorage.getItem('lang') || navigator.language.slice(0,2);
+    var t = translations[lang] || translations['ru'];
+    return {
+        desktop_intel: t.cat_desk_intel,
+        desktop_amd:   t.cat_desk_amd,
+        laptop_intel:  t.cat_lap_intel,
+        laptop_amd:    t.cat_lap_amd,
+        other_intel:   t.cat_other_intel,
+        xeon_intel:    t.cat_xeon,
+        other_amd:     t.cat_other_amd,
+        arm_cpu:       'ARM'
+    };
+})();
 
     document.getElementById('cpu-search').addEventListener('input', function() {
         var raw = this.value.trim();
@@ -667,12 +668,14 @@
         var matched = [];
 
         if (isExact) {
+            // /query — только по имени, без похожих
             matched = all.filter(function(cpu) {
                 var n = cpu.name.toLowerCase();
                 return qWords.every(function(w) { return n.indexOf(w) !== -1; });
             }).sort(function(a, b) { return b.multi - a.multi; });
 
         } else {
+            // обычный поиск: совпадение по имени + похожие по multi ±10%
             var nameMatched = all.filter(function(cpu) {
                 var n = cpu.name.toLowerCase();
                 return qWords.every(function(w) { return n.indexOf(w) !== -1; });
@@ -745,7 +748,8 @@ const translations = {
         h2_xeon: "Intel Xeon процессоры",
         h2_other_amd: "Прочие AMD процессоры",
         h2_arm: "ARM процессоры",
-        btn_dl: "Скачать MakuTweaker"
+        btn_dl: "Скачать MakuTweaker",
+        btn_submit: "Отправить свои результаты"
     },
     en: {
         page_title: "Adderly.Top - MakuTweaker Benchmark Results",
@@ -777,7 +781,8 @@ const translations = {
         h2_xeon: "Intel Xeon Processors",
         h2_other_amd: "Other AMD Processors",
         h2_arm: "ARM Processors",
-        btn_dl: "Download MakuTweaker"
+        btn_dl: "Download MakuTweaker",
+        btn_submit: "Submit your results"
     },
     uk: {
         page_title: "Adderly.Top - Результати MakuTweaker Benchmark",
@@ -809,7 +814,8 @@ const translations = {
         h2_xeon: "Процесори Intel Xeon",
         h2_other_amd: "Інші процесори AMD",
         h2_arm: "Процесори ARM",
-        btn_dl: "Завантажити MakuTweaker"
+        btn_dl: "Завантажити MakuTweaker",
+        btn_submit: "Відправити свої результати"
     },
     zh: {
         page_title: "Adderly.Top - MakuTweaker 基准测试结果",
@@ -841,7 +847,8 @@ const translations = {
         h2_xeon: "Intel Xeon 处理器",
         h2_other_amd: "其他 AMD 处理器",
         h2_arm: "ARM 处理器",
-        btn_dl: "下载 MakuTweaker"
+        btn_dl: "下载 MakuTweaker",
+        btn_submit: "提交您的结果"
     },
     ja: {
         page_title: "Adderly.Top - MakuTweaker ベンチマーク結果",
@@ -873,7 +880,8 @@ const translations = {
         h2_xeon: "Intel Xeon プロセッサ",
         h2_other_amd: "その他 AMD プロセッサ",
         h2_arm: "ARM プロセッサ",
-        btn_dl: "MakuTweakerをダウンロード"
+        btn_dl: "MakuTweakerをダウンロード",
+        btn_submit: "結果を送信する"
     }
 };
 
