@@ -106,11 +106,6 @@
             "multi": 3035
         },
         {
-            "name": "Intel Core i7 K 875",
-            "single": 446,
-            "multi": 2434
-        },
-        {
             "name": "Intel Core i7 950",
             "single": 485,
             "multi": 2208
@@ -449,11 +444,6 @@
             "name": "Intel Core i7 870",
             "single": 349,
             "multi": 1921
-        },
-        {
-            "name": "virt 10.0",
-            "single": 310,
-            "multi": 1591
         }
     ],
     "desktop_amd": [
@@ -1584,11 +1574,6 @@
             "name": "Intel Xeon E5 2640 V4 (10 Ядер)",
             "single": 791,
             "multi": 8201
-        },
-        {
-            "name": "Intel Xeon E5 2680 V3 (12 Ядер)",
-            "single": 728,
-            "multi": 10117
         },
         {
             "name": "Intel Xeon E5 2673 V3 (12 Ядер)",
