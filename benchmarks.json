@@ -950,11 +950,6 @@
             "multi": 1187
         },
         {
-            "name": "Intel Core i5 M560",
-            "single": 389,
-            "multi": 1122
-        },
-        {
             "name": "Intel Core i3 1220P",
             "single": 1137,
             "multi": 7886
