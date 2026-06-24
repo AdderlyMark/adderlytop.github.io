@@ -369,111 +369,6 @@
             "name": "Intel Core i3 540",
             "single": 336,
             "multi": 1118
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-14600K",
-            "single": 1381,
-            "multi": 18124
-        },
-        {
-            "name": "AMD Ryzen 5 7500F 6-Core Processor",
-            "single": 1155,
-            "multi": 12329
-        },
-        {
-            "name": "12th Gen Intel(R) Core(TM) i5-12400F",
-            "single": 1141,
-            "multi": 11227
-        },
-        {
-            "name": "AMD Ryzen 5 8400F 6-Core Processor",
-            "single": 1090,
-            "multi": 11845
-        },
-        {
-            "name": "AMD Ryzen 7 7800X3D 8-Core Processor",
-            "single": 1068,
-            "multi": 7255
-        },
-        {
-            "name": "AMD Ryzen 7 5700X 8-Core Processor",
-            "single": 1053,
-            "multi": 11831
-        },
-        {
-            "name": "AMD Ryzen 5 5600 6-Core Processor",
-            "single": 1026,
-            "multi": 9810
-        },
-        {
-            "name": "AMD Ryzen 5 5600X 6-Core Processor",
-            "single": 947,
-            "multi": 10014
-        },
-        {
-            "name": "AMD Ryzen 5 4500 6-Core Processor",
-            "single": 943,
-            "multi": 8242
-        },
-        {
-            "name": "AMD Ryzen 7 5700X3D 8-Core Processor",
-            "single": 937,
-            "multi": 11647
-        },
-        {
-            "name": "AMD Ryzen 5 5500X3D 6-Core Processor",
-            "single": 926,
-            "multi": 9201
-        },
-        {
-            "name": "AMD Ryzen 5 3600 6-Core Processor",
-            "single": 906,
-            "multi": 7616
-        },
-        {
-            "name": "AMD Ryzen 5 2600 Six-Core Processor",
-            "single": 800,
-            "multi": 6340
-        },
-        {
-            "name": "AMD Ryzen 5 1500X Quad-Core Processor",
-            "single": 729,
-            "multi": 4196
-        },
-        {
-            "name": "Intel(R) N150",
-            "single": 678,
-            "multi": 2203
-        },
-        {
-            "name": "Intel(R) Core(TM) i5 CPU       M 560",
-            "single": 479,
-            "multi": 1075
-        },
-        {
-            "name": "AMD FX(tm)-4100 Quad-Core Processor",
-            "single": 397,
-            "multi": 1243
-        },
-        {
-            "name": "Intel(R) Core(TM) i7 CPU         870",
-            "single": 349,
-            "multi": 1921
-        },
-        {
-            "name": "virt-10.0",
-            "single": 310,
-            "multi": 1591
-        },
-        {
-            "name": "Intel(R) Core(TM)2 Duo CPU     T5800",
-            "single": 236,
-            "multi": 470
-        },
-        {
-            "name": "",
-            "single": 0,
-            "multi": 0
         }
     ],
     "desktop_amd": [
@@ -656,66 +551,6 @@
             "name": "AMD Ryzen 3 2200G",
             "single": 712,
             "multi": 2851
-        },
-        {
-            "name": "AMD Ryzen 7 255 w/ Radeon 780M Graphics",
-            "single": 1134,
-            "multi": 15014
-        },
-        {
-            "name": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
-            "single": 1093,
-            "multi": 13456
-        },
-        {
-            "name": "AMD Ryzen 7 7445HS w/ Radeon 740M Graphics",
-            "single": 1069,
-            "multi": 9172
-        },
-        {
-            "name": "AMD Ryzen 5 5600G with Radeon Graphics",
-            "single": 1030,
-            "multi": 10082
-        },
-        {
-            "name": "AMD Ryzen 7 8745H with Radeon 780M Graphics",
-            "single": 1021,
-            "multi": 14134
-        },
-        {
-            "name": "AMD Ryzen 5 7535HS with Radeon Graphics",
-            "single": 983,
-            "multi": 9159
-        },
-        {
-            "name": "AMD Ryzen 5 5500",
-            "single": 971,
-            "multi": 8694
-        },
-        {
-            "name": "AMD Ryzen 5 6600H with Radeon Graphics",
-            "single": 878,
-            "multi": 7134
-        },
-        {
-            "name": "AMD Ryzen 5 7430U with Radeon Graphics",
-            "single": 863,
-            "multi": 7320
-        },
-        {
-            "name": "AMD Ryzen 5 3400G with Radeon Vega Graphics",
-            "single": 862,
-            "multi": 4805
-        },
-        {
-            "name": "AMD Ryzen 5 5600U with Radeon Graphics",
-            "single": 854,
-            "multi": 4062
-        },
-        {
-            "name": "AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx",
-            "single": 719,
-            "multi": 3783
         }
     ],
     "laptop_intel": [
@@ -1078,201 +913,6 @@
             "name": "Intel Core i3 330M",
             "single": 301,
             "multi": 769
-        },
-        {
-            "name": "13th Gen Intel(R) Core(TM) i7-1355U",
-            "single": 1311,
-            "multi": 4165
-        },
-        {
-            "name": "13th Gen Intel(R) Core(TM) i7-13620H",
-            "single": 1261,
-            "multi": 15508
-        },
-        {
-            "name": "Intel(R) Core(TM) Ultra 9 275HX",
-            "single": 1230,
-            "multi": 22729
-        },
-        {
-            "name": "Intel(R) Core(TM) Ultra 7 255H",
-            "single": 1211,
-            "multi": 12147
-        },
-        {
-            "name": "13th Gen Intel(R) Core(TM) i5-13450HX",
-            "single": 1203,
-            "multi": 13473
-        },
-        {
-            "name": "11th Gen Intel(R) Core(TM) i9-11900H",
-            "single": 1150,
-            "multi": 10482
-        },
-        {
-            "name": "11th Gen Intel(R) Core(TM) i7-11800H",
-            "single": 1120,
-            "multi": 11809
-        },
-        {
-            "name": "12th Gen Intel(R) Core(TM) i5-12500H",
-            "single": 1075,
-            "multi": 8556
-        },
-        {
-            "name": "12th Gen Intel(R) Core(TM) i7-12700H",
-            "single": 1055,
-            "multi": 12177
-        },
-        {
-            "name": "12th Gen Intel(R) Core(TM) i5-12450H",
-            "single": 1050,
-            "multi": 8181
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-10200H CPU",
-            "single": 1004,
-            "multi": 5138
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-10210U CPU",
-            "single": 941,
-            "multi": 3918
-        },
-        {
-            "name": "12th Gen Intel(R) Core(TM) i5-1240P",
-            "single": 903,
-            "multi": 7716
-        },
-        {
-            "name": "12th Gen Intel(R) Core(TM) i5-1235U",
-            "single": 902,
-            "multi": 6424
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-1035G1 CPU",
-            "single": 879,
-            "multi": 5335
-        },
-        {
-            "name": "Intel(R) Core(TM) i7-4790 CPU",
-            "single": 870,
-            "multi": 4280
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-8300H CPU",
-            "single": 869,
-            "multi": 3955
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-9300H CPU",
-            "single": 839,
-            "multi": 3170
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-4160 CPU",
-            "single": 806,
-            "multi": 2004
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-1005G1 CPU",
-            "single": 803,
-            "multi": 2383
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-4310M CPU",
-            "single": 784,
-            "multi": 1744
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-4570 CPU",
-            "single": 776,
-            "multi": 2927
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-6500 CPU",
-            "single": 770,
-            "multi": 3057
-        },
-        {
-            "name": "Intel(R) Core(TM) i7-3770K CPU",
-            "single": 759,
-            "multi": 3292
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-10100F CPU",
-            "single": 742,
-            "multi": 3005
-        },
-        {
-            "name": "Intel(R) Core(TM) i7-3770 CPU",
-            "single": 692,
-            "multi": 3388
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-5350U CPU",
-            "single": 685,
-            "multi": 1635
-        },
-        {
-            "name": "13th Gen Intel(R) Core(TM) i5-13420H",
-            "single": 681,
-            "multi": 6373
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-4170 CPU",
-            "single": 669,
-            "multi": 1801
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-3220 CPU",
-            "single": 640,
-            "multi": 1521
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-3230M CPU",
-            "single": 614,
-            "multi": 1455
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-7100U CPU",
-            "single": 477,
-            "multi": 1094
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-2540M CPU",
-            "single": 426,
-            "multi": 624
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-3110M CPU",
-            "single": 423,
-            "multi": 999
-        },
-        {
-            "name": "Intel(R) Core(TM) i5-8250U CPU",
-            "single": 376,
-            "multi": 1834
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-2350M CPU",
-            "single": 353,
-            "multi": 935
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-3217U CPU",
-            "single": 352,
-            "multi": 887
-        },
-        {
-            "name": "Intel(R) Core(TM) i7-7700HQ CPU",
-            "single": 293,
-            "multi": 1161
-        },
-        {
-            "name": "Intel(R) Core(TM) i3-4005U CPU",
-            "single": 272,
-            "multi": 840
         }
     ],
     "laptop_amd": [
@@ -1400,11 +1040,6 @@
             "name": "AMD Ryzen 3 3200U",
             "single": 682,
             "multi": 1774
-        },
-        {
-            "name": "AMD Ryzen 7 7435HS",
-            "single": 930,
-            "multi": 11164
         }
     ],
     "other_intel": [
@@ -1552,41 +1187,6 @@
             "name": "Intel N97",
             "single": 696,
             "multi": 2225
-        },
-        {
-            "name": "Intel(R) Pentium(R) CPU G4560",
-            "single": 619,
-            "multi": 1124
-        },
-        {
-            "name": "Intel(R) Pentium(R) Silver N6000",
-            "single": 505,
-            "multi": 1318
-        },
-        {
-            "name": "Intel(R) Celeron(R) N5095",
-            "single": 470,
-            "multi": 1832
-        },
-        {
-            "name": "Intel(R) Celeron(R) J4125 CPU",
-            "single": 397,
-            "multi": 1249
-        },
-        {
-            "name": "Pentium(R) Dual-Core CPU       T4400",
-            "single": 277,
-            "multi": 520
-        },
-        {
-            "name": "Intel(R) Pentium(R) CPU  N3710",
-            "single": 234,
-            "multi": 922
-        },
-        {
-            "name": "Intel(R) Pentium(R) CPU  N3700",
-            "single": 174,
-            "multi": 652
         }
     ],
     "xeon_intel": [
@@ -1689,26 +1289,6 @@
             "name": "Intel Xeon E5 2630 V2 (6 Ядер)",
             "single": 540,
             "multi": 4240
-        },
-        {
-            "name": "Intel(R) Xeon(R) CPU E5-2643 v3",
-            "single": 763,
-            "multi": 4890
-        },
-        {
-            "name": "Intel(R) Xeon(R) CPU E5-2680 v3",
-            "single": 759,
-            "multi": 10926
-        },
-        {
-            "name": "Intel(R) Xeon(R) CPU E31270",
-            "single": 613,
-            "multi": 3049
-        },
-        {
-            "name": "Intel(R) Xeon(R) CPU E5-2660 v2",
-            "single": 430,
-            "multi": 6263
         }
     ],
     "other_amd": [
@@ -1831,11 +1411,6 @@
             "name": "AMD C-50",
             "single": 91,
             "multi": 157
-        },
-        {
-            "name": "AMD E-450 APU with Radeon(tm) HD Graphics",
-            "single": 149,
-            "multi": 262
         }
     ],
     "arm_cpu": [
@@ -1848,11 +1423,6 @@
             "name": "Qualcomm Snapdragon 8cx Gen 3",
             "single": 158,
             "multi": 1120
-        },
-        {
-            "name": "Snapdragon 845",
-            "single": 77,
-            "multi": 353
         }
     ]
 }
