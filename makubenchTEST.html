@@ -102,22 +102,15 @@
             transform: translateX(4px);
         }
 
-        .floating-button.active {
-            background: rgba(168, 85, 247, 0.2);
-            color: #fff;
-            border-color: rgba(168, 85, 247, 0.5);
-        }
-
         .floating-button.overall-btn {
-            background: rgba(168, 85, 247, 0.1);
+            background: rgba(168, 85, 247, 0.12);
             color: #c084fc;
-            border-color: rgba(168, 85, 247, 0.3);
+            border-color: rgba(168, 85, 247, 0.35);
             font-weight: 600;
         }
-
         .floating-button.overall-btn:hover,
         .floating-button.overall-btn.active {
-            background: rgba(168, 85, 247, 0.3);
+            background: rgba(168, 85, 247, 0.28);
             color: #fff;
             border-color: rgba(168, 85, 247, 0.7);
         }
@@ -125,8 +118,10 @@
         .panel-divider {
             height: 1px;
             background: rgba(255,255,255,0.1);
-            margin: 4px 0;
+            margin: 2px 0;
         }
+
+        #overall-section { display: none; }
 
         main h2 {
             margin-top: 50px;
@@ -275,27 +270,6 @@
             opacity: 0.7;
         }
 
-        /* Overall rating section */
-        #overall-section {
-            display: none;
-        }
-
-        #overall-section h2 {
-            background: linear-gradient(135deg, #a855f7, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Category badge in overall table */
-        .cpu-category-badge {
-            font-size: 0.7rem;
-            color: #a855f7;
-            opacity: 0.8;
-            display: block;
-            margin-top: 2px;
-        }
-
         @media (max-width: 1250px) {
             .floating-panel { left: 10px; width: 140px; padding: 12px; }
             .panel-header { width: 100%; border-bottom: none; margin-bottom: 5px; padding-bottom: 0; }
@@ -355,7 +329,7 @@
 <body>
     <div class="floating-panel">
         <div class="panel-header" data-i18n="cat_title">Категории</div>
-        <button class="floating-button overall-btn" id="btn-overall" onclick="showOverall()" data-i18n="cat_overall">Общий рейтинг</button>
+        <button class="floating-button overall-btn" id="btn-overall" onclick="showOverall()" data-i18n="cat_overall">⭐ Общий рейтинг</button>
         <div class="panel-divider"></div>
         <button class="floating-button" onclick="scrollToCategory('desktop_intel')" data-i18n="cat_desk_intel">Настольные Intel Core</button>
         <button class="floating-button" onclick="scrollToCategory('desktop_amd')" data-i18n="cat_desk_amd">Настольные AMD Ryzen</button>
@@ -412,7 +386,6 @@
         </table>
     </div>
 
-    <!-- Overall rating section -->
     <div id="overall-section">
         <h2 id="overall_rating" data-i18n="h2_overall">Общий рейтинг процессоров</h2>
         <div class="table-container">
@@ -429,119 +402,116 @@
         </div>
     </div>
 
-    <!-- Category sections -->
-    <div id="categories-section">
-        <h2 id="desktop_intel" data-i18n="h2_desk_intel">Настольные Intel Core процессоры</h2>
-        <div class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name" data-i18n="th_cpu">Процессор</th>
-                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
-                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <h2 id="desktop_intel" data-i18n="h2_desk_intel">Настольные Intel Core процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        <h2 id="desktop_amd" data-i18n="h2_desk_amd">Настольные AMD Ryzen процессоры</h2>
-        <div class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name" data-i18n="th_cpu">Процессор</th>
-                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
-                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <h2 id="desktop_amd" data-i18n="h2_desk_amd">Настольные AMD Ryzen процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        <h2 id="laptop_intel" data-i18n="h2_lap_intel">Ноутбучные Intel Core процессоры</h2>
-        <div class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name" data-i18n="th_cpu">Процессор</th>
-                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
-                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <h2 id="laptop_intel" data-i18n="h2_lap_intel">Ноутбучные Intel Core процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        <h2 id="laptop_amd" data-i18n="h2_lap_amd">Ноутбучные AMD Ryzen процессоры</h2>
-        <div class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name" data-i18n="th_cpu">Процессор</th>
-                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
-                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <h2 id="laptop_amd" data-i18n="h2_lap_amd">Ноутбучные AMD Ryzen процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        <h2 id="other_intel" data-i18n="h2_other_intel">Прочие Intel процессоры</h2>
-        <div class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name" data-i18n="th_cpu">Процессор</th>
-                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
-                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <h2 id="other_intel" data-i18n="h2_other_intel">Прочие Intel процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        <h2 id="xeon_intel" data-i18n="h2_xeon">Intel Xeon процессоры</h2>
-        <div class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name" data-i18n="th_cpu">Процессор</th>
-                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
-                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <h2 id="xeon_intel" data-i18n="h2_xeon">Intel Xeon процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        <h2 id="other_amd" data-i18n="h2_other_amd">Прочие AMD процессоры</h2>
-        <div class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name" data-i18n="th_cpu">Процессор</th>
-                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
-                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <h2 id="other_amd" data-i18n="h2_other_amd">Прочие AMD процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        <h2 id="arm_cpu" data-i18n="h2_arm">ARM процессоры</h2>
-        <div class="table-container">
-            <table class="sortable">
-                <thead>
-                    <tr>
-                        <th class="name" data-i18n="th_cpu">Процессор</th>
-                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
-                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <h2 id="arm_cpu" data-i18n="h2_arm">ARM процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </div>
 
     <div class="buttons" style="margin-bottom: 60px;">
@@ -570,115 +540,100 @@
 <script src="sorttable.js"></script>
 
 <script>
-    // ── Global benchmark data ──────────────────────────────────────────────
-    let allBenchmarkData = {};   // { categoryId: [{name, single, multi}, ...] }
-    let isOverallMode = false;
+    // ── глобальное хранилище данных ───────────────────────────────────────
+    var allBenchmarkData = {};
+    var isOverallMode = false;
 
-    // ── Scroll helpers ─────────────────────────────────────────────────────
-    function smoothScrollTo(el) {
-        const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
+    function scrollToEl(el) {
+        var y = el.getBoundingClientRect().top + window.pageYOffset - 100;
         window.scrollTo({ top: y, behavior: 'smooth' });
     }
 
-    // ── Category navigation ────────────────────────────────────────────────
-    // Called when user clicks a category button from the panel
+    // Прокрутка к категории (с выходом из overall-режима если надо)
     function scrollToCategory(id) {
         if (isOverallMode) {
-            // Exit overall mode first, then scroll
-            hideOverall(function() {
-                const el = document.getElementById(id);
-                if (el) smoothScrollTo(el);
+            document.getElementById('overall-section').style.display = 'none';
+            document.getElementById('btn-overall').classList.remove('active');
+            // показываем все h2 и таблицы категорий
+            document.querySelectorAll('main > h2, main > .table-container').forEach(function(el) {
+                el.style.display = '';
             });
-        } else {
-            const el = document.getElementById(id);
-            if (el) smoothScrollTo(el);
+            isOverallMode = false;
+        }
+        var el = document.getElementById(id);
+        if (el) {
+            // небольшая задержка чтобы display успел примениться
+            setTimeout(function() { scrollToEl(el); }, 20);
         }
     }
 
-    // Legacy alias used in old markup (kept for safety)
-    function scrollToSection(id) {
-        scrollToCategory(id);
-    }
+    // Старый alias — на случай если где-то ещё используется
+    function scrollToSection(id) { scrollToCategory(id); }
 
-    // ── Overall rating mode ────────────────────────────────────────────────
+    // ── Общий рейтинг ─────────────────────────────────────────────────────
     function showOverall() {
         if (isOverallMode) return;
         isOverallMode = true;
 
-        // Build combined sorted table (by multi desc)
-        const allCpus = [];
-        for (const [catId, cpus] of Object.entries(allBenchmarkData)) {
-            cpus.forEach(cpu => allCpus.push({ ...cpu, _cat: catId }));
+        // Собираем все процессоры и сортируем по multi desc
+        var all = [];
+        for (var cat in allBenchmarkData) {
+            allBenchmarkData[cat].forEach(function(cpu) {
+                all.push(cpu);
+            });
         }
-        allCpus.sort((a, b) => b.multi - a.multi);
+        all.sort(function(a, b) { return b.multi - a.multi; });
 
-        const tbody = document.getElementById('overall-tbody');
-        tbody.innerHTML = allCpus.map(cpu =>
-            `<tr>
-                <td class="name">${cpu.name}</td>
-                <td class="score sorttable_numeric">${cpu.single}</td>
-                <td class="score sorttable_numeric">${cpu.multi}</td>
-            </tr>`
-        ).join('');
+        var tbody = document.getElementById('overall-tbody');
+        tbody.innerHTML = all.map(function(cpu) {
+            return '<tr><td class="name">' + cpu.name + '</td>' +
+                   '<td class="score sorttable_numeric">' + cpu.single + '</td>' +
+                   '<td class="score sorttable_numeric">' + cpu.multi + '</td></tr>';
+        }).join('');
 
-        // Re-init sorttable for the overall table
-        if (window.sorttable) sorttable.makeSortable(document.getElementById('overall-table'));
+        // Скрываем все h2 категорий и их таблицы
+        document.querySelectorAll('main > h2, main > .table-container').forEach(function(el) {
+            el.style.display = 'none';
+        });
 
-        // Show overall, hide categories
-        document.getElementById('overall-section').style.display = 'block';
-        document.getElementById('categories-section').style.display = 'none';
-
-        // Mark button active
+        // Показываем overall-секцию
+        var overallSection = document.getElementById('overall-section');
+        overallSection.style.display = 'block';
         document.getElementById('btn-overall').classList.add('active');
 
-        // Scroll to overall heading
-        const heading = document.getElementById('overall_rating');
-        smoothScrollTo(heading);
+        // Re-init sorttable
+        if (window.sorttable) sorttable.makeSortable(document.getElementById('overall-table'));
+
+        setTimeout(function() { scrollToEl(overallSection); }, 20);
     }
 
-    function hideOverall(callback) {
-        isOverallMode = false;
-        document.getElementById('overall-section').style.display = 'none';
-        document.getElementById('categories-section').style.display = 'block';
-        document.getElementById('btn-overall').classList.remove('active');
-        // Give DOM a frame to render before scrolling
-        requestAnimationFrame(function() {
-            requestAnimationFrame(function() {
-                if (callback) callback();
-            });
-        });
-    }
-
-    // ── Load benchmark data ────────────────────────────────────────────────
+    // ── Загрузка данных ────────────────────────────────────────────────────
     fetch('benchmarks.json')
-        .then(response => response.json())
-        .then(data => {
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
             allBenchmarkData = data;
 
-            for (const [categoryId, cpus] of Object.entries(data)) {
-                const header = document.getElementById(categoryId);
+            for (var categoryId in data) {
+                var cpus = data[categoryId];
+                var header = document.getElementById(categoryId);
                 if (header) {
-                    const tbody = header.closest
-                        ? header.parentElement.querySelector('#' + categoryId + ' ~ .table-container tbody')
-                        : null;
-
-                    // nextElementSibling of h2 is the .table-container
-                    const container = header.nextElementSibling;
+                    var container = header.nextElementSibling;
                     if (container) {
-                        const tb = container.querySelector('tbody');
-                        if (tb) {
-                            tb.innerHTML = cpus.map(cpu =>
-                                `<tr><td class="name">${cpu.name}</td><td class="score sorttable_numeric">${cpu.single}</td><td class="score sorttable_numeric">${cpu.multi}</td></tr>`
-                            ).join('');
+                        var tbody = container.querySelector('tbody');
+                        if (tbody) {
+                            tbody.innerHTML = cpus.map(function(cpu) {
+                                return '<tr><td class="name">' + cpu.name + '</td>' +
+                                       '<td class="score sorttable_numeric">' + cpu.single + '</td>' +
+                                       '<td class="score sorttable_numeric">' + cpu.multi + '</td></tr>';
+                            }).join('');
                         }
                     }
                 }
             }
 
-            // Sort each category table by multi-core descending
-            setTimeout(() => {
-                document.querySelectorAll('#categories-section .sortable').forEach(table => {
-                    const multiHeader = table.querySelector('thead tr th:nth-child(3)');
+            setTimeout(function() {
+                document.querySelectorAll('.sortable').forEach(function(table) {
+                    var multiHeader = table.querySelector('thead tr th:nth-child(3)');
                     if (multiHeader && window.sorttable && sorttable.innerSortFunction) {
                         sorttable.innerSortFunction.apply(multiHeader, []);
                         sorttable.innerSortFunction.apply(multiHeader, []);
@@ -688,88 +643,65 @@
                 });
             }, 50);
         })
-        .catch(error => console.error("Ошибка при загрузке бенчмарков:", error));
+        .catch(function(e) { console.error('Ошибка загрузки бенчмарков:', e); });
 
-    // ── Search ─────────────────────────────────────────────────────────────
-    const searchInput = document.getElementById('cpu-search');
-    const searchResults = document.getElementById('similar-cpu-results');
-    const searchTbody = document.getElementById('similar-cpu-tbody');
-
-    searchInput.addEventListener('input', function() {
-        const raw = this.value.trim();
+    // ── Поиск ─────────────────────────────────────────────────────────────
+    document.getElementById('cpu-search').addEventListener('input', function() {
+        var raw = this.value.trim();
+        var resultsBox = document.getElementById('similar-cpu-results');
+        var tbody = document.getElementById('similar-cpu-tbody');
 
         if (!raw) {
-            searchResults.style.display = 'none';
-            searchTbody.innerHTML = '';
+            resultsBox.style.display = 'none';
+            tbody.innerHTML = '';
             return;
         }
 
-        // "/" prefix = global search (all categories); otherwise search current view
-        const isGlobal = raw.startsWith('/');
-        const query = isGlobal ? raw.slice(1).trim() : raw;
+        var query = raw.startsWith('/') ? raw.slice(1).trim() : raw;
+        if (!query) { resultsBox.style.display = 'none'; return; }
 
-        if (!query) {
-            searchResults.style.display = 'none';
-            searchTbody.innerHTML = '';
+        var qLow = query.toLowerCase();
+        var qWords = qLow.split(/\s+/);
+
+        var all = [];
+        for (var cat in allBenchmarkData) {
+            allBenchmarkData[cat].forEach(function(cpu) {
+                all.push({ name: cpu.name, single: cpu.single, multi: cpu.multi, cat: cat });
+            });
+        }
+
+        var matches = all.filter(function(cpu) {
+            var n = cpu.name.toLowerCase();
+            return qWords.every(function(w) { return n.includes(w); });
+        }).sort(function(a, b) {
+            var aEx = a.name.toLowerCase().includes(qLow) ? 1 : 0;
+            var bEx = b.name.toLowerCase().includes(qLow) ? 1 : 0;
+            return (bEx - aEx) || (b.multi - a.multi);
+        });
+
+        if (!matches.length) {
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-muted);padding:20px;">Ничего не найдено</td></tr>';
+            resultsBox.style.display = 'block';
             return;
         }
 
-        const queryLower = query.toLowerCase();
-
-        // Collect all CPUs from allBenchmarkData
-        const allCpus = [];
-        for (const [catId, cpus] of Object.entries(allBenchmarkData)) {
-            cpus.forEach(cpu => allCpus.push({ ...cpu, _cat: catId }));
-        }
-
-        // Score matches: exact substring = higher priority
-        const matches = allCpus
-            .map(cpu => {
-                const nameLower = cpu.name.toLowerCase();
-                let score = 0;
-                if (nameLower === queryLower) score = 3;
-                else if (nameLower.includes(queryLower)) score = 2;
-                else if (queryLower.split(' ').every(w => nameLower.includes(w))) score = 1;
-                return { ...cpu, _score: score };
-            })
-            .filter(cpu => cpu._score > 0)
-            .sort((a, b) => b._score - a._score || b.multi - a.multi);
-
-        if (matches.length === 0) {
-            searchTbody.innerHTML = `<tr><td colspan="4" style="text-align:center;color:var(--text-muted);padding:20px;">Ничего не найдено</td></tr>`;
-            searchResults.style.display = 'block';
-            return;
-        }
-
-        searchTbody.innerHTML = matches.map(cpu => {
-            const highlighted = cpu.name.replace(
-                new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'),
-                '<span class="match-text">$1</span>'
-            );
-            return `<tr>
-                <td class="name">${highlighted}</td>
-                <td class="score">${cpu.single}</td>
-                <td class="score">${cpu.multi}</td>
-                <td style="color:var(--text-muted);font-size:0.85rem;">${getCategoryLabel(cpu._cat)}</td>
-            </tr>`;
-        }).join('');
-
-        searchResults.style.display = 'block';
-    });
-
-    function getCategoryLabel(catId) {
-        const labels = {
-            desktop_intel: 'Desktop Intel',
-            desktop_amd: 'Desktop AMD',
-            laptop_intel: 'Laptop Intel',
-            laptop_amd: 'Laptop AMD',
-            other_intel: 'Other Intel',
-            xeon_intel: 'Xeon',
-            other_amd: 'Other AMD',
-            arm_cpu: 'ARM'
+        var catLabels = {
+            desktop_intel:'Desktop Intel', desktop_amd:'Desktop AMD',
+            laptop_intel:'Laptop Intel', laptop_amd:'Laptop AMD',
+            other_intel:'Other Intel', xeon_intel:'Xeon',
+            other_amd:'Other AMD', arm_cpu:'ARM'
         };
-        return labels[catId] || catId;
-    }
+
+        var re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+        tbody.innerHTML = matches.map(function(cpu) {
+            var hl = cpu.name.replace(re, '<span class="match-text">$1</span>');
+            return '<tr><td class="name">' + hl + '</td>' +
+                   '<td class="score">' + cpu.single + '</td>' +
+                   '<td class="score">' + cpu.multi + '</td>' +
+                   '<td style="color:var(--text-muted);font-size:0.85rem">' + (catLabels[cpu.cat]||cpu.cat) + '</td></tr>';
+        }).join('');
+        resultsBox.style.display = 'block';
+    });
 </script>
 
 <script>
