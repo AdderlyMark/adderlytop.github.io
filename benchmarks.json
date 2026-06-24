@@ -1806,11 +1806,6 @@
             "name": "AMD A4 9125",
             "single": 320,
             "multi": 690
-        },
-        {
-            "name": "AMD E 450",
-            "single": 149,
-            "multi": 262
         }
     ],
     "arm_cpu": [
