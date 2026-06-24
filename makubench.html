@@ -102,6 +102,27 @@
             transform: translateX(4px);
         }
 
+        .floating-button.overall-btn {
+            background: rgba(168, 85, 247, 0.12);
+            color: #c084fc;
+            border-color: rgba(168, 85, 247, 0.35);
+            font-weight: 600;
+        }
+        .floating-button.overall-btn:hover,
+        .floating-button.overall-btn.active {
+            background: rgba(168, 85, 247, 0.28);
+            color: #fff;
+            border-color: rgba(168, 85, 247, 0.7);
+        }
+
+        .panel-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 2px 0;
+        }
+
+        #overall-section { display: none; }
+
         main h2 {
             margin-top: 50px;
             margin-bottom: 20px;
@@ -308,13 +329,15 @@
 <body>
     <div class="floating-panel">
         <div class="panel-header" data-i18n="cat_title">Категории</div>
-        <button class="floating-button" onclick="scrollToSection('desktop_intel')" data-i18n="cat_desk_intel">Настольные Intel Core</button>
-        <button class="floating-button" onclick="scrollToSection('desktop_amd')" data-i18n="cat_desk_amd">Настольные AMD Ryzen</button>
-        <button class="floating-button" onclick="scrollToSection('laptop_intel')" data-i18n="cat_lap_intel">Ноутбучные Intel Core</button>
-        <button class="floating-button" onclick="scrollToSection('laptop_amd')" data-i18n="cat_lap_amd">Ноутбучные AMD Ryzen</button>
-        <button class="floating-button" onclick="scrollToSection('other_intel')" data-i18n="cat_other_intel">Прочие Intel</button>
-        <button class="floating-button" onclick="scrollToSection('xeon_intel')" data-i18n="cat_xeon">Intel Xeon</button>
-        <button class="floating-button" onclick="scrollToSection('other_amd')" data-i18n="cat_other_amd">Прочие AMD</button>
+        <button class="floating-button overall-btn" id="btn-overall" onclick="showOverall()" data-i18n="cat_overall">Общий рейтинг</button>
+        <div class="panel-divider"></div>
+        <button class="floating-button" onclick="scrollToCategory('desktop_intel')" data-i18n="cat_desk_intel">Настольные Intel Core</button>
+        <button class="floating-button" onclick="scrollToCategory('desktop_amd')" data-i18n="cat_desk_amd">Настольные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToCategory('laptop_intel')" data-i18n="cat_lap_intel">Ноутбучные Intel Core</button>
+        <button class="floating-button" onclick="scrollToCategory('laptop_amd')" data-i18n="cat_lap_amd">Ноутбучные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToCategory('other_intel')" data-i18n="cat_other_intel">Прочие Intel</button>
+        <button class="floating-button" onclick="scrollToCategory('xeon_intel')" data-i18n="cat_xeon">Intel Xeon</button>
+        <button class="floating-button" onclick="scrollToCategory('other_amd')" data-i18n="cat_other_amd">Прочие AMD</button>
     </div>
 
 <header>
@@ -356,11 +379,27 @@
                     <th class="name" data-i18n="th_cpu">Процессор</th>
                     <th class="score" data-i18n="th_single">Одноядерный</th>
                     <th class="score" data-i18n="th_multi">Многопоточный</th>
-                    <th data-i18n="th_comment">Комментарий</th>
+                    <th data-i18n="th_cpu_type">Тип</th>
                 </tr>
             </thead>
             <tbody id="similar-cpu-tbody"></tbody>
         </table>
+    </div>
+
+    <div id="overall-section">
+        <h2 id="overall_rating" data-i18n="h2_overall">Общий рейтинг процессоров</h2>
+        <div class="table-container">
+            <table class="sortable" id="overall-table">
+                <thead>
+                    <tr>
+                        <th class="name" data-i18n="th_cpu">Процессор</th>
+                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                    </tr>
+                </thead>
+                <tbody id="overall-tbody"></tbody>
+            </table>
+        </div>
     </div>
 
     <h2 id="desktop_intel" data-i18n="h2_desk_intel">Настольные Intel Core процессоры</h2>
@@ -477,7 +516,6 @@
 
     <div class="buttons" style="margin-bottom: 60px;">
         <a href="https://adderly.top/makutweaker" class="btn-primary" data-i18n="btn_dl">Скачать MakuTweaker</a>
-        <a href="https://t.me/adderly324/4460" class="btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="btn_submit">Отправить свои результаты</a>
     </div>
 
 </main>
@@ -501,45 +539,170 @@
 <script src="sorttable.js"></script>
 
 <script>
-    function scrollToSection(id) {
-        const el = document.getElementById(id);
-        if(el) {
-            const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
-            window.scrollTo({top: y, behavior: 'smooth'});
+    var allBenchmarkData = {};
+    var isOverallMode = false;
+
+    function scrollToEl(el) {
+        var y = el.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+    function scrollToCategory(id) {
+        if (isOverallMode) {
+            document.getElementById('overall-section').style.display = 'none';
+            document.getElementById('btn-overall').classList.remove('active');
+            document.querySelectorAll('main > h2, main > .table-container').forEach(function(el) {
+                el.style.display = '';
+            });
+            isOverallMode = false;
         }
+        var el = document.getElementById(id);
+        if (el) setTimeout(function() { scrollToEl(el); }, 20);
+    }
+
+    function scrollToSection(id) { scrollToCategory(id); }
+
+    function showOverall() {
+        if (isOverallMode) return;
+        isOverallMode = true;
+
+        var all = [];
+        for (var cat in allBenchmarkData) {
+            allBenchmarkData[cat].forEach(function(cpu) { all.push(cpu); });
+        }
+        all.sort(function(a, b) { return b.multi - a.multi; });
+
+        document.getElementById('overall-tbody').innerHTML = all.map(function(cpu) {
+            return '<tr><td class="name">' + cpu.name + '</td>' +
+                   '<td class="score sorttable_numeric">' + cpu.single + '</td>' +
+                   '<td class="score sorttable_numeric">' + cpu.multi + '</td></tr>';
+        }).join('');
+
+        document.querySelectorAll('main > h2, main > .table-container').forEach(function(el) {
+            el.style.display = 'none';
+        });
+
+        var sec = document.getElementById('overall-section');
+        sec.style.display = 'block';
+        document.getElementById('btn-overall').classList.add('active');
+        if (window.sorttable) sorttable.makeSortable(document.getElementById('overall-table'));
+        setTimeout(function() { scrollToEl(sec); }, 20);
     }
 
     fetch('benchmarks.json')
-        .then(response => response.json())
-        .then(data => {
-            for (const [categoryId, cpus] of Object.entries(data)) {
-                const header = document.getElementById(categoryId);
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            allBenchmarkData = data;
+            for (var categoryId in data) {
+                var cpus = data[categoryId];
+                var header = document.getElementById(categoryId);
                 if (header) {
-                    const tbody = header.nextElementSibling.querySelector('tbody');
-                    if (tbody) {
-                        let html = '';
-                        cpus.forEach(cpu => {
-                            html += `<tr><td class="name">${cpu.name}</td><td class="score sorttable_numeric">${cpu.single}</td><td class="score sorttable_numeric">${cpu.multi}</td></tr>`;
-                        });
-                        tbody.innerHTML = html;
+                    var container = header.nextElementSibling;
+                    if (container) {
+                        var tbody = container.querySelector('tbody');
+                        if (tbody) {
+                            tbody.innerHTML = cpus.map(function(cpu) {
+                                return '<tr><td class="name">' + cpu.name + '</td>' +
+                                       '<td class="score sorttable_numeric">' + cpu.single + '</td>' +
+                                       '<td class="score sorttable_numeric">' + cpu.multi + '</td></tr>';
+                            }).join('');
+                        }
                     }
                 }
             }
-
-            setTimeout(() => {
-                document.querySelectorAll('.sortable').forEach(table => {
-                    const multiHeader = table.querySelector('thead tr th:nth-child(3)');
-                    if (multiHeader && sorttable.innerSortFunction) {
+            setTimeout(function() {
+                document.querySelectorAll('.sortable').forEach(function(table) {
+                    var multiHeader = table.querySelector('thead tr th:nth-child(3)');
+                    if (multiHeader && window.sorttable && sorttable.innerSortFunction) {
                         sorttable.innerSortFunction.apply(multiHeader, []);
-                        sorttable.innerSortFunction.apply(multiHeader, []); 
+                        sorttable.innerSortFunction.apply(multiHeader, []);
                         multiHeader.classList.remove('sorttable_sorted');
                         multiHeader.classList.add('sorttable_sorted_reverse');
                     }
                 });
-            }, 50); 
+            }, 50);
         })
-        .catch(error => console.error("Ошибка при загрузке бенчмарков:", error));
+        .catch(function(e) { console.error('Ошибка загрузки бенчмарков:', e); });
 
+    var CAT_LABELS = {
+        desktop_intel:'Intel Core', desktop_amd:'AMD Ryzen',
+        laptop_intel:'Intel Core',   laptop_amd:'AMD Ryzen',
+        other_intel:'Other Intel',          xeon_intel:'Intel Xeon',
+        other_amd:'Other AMD',              arm_cpu:'ARM'
+    };
+
+    document.getElementById('cpu-search').addEventListener('input', function() {
+        var raw = this.value.trim();
+        var resultsBox = document.getElementById('similar-cpu-results');
+        var tbody      = document.getElementById('similar-cpu-tbody');
+
+        if (!raw) {
+            resultsBox.style.display = 'none';
+            tbody.innerHTML = '';
+            return;
+        }
+
+        var isExact = raw.startsWith('/');
+        var query   = isExact ? raw.slice(1).trim() : raw.trim();
+        if (!query) { resultsBox.style.display = 'none'; return; }
+
+        var qLow   = query.toLowerCase();
+        var qWords = qLow.split(' ').filter(function(w) { return w.length > 0; });
+
+        var all = [];
+        for (var cat in allBenchmarkData) {
+            allBenchmarkData[cat].forEach(function(cpu) {
+                all.push({ name: cpu.name, single: cpu.single, multi: cpu.multi, cat: cat });
+            });
+        }
+
+        var matched = [];
+
+        if (isExact) {
+            matched = all.filter(function(cpu) {
+                var n = cpu.name.toLowerCase();
+                return qWords.every(function(w) { return n.indexOf(w) !== -1; });
+            }).sort(function(a, b) { return b.multi - a.multi; });
+
+        } else {
+            var nameMatched = all.filter(function(cpu) {
+                var n = cpu.name.toLowerCase();
+                return qWords.every(function(w) { return n.indexOf(w) !== -1; });
+            });
+
+            if (nameMatched.length > 0) {
+                nameMatched.sort(function(a, b) { return b.multi - a.multi; });
+                var best = nameMatched[0];
+                var lo = best.multi * 0.90;
+                var hi = best.multi * 1.10;
+                var seen = {};
+                nameMatched.forEach(function(cpu) { seen[cpu.name] = true; matched.push(cpu); });
+                all.forEach(function(cpu) {
+                    if (!seen[cpu.name] && cpu.multi >= lo && cpu.multi <= hi) {
+                        matched.push(cpu);
+                    }
+                });
+                matched.sort(function(a, b) { return b.multi - a.multi; });
+            }
+        }
+
+        if (!matched.length) {
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-muted);padding:20px;">Ничего не найдено</td></tr>';
+            resultsBox.style.display = 'block';
+            return;
+        }
+
+        var escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        var re = new RegExp('(' + escaped + ')', 'gi');
+        tbody.innerHTML = matched.map(function(cpu) {
+            var hl = cpu.name.replace(re, '<span class="match-text">$1</span>');
+            return '<tr><td class="name">' + hl + '</td>' +
+                   '<td class="score">' + cpu.single + '</td>' +
+                   '<td class="score">' + cpu.multi + '</td>' +
+                   '<td style="color:var(--text-muted);font-size:0.85rem">' + (CAT_LABELS[cpu.cat]||cpu.cat) + '</td></tr>';
+        }).join('');
+        resultsBox.style.display = 'block';
+    });
 </script>
 
 <script>
@@ -549,6 +712,7 @@ const translations = {
         nav_builds: "Сборки",
         nav_support: "Поддержать",
         cat_title: "Категории",
+        cat_overall: "Общий рейтинг",
         cat_desk_intel: "Настольные Intel Core",
         cat_desk_amd: "Настольные AMD Ryzen",
         cat_lap_intel: "Ноутбучные Intel Core",
@@ -563,7 +727,8 @@ const translations = {
         th_cpu: "Процессор",
         th_single: "Одноядерный",
         th_multi: "Многопоточный",
-        th_comment: "Комментарий",
+        th_cpu_type: "Тип",
+        h2_overall: "Общий рейтинг процессоров",
         h2_desk_intel: "Настольные Intel Core процессоры",
         h2_desk_amd: "Настольные AMD Ryzen процессоры",
         h2_lap_intel: "Ноутбучные Intel Core процессоры",
@@ -572,14 +737,14 @@ const translations = {
         h2_xeon: "Intel Xeon процессоры",
         h2_other_amd: "Прочие AMD процессоры",
         h2_arm: "ARM процессоры",
-        btn_dl: "Скачать MakuTweaker",
-        btn_submit: "Отправить свои результаты"
+        btn_dl: "Скачать MakuTweaker"
     },
     en: {
         page_title: "Adderly.Top - MakuTweaker Benchmark Results",
         nav_builds: "Bootlegs",
         nav_support: "Support",
         cat_title: "Categories",
+        cat_overall: "Overall Ranking",
         cat_desk_intel: "Desktop Intel Core",
         cat_desk_amd: "Desktop AMD Ryzen",
         cat_lap_intel: "Laptop Intel Core",
@@ -594,7 +759,8 @@ const translations = {
         th_cpu: "Processor",
         th_single: "Single-core",
         th_multi: "Multi-core",
-        th_comment: "Comment",
+        th_cpu_type: "CPU Type",
+        h2_overall: "Overall Processor Ranking",
         h2_desk_intel: "Desktop Intel Core Processors",
         h2_desk_amd: "Desktop AMD Ryzen Processors",
         h2_lap_intel: "Laptop Intel Core Processors",
@@ -603,14 +769,14 @@ const translations = {
         h2_xeon: "Intel Xeon Processors",
         h2_other_amd: "Other AMD Processors",
         h2_arm: "ARM Processors",
-        btn_dl: "Download MakuTweaker",
-        btn_submit: "Submit your results"
+        btn_dl: "Download MakuTweaker"
     },
     uk: {
         page_title: "Adderly.Top - Результати MakuTweaker Benchmark",
         nav_builds: "Збірки",
         nav_support: "Підтримати",
         cat_title: "Категорії",
+        cat_overall: "Загальний рейтинг",
         cat_desk_intel: "Настільні Intel Core",
         cat_desk_amd: "Настільні AMD Ryzen",
         cat_lap_intel: "Ноутбучні Intel Core",
@@ -625,7 +791,8 @@ const translations = {
         th_cpu: "Процесор",
         th_single: "Одноядерний",
         th_multi: "Багатопотоковий",
-        th_comment: "Коментар",
+        th_cpu_type: "Тип",
+        h2_overall: "Загальний рейтинг процесорів",
         h2_desk_intel: "Настільні процесори Intel Core",
         h2_desk_amd: "Настільні процесори AMD Ryzen",
         h2_lap_intel: "Ноутбучні процесори Intel Core",
@@ -634,14 +801,14 @@ const translations = {
         h2_xeon: "Процесори Intel Xeon",
         h2_other_amd: "Інші процесори AMD",
         h2_arm: "Процесори ARM",
-        btn_dl: "Завантажити MakuTweaker",
-        btn_submit: "Відправити свої результати"
+        btn_dl: "Завантажити MakuTweaker"
     },
     zh: {
         page_title: "Adderly.Top - MakuTweaker 基准测试结果",
         nav_builds: "系统版本",
         nav_support: "支持",
         cat_title: "类别",
+        cat_overall: "总体排名",
         cat_desk_intel: "台式机 Intel Core",
         cat_desk_amd: "台式机 AMD Ryzen",
         cat_lap_intel: "笔记本 Intel Core",
@@ -656,7 +823,8 @@ const translations = {
         th_cpu: "处理器",
         th_single: "单核",
         th_multi: "多核",
-        th_comment: "评论",
+        th_cpu_type: "类型",
+        h2_overall: "处理器总体排名",
         h2_desk_intel: "台式机 Intel Core 处理器",
         h2_desk_amd: "台式机 AMD Ryzen 处理器",
         h2_lap_intel: "笔记本 Intel Core 处理器",
@@ -665,14 +833,14 @@ const translations = {
         h2_xeon: "Intel Xeon 处理器",
         h2_other_amd: "其他 AMD 处理器",
         h2_arm: "ARM 处理器",
-        btn_dl: "下载 MakuTweaker",
-        btn_submit: "提交您的结果"
+        btn_dl: "下载 MakuTweaker"
     },
     ja: {
         page_title: "Adderly.Top - MakuTweaker ベンチマーク結果",
         nav_builds: "ビルド",
         nav_support: "サポート",
         cat_title: "カテゴリ",
+        cat_overall: "総合ランキング",
         cat_desk_intel: "デスクトップ Intel Core",
         cat_desk_amd: "デスクトップ AMD Ryzen",
         cat_lap_intel: "ノートPC Intel Core",
@@ -687,7 +855,8 @@ const translations = {
         th_cpu: "プロセッサ",
         th_single: "シングルコア",
         th_multi: "マルチコア",
-        th_comment: "コメント",
+        th_cpu_type: "タイプ",
+        h2_overall: "プロセッサ総合ランキング",
         h2_desk_intel: "デスクトップ Intel Core プロセッサ",
         h2_desk_amd: "デスクトップ AMD Ryzen プロセッサ",
         h2_lap_intel: "ノートPC Intel Core プロセッサ",
@@ -696,8 +865,7 @@ const translations = {
         h2_xeon: "Intel Xeon プロセッサ",
         h2_other_amd: "その他 AMD プロセッサ",
         h2_arm: "ARM プロセッサ",
-        btn_dl: "MakuTweakerをダウンロード",
-        btn_submit: "結果を送信する"
+        btn_dl: "MakuTweakerをダウンロード"
     }
 };
 
