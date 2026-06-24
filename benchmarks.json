@@ -211,11 +211,6 @@
             "multi": 5538
         },
         {
-            "name": "Intel Core i5 8365U",
-            "single": 1005,
-            "multi": 4264
-        },
-        {
             "name": "Intel Core i5 6600",
             "single": 952,
             "multi": 3518
@@ -843,6 +838,11 @@
             "name": "Intel Core i5 11260H",
             "single": 1044,
             "multi": 8126
+        },
+        {
+            "name": "Intel Core i5 8365U",
+            "single": 1005,
+            "multi": 4264
         },
         {
             "name": "Intel Core i5 10310U",
