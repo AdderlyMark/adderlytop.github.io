@@ -444,6 +444,11 @@
             "name": "Intel Core i7 870",
             "single": 349,
             "multi": 1921
+        },
+        {
+            "name": "virt 10.0",
+            "single": 310,
+            "multi": 1591
         }
     ],
     "desktop_amd": [
@@ -1796,6 +1801,11 @@
             "name": "AMD A4 9125",
             "single": 320,
             "multi": 690
+        },
+        {
+            "name": "AMD E 450",
+            "single": 149,
+            "multi": 262
         }
     ],
     "arm_cpu": [
