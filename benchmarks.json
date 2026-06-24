@@ -1519,11 +1519,6 @@
             "multi": 470
         },
         {
-            "name": "Celeron T3100",
-            "single": 235,
-            "multi": 458
-        },
-        {
             "name": "Intel Pentium N3710",
             "single": 234,
             "multi": 922
