@@ -1,146 +1,280 @@
-Intel Core i5-14600K
-Intel Core i5-14600KF
-Error reading
-13th Gen Intel Core i7-1355U
-Intel Core i7-14650HX
-Intel Core 5 210H
-13th Gen Intel Core i7-13620H
-AMD Ryzen 7 9700X 8-Core
-Intel Core Ultra 9 275HX
-Intel Core Ultra 7 255H
-13th Gen Intel Core i5-13450HX
-AMD Ryzen 9 9900X3D 12-Core
-Intel Core i7-10700KF
-AMD Ryzen 9 8945HX
-AMD Ryzen 5 7500F 6-Core
-12th Gen Intel Core i5-12400
-11th Gen Intel Core i9-11900H
-AMD Ryzen 7 255 Radeon 780M
-12th Gen Intel Core i3-12100F
-11th Gen Intel Core i7-11800H
-12th Gen Intel Core i7-12650H
-11th Gen Intel Core i5-1155G7
-12th Gen Intel Core i5-12400F
-AMD Ryzen 7 8845HS Radeon 780M
-AMD Ryzen 7 5800X 8-Core
-11th Gen Intel Core i5-11600
-AMD Ryzen 5 8400F 6-Core
-12th Gen Intel Core i7-12700H
-12th Gen Intel Core i5-12500H
-12th Gen Intel Core i5-12450H
-AMD Ryzen 7 7445HS Radeon 740M
-AMD Ryzen 7 7800X3D 8-Core
-Intel Core i7-9700
-AMD Ryzen 7 5700X 8-Core
-AMD Ryzen 7 8745HS Radeon 780M
-AMD Ryzen 5 5600G
-11th Gen Intel Core i5-11400F
-AMD Ryzen 5 9600X 6-Core
-AMD Ryzen 5 5600 6-Core
-AMD Ryzen 7 8745H with Radeon 780M
-Intel Core i5-10400F
-AMD Ryzen 5 7535HS
-Intel Core i5-10200H
-11th Gen Intel Core i3-1115G4
-Intel Core i5-10400
-12th Gen Intel Core i5-1235U
-AMD Ryzen 5 5500
-AMD Ryzen 5 5600X 6-Core
-Intel Core i5-8500
-AMD Ryzen 5 4500 6-Core
-Intel Core i5-10210U
-AMD Ryzen 7 5700X3D 8-Core
-AMD Ryzen 3 PRO 4350G
-AMD Ryzen 7 7435HS
-AMD Ryzen 5 5500X3D 6-Core
-AMD Ryzen 5 3600 6-Core
-AMD Ryzen 7 8845H Radeon 780M
-12th Gen Intel Core i5-1240P
-Intel Core i5-1035G1
-AMD Ryzen 5 6600H
-Intel Core i7-4790
-Intel Core i5-8300H
-Intel Core i5-7500
-AMD Ryzen 5 3400G
-AMD Ryzen 5 7430U
-Intel Core i7-4770K
-AMD Ryzen 5 5600U
-AMD Ryzen 5 3600X 6-Core
-AMD Ryzen 5 2400G
-Intel Core i3-4160
-Intel Core i3-1005G1
-AMD Ryzen 5 2600 Six-Core
-AMD Ryzen 3 PRO 1300 Quad-Core
-Intel Xeon E5-2690 v3
-Intel Core i5-4310M
-Intel Core i3-4130
-Intel Core i5-4570
-Intel Core i5-6500
-Intel Xeon E5-2643 v3
-AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx
-AMD Ryzen 7 2700U with Radeon Vega Mobile Gfx
-AMD Ryzen 5 5500U
-Intel Core i5-7200U
-Intel Core i7-3770K
-Intel Core i3-10100F
-AMD Ryzen 7 2700
-AMD Ryzen 5 1500X Quad-Core
-Intel Core i5-6300U
-Intel Core i5-9300H
-Intel Xeon E5-2630 v3
-Intel Core i7-3770
+Intel Core i9 14900K
+Intel Core i7 14700K
+Intel Core i7 14700KF
+Intel Core Ultra 9 285K
+Intel Core i7 13700KF
+Intel Core i7 14700F
+Intel Core i9 13900KF
+Intel Core Ultra 7 265KF
+Intel Core i5 14600KF
+Intel Core i5 13600K
+Intel Core i5 13600KF
+Intel Core i7 12700KF
+Intel Core i9 10850K
+Intel Core i5 12600KF
+Intel Core i5 14400F
+Intel Core i5 13490F
+Intel Core i5 1340
+Intel Core i5 1440
+Intel Core i5 13400F
+Intel Core i7 1170
+Intel Core i9 9900K
+Intel Core i5 12400F
+Intel Core i5 1240
+Intel Core i7 9700K
+Intel Core i5 114
+Intel Core i7 9700F
+Intel Core i7 87
+Intel Core i5 105
+Intel Core i3 13100F
+Intel Core i5 10
+Intel Core i5 10400F
+Intel Core i3 12100F
+Intel Core i5 11400F
+Intel Core i3 10105F
+Intel Core i3 101
+Intel Core i5 9400F
+Intel Core i5 8
+Intel Core i3 10100F
+Intel Core i5 8600K
+Intel Core i7 77
+Intel Core i7 6
+Intel Core i5 7600K
+Intel Core i7 4
+Intel Core i5 8365U
+Intel Core i7 4
+Intel Core i3 91
+Intel Core i3 9100F
+Intel Core i7 3
+Intel Core i5 6
+Intel Core i5 7
+Intel Core i3 8
+Intel Core i5 4
+Intel Core i5 5675R
+Intel Core i5 7
+Intel Core i5 4
+Intel Core i7 2
+Intel Core i5 4
+Intel Core i5 4
+Intel Core i5 3
+Intel Core i5 3
+Intel Core i3 7
+Intel Core i5 3
+Intel Core i7 K
+Intel Core i5 2
+Intel Core i5 2
+Intel Core i7
+Intel Core i7
+Intel Core i3 4
+Intel Core i5 6
+Intel Core i5 2
+Intel Core i3 3
+Intel Core i3 2
+Intel Core i3 2
+Intel Core i3
+AMD Ryzen 9 9950X3D
+AMD Ryzen 9 7950X3D
+AMD Ryzen 9 9900X
+AMD Ryzen 9 9950X
+AMD Ryzen 9 5900X
+AMD Ryzen 7 9800X3D
+AMD Ryzen 7 770
+AMD Ryzen 7 7800X3D
+AMD Ryzen 7 8700F
+AMD Ryzen 7 9700X
+AMD Ryzen 5 9600X
+AMD Ryzen 7 5800X
+AMD Ryzen 5 7500F
+AMD Ryzen 7 5800X3D
+AMD Ryzen 7 7600X
 AMD Ryzen 7 5700G
-Intel Core i7-4870HQ
-Intel N150
-Intel Core i5-3470
-Intel Core i3-4170
-13th Gen Intel Core i5-13420H
-Intel Core i5-5350U
-Intel Core i3-3225
-Intel Core i3-3220
+AMD Ryzen 7 5700X3D
+AMD Ryzen 7 5700X
+AMD Ryzen 7 3700X
+AMD Ryzen 5 8400F
+AMD Ryzen 5 5600X
+AMD Ryzen 5 560
+AMD Ryzen 5 5
+AMD Ryzen 5 5600G
+AMD Ryzen 7 2700X
+AMD Ryzen 5 4
+AMD Ryzen 5 4600G
+AMD Ryzen 5 3
+AMD Ryzen 5 1600X
+AMD Ryzen 5 1
+AMD Ryzen 5 3
+AMD Ryzen 5 2
+AMD Ryzen 5 3400G
+AMD Ryzen 5 2400G
+AMD Ryzen 3 3200G
+AMD Ryzen 3 2200G
+Intel Core Ultra 9 275HX
+Intel Core i9 14900HX
+Intel Core i7 14650H
+Intel Core i7 13650HX
+Intel Core Ultra 7 155H
+Intel Core i7 13620H
+Intel Core i9 13900H
+Intel Core i5 13450HX
+Intel Core i7 12650H
+Intel Core i5 12500H
+Intel Core 5 210H
+Intel Core i5 12450H
+Intel Core i7 11800H
+Intel Core i5 13420H
+Intel Core i5 13500H
+Intel Core i5 11400H
+Intel Core i7 10750H
+Intel Core i5 11260H
+Intel Core i7 1255U
+Intel Core i3 1220P
+Intel Core i7 9750HF
+Intel Core i7 12700H
+Intel Core i7 1165G
+Intel Core i5 1334U
+Intel Core i7 9750H
+Intel Core i5 1135G
+Intel Core i3 1125G
+Intel Core i5 10310U
+Intel Core i5 10210U
+Intel Core i5 10300H
+Intel Core i5 8300H
+Intel Core i7 6700HQ
+Intel Core i5 1035G
+Intel Core i5 1235U
+Intel Core i7 8550U
+Intel Core i5 8250U
+Intel Core i7 7700HQ
+Intel Core i5 8350U
+Intel Core i7 3630QM
+Intel Core i7 7300HQ
+Intel Core i3 1005G
+Intel Core i3 10100U
+Intel Core i3 8130U
+Intel Core i7 7500U
+Intel Core i5 7200U
+Intel Core i7 5650U
+Intel Core i5 6200U
+Intel Core i7 5500U
+Intel Core i3 4200M
+Intel Core i7 4258U
+Intel Core i5 5500U
+Intel Core i5 5200U
+Intel Core i7 4510U
+Intel Core i5 3320M
+Intel Core i5 3230M
+Intel Core i3 4000M
+Intel Core i5 4210U
+Intel Core i5 3210M
+Intel Core i7 3517U
+Intel Core i5 2450M
+Intel Core i3 3120M
+Intel Core i3 5005U
+Intel Core i5 3337U
+Intel Core i3 3110M
+Intel Core i5 M
+Intel Core i3 4030U
+Intel Core i7 M
+Intel Core i3 380M
+Intel Core i3 4010U
+Intel Core i3 2330M
+Intel Core i3 330M
+Intel Core i3 2348M
+AMD Ryzen 9 7945HX
+AMD Ryzen 9 7845HX
+AMD Ryzen AI 9 HX 37
+AMD Ryzen 7 26
+AMD Ryzen 9 7940HS
+AMD Ryzen 7 8845H
+AMD Ryzen 7 H 25
+AMD Ryzen AI 9 3
+AMD Ryzen 9 6900HS
+AMD Ryzen 7 8840HS
+AMD Ryzen 7 7435H
+AMD Ryzen 5 6600H
+AMD Ryzen 5 7535HS
+AMD Ryzen 5 7530U
+AMD Ryzen 5 5600H
+AMD Ryzen 7 4800HS
+AMD Ryzen 7 7730U
+AMD Ryzen 5 7430U
 AMD Ryzen 7 5700U
-Intel Pentium G4560
-Intel Core i5-3230M
-Intel Xeon E31270
-Intel Xeon E5-2680 v3
-Intel Core i5-4430
-Intel Core i3-3220T
-Intel Pentium Silver N6000
-Intel Celeron N5095
-Intel Core i5-2410M
-AMD A8-7600 Radeon R7, 10 Compute Cores 4C+6G
-Intel Core i5 M 560
-Intel Core i3-7100U
-Intel Core i7-10700F
-Intel Core i5 M 540
-Intel Core i3-3110M
-Intel Xeon E5-2660 v2
-Intel Core i5-2540M
-Intel Pentium 4415U
-AMD Ryzen 5 8640HS Radeon 760M
-AMD FX-4100 Quad-Core
-Intel Celeron J4125
-Intel Pentium B960
-Apple Silicon
-Intel Core2 Quad Q9400
-Intel Core i5-8250U
-Pentium E6300
-AMD Phenom II X4 B50
-Intel Core i3-2350M
-Intel Core i3-3217U
-Intel Core i7 870
-AMD A8-4500M APU with Radeon HD
-Intel Core i5 M 430
-Intel Core2 Duo T8300
-Intel Core2 Duo P8400
-AMD A4-9125 RADEON R3, 4 COMPUTE CORES 2C+2G
-Intel Core i3-4005U
-virt-10.0
-Intel Core i7-7700HQ
-Pentium T4400
-Intel Core2 Duo T5800
-Celeron T3100
-Intel Pentium N3710
-Intel Pentium N3700
-AMD E-450 APU with Radeon HD
-Snapdragon 845
+AMD Ryzen 5 5500U
+AMD Ryzen 5 3550H
+AMD Ryzen 7 3700U
+AMD Ryzen 5 3500U
+AMD Ryzen 3 3250U
+AMD Ryzen 3 3200U
+Intel NVIDIA CC
+Intel N
+Intel Pentium Gold 7
+Intel N
+Intel Pentium Gold G6
+Intel Celeron N5
+Intel Core 2 Quad Q8
+Intel Pentium Gold G4
+Intel Pentium 5405U
+Intel Core 2 Quad Q6
+Intel Pentium Silver N5
+Intel Pentium 4417U
+Intel Pentium G2
+Intel Celeron N4
+Intel Pentium G
+Intel Core 2 Duo P
+Intel Celeron N
+Intel Celeron J
+Intel Pentium 2117U
+Intel Celeron E
+Intel Pentium B
+Intel Celeron E
+Intel Pentium P
+Intel Pentium E
+Intel Celeron T
+Intel Celeron N
+Intel Celeron B
+Intel Core 2 Duo T
+Intel Celeron N
+Intel Xeon E5 2696 V3
+Intel Xeon E5 2690 V4
+Intel Xeon E5 2680 V4
+Intel Xeon E5 2673 V3
+Intel Xeon E5 2670 V3
+Intel Xeon E5 2699 V3
+Intel Xeon E5 2680 V3
+Intel Xeon E5 2666 V3
+Intel Xeon E5 2650 V4
+Intel Xeon E5 2667 V4
+Intel Xeon E5 1660 V4
+Intel Xeon E5 2640 V4
+Intel Xeon E5 2689 0
+Intel Xeon E5 2650 V2
+Intel Xeon E3 1240 V5
+Intel Xeon E5 2620 V3
+Intel Xeon E3 1270 V3
+Intel Xeon E5 2630 V2
+Intel Xeon E3 1240
+Intel Xeon E5 2643 0
+AMD EPYC 97
+AMD EPYC 74
+AMD FX 8
+AMD Phenom II X6 1100T
+AMD Athlon 3000G
+AMD A10 9
+AMD A10 6
+AMD Athlon X4 760K
+AMD A10 PRO-7800B
+AMD FX 4
+AMD Phenom II X4
+AMD A8 5600K
+AMD FX 4
+AMD Athlon Gold 3150U
+AMD Athlon II X3
+AMD A8 4500M
+AMD 3020e
+AMD A4
+AMD A6 3420M
+AMD Athlon 64 X2 5600+
+AMD Athlon 64 X2 4400+
+AMD A4 3305M
+AMD E-
+AMD C-
