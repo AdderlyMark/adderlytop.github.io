@@ -625,20 +625,25 @@
         })
         .catch(function(e) { console.error('Ошибка загрузки бенчмарков:', e); });
 
-    var CAT_LABELS = (function() {
-    var lang = localStorage.getItem('lang') || navigator.language.slice(0,2);
-    var t = translations[lang] || translations['ru'];
-    return {
-        desktop_intel: t.cat_desk_intel,
-        desktop_amd:   t.cat_desk_amd,
-        laptop_intel:  t.cat_lap_intel,
-        laptop_amd:    t.cat_lap_amd,
-        other_intel:   t.cat_other_intel,
-        xeon_intel:    t.cat_xeon,
-        other_amd:     t.cat_other_amd,
-        arm_cpu:       'ARM'
-    };
-})();
+    function getCatLabel(catKey) {
+        var lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+        var t = translations[lang] || translations['ru'];
+
+        var map = {
+            desktop_intel: t.cat_desk_intel,
+            desktop_amd:   t.cat_desk_amd,
+            laptop_intel:  t.cat_lap_intel,
+            laptop_amd:    t.cat_lap_amd,
+            other_intel:   t.cat_other_intel,
+            xeon_intel:    t.cat_xeon,
+            other_amd:     t.cat_other_amd,
+            arm_cpu:       t.h2_arm || 'ARM'
+        };
+        
+        return map[catKey] || catKey;
+    }
+
+    getCatLabel(cpu.cat)
 
     document.getElementById('cpu-search').addEventListener('input', function() {
         var raw = this.value.trim();
@@ -668,14 +673,12 @@
         var matched = [];
 
         if (isExact) {
-            // /query — только по имени, без похожих
             matched = all.filter(function(cpu) {
                 var n = cpu.name.toLowerCase();
                 return qWords.every(function(w) { return n.indexOf(w) !== -1; });
             }).sort(function(a, b) { return b.multi - a.multi; });
 
         } else {
-            // обычный поиск: совпадение по имени + похожие по multi ±10%
             var nameMatched = all.filter(function(cpu) {
                 var n = cpu.name.toLowerCase();
                 return qWords.every(function(w) { return n.indexOf(w) !== -1; });
@@ -710,7 +713,7 @@
             return '<tr><td class="name">' + hl + '</td>' +
                    '<td class="score">' + cpu.single + '</td>' +
                    '<td class="score">' + cpu.multi + '</td>' +
-                   '<td style="color:var(--text-muted);font-size:0.85rem">' + (CAT_LABELS[cpu.cat]||cpu.cat) + '</td></tr>';
+                   '<td style="color:var(--text-muted);font-size:0.85rem">' + getCatLabel(cpu.cat) + '</td></tr>';
         }).join('');
         resultsBox.style.display = 'block';
     });
@@ -888,6 +891,10 @@ const translations = {
 function setLang(lang) {
     localStorage.setItem("lang", lang);
     applyLang(lang);
+        var searchInput = document.getElementById('cpu-search');
+    if (searchInput.value.trim() !== '') {
+        searchInput.dispatchEvent(new Event('input'));
+    }
 }
 
 function applyLang(lang) {
