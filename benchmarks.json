@@ -369,11 +369,6 @@
             "name": "Intel Core i3 540",
             "single": 336,
             "multi": 1118
-        },
-        {
-            "name": "",
-            "single": 0,
-            "multi": 0
         }
     ],
     "desktop_amd": [
