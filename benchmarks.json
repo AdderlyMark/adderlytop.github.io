@@ -1768,11 +1768,6 @@
             "multi": 477
         },
         {
-            "name": "AMD E-450",
-            "single": 109,
-            "multi": 162
-        },
-        {
             "name": "AMD 3020e",
             "single": 92,
             "multi": 961
