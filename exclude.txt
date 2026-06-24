@@ -365,3 +365,4 @@ Intel Pentium N3700
 AMD E 450
 Snapdragon 845
 virt 10.0
+AMD E 450
