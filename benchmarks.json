@@ -439,11 +439,6 @@
             "name": "Intel Core i7 870",
             "single": 349,
             "multi": 1921
-        },
-        {
-            "name": "virt 10.0",
-            "single": 310,
-            "multi": 1591
         }
     ],
     "desktop_amd": [
@@ -1507,11 +1502,6 @@
             "name": "Intel Core2 Duo P8400",
             "single": 321,
             "multi": 631
-        },
-        {
-            "name": "Pentium T4400",
-            "single": 277,
-            "multi": 520
         },
         {
             "name": "Intel Core2 Duo T5800",
