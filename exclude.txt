@@ -365,3 +365,13 @@ AMD E 450
 Snapdragon 845
 virt 10.0
 AMD E 450
+Intel Core i3 14100F
+AMD Ryzen 5 7235HS
+Intel Xeon E5 1680 v2
+Intel Core i3 10110U
+Intel Core i7 5820K
+Intel Xeon E5 2670 v3
+Intel Xeon E5 2650 v3
+Intel Core i5 6400T
+Pentium T4400
+Celeron T3100
