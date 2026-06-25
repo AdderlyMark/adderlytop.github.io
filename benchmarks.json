@@ -439,6 +439,21 @@
             "name": "Intel Core i7 870",
             "single": 349,
             "multi": 1921
+        },
+        {
+            "name": "Intel Core i3 14100F",
+            "single": 1173,
+            "multi": 8529
+        },
+        {
+            "name": "Intel Core i7 5820K",
+            "single": 795,
+            "multi": 5850
+        },
+        {
+            "name": "Intel Core i5 6400T",
+            "single": 601,
+            "multi": 2172
         }
     ],
     "desktop_amd": [
@@ -1133,6 +1148,11 @@
             "name": "Intel Core i3 4005U",
             "single": 319,
             "multi": 885
+        },
+        {
+            "name": "Intel Core i3 10110U",
+            "single": 870,
+            "multi": 2187
         }
     ],
     "laptop_amd": [
@@ -1305,6 +1325,11 @@
             "name": "AMD Ryzen 5 8640HS",
             "single": 420,
             "multi": 4383
+        },
+        {
+            "name": "AMD Ryzen 5 7235HS",
+            "single": 960,
+            "multi": 6406
         }
     ],
     "other_intel": [
@@ -1517,6 +1542,16 @@
             "name": "Intel Pentium N3700",
             "single": 196,
             "multi": 475
+        },
+        {
+            "name": "Pentium T4400",
+            "single": 277,
+            "multi": 520
+        },
+        {
+            "name": "Celeron T3100",
+            "single": 235,
+            "multi": 458
         }
     ],
     "xeon_intel": [
@@ -1644,6 +1679,21 @@
             "name": "Intel Xeon E5 2660 v2",
             "single": 430,
             "multi": 6263
+        },
+        {
+            "name": "Intel Xeon E5 1680 v2",
+            "single": 882,
+            "multi": 8691
+        },
+        {
+            "name": "Intel Xeon E5 2670 v3",
+            "single": 709,
+            "multi": 9895
+        },
+        {
+            "name": "Intel Xeon E5 2650 v3",
+            "single": 673,
+            "multi": 7504
         }
     ],
     "other_amd": [
