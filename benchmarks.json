@@ -454,6 +454,31 @@
             "name": "Intel Core i5 6400T",
             "single": 601,
             "multi": 2172
+        },
+        {
+            "name": "Intel Core i5 11600K",
+            "single": 1140,
+            "multi": 8205
+        },
+        {
+            "name": "Intel Core i9 11900K",
+            "single": 849,
+            "multi": 9929
+        },
+        {
+            "name": "Intel Core i3 N305",
+            "single": 733,
+            "multi": 4596
+        },
+        {
+            "name": "Intel Core i5 4440",
+            "single": 712,
+            "multi": 2698
+        },
+        {
+            "name": "QEMU Virtual version 2.5+",
+            "single": 495,
+            "multi": 2629
         }
     ],
     "desktop_amd": [
@@ -676,6 +701,11 @@
             "name": "AMD Ryzen 5 1500X",
             "single": 729,
             "multi": 4196
+        },
+        {
+            "name": "AMD Ryzen 5 5500GT",
+            "single": 1027,
+            "multi": 9810
         }
     ],
     "laptop_intel": [
@@ -1552,6 +1582,11 @@
             "name": "Celeron T3100",
             "single": 235,
             "multi": 458
+        },
+        {
+            "name": "Intel Pentium 6405U",
+            "single": 490,
+            "multi": 1365
         }
     ],
     "xeon_intel": [
@@ -1694,6 +1729,16 @@
             "name": "Intel Xeon E5 2650 v3",
             "single": 673,
             "multi": 7504
+        },
+        {
+            "name": "Intel Xeon E3 1230 V2",
+            "single": 676,
+            "multi": 3330
+        },
+        {
+            "name": "Intel Xeon E5 2650 v2",
+            "single": 615,
+            "multi": 11539
         }
     ],
     "other_amd": [
@@ -1836,6 +1881,11 @@
             "name": "AMD E 450",
             "single": 149,
             "multi": 262
+        },
+        {
+            "name": "AMD FX 6300",
+            "single": 463,
+            "multi": 2541
         }
     ],
     "arm_cpu": [
