@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест - Adderly.Top</title>
+    
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/styles.css"> 
+    <meta property="og:title" content="Тест">
+    <meta property="og:keywords" content="tags,tegi">
+    <meta property="og:description" content="Описание">
+    <meta name="description" content="Описание">
+</head>
+<body>
+<header>
+    <a href="/" class="logo">
+        <img src="/favicon.ico" alt="MakuT" class="site-icon">Adderly.Top
+    </a>
+    <nav>
+        <ul>
+            <li><a href="/builds">Сборки</a></li>
+            <li><a href="/makutweaker">MakuTweaker</a></li>
+            <li><a href="/support">Поддержать</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h1>Заголовок</h1>
+        <p>Текст</p>
+        <div class="gallery-row">
+            <img src="https://thumbs.dreamstime.com/b/none-214340643.jpg" alt="Изображение">
+        </div>
+        <hr style="border-color: var(--border-color); margin: 30px 0;">
+        <h1>Второй заголовок</h1>
+        <p>Снова текст</p>
+        <div class="buttons">
+            <a href="https://adderly.top" class="btn-primary">Кнопочка</a>
+        </div>
+        <div class="accordion-container">
+            <button class="accordion">Комбобоксик</button>
+            <div class="panel">
+                <div class="panel-content">
+                    <p>Текст</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer-socials">
+        <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/tg.png" alt="Telegram Icon" class="social-icon">
+        </a>
+        <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/yt.png" alt="YouTube Icon" class="social-icon">
+        </a>
+        <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/boosty.png" alt="Boosty Icon" class="social-icon">
+        </a>
+    </div>
+    <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+</body>
+</html>
