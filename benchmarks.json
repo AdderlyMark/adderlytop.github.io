@@ -474,11 +474,6 @@
             "name": "Intel Core i5 4440",
             "single": 712,
             "multi": 2698
-        },
-        {
-            "name": "QEMU Virtual version 2.5+",
-            "single": 495,
-            "multi": 2629
         }
     ],
     "desktop_amd": [
