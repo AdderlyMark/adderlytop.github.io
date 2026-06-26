@@ -125,7 +125,7 @@
 
         main h2 {
             margin-top: 50px;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             color: #fff;
             font-size: 1.8rem;
             font-weight: 800;
@@ -338,6 +338,9 @@
         <button class="floating-button" onclick="scrollToCategory('other_intel')" data-i18n="cat_other_intel">Прочие Intel</button>
         <button class="floating-button" onclick="scrollToCategory('xeon_intel')" data-i18n="cat_xeon">Intel Xeon</button>
         <button class="floating-button" onclick="scrollToCategory('other_amd')" data-i18n="cat_other_amd">Прочие AMD</button>
+        <button class="floating-button" onclick="scrollToCategory('arm_cpu')" data-i18n="cat_arm">ARM процессоры</button>
+        <div class="panel-divider"></div>
+        <button class="floating-button" onclick="scrollToCategory('statistics_title')" data-i18n="cat_stats">Статистика</button>
     </div>
 
 <header>
@@ -629,7 +632,17 @@
                 { id: 'arm_cpu', i18n: 'h2_arm' }
             ];
 
+            var totalCpus = 0;
+            targetOrder.forEach(function(cat) {
+                totalCpus += (data[cat.id] ? data[cat.id].length : 0);
+            });
             var statsHtml = [];
+            
+            statsHtml.push('<tr style="background: rgba(168, 85, 247, 0.1);">' +
+                '<td style="padding: 14px 20px; font-weight: 700; color: #fff;" data-i18n="stat_total"></td>' +
+                '<td class="score" style="font-weight: 800; color: #a855f7; text-align: right; padding-right: 40px; font-size: 1.1rem;">' + totalCpus + '</td>' +
+            '</tr>');
+
             targetOrder.forEach(function(cat) {
                 var cpus = data[cat.id] || [];
                 statsHtml.push('<tr>' +
@@ -754,6 +767,9 @@ const translations = {
         cat_other_intel: "Прочие Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "Прочие AMD",
+        cat_arm: "ARM процессоры",
+        cat_stats: "Статистика",
+        stat_total: "Всего процессоров",
         h1_main: "Результаты MakuTweaker Benchmark",
         search_placeholder: "Введите название процессора (например, 13700KF)",
         search_hint: "Добавьте в начале \"/\" чтобы сделать глобальный поиск.",
@@ -787,6 +803,9 @@ const translations = {
         cat_other_intel: "Other Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "Other AMD",
+        cat_arm: "ARM Processors",
+        cat_stats: "Statistics",
+        stat_total: "Total Processors",
         h1_main: "MakuTweaker Benchmark Results",
         search_placeholder: "Enter processor name (e.g., 13700KF)",
         search_hint: "Add \"/\" at the beginning for a global search.",
@@ -820,6 +839,9 @@ const translations = {
         cat_other_intel: "Інші Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "Інші AMD",
+        cat_arm: "ARM процесори",
+        cat_stats: "Статистика",
+        stat_total: "Всього процесорів",
         h1_main: "Результати MakuTweaker Benchmark",
         search_placeholder: "Введіть назву процесора (наприклад, 13700KF)",
         search_hint: "Додайте на початку \"/\" щоб зробити глобальний пошук.",
@@ -853,6 +875,9 @@ const translations = {
         cat_other_intel: "其他 Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "其他 AMD",
+        cat_arm: "ARM 处理器",
+        cat_stats: "统计数据",
+        stat_total: "处理器总数",
         h1_main: "MakuTweaker 基准测试结果",
         search_placeholder: "输入处理器名称（例如 13700KF）",
         search_hint: "在开头添加 \"/\" 进行全局搜索。",
@@ -886,6 +911,9 @@ const translations = {
         cat_other_intel: "その他 Intel",
         cat_xeon: "Intel Xeon",
         cat_other_amd: "その他 AMD",
+        cat_arm: "ARM プロセッサ",
+        cat_stats: "統計",
+        stat_total: "合計プロセッサ",
         h1_main: "MakuTweaker ベンチマーク結果",
         search_placeholder: "プロセッサ名を入力 (例: 13700KF)",
         search_hint: "グローバル検索を行うには、先頭に「/」を追加します。",
