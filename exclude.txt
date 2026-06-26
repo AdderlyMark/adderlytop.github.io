@@ -385,3 +385,4 @@ Intel Xeon E5 2650 v2
 QEMU Virtual version 2.5+
 Intel Pentium 6405U
 AMD FX 6300
+QEMU Virtual version 2.5+
