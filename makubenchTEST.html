@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adderly.Top - Результаты MakuTweaker Benchmark</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68MY39SKZ9');
+    </script>
+
+    <meta property="og:image" content="https://adderly.top/images/favicon.png">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+    
+    <meta property="og:title" content="Результаты MakuTweaker Benchmark">
+    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, результати тестів, результати, бенчмарк, макутвікер, test results, results, benchmark, resultados de pruebas, resultados, testergebnisse, ergebnisse, výsledky testů, výsledky, testi tulemused, tulemused, 测试结果, 结果, 基准测试, makutweaker基准测试, テスト結果, 結果, ベンチマーク, makutweakerベンチマーク, mga resulta ng pagsubok, mga resulta">
+    <meta property="og:description" content="Результаты MakuTweaker Benchmark">
+    <meta name="description" content="Результаты MakuTweaker Benchmark от пользователей MakuTweaker">
+    <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makutyper, makuadarii, софт от аддерли, сайт марка аддерли, сайт аддерли, makutweaker benchmark, benchmark, результаты тестов, результаты, бенч, макутвикер, бенчмарк, результати тестів, результати, бенчмарк, макутвікер, test results, results, benchmark, resultados de pruebas, resultados, testergebnisse, ergebnisse, výsledky testů, výsledky, testi tulemused, tulemused, 测试结果, 结果, 基准测试, makutweaker基准测试, テスト結果, 結果, ベンチマーク, makutweakerベンチマーク, mga resulta ng pagsubok, mga resulta">
+
+    <style>
+        .lang-switcher {
+            display: grid;
+            grid-template-columns:repeat(10, auto);
+            gap: 4px; margin-left: 10px; align-items: center;
+        }
+
+        .lang-switcher button {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #aaa;
+            padding: 2px 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.65rem;
+            line-height: 1;
+            transition: 0.2s;
+        }
+
+        .lang-switcher button:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .floating-panel {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 16px;
+            width: 210px;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .panel-header {
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .floating-button {
+            display: block;
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            text-align: left;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        .floating-button:hover {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border-color: rgba(255,255,255,0.2);
+            transform: translateX(4px);
+        }
+
+        .floating-button.overall-btn {
+            background: rgba(168, 85, 247, 0.12);
+            color: #c084fc;
+            border-color: rgba(168, 85, 247, 0.35);
+            font-weight: 600;
+        }
+        .floating-button.overall-btn:hover,
+        .floating-button.overall-btn.active {
+            background: rgba(168, 85, 247, 0.28);
+            color: #fff;
+            border-color: rgba(168, 85, 247, 0.7);
+        }
+
+        .panel-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 2px 0;
+        }
+
+        #overall-section { display: none; }
+
+        main h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .table-container {
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto 30px auto;
+            overflow-x: auto;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 14px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            color: var(--text-main);
+        }
+
+        th {
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        th:hover { background: rgba(0,0,0,0.5); }
+        tbody tr { transition: background 0.2s ease; }
+        tbody tr:hover { background: rgba(168, 85, 247, 0.15); }
+        tbody tr:last-child td { border-bottom: none; }
+        th.name, td.name { font-weight: 500; color: #fff; }
+        th.sorttable_sorted::after { content: " ↓"; color: #a855f7; font-size: 14px; margin-left: 5px; }
+        th.sorttable_sorted_reverse::after { content: " ↑"; color: #a855f7; font-size: 14px; margin-left: 5px; }
+
+        th.name {
+        width: 50%;
+        }
+
+        th.score {
+            width: 15%;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        td.score {
+            text-align: center;
+        }
+
+        .search-container { margin: 30px 0; text-align: center; }
+        #cpu-search {
+            width: 95%;
+            max-width: 600px;
+            box-sizing: border-box;
+            padding: 15px 20px;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid var(--border-color);
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        #cpu-search:focus {
+            border-color: #a855f7;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+        }
+
+        .search-container h6 {
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .similar-cpu-results {
+            margin: 20px auto 40px;
+            background: rgba(30, 15, 45, 0.8);
+            border: 1px solid #a855f7;
+            border-radius: 12px;
+            padding: 20px;
+            display: none;
+            max-width: 900px;
+            width: 95%; 
+            box-sizing: border-box;
+        }
+        .similar-cpu-results h3 { margin-top: 0; color: #fff; font-size: 1.2rem; }
+        .match-text { color: #a855f7; font-weight: 700; }
+
+        #similar-cpu-results th.name {
+            width: 30%;
+        }
+
+        #similar-cpu-results th:last-child, 
+        #similar-cpu-results td:last-child {
+            width: 15%;
+            line-height: 1.4;
+        }
+
+        table {
+            counter-reset: rowRank;
+        }
+
+        tbody tr {
+            counter-increment: rowRank;
+        }
+
+        th.name, td.name {
+            position: relative;
+            padding-left: 70px;
+        }
+
+        th.name::before {
+            content: "#";
+            position: absolute;
+            left: 20px;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        td.name::before {
+            content: counter(rowRank);
+            position: absolute;
+            left: 20px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 1250px) {
+            .floating-panel { left: 10px; width: 140px; padding: 12px; }
+            .panel-header { width: 100%; border-bottom: none; margin-bottom: 5px; padding-bottom: 0; }
+            .floating-button { padding: 8px 10px; font-size: 0.8rem; }
+            .floating-button:hover { transform: translateY(-2px); }
+        }
+
+
+        @media (max-width: 1100px) {
+            .lang-switcher { display: none; }
+            .floating-panel { display: none !important; }
+            .lang-switcher button {
+                font-size: 0.6rem;
+                padding: 2px 4px;
+            }
+        }
+        @media (max-width: 650px) {
+            table {
+                min-width: 100%;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.85rem;
+            }
+            
+            th.score {
+                font-size: 0.7rem;
+                white-space: normal;
+            }
+
+            th.sorttable_sorted::after, 
+            th.sorttable_sorted_reverse::after {
+                display: none;
+            }
+
+            main h2 {
+                font-size: 1.4rem;
+                margin-top: 30px;
+            }
+
+            #cpu-search {
+                font-size: 0.9rem;
+                padding: 12px 15px;
+            }
+
+            th.name, td.name {
+                padding-left: 30px;
+            }
+            th.name::before, td.name::before {
+                left: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="floating-panel">
+        <div class="panel-header" data-i18n="cat_title">Категории</div>
+        <button class="floating-button overall-btn" id="btn-overall" onclick="showOverall()" data-i18n="cat_overall">Общий рейтинг</button>
+        <div class="panel-divider"></div>
+        <button class="floating-button" onclick="scrollToCategory('desktop_intel')" data-i18n="cat_desk_intel">Настольные Intel Core</button>
+        <button class="floating-button" onclick="scrollToCategory('desktop_amd')" data-i18n="cat_desk_amd">Настольные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToCategory('laptop_intel')" data-i18n="cat_lap_intel">Ноутбучные Intel Core</button>
+        <button class="floating-button" onclick="scrollToCategory('laptop_amd')" data-i18n="cat_lap_amd">Ноутбучные AMD Ryzen</button>
+        <button class="floating-button" onclick="scrollToCategory('other_intel')" data-i18n="cat_other_intel">Прочие Intel</button>
+        <button class="floating-button" onclick="scrollToCategory('xeon_intel')" data-i18n="cat_xeon">Intel Xeon</button>
+        <button class="floating-button" onclick="scrollToCategory('other_amd')" data-i18n="cat_other_amd">Прочие AMD</button>
+    </div>
+
+<header>
+    <a href="index" class="logo">
+        <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
+    </a>
+
+<div class="lang-switcher">
+        <button onclick="setLang('ru')"><span class="fi fi-ru"></span> RU</button>
+        <button onclick="setLang('uk')"><span class="fi fi-ua"></span> UK</button>
+        <button onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+        <button onclick="setLang('zh')"><span class="fi fi-cn"></span> ZH</button>
+        <button onclick="setLang('ja')"><span class="fi fi-jp"></span> JA</button>
+    </div>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="builds" data-i18n="nav_builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="support" data-i18n="nav_support">Поддержать</a></li>
+        </ul>
+    </nav>
+    <img src="icons/burger.svg" alt="Меню" id="burger">
+</header>
+
+<main>
+    <h1 data-i18n="h1_main">Результаты MakuTweaker Benchmark</h1>
+
+    <div class="search-container">
+        <input type="text" id="cpu-search" placeholder="Введите название процессора (например, 13700KF)" data-i18n="search_placeholder">
+        <h6 data-i18n="search_hint">Добавьте в начале "/" чтобы сделать глобальный поиск.</h6>
+    </div>
+
+    <div id="similar-cpu-results" class="similar-cpu-results table-container">
+        <h3 data-i18n="search_results_title">Результат поиска и похожие процессоры:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score" data-i18n="th_single">Одноядерный</th>
+                    <th class="score" data-i18n="th_multi">Многопоточный</th>
+                    <th data-i18n="th_cpu_type">Тип</th>
+                </tr>
+            </thead>
+            <tbody id="similar-cpu-tbody"></tbody>
+        </table>
+    </div>
+
+    <div id="overall-section">
+        <h2 id="overall_rating" data-i18n="h2_overall">Общий рейтинг процессоров</h2>
+        <div class="table-container">
+            <table class="sortable" id="overall-table">
+                <thead>
+                    <tr>
+                        <th class="name" data-i18n="th_cpu">Процессор</th>
+                        <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                        <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                    </tr>
+                </thead>
+                <tbody id="overall-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2 id="desktop_intel" data-i18n="h2_desk_intel">Настольные Intel Core процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2 id="desktop_amd" data-i18n="h2_desk_amd">Настольные AMD Ryzen процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2 id="laptop_intel" data-i18n="h2_lap_intel">Ноутбучные Intel Core процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2 id="laptop_amd" data-i18n="h2_lap_amd">Ноутбучные AMD Ryzen процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2 id="other_intel" data-i18n="h2_other_intel">Прочие Intel процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2 id="xeon_intel" data-i18n="h2_xeon">Intel Xeon процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2 id="other_amd" data-i18n="h2_other_amd">Прочие AMD процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2 id="arm_cpu" data-i18n="h2_arm">ARM процессоры</h2>
+    <div class="table-container">
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th class="name" data-i18n="th_cpu">Процессор</th>
+                    <th class="score sorttable_numeric" data-i18n="th_single">Одноядерный</th>
+                    <th class="score sorttable_numeric" data-i18n="th_multi">Многопоточный</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2 id="statistics_title" data-i18n="h2_statistics">Статистика</h2>
+    <div class="table-container" style="max-width: 720px;">
+        <table>
+            <tbody id="statistics-tbody"></tbody>
+        </table>
+    </div>
+
+    <div class="buttons" style="margin-bottom: 60px;">
+        <a href="https://adderly.top/makutweaker" class="btn-primary" data-i18n="btn_dl">Скачать MakuTweaker</a>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-socials">
+        <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
+        </a>
+        <a href="https://youtube.com/@MakuAdarii" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/yt.png" alt="YouTube Icon" class="social-icon">
+        </a>
+        <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
+        </a>
+    </div>
+    <p id="trademark">&copy; 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
+
+<script src="burger.js"></script>
+<script src="sorttable.js"></script>
+
+<script>
+    var allBenchmarkData = {};
+    var isOverallMode = false;
+
+    function scrollToEl(el) {
+        var y = el.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+    function scrollToCategory(id) {
+        if (isOverallMode) {
+            document.getElementById('overall-section').style.display = 'none';
+            document.getElementById('btn-overall').classList.remove('active');
+            document.querySelectorAll('main > h2, main > .table-container').forEach(function(el) {
+                el.style.display = '';
+            });
+            isOverallMode = false;
+        }
+        var el = document.getElementById(id);
+        if (el) setTimeout(function() { scrollToEl(el); }, 20);
+    }
+
+    function scrollToSection(id) { scrollToCategory(id); }
+
+    function showOverall() {
+        if (isOverallMode) return;
+        isOverallMode = true;
+
+        var all = [];
+        for (var cat in allBenchmarkData) {
+            allBenchmarkData[cat].forEach(function(cpu) { all.push(cpu); });
+        }
+        all.sort(function(a, b) { return b.single - a.single; });
+
+        document.getElementById('overall-tbody').innerHTML = all.map(function(cpu) {
+            return '<tr><td class="name">' + cpu.name + '</td>' +
+                   '<td class="score sorttable_numeric">' + cpu.single + '</td>' +
+                   '<td class="score sorttable_numeric">' + cpu.multi + '</td></tr>';
+        }).join('');
+
+        document.querySelectorAll('main > h2, main > .table-container').forEach(function(el) {
+            el.style.display = 'none';
+        });
+
+        var sec = document.getElementById('overall-section');
+        sec.style.display = 'block';
+        document.getElementById('btn-overall').classList.add('active');
+        if (window.sorttable) sorttable.makeSortable(document.getElementById('overall-table'));
+        setTimeout(function() { scrollToEl(sec); }, 20);
+    }
+
+    fetch('benchmarks.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            allBenchmarkData = data;
+            for (var categoryId in data) {
+                var cpus = data[categoryId];
+                var header = document.getElementById(categoryId);
+                if (header) {
+                    var container = header.nextElementSibling;
+                    if (container) {
+                        var tbody = container.querySelector('tbody');
+                        if (tbody) {
+                            tbody.innerHTML = cpus.map(function(cpu) {
+                                return '<tr><td class="name">' + cpu.name + '</td>' +
+                                       '<td class="score sorttable_numeric">' + cpu.single + '</td>' +
+                                       '<td class="score sorttable_numeric">' + cpu.multi + '</td></tr>';
+                            }).join('');
+                        }
+                    }
+                }
+            }
+
+            var statsHtml = [];
+            for (var categoryId in data) {
+                var cpus = data[categoryId];
+                statsHtml.push('<tr>' +
+                    '<td style="padding: 14px 20px; font-weight: 500; color: #fff;" data-i18n="h2_' + categoryId + '"></td>' +
+                    '<td class="score" style="font-weight: 700; color: #a855f7; text-align: right; padding-right: 40px;">: ' + cpus.length + '</td>' +
+                '</tr>');
+            }
+            document.getElementById('statistics-tbody').innerHTML = statsHtml.join('');
+            var currentLang = localStorage.getItem("lang") || "ru";
+            applyLang(currentLang);
+
+            setTimeout(function() {
+                document.querySelectorAll('.sortable').forEach(function(table) {
+                    var singleHeader = table.querySelector('thead tr th:nth-child(2)');
+                    if (singleHeader && window.sorttable && sorttable.innerSortFunction) {
+                        sorttable.innerSortFunction.apply(singleHeader, []);
+                        sorttable.innerSortFunction.apply(singleHeader, []);
+                        singleHeader.classList.remove('sorttable_sorted');
+                        singleHeader.classList.add('sorttable_sorted_reverse');
+                    }
+                });
+            }, 50);
+        })
+        .catch(function(e) { console.error('Ошибка загрузки бенчмарков:', e); });
+
+    var CAT_LABELS = {
+        desktop_intel:'Intel Core', desktop_amd:'AMD Ryzen',
+        laptop_intel:'Intel Core',   laptop_amd:'AMD Ryzen',
+        other_intel:'Other Intel',          xeon_intel:'Intel Xeon',
+        other_amd:'Other AMD',              arm_cpu:'ARM'
+    };
+
+    document.getElementById('cpu-search').addEventListener('input', function() {
+        var raw = this.value.trim();
+        var resultsBox = document.getElementById('similar-cpu-results');
+        var tbody      = document.getElementById('similar-cpu-tbody');
+
+        if (!raw) {
+            resultsBox.style.display = 'none';
+            tbody.innerHTML = '';
+            return;
+        }
+
+        var isExact = raw.startsWith('/');
+        var query   = isExact ? raw.slice(1).trim() : raw.trim();
+        if (!query) { resultsBox.style.display = 'none'; return; }
+
+        var qLow   = query.toLowerCase();
+        var qWords = qLow.split(' ').filter(function(w) { return w.length > 0; });
+
+        var all = [];
+        for (var cat in allBenchmarkData) {
+            allBenchmarkData[cat].forEach(function(cpu) {
+                all.push({ name: cpu.name, single: cpu.single, multi: cpu.multi, cat: cat });
+            });
+        }
+
+        var matched = [];
+
+        if (isExact) {
+            matched = all.filter(function(cpu) {
+                var n = cpu.name.toLowerCase();
+                return qWords.every(function(w) { return n.indexOf(w) !== -1; });
+            }).sort(function(a, b) { return b.single - a.single; });
+
+        } else {
+            var nameMatched = all.filter(function(cpu) {
+                var n = cpu.name.toLowerCase();
+                return qWords.every(function(w) { return n.indexOf(w) !== -1; });
+            });
+
+            if (nameMatched.length > 0) {
+                nameMatched.sort(function(a, b) { return b.single - a.single; });
+                var best = nameMatched[0];
+                var lo = best.single * 0.90;
+                var hi = best.single * 1.10;
+                var seen = {};
+                nameMatched.forEach(function(cpu) { seen[cpu.name] = true; matched.push(cpu); });
+                all.forEach(function(cpu) {
+                    if (!seen[cpu.name] && cpu.single >= lo && cpu.single <= hi) {
+                        matched.push(cpu);
+                    }
+                });
+                matched.sort(function(a, b) { return b.single - a.single; });
+            }
+        }
+
+        matched = matched.slice(0, 15);
+
+        if (!matched.length) {
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-muted);padding:20px;">Ничего не найдено</td></tr>';
+            resultsBox.style.display = 'block';
+            return;
+        }
+
+        var escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        var re = new RegExp('(' + escaped + ')', 'gi');
+        tbody.innerHTML = matched.map(function(cpu) {
+            var hl = cpu.name.replace(re, '<span class="match-text">$1</span>');
+            return '<tr><td class="name">' + hl + '</td>' +
+                   '<td class="score">' + cpu.single + '</td>' +
+                   '<td class="score">' + cpu.multi + '</td>' +
+                   '<td style="color:var(--text-muted);font-size:0.85rem">' + (CAT_LABELS[cpu.cat]||cpu.cat) + '</td></tr>';
+        }).join('');
+        resultsBox.style.display = 'block';
+    });
+</script>
+
+<script>
+const translations = {
+    ru: {
+        page_title: "Adderly.Top - Результаты MakuTweaker Benchmark",
+        nav_builds: "Сборки",
+        nav_support: "Поддержать",
+        cat_title: "Категории",
+        cat_overall: "Общий рейтинг",
+        cat_desk_intel: "Настольные Intel Core",
+        cat_desk_amd: "Настольные AMD Ryzen",
+        cat_lap_intel: "Ноутбучные Intel Core",
+        cat_lap_amd: "Ноутбучные AMD Ryzen",
+        cat_other_intel: "Прочие Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Прочие AMD",
+        h1_main: "Результаты MakuTweaker Benchmark",
+        search_placeholder: "Введите название процессора (например, 13700KF)",
+        search_hint: "Добавьте в начале \"/\" чтобы сделать глобальный поиск.",
+        search_results_title: "Результат поиска и похожие процессоры:",
+        th_cpu: "Процессор",
+        th_single: "Одноядерный",
+        th_multi: "Многопоточный",
+        th_cpu_type: "Тип",
+        h2_overall: "Общий рейтинг процессоров",
+        h2_desk_intel: "Настольные Intel Core процессоры",
+        h2_desk_amd: "Настольные AMD Ryzen процессоры",
+        h2_lap_intel: "Ноутбучные Intel Core процессоры",
+        h2_lap_amd: "Ноутбучные AMD Ryzen процессоры",
+        h2_other_intel: "Прочие Intel процессоры",
+        h2_xeon: "Intel Xeon процессоры",
+        h2_other_amd: "Прочие AMD процессоры",
+        h2_arm: "ARM процессоры",
+        h2_statistics: "Статистика",
+        btn_dl: "Скачать MakuTweaker"
+    },
+    en: {
+        page_title: "Adderly.Top - MakuTweaker Benchmark Results",
+        nav_builds: "Bootlegs",
+        nav_support: "Support",
+        cat_title: "Categories",
+        cat_overall: "Overall Ranking",
+        cat_desk_intel: "Desktop Intel Core",
+        cat_desk_amd: "Desktop AMD Ryzen",
+        cat_lap_intel: "Laptop Intel Core",
+        cat_lap_amd: "Laptop AMD Ryzen",
+        cat_other_intel: "Other Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Other AMD",
+        h1_main: "MakuTweaker Benchmark Results",
+        search_placeholder: "Enter processor name (e.g., 13700KF)",
+        search_hint: "Add \"/\" at the beginning for a global search.",
+        search_results_title: "Search result and similar processors:",
+        th_cpu: "Processor",
+        th_single: "Single-core",
+        th_multi: "Multi-core",
+        th_cpu_type: "CPU Type",
+        h2_overall: "Overall Processor Ranking",
+        h2_desk_intel: "Desktop Intel Core Processors",
+        h2_desk_amd: "Desktop AMD Ryzen Processors",
+        h2_lap_intel: "Laptop Intel Core Processors",
+        h2_lap_amd: "Laptop AMD Ryzen Processors",
+        h2_other_intel: "Other Intel Processors",
+        h2_xeon: "Intel Xeon Processors",
+        h2_other_amd: "Other AMD Processors",
+        h2_arm: "ARM Processors",
+        h2_statistics: "Statistics",
+        btn_dl: "Download MakuTweaker"
+    },
+    uk: {
+        page_title: "Adderly.Top - Результати MakuTweaker Benchmark",
+        nav_builds: "Збірки",
+        nav_support: "Підтримати",
+        cat_title: "Категорії",
+        cat_overall: "Загальний рейтинг",
+        cat_desk_intel: "Настільні Intel Core",
+        cat_desk_amd: "Настільні AMD Ryzen",
+        cat_lap_intel: "Ноутбучні Intel Core",
+        cat_lap_amd: "Ноутбучні AMD Ryzen",
+        cat_other_intel: "Інші Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "Інші AMD",
+        h1_main: "Результати MakuTweaker Benchmark",
+        search_placeholder: "Введіть назву процесора (наприклад, 13700KF)",
+        search_hint: "Додайте на початку \"/\" щоб зробити глобальний пошук.",
+        search_results_title: "Результат пошуку та схожі процесори:",
+        th_cpu: "Процессор",
+        th_single: "Одноядерний",
+        th_multi: "Багатопотоковий",
+        th_cpu_type: "Тип",
+        h2_overall: "Загальний рейтинг процесорів",
+        h2_desk_intel: "Настільні процесори Intel Core",
+        h2_desk_amd: "Настільні процесори AMD Ryzen",
+        h2_lap_intel: "Ноутбучні процесори Intel Core",
+        h2_lap_amd: "Ноутбучні процесори AMD Ryzen",
+        h2_other_intel: "Інші процесори Intel",
+        h2_xeon: "Процесори Intel Xeon",
+        h2_other_amd: "Інші процесори AMD",
+        h2_arm: "Процесори ARM",
+        h2_statistics: "Статистика",
+        btn_dl: "Завантажити MakuTweaker"
+    },
+    zh: {
+        page_title: "Adderly.Top - MakuTweaker 基准测试结果",
+        nav_builds: "系统版本",
+        nav_support: "支持",
+        cat_title: "类别",
+        cat_overall: "总体排名",
+        cat_desk_intel: "台式机 Intel Core",
+        cat_desk_amd: "台式机 AMD Ryzen",
+        cat_lap_intel: "笔记本 Intel Core",
+        cat_lap_amd: "笔记本 AMD Ryzen",
+        cat_other_intel: "其他 Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "其他 AMD",
+        h1_main: "MakuTweaker 基准测试结果",
+        search_placeholder: "输入处理器名称（例如 13700KF）",
+        search_hint: "在开头添加 \"/\" 进行全局搜索。",
+        search_results_title: "搜索结果及类似处理器：",
+        th_cpu: "处理器",
+        th_single: "单核",
+        th_multi: "多核",
+        th_cpu_type: "类型",
+        h2_overall: "处理器总体排名",
+        h2_desk_intel: "台式机 Intel Core 处理器",
+        h2_desk_amd: "台式机 AMD Ryzen 处理器",
+        h2_lap_intel: "笔记本 Intel Core 处理器",
+        h2_lap_amd: "笔记本 AMD Ryzen 处理器",
+        h2_other_intel: "其他 Intel 处理器",
+        h2_xeon: "Intel Xeon 处理器",
+        h2_other_amd: "其他 AMD 处理器",
+        h2_arm: "ARM 处理器",
+        h2_statistics: "统计数据",
+        btn_dl: "下载 MakuTweaker"
+    },
+    ja: {
+        page_title: "Adderly.Top - MakuTweaker ベンチマーク結果",
+        nav_builds: "ビルド",
+        nav_support: "サポート",
+        cat_title: "カテゴリ",
+        cat_overall: "総合ランキング",
+        cat_desk_intel: "デスクトップ Intel Core",
+        cat_desk_amd: "デスクトップ AMD Ryzen",
+        cat_lap_intel: "ノートPC Intel Core",
+        cat_lap_amd: "ノートPC AMD Ryzen",
+        cat_other_intel: "その他 Intel",
+        cat_xeon: "Intel Xeon",
+        cat_other_amd: "その他 AMD",
+        h1_main: "MakuTweaker ベンチマーク結果",
+        search_placeholder: "プロセッサ名を入力 (例: 13700KF)",
+        search_hint: "グローバル検索を行うには、先頭に「/」を追加します。",
+        search_results_title: "検索結果と類似のプロセッサ:",
+        th_cpu: "プロセッサ",
+        th_single: "シングルコア",
+        th_multi: "マルチコア",
+        th_cpu_type: "タイプ",
+        h2_overall: "プロセッサ総合ランキング",
+        h2_desk_intel: "デスクトップ Intel Core プロセッサ",
+        h2_desk_amd: "デスクトップ AMD Ryzen プロセッサ",
+        h2_lap_intel: "ノートPC Intel Core プロセッサ",
+        h2_lap_amd: "ノートPC AMD Ryzen プロセッサ",
+        h2_other_intel: "その他 Intel プロセッサ",
+        h2_xeon: "Intel Xeon プロセッサ",
+        h2_other_amd: "その他 AMD プロセッサ",
+        h2_arm: "ARM プロセッサ",
+        h2_statistics: "統計",
+        btn_dl: "MakuTweakerをダウンロード"
+    }
+};
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+    applyLang(lang);
+}
+
+function applyLang(lang) {
+    const t = translations[lang] || translations.ru; 
+
+    if (t.page_title) {
+        document.title = t.page_title;
+    }
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) {
+            if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+                el.placeholder = t[key];
+            } else {
+                el.innerHTML = t[key];
+            }
+        }
+    });
+}
+
+const savedLang = localStorage.getItem("lang");
+if (savedLang) {
+    applyLang(savedLang);
+} else {
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+        applyLang(browserLang);
+    } else {
+        applyLang("ru");
+    }
+}
+</script>
+</body>
+</html>
