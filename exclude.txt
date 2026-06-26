@@ -375,3 +375,13 @@ Intel Xeon E5 2650 v3
 Intel Core i5 6400T
 Pentium T4400
 Celeron T3100
+Intel Core i5 11600K
+AMD Ryzen 5 5500GT
+Intel Core i9 11900K
+Intel Core i3 N305
+Intel Core i5 4440
+Intel Xeon E3 1230 V2
+Intel Xeon E5 2650 v2
+QEMU Virtual version 2.5+
+Intel Pentium 6405U
+AMD FX 6300
