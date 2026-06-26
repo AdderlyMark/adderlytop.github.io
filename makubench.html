@@ -175,7 +175,7 @@
         th.sorttable_sorted_reverse::after { content: " ↑"; color: #a855f7; font-size: 14px; margin-left: 5px; }
 
         th.name {
-        width: 50%;
+            width: 50%;
         }
 
         th.score {
@@ -514,6 +514,13 @@
         </table>
     </div>
 
+    <h2 id="statistics_title" data-i18n="h2_statistics">Статистика</h2>
+    <div class="table-container" style="max-width: 720px;">
+        <table>
+            <tbody id="statistics-tbody"></tbody>
+        </table>
+    </div>
+
     <div class="buttons" style="margin-bottom: 60px;">
         <a href="https://adderly.top/makutweaker" class="btn-primary" data-i18n="btn_dl">Скачать MakuTweaker</a>
     </div>
@@ -570,7 +577,7 @@
         for (var cat in allBenchmarkData) {
             allBenchmarkData[cat].forEach(function(cpu) { all.push(cpu); });
         }
-        all.sort(function(a, b) { return b.multi - a.multi; });
+        all.sort(function(a, b) { return b.single - a.single; });
 
         document.getElementById('overall-tbody').innerHTML = all.map(function(cpu) {
             return '<tr><td class="name">' + cpu.name + '</td>' +
@@ -610,14 +617,39 @@
                     }
                 }
             }
+
+            var targetOrder = [
+                { id: 'desktop_intel', i18n: 'h2_desk_intel' },
+                { id: 'desktop_amd', i18n: 'h2_desk_amd' },
+                { id: 'laptop_intel', i18n: 'h2_lap_intel' },
+                { id: 'laptop_amd', i18n: 'h2_lap_amd' },
+                { id: 'other_intel', i18n: 'h2_other_intel' },
+                { id: 'xeon_intel', i18n: 'h2_xeon' },
+                { id: 'other_amd', i18n: 'h2_other_amd' },
+                { id: 'arm_cpu', i18n: 'h2_arm' }
+            ];
+
+            var statsHtml = [];
+            targetOrder.forEach(function(cat) {
+                var cpus = data[cat.id] || [];
+                statsHtml.push('<tr>' +
+                    '<td style="padding: 14px 20px; font-weight: 500; color: #fff;" data-i18n="' + cat.i18n + '"></td>' +
+                    '<td class="score" style="font-weight: 700; color: #a855f7; text-align: right; padding-right: 40px;">' + cpus.length + '</td>' +
+                '</tr>');
+            });
+            document.getElementById('statistics-tbody').innerHTML = statsHtml.join('');
+            
+            var currentLang = localStorage.getItem("lang") || "ru";
+            applyLang(currentLang);
+
             setTimeout(function() {
                 document.querySelectorAll('.sortable').forEach(function(table) {
-                    var multiHeader = table.querySelector('thead tr th:nth-child(3)');
-                    if (multiHeader && window.sorttable && sorttable.innerSortFunction) {
-                        sorttable.innerSortFunction.apply(multiHeader, []);
-                        sorttable.innerSortFunction.apply(multiHeader, []);
-                        multiHeader.classList.remove('sorttable_sorted');
-                        multiHeader.classList.add('sorttable_sorted_reverse');
+                    var singleHeader = table.querySelector('thead tr th:nth-child(2)');
+                    if (singleHeader && window.sorttable && sorttable.innerSortFunction) {
+                        sorttable.innerSortFunction.apply(singleHeader, []);
+                        sorttable.innerSortFunction.apply(singleHeader, []);
+                        singleHeader.classList.remove('sorttable_sorted');
+                        singleHeader.classList.add('sorttable_sorted_reverse');
                     }
                 });
             }, 50);
@@ -662,7 +694,7 @@
             matched = all.filter(function(cpu) {
                 var n = cpu.name.toLowerCase();
                 return qWords.every(function(w) { return n.indexOf(w) !== -1; });
-            }).sort(function(a, b) { return b.multi - a.multi; });
+            }).sort(function(a, b) { return b.single - a.single; });
 
         } else {
             var nameMatched = all.filter(function(cpu) {
@@ -671,20 +703,22 @@
             });
 
             if (nameMatched.length > 0) {
-                nameMatched.sort(function(a, b) { return b.multi - a.multi; });
+                nameMatched.sort(function(a, b) { return b.single - a.single; });
                 var best = nameMatched[0];
-                var lo = best.multi * 0.90;
-                var hi = best.multi * 1.10;
+                var lo = best.single * 0.90;
+                var hi = best.single * 1.10;
                 var seen = {};
                 nameMatched.forEach(function(cpu) { seen[cpu.name] = true; matched.push(cpu); });
                 all.forEach(function(cpu) {
-                    if (!seen[cpu.name] && cpu.multi >= lo && cpu.multi <= hi) {
+                    if (!seen[cpu.name] && cpu.single >= lo && cpu.single <= hi) {
                         matched.push(cpu);
                     }
                 });
-                matched.sort(function(a, b) { return b.multi - a.multi; });
+                matched.sort(function(a, b) { return b.single - a.single; });
             }
         }
+
+        matched = matched.slice(0, 15);
 
         if (!matched.length) {
             tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-muted);padding:20px;">Ничего не найдено</td></tr>';
@@ -737,6 +771,7 @@ const translations = {
         h2_xeon: "Intel Xeon процессоры",
         h2_other_amd: "Прочие AMD процессоры",
         h2_arm: "ARM процессоры",
+        h2_statistics: "Статистика",
         btn_dl: "Скачать MakuTweaker"
     },
     en: {
@@ -769,6 +804,7 @@ const translations = {
         h2_xeon: "Intel Xeon Processors",
         h2_other_amd: "Other AMD Processors",
         h2_arm: "ARM Processors",
+        h2_statistics: "Statistics",
         btn_dl: "Download MakuTweaker"
     },
     uk: {
@@ -788,7 +824,7 @@ const translations = {
         search_placeholder: "Введіть назву процесора (наприклад, 13700KF)",
         search_hint: "Додайте на початку \"/\" щоб зробити глобальний пошук.",
         search_results_title: "Результат пошуку та схожі процесори:",
-        th_cpu: "Процесор",
+        th_cpu: "Процессор",
         th_single: "Одноядерний",
         th_multi: "Багатопотоковий",
         th_cpu_type: "Тип",
@@ -801,6 +837,7 @@ const translations = {
         h2_xeon: "Процесори Intel Xeon",
         h2_other_amd: "Інші процесори AMD",
         h2_arm: "Процесори ARM",
+        h2_statistics: "Статистика",
         btn_dl: "Завантажити MakuTweaker"
     },
     zh: {
@@ -833,6 +870,7 @@ const translations = {
         h2_xeon: "Intel Xeon 处理器",
         h2_other_amd: "其他 AMD 处理器",
         h2_arm: "ARM 处理器",
+        h2_statistics: "统计数据",
         btn_dl: "下载 MakuTweaker"
     },
     ja: {
@@ -865,6 +903,7 @@ const translations = {
         h2_xeon: "Intel Xeon プロセッサ",
         h2_other_amd: "その他 AMD プロセッサ",
         h2_arm: "ARM プロセッサ",
+        h2_statistics: "統計",
         btn_dl: "MakuTweakerをダウンロード"
     }
 };
