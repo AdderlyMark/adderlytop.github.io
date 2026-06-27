@@ -386,3 +386,6 @@ QEMU Virtual version 2.5+
 Intel Pentium 6405U
 AMD FX 6300
 QEMU Virtual version 2.5+
+AMD Ryzen 5 7535U
+Intel Core i5 5300U
+AMD C 70
