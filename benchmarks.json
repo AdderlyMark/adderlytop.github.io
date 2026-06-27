@@ -398,7 +398,7 @@
         {
             "name": "Intel Core i3 4130",
             "single": 777,
-            "multi": 1835
+            "multi": 1860
         },
         {
             "name": "Intel Core i5 6500",
@@ -544,7 +544,7 @@
         },
         {
             "name": "AMD Ryzen 7 7800X3D",
-            "single": 1068,
+            "single": 1093,
             "multi": 15447
         },
         {
@@ -1178,6 +1178,11 @@
             "name": "Intel Core i3 10110U",
             "single": 870,
             "multi": 2187
+        },
+        {
+            "name": "Intel Core i5 5300U",
+            "single": 526,
+            "multi": 1581
         }
     ],
     "laptop_amd": [
@@ -1238,7 +1243,7 @@
         },
         {
             "name": "AMD Ryzen 7 7435H",
-            "single": 964,
+            "single": 1008,
             "multi": 11245
         },
         {
@@ -1355,6 +1360,11 @@
             "name": "AMD Ryzen 5 7235HS",
             "single": 960,
             "multi": 6406
+        },
+        {
+            "name": "AMD Ryzen 5 7535U",
+            "single": 542,
+            "multi": 5468
         }
     ],
     "other_intel": [
@@ -1401,7 +1411,7 @@
         {
             "name": "Intel Pentium Silver N5000",
             "single": 398,
-            "multi": 1304
+            "multi": 1305
         },
         {
             "name": "Intel Pentium E5500",
@@ -1722,8 +1732,8 @@
         },
         {
             "name": "Intel Xeon E5 2650 v3",
-            "single": 673,
-            "multi": 7504
+            "single": 681,
+            "multi": 7557
         },
         {
             "name": "Intel Xeon E3 1230 V2",
@@ -1732,7 +1742,7 @@
         },
         {
             "name": "Intel Xeon E5 2650 v2",
-            "single": 615,
+            "single": 619,
             "multi": 11539
         }
     ],
@@ -1881,6 +1891,11 @@
             "name": "AMD FX 6300",
             "single": 463,
             "multi": 2541
+        },
+        {
+            "name": "AMD C 70",
+            "single": 79,
+            "multi": 155
         }
     ],
     "arm_cpu": [
