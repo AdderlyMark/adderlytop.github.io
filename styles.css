@@ -181,10 +181,7 @@ main > p {
     box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3); 
 }
 
-@media (max-width: 768px) {
-    .flash-row, .tweaker-row {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 1110px) {
     .gallery-row {
         flex-direction: column;
         align-items: center;
@@ -193,6 +190,12 @@ main > p {
     .gallery-row img {
         max-width: 100% !important;
         max-height: 400px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .flash-row, .tweaker-row {
+        grid-template-columns: 1fr;
     }
 }
 
