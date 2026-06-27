@@ -25,9 +25,9 @@
     </script>
 
     <meta property="og:title" content="Имя вкладки">
-    <meta property="og:keywords" content="adderly, adderlytop, adderly top, марк аддерли, аддерли, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли">
-    <meta property="og:description" content="Описание">
-    <meta name="description" content="Описание">
+    <meta property="og:keywords" content="adderly, adderlytop, adderly top, марк аддерли, аддерли, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, test tag">
+    <meta property="og:description" content="Тестовое описание">
+    <meta name="description" content="Тестовое описание">
 </head>
 <body>
 <header>
@@ -58,17 +58,17 @@
         <hr style="border-color: var(--border-color); margin: 30px 0;">
         <h1 style="text-align: center;">Галерея с двумя картинками</h1>
         <div class="gallery-row" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 15px;">
-            <img src="https://static.zerochan.net/Yamai.Kaguya.full.4153083.jpg" alt="Изображение 1" style="max-height: 600px; max-width: 45%; height: auto; object-fit: contain;">
-            <img src="https://static.zerochan.net/Yamai.Kaguya.full.4173748.jpg" alt="Изображение 2" style="max-height: 600px; max-width: 45%; height: auto; object-fit: contain;">
+            <img src="https://static.zerochan.net/Yamai.Kaguya.full.4153083.jpg" alt="Изображение 1" style="max-height: 600px; max-width: calc(50% - 10px); height: auto; object-fit: contain;">
+            <img src="https://static.zerochan.net/Yamai.Kaguya.full.4173748.jpg" alt="Изображение 2" style="max-height: 600px; max-width: calc(50% - 10px); height: auto; object-fit: contain;">
         </div>
         <div class="buttons" style="margin-bottom: 20px;">
-            <a href="https://adderly.top" class="btn-primary">Кнопочка</a>
+            <a href="https://www.youtube.com/@makuadarii" class="btn-primary">Кнопочка</a>
         </div>
         <div class="accordion-container" style="margin-bottom: 20px;">
             <button class="accordion">Комбобоксик</button>
             <div class="panel">
                 <div class="panel-content">
-                    <p>скрытый текст<br>новая строчка</p>
+                    <p>Спрятанный текст<br>Всем привет</p>
                 </div>
             </div>
         </div>
@@ -110,6 +110,35 @@
             }
         });
     }
+</script>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    document.querySelectorAll('.gallery-row img').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    closeBtn.addEventListener('click', closeLightbox);
+    lightboxImg.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
 </script>
 </body>
 </html>
