@@ -185,6 +185,15 @@ main > p {
     .flash-row, .tweaker-row {
         grid-template-columns: 1fr;
     }
+    .gallery-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-row img {
+        max-width: 100% !important;
+        max-height: 400px !important;
+    }
 }
 
 .gallery-container {
