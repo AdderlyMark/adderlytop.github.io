@@ -451,46 +451,60 @@ function applyLang(lang) {
 async function renderLatestNews() {
     const newsGrid = document.getElementById("latest-news-grid");
 
+    const OWNER = "AdderlyMark";
+    const REPO = "adderlytop.github.io";
+    const BRANCH = "main";
+
     try {
-        const response = await fetch("news/news.json");
 
-        if (!response.ok)
-            throw new Error();
+        const files = await fetch(
+            `https://api.github.com/repos/${OWNER}/${REPO}/contents/news`
+        ).then(r => r.json());
 
-        const news = await response.json();
+        const htmlFiles = files
+            .filter(f => f.type === "file" && f.name.endsWith(".html"))
+            .sort((a, b) => new Date(b.git_url ? b.git_url : 0));
 
-        news.sort((a, b) => new Date(b.date) - new Date(a.date));
+        // Берём только первые 6
+        const latest = htmlFiles.slice(0, 6);
 
         newsGrid.innerHTML = "";
 
-        for (const item of news.slice(0, 6)) {
+        await Promise.all(latest.map(async file => {
 
-            const html = await fetch(`news/${item.file}`).then(r => r.text());
+            const html = await fetch(
+                `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/news/${file.name}`
+            ).then(r => r.text());
 
             const doc = new DOMParser().parseFromString(html, "text/html");
 
-            let title = doc.querySelector("title")?.textContent ?? item.file;
+            let title =
+                doc.querySelector("title")?.textContent ??
+                file.name;
 
             title = title
                 .replace(" - Adderly.Top", "")
                 .replace("Adderly.Top - ", "")
                 .trim();
 
-            const button = document.createElement("a");
+            const a = document.createElement("a");
+            a.href = `news/${file.name}`;
+            a.textContent = title;
 
-            button.href = `news/${item.file}`;
-            button.textContent = title;
+            newsGrid.appendChild(a);
 
-            newsGrid.appendChild(button);
-        }
+        }));
 
-    } catch (e) {
+    }
+    catch(e){
 
         console.error(e);
 
         newsGrid.innerHTML =
-            "<p style='grid-column:1/-1;text-align:center;color:#aaa'>Не удалось загрузить новости</p>";
+            "<p style='grid-column:1/-1;text-align:center;color:#aaa'>Не удалось загрузить новости.</p>";
+
     }
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {
