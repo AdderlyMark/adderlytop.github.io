@@ -83,7 +83,7 @@
         {
             "name": "Intel Core i7 4790",
             "single": 876,
-            "multi": 4293
+            "multi": 4294
         },
         {
             "name": "Intel Core i7 4770",
@@ -202,7 +202,7 @@
         },
         {
             "name": "Intel Core i5 9400F",
-            "single": 966,
+            "single": 985,
             "multi": 5659
         },
         {
@@ -474,6 +474,11 @@
             "name": "Intel Core i5 4440",
             "single": 712,
             "multi": 2698
+        },
+        {
+            "name": "Intel Core i9 9980HK",
+            "single": 731,
+            "multi": 6656
         }
     ],
     "desktop_amd": [
@@ -540,11 +545,11 @@
         {
             "name": "AMD Ryzen 7 5700X",
             "single": 1072,
-            "multi": 12584
+            "multi": 12600
         },
         {
             "name": "AMD Ryzen 7 7800X3D",
-            "single": 1093,
+            "single": 1116,
             "multi": 15447
         },
         {
@@ -1183,6 +1188,11 @@
             "name": "Intel Core i5 5300U",
             "single": 526,
             "multi": 1581
+        },
+        {
+            "name": "Intel Core i5 4200M",
+            "single": 640,
+            "multi": 1633
         }
     ],
     "laptop_amd": [
@@ -1273,7 +1283,7 @@
         },
         {
             "name": "AMD Ryzen 5 7530U",
-            "single": 1032,
+            "single": 1048,
             "multi": 8803
         },
         {
@@ -1365,6 +1375,11 @@
             "name": "AMD Ryzen 5 7535U",
             "single": 542,
             "multi": 5468
+        },
+        {
+            "name": "AMD Ryzen 7 3750H",
+            "single": 820,
+            "multi": 3577
         }
     ],
     "other_intel": [
@@ -1592,6 +1607,11 @@
             "name": "Intel Pentium 6405U",
             "single": 490,
             "multi": 1365
+        },
+        {
+            "name": "Intel N95",
+            "single": 508,
+            "multi": 520
         }
     ],
     "xeon_intel": [
@@ -1732,8 +1752,8 @@
         },
         {
             "name": "Intel Xeon E5 2650 v3",
-            "single": 681,
-            "multi": 7557
+            "single": 684,
+            "multi": 7592
         },
         {
             "name": "Intel Xeon E3 1230 V2",
@@ -1896,6 +1916,11 @@
             "name": "AMD C 70",
             "single": 79,
             "multi": 155
+        },
+        {
+            "name": "AMD E 240",
+            "single": 122,
+            "multi": 121
         }
     ],
     "arm_cpu": [
