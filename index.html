@@ -163,6 +163,11 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
 
+        .news-grid a:hover {
+            border-color: #a855f7 !important;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.2) !important;
+        }
+
         .home-grid a img {
             width: 20px;
             height: 20px;
@@ -262,6 +267,13 @@
         На сайте есть реклама. Если вы выключите адблокер, вы поможете мне продолжать свою деятельность!</p>
     </section>
 
+    <section class="news-section">
+        <h2 data-i18n="news_title" style="text-align: center; margin-top: 40px; margin-bottom: 5px; color: #fff; font-weight: 700; font-size: 1.5rem;">Последние статьи и новости на сайте:</h2>
+        <div id="latest-news-grid" class="home-grid news-grid">
+            <p style="grid-column: 1/-1; text-align: center; color: #aaa;">Загрузка новостей...</p>
+        </div>
+    </section>
+
     <section class="top-software-section">
         <h2 data-i18n="software_title" style="text-align: center; margin-top: 40px; margin-bottom: -30px; color: #fff; font-weight: 700; font-size: 1.5rem;">Скачать программы от Марка Аддерли:</h2>
         <div class="top-software-grid">
@@ -307,7 +319,6 @@
             <a href="https://boosty.to/adderly" target="_blank" rel="noopener noreferrer">
                 <img src="icons/boosty.png" alt="Boosty"> <span data-i18n="btn_boosty">Поддержать на Boosty</span>
             </a>
-
         </div>
     </section>
 
@@ -356,6 +367,7 @@ const translations = {
         nav_support: "Поддержать",
         welcome_title: "Добро пожаловать на Adderly.Top!",
         welcome_desc: "Это сайт Марка Аддерли - техноблогера на YouTube.<br>Здесь вы можете скачать мои программы для Windows, оригинальные ISO, MakuTweaker и многое другое!<br>На сайте есть реклама. Если вы выключите адблокер, вы поможете мне продолжать свою деятельность!",
+        news_title: "Последние статьи и новости на сайте:",
         software_title: "Скачать программы от Марка Аддерли:",
         card_tweaker_desc: "Самый дружелюбный и полезный твикер для Windows.",
         card_typer_desc: "Современный и полезный блокнот, идеально дополняющий дизайн Windows 11.",
@@ -377,6 +389,7 @@ const translations = {
         nav_support: "Support",
         welcome_title: "Welcome to Adderly.Top!",
         welcome_desc: "This is the website of Mark Adderly - a tech blogger on YouTube.<br>Here you can download my Windows software, original ISOs, MakuTweaker, and much more!<br>There are ads on the site. If you disable your adblocker, you will help me continue my work!",
+        news_title: "Latest articles and news on the site:",
         software_title: "Download Mark Adderly's Programs:",
         card_tweaker_desc: "The most friendly and useful tweaker for Windows.",
         card_typer_desc: "A modern and useful notepad that perfectly complements the design of Windows 11.",
@@ -398,6 +411,7 @@ const translations = {
         nav_support: "Підтримати",
         welcome_title: "Ласкаво просимо на Adderly.Top!",
         welcome_desc: "Це сайт Марка Аддерлі - техноблогера на YouTube.<br>Тут ви можете завантажити мої програми для Windows, оригінальні ISO, MakuTweaker та багато іншого!<br>На сайті є реклама. Если ви вимкнете адблокер, ви допоможете мені продовжувати свою діяльність!",
+        news_title: "Останні статті та новини на сайті:",
         software_title: "Завантажити програми Марка Аддерлі:",
         card_tweaker_desc: "Найбільш дружній та корисний твікер для Windows.",
         card_typer_desc: "Сучасний та корисний блокнот, який ідеально доповнює дизайн Windows 11.",
@@ -432,6 +446,60 @@ function applyLang(lang) {
         if (t[key]) el.innerHTML = t[key];
     });
 }
+
+async function renderLatestNews() {
+    const newsGrid = document.getElementById("latest-news-grid");
+    const OWNER = "AdderlyMark";
+    const REPO = "adderlytop.github.io";
+    const BRANCH = "main";
+
+    try {
+        const files = await fetch(
+            `https://api.github.com/repos/${OWNER}/${REPO}/contents/news`
+        ).then(r => r.json());
+
+        const htmlFiles = files
+            .filter(f => f.type === "file" && f.name.endsWith(".html"))
+            .sort((a, b) => new Date(b.git_url ? b.git_url : 0));
+        const latest = htmlFiles.slice(0, 6);
+        newsGrid.innerHTML = "";
+
+        await Promise.all(latest.map(async file => {
+
+            const html = await fetch(
+                `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/news/${file.name}`
+            ).then(r => r.text());
+
+            const doc = new DOMParser().parseFromString(html, "text/html");
+            let title =
+                doc.querySelector("title")?.textContent ??
+                file.name;
+
+            title = title
+                .replace(" - Adderly.Top", "")
+                .replace("Adderly.Top - ", "")
+                .trim();
+
+            const a = document.createElement("a");
+            a.href = `news/${file.name}`;
+            a.textContent = title;
+            newsGrid.appendChild(a);
+
+        }));
+
+    }
+    catch(e){
+        console.error(e);
+        newsGrid.innerHTML =
+            "<p style='grid-column:1/-1;text-align:center;color:#aaa'>Не удалось загрузить новости.</p>";
+
+    }
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderLatestNews();
+});
 
 const savedLang = localStorage.getItem("lang");
 if (savedLang) {
