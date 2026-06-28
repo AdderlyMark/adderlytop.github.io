@@ -450,65 +450,49 @@ function applyLang(lang) {
 
 async function renderLatestNews() {
     const newsGrid = document.getElementById("latest-news-grid");
-    if (!newsGrid) return;
 
     try {
-        const dirResponse = await fetch('news/');
-        if (!dirResponse.ok) throw new Error('Папка недоступна');
-        
-        const dirText = await dirResponse.text();
-        const parser = new DOMParser();
-        const dirDoc = parser.parseFromString(dirText, 'text/html');
-        let htmlFiles = Array.from(dirDoc.querySelectorAll('a'))
-            .map(a => a.getAttribute('href'))
-            .filter(href => href && href.endsWith('.html') && !href.startsWith('http') && !href.startsWith('/'));
-        
-        // Убираем дубликаты
-        htmlFiles = [...new Set(htmlFiles)];
+        const response = await fetch("news/news.json");
 
-        if (htmlFiles.length === 0) {
-            newsGrid.innerHTML = "<p style='grid-column: 1/-1; text-align: center; color: #aaa;'>Новостей пока нет</p>";
-            return;
-        }
+        if (!response.ok)
+            throw new Error();
 
-        const filesToProcess = htmlFiles.slice(-15);
-        const fileData = await Promise.all(filesToProcess.map(async (file) => {
-            try {
-                const path = file.startsWith('news/') ? file : `news/${file}`;
-                const fileResp = await fetch(path);
-                const fileText = await fileResp.text();
-                const lastMod = fileResp.headers.get('Last-Modified');
-                const timestamp = lastMod ? new Date(lastMod).getTime() : 0;
-                
-                const titleMatch = fileText.match(/<title>(.*?)<\/title>/i);
-                let title = titleMatch ? titleMatch[1] : file;
-                title = title.replace(" - Adderly.Top", "").replace(" - Главная", "").trim();
-                
-                return { path, title, timestamp };
-            } catch (e) {
-                // Заглушка, если файл не удалось прочитать
-                return { path: `news/${file}`, title: file, timestamp: 0 };
-            }
-        }));
+        const news = await response.json();
 
-        fileData.sort((a, b) => b.timestamp - a.timestamp);
-        const top6 = fileData.slice(0, 6);
+        news.sort((a, b) => new Date(b.date) - new Date(a.date));
 
         newsGrid.innerHTML = "";
-        top6.forEach(data => {
-            const btn = document.createElement("a");
-            btn.href = data.path;
-            btn.textContent = data.title;
-            newsGrid.appendChild(btn);
-        });
 
-    } catch (error) {
-        console.error('Ошибка загрузки новостей через fetch:', error);
-        newsGrid.innerHTML = "<p style='color: #aaa; grid-column: 1/-1; text-align: center;'>Не удалось загрузить список новостей</p>";
+        for (const item of news.slice(0, 6)) {
+
+            const html = await fetch(`news/${item.file}`).then(r => r.text());
+
+            const doc = new DOMParser().parseFromString(html, "text/html");
+
+            let title = doc.querySelector("title")?.textContent ?? item.file;
+
+            title = title
+                .replace(" - Adderly.Top", "")
+                .replace("Adderly.Top - ", "")
+                .trim();
+
+            const button = document.createElement("a");
+
+            button.href = `news/${item.file}`;
+            button.textContent = title;
+
+            newsGrid.appendChild(button);
+        }
+
+    } catch (e) {
+
+        console.error(e);
+
+        newsGrid.innerHTML =
+            "<p style='grid-column:1/-1;text-align:center;color:#aaa'>Не удалось загрузить новости</p>";
     }
 }
 
-// Запускаем при загрузке страницы
 document.addEventListener("DOMContentLoaded", () => {
     renderLatestNews();
 });
