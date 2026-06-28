@@ -389,3 +389,8 @@ QEMU Virtual version 2.5+
 AMD Ryzen 5 7535U
 Intel Core i5 5300U
 AMD C 70
+AMD Ryzen 7 3750H
+Intel Core i9 9980HK
+Intel Core i5 4200M
+Intel N95
+AMD E 240
