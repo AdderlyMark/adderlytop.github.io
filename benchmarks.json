@@ -479,6 +479,16 @@
             "name": "Intel Core i9 9980HK",
             "single": 731,
             "multi": 6656
+        },
+        {
+            "name": "Intel Core i7 12700F",
+            "single": 1198,
+            "multi": 17910
+        },
+        {
+            "name": "Intel Core i7 7700K",
+            "single": 1099,
+            "multi": 5882
         }
     ],
     "desktop_amd": [
@@ -659,8 +669,8 @@
         },
         {
             "name": "AMD Ryzen 3 2200G",
-            "single": 712,
-            "multi": 2851
+            "single": 846,
+            "multi": 3359
         },
         {
             "name": "AMD Ryzen 9 9900X3D",
@@ -706,6 +716,11 @@
             "name": "AMD Ryzen 5 5500GT",
             "single": 1027,
             "multi": 9810
+        },
+        {
+            "name": "AMD Ryzen 3 1200",
+            "single": 670,
+            "multi": 2313
         }
     ],
     "laptop_intel": [
@@ -892,7 +907,7 @@
         {
             "name": "Intel Core i5 1235U",
             "single": 1039,
-            "multi": 6767
+            "multi": 6982
         },
         {
             "name": "Intel Core i5 10300H",
@@ -1193,6 +1208,16 @@
             "name": "Intel Core i5 4200M",
             "single": 640,
             "multi": 1633
+        },
+        {
+            "name": "Intel Core i5 10500H",
+            "single": 1026,
+            "multi": 6486
+        },
+        {
+            "name": "Intel Core i9 10885H",
+            "single": 811,
+            "multi": 9050
         }
     ],
     "laptop_amd": [
@@ -1380,6 +1405,11 @@
             "name": "AMD Ryzen 7 3750H",
             "single": 820,
             "multi": 3577
+        },
+        {
+            "name": "AMD Ryzen 7 5825U",
+            "single": 1059,
+            "multi": 9235
         }
     ],
     "other_intel": [
@@ -1612,6 +1642,26 @@
             "name": "Intel N95",
             "single": 508,
             "multi": 520
+        },
+        {
+            "name": "Genuine Intel 0000",
+            "single": 985,
+            "multi": 5689
+        },
+        {
+            "name": "Intel Core2 Quad Q8300",
+            "single": 319,
+            "multi": 1201
+        },
+        {
+            "name": "Intel Celeron B820",
+            "single": 307,
+            "multi": 603
+        },
+        {
+            "name": "Intel Atom x5 Z8500",
+            "single": 177,
+            "multi": 689
         }
     ],
     "xeon_intel": [
@@ -1764,6 +1814,16 @@
             "name": "Intel Xeon E5 2650 v2",
             "single": 619,
             "multi": 11539
+        },
+        {
+            "name": "Intel Xeon E5 2666 v3",
+            "single": 668,
+            "multi": 7945
+        },
+        {
+            "name": "Intel Xeon E5 2630 v2",
+            "single": 566,
+            "multi": 3557
         }
     ],
     "other_amd": [
@@ -1921,6 +1981,11 @@
             "name": "AMD E 240",
             "single": 122,
             "multi": 121
+        },
+        {
+            "name": "AMD Phenom II X6 1055T",
+            "single": 260,
+            "multi": 1545
         }
     ],
     "arm_cpu": [
