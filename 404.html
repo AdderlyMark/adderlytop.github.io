@@ -3,130 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adderly.Top - 404</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240026161894199"
-    crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68MY39SKZ9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-68MY39SKZ9');
-    </script>
+    <title>Adderly.Top - 404 Страница не найдена</title>
+    
     <meta property="og:image" content="https://adderly.top/images/favicon.png">
     <link rel="icon" href="images/favicon.png">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="formain.css">
+    
+    <meta property="og:title" content="Сайт Марка Аддерли - 404">
+    <meta property="og:description" content="Страница не найдена">
+    <meta name="description" content="Ошибка 404 - страница не найдена.">
 
-    <script>
-        const toggleDisplay = (el, condition, display) => el.style.display = condition ? display : 'none';
-        let existingNews = new Map();
-    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                return false;
-            }
+        :root {
+            --bg-color: #12081f; 
+            --card-bg: rgba(30, 15, 45, 0.5); 
+            --text-main: #f3f4f6;
+            --text-muted: #c0a8e6; 
+            --border-color: rgba(255, 255, 255, 0.12);
+            --primary-gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            --primary-glow: rgba(124, 58, 237, 0.5);
+        }
+
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: clip;
+            background-color: var(--bg-color);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top center, #2e1065 0%, var(--bg-color) 60%);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: grid;
+            position: relative;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        body::before, body::after {
+            content: '';
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.6;
+            animation: float 10s infinite alternate ease-in-out;
+        }
+
+        body::before {
+            top: -10%; left: -10%;
+            width: 500px; height: 500px;
+            background: rgba(124, 58, 237, 0.3);
+        }
+
+        body::after {
+            bottom: -10%; right: -10%;
+            width: 600px; height: 600px;
+            background: rgba(79, 70, 229, 0.25);
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(30px, 50px); }
+        }
+
+        header {
+            position: sticky;
+            top: 10px;
+            width: calc(100% - 20px);
+            max-width: 1100px;
+            box-sizing: border-box;
+            margin: 10px auto 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 30px;
+            background: rgba(20, 10, 30, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 100px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .site-icon { 
+            width: 36px; height: 36px; 
+            border-radius: 8px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover { color: #fff; }
+
+        main {
+            width: calc(100% - 20px);
+            max-width: 1100px;
+            margin: 10px auto 40px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            color: #ffffff; 
+        }
+
+        main > section > p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            width: 100%; 
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .top-software-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto 20px;
+            max-width: 920px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .software-card {
+            flex: 0 0 calc(50% - 20px);
+            max-width: 400px;
+            background: var(--card-bg, rgba(30, 15, 45, 0.6));
+            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+            box-sizing: border-box;
+        }
+
+        .software-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #a855f7;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(168, 85, 247, 0.15);
+        }
+
+        .software-card .icon-wrapper {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .software-card .icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .software-card:hover .icon-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .software-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 10px 0;
+        }
+
+        .software-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #ccc;
+            margin: 0;
+        }
+
+        .home-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px auto 40px;
+            max-width: 900px;
+        }
+        
+        .home-grid a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #fff;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 16px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+        }
+
+        .home-grid a:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .home-grid a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(12px);
+            margin: 40px auto 20px;
+            max-width: 850px;
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .video-card h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            padding: 15px 40px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            background: rgba(10, 5, 20, 0.8); 
+        }
+
+        .footer-socials {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 28px; height: 28px; 
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover .social-icon {
+            transform: translateY(-5px);
+        }
+
+        #trademark {
+            margin: 0;
+            color: #9d8db3;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            h1 { font-size: 2.2rem; }
             
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
+            .top-software-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 0 10px;
             }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
+            .software-card {
+                flex: 0 0 100%;
+                max-width: 100%;
             }
-
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
+            .home-grid {
+                grid-template-columns: 1fr;
             }
-
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
+            .video-card {
+                padding: 15px;
             }
-        });
-
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-    </script>
-
-    <meta property="og:title" content="Сайт Марка Аддерли">
-    <meta property="og:keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10">
-    <meta property="og:description" content="Главная страница сайта Марка Аддерли">
-    <meta name="description" content="Главная страница сайта Марка Аддерли, сборки, блог и новости.">
-    <meta name="keywords" content="adderly, adderlyfun, adderlytop, adderly fun, adderly top, марк аддерли, аддерли, аддерли фан, аддерли топ, аддерлитоп, сборки от аддерли, makutweaker, makuadarii, новости аддерли, новости от аддерли, блог аддерли, софт от аддерли, сайт марка аддерли, сайт аддерли, makuyan, MakuYan, MakuOS, MakuOS LTSC, makuos 11, makuos 10">
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 <header>
     <a href="index" class="logo">
         <img src="images/favicon.png" alt="MakuT" class="site-icon">Adderly.Top
     </a>
-        <nav>
-            <ul>
-                <li><a href="builds">Сборки</a></li>
-                <li><a href="makutweaker">MakuTweaker</a></li>
-                <li><a href="support">Поддержать</a></li>
-            </ul>
-        </nav>
-        <img src="icons/burger.svg" alt="Меню" id="burger">
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="builds">Сборки</a></li>
+            <li><a href="makutweaker">MakuTweaker</a></li>
+            <li><a href="support">Поддержать</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
-<section>
-    <h2 id="welcome">Страница не найдена! Но вы можете продолжать бродить по сайту :)</h2>
+    <section>
+        <h1 id="welcome">404 - Страница не найдена!<br>Но вы можете продолжать бродить по сайту :)</h1>
         <p id="discription">Это сайт Марка Аддерли - техноблогера на YouTube.<br>
-        Здесь вы можете скачать мои сборки Windows, оригинальные ISO, MakuTweaker, и многое другое!<br>
-        На сайте есть реклама. Если вы выключите адблок и нажмёте крестик,вы поможете мне продолжать свою деятельность!
-</section>
-<div class="page">
-    <section class="button-menu-section">
-            <div class="row">
-                <a href="builds">Сборки от Аддерли</a>
-                <a href="windows">Официальные ISO Windows</a>
-            </div>
-            <div class="row">
-                <a href="makutweaker">Скачать MakuTweaker</a>
-                <a href="makubench">MakuTweaker Benchmark</a>
-            </div>
-            <div class="row">
-                <a href="win_pe">Windows PE от Аддерли</a>
-                <a href="https://youtu.be/nBvSLOUS03Y?si=DozEeAJ7RJedh85o">Как переустановить Windows?</a>
-            </div>
-            <div class="row">
-                <a href="faq" id="faq">Часто задаваемые вопросы</a>
-                <a href="makuyan">Запрещатор Яндекса</a>
-            </div>
-            <div class="row">
-                <a href="https://t.me/adderly324" id="tgchanell">Telegram канал</a>
-                <a href="https://boosty.to/adderly" id="supboosty">Поддержать на Boosty</a>
-            </div>
-            </div>
-        </section>
+        Здесь вы можете скачать мои программы для Windows, оригинальные ISO, MakuTweaker и многое другое!</p>
+    </section>
 
-         <section class="youtube-section">
-                <h2>Самое актуальное видео на YouTube канале</h2>
-                <iframe height="393"
+    <section class="top-software-section">
+        <h2 style="text-align: center; margin-top: 40px; margin-bottom: -30px; color: #fff; font-weight: 700; font-size: 1.5rem;">Скачать программы от Марка Аддерли:</h2>
+        <div class="top-software-grid">
+            <a href="makutweaker" class="software-card">
+                <div class="icon-wrapper"><img src="icons/1.png" alt="MakuTweaker"></div>
+                <h3>MakuTweaker</h3>
+                <p>Самый дружелюбный и полезный твикер для Windows.</p>
+            </a>
+            <a href="makutyper" class="software-card">
+                <div class="icon-wrapper"><img src="icons/2.png" alt="MakuTyper"></div>
+                <h3>MakuTyper</h3>
+                <p>Современный и полезный блокнот, идеально дополняющий дизайн Windows 11.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="button-menu-section">
+        <h2 style="text-align: center; color: #fff; margin-bottom: -15px;">Прочие страницы</h2>
+        <div class="home-grid">
+            <a href="windows">Скачать официальные Windows</a>
+            <a href="makubench">MakuTweaker Benchmark</a>
+            <a href="win_pe">Windows PE от Аддерли</a>
+            <a href="builds">Сборки от Аддерли</a>
+
+            <a href="https://t.me/adderly324" target="_blank" rel="noopener noreferrer">
+                <img src="icons/tg.png" alt="TG"> <span>Telegram канал</span>
+            </a>
+            <a href="https://boosty.to/adderly" target="_blank" rel="noopener noreferrer">
+                <img src="icons/boosty.png" alt="Boosty"> <span>Поддержать на Boosty</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="youtube-section">
+        <div class="video-card">
+            <h2>Самое актуальное видео на YouTube канале</h2>
+            <div class="video-wrapper">
+                <iframe 
                     src="https://www.youtube.com/embed/videoseries?si=EL7VwKSGH9gmIKnk&amp;list=UULFsS9QFVkkxhF0zYwf1QP2ZA"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </section>
-    </main>
-
-</div>
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
 </main>
+
 <footer>
+    <div class="footer-socials">
         <a href="https://t.me/adderly324" class="social-link" target="_blank" rel="noopener noreferrer">
             <img src="icons/tg.png" alt="Telegram Icon" class="social-icon">
         </a>
@@ -136,8 +454,8 @@
         <a href="https://www.boosty.to/adderly" class="social-link" target="_blank" rel="noopener noreferrer">
             <img src="icons/boosty.png" alt="Boosty Icon" class="social-icon">
         </a>
-        <p id="trademark">© 2025 Adderly.Top // Марк Аддерли</p>
-    </footer>
-<script src="burger.js"></script>
+    </div>
+    <p id="trademark">© 2026 Adderly.Top // Марк Аддерли</p>
+</footer>
 </body>
 </html>
