@@ -17,8 +17,8 @@
         },
         {
             "name": "Intel Core i9 9900K",
-            "single": 1149,
-            "multi": 11983
+            "single": 1229,
+            "multi": 12348
         },
         {
             "name": "Intel Core Ultra 9 285K",
@@ -268,7 +268,7 @@
         {
             "name": "Intel Core i5 3470",
             "single": 696,
-            "multi": 2632
+            "multi": 2636
         },
         {
             "name": "Intel Core i5 2500",
@@ -489,6 +489,21 @@
             "name": "Intel Core i7 7700K",
             "single": 1099,
             "multi": 5882
+        },
+        {
+            "name": "Intel Core Ultra 5 245KF",
+            "single": 1198,
+            "multi": 15034
+        },
+        {
+            "name": "Intel Core i5 10500FE",
+            "single": 829,
+            "multi": 6272
+        },
+        {
+            "name": "Intel Core i5 760",
+            "single": 501,
+            "multi": 1783
         }
     ],
     "desktop_amd": [
@@ -674,7 +689,7 @@
         },
         {
             "name": "AMD Ryzen 9 9900X3D",
-            "single": 1203,
+            "single": 1240,
             "multi": 28681
         },
         {
@@ -1218,6 +1233,21 @@
             "name": "Intel Core i9 10885H",
             "single": 811,
             "multi": 9050
+        },
+        {
+            "name": "Intel Core Ultra 9 285H",
+            "single": 1225,
+            "multi": 13974
+        },
+        {
+            "name": "Intel Core i7 8565U",
+            "single": 578,
+            "multi": 2049
+        },
+        {
+            "name": "Intel Core i3 M 380",
+            "single": 156,
+            "multi": 525
         }
     ],
     "laptop_amd": [
@@ -1662,6 +1692,11 @@
             "name": "Intel Atom x5 Z8500",
             "single": 177,
             "multi": 689
+        },
+        {
+            "name": "Intel Core2 Quad Q9450",
+            "single": 378,
+            "multi": 1475
         }
     ],
     "xeon_intel": [
@@ -1802,8 +1837,8 @@
         },
         {
             "name": "Intel Xeon E5 2650 v3",
-            "single": 684,
-            "multi": 7592
+            "single": 685,
+            "multi": 7608
         },
         {
             "name": "Intel Xeon E3 1230 V2",
@@ -1824,6 +1859,11 @@
             "name": "Intel Xeon E5 2630 v2",
             "single": 566,
             "multi": 3557
+        },
+        {
+            "name": "Intel Xeon E5 2667 v4",
+            "single": 875,
+            "multi": 8657
         }
     ],
     "other_amd": [
@@ -1986,6 +2026,11 @@
             "name": "AMD Phenom II X6 1055T",
             "single": 260,
             "multi": 1545
+        },
+        {
+            "name": "AMD FX 4350",
+            "single": 524,
+            "multi": 1950
         }
     ],
     "arm_cpu": [
