@@ -407,3 +407,12 @@ Intel Core2 Quad Q8300
 Intel Celeron B820
 AMD Phenom II X6 1055T
 Intel Atom x5 Z8500
+Intel Core Ultra 9 285H
+Intel Core Ultra 5 245KF
+Intel Xeon E5 2667 v4
+Intel Core i5 10500FE
+Intel Core i7 8565U
+AMD FX 4350
+Intel Core i5 760
+Intel Core2 Quad Q9450
+Intel Core i3 M 380
