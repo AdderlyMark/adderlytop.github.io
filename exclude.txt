@@ -416,3 +416,10 @@ AMD FX 4350
 Intel Core i5 760
 Intel Core2 Quad Q9450
 Intel Core i3 M 380
+AMD Ryzen 7 7735H
+AMD Ryzen 5 220
+AMD Ryzen 7 PRO 8845HS
+AMD Ryzen 7 PRO 4750U
+Intel Xeon E5 2470 v2
+Intel Core i3 6100U
+AMD FX 6100
