@@ -1864,6 +1864,11 @@
             "name": "Intel Xeon E5 2470 v2",
             "single": 577,
             "multi": 6779
+        },
+        {
+            "name": "Intel Xeon E31270",
+            "single": 613,
+            "multi": 3049
         }
     ],
     "other_amd": [
