@@ -323,7 +323,7 @@
         {
             "name": "Intel Core i3 9100F",
             "single": 1002,
-            "multi": 3833
+            "multi": 3837
         },
         {
             "name": "Intel Core i3 7100",
@@ -402,7 +402,7 @@
         },
         {
             "name": "Intel Core i5 6500",
-            "single": 770,
+            "single": 772,
             "multi": 3057
         },
         {
@@ -498,7 +498,7 @@
         {
             "name": "Intel Core i5 10500FE",
             "single": 829,
-            "multi": 6272
+            "multi": 6285
         },
         {
             "name": "Intel Core i5 760",
@@ -604,7 +604,7 @@
         },
         {
             "name": "AMD Ryzen 5 7500F",
-            "single": 1155,
+            "single": 1160,
             "multi": 12801
         },
         {
@@ -734,8 +734,13 @@
         },
         {
             "name": "AMD Ryzen 3 1200",
-            "single": 670,
-            "multi": 2313
+            "single": 700,
+            "multi": 2494
+        },
+        {
+            "name": "AMD Ryzen 5 220",
+            "single": 950,
+            "multi": 6941
         }
     ],
     "laptop_intel": [
@@ -1242,12 +1247,17 @@
         {
             "name": "Intel Core i7 8565U",
             "single": 578,
-            "multi": 2049
+            "multi": 2118
         },
         {
             "name": "Intel Core i3 M 380",
             "single": 156,
             "multi": 525
+        },
+        {
+            "name": "Intel Core i3 6100U",
+            "single": 518,
+            "multi": 1364
         }
     ],
     "laptop_amd": [
@@ -1440,6 +1450,21 @@
             "name": "AMD Ryzen 7 5825U",
             "single": 1059,
             "multi": 9235
+        },
+        {
+            "name": "AMD Ryzen 7 7735H",
+            "single": 1036,
+            "multi": 11328
+        },
+        {
+            "name": "AMD Ryzen 7 PRO 8845HS",
+            "single": 889,
+            "multi": 13245
+        },
+        {
+            "name": "AMD Ryzen 7 PRO 4750U",
+            "single": 716,
+            "multi": 3928
         }
     ],
     "other_intel": [
@@ -1864,6 +1889,11 @@
             "name": "Intel Xeon E5 2667 v4",
             "single": 875,
             "multi": 8657
+        },
+        {
+            "name": "Intel Xeon E5 2470 v2",
+            "single": 577,
+            "multi": 6779
         }
     ],
     "other_amd": [
@@ -2031,6 +2061,11 @@
             "name": "AMD FX 4350",
             "single": 524,
             "multi": 1950
+        },
+        {
+            "name": "AMD FX 6100",
+            "single": 398,
+            "multi": 1938
         }
     ],
     "arm_cpu": [
