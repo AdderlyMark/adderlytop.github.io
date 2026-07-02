@@ -1736,11 +1736,6 @@
             "multi": 13832
         },
         {
-            "name": "Intel Xeon E5 2667 V4 (8 Ядер)",
-            "single": 865,
-            "multi": 8703
-        },
-        {
             "name": "Intel Xeon E5 1660 V4 (8 Ядер)",
             "single": 853,
             "multi": 8519
@@ -1756,11 +1751,6 @@
             "multi": 12648
         },
         {
-            "name": "Intel Xeon E5 2666 V3 (10 Ядер)",
-            "single": 801,
-            "multi": 9254
-        },
-        {
             "name": "Intel Xeon E5 2640 V4 (10 Ядер)",
             "single": 791,
             "multi": 8201
@@ -1769,11 +1759,6 @@
             "name": "Intel Xeon E5 2673 V3 (12 Ядер)",
             "single": 715,
             "multi": 10848
-        },
-        {
-            "name": "Intel Xeon E5 2670 V3 (12 Ядер)",
-            "single": 712,
-            "multi": 10682
         },
         {
             "name": "Intel Xeon E5 2650 V4 (12 Ядер)",
@@ -1801,11 +1786,6 @@
             "multi": 5875
         },
         {
-            "name": "Intel Xeon E5 2650 V2 (8 Ядер)",
-            "single": 585,
-            "multi": 5508
-        },
-        {
             "name": "Intel Xeon E5 2620 V3 (6 Ядер)",
             "single": 560,
             "multi": 4510
@@ -1814,11 +1794,6 @@
             "name": "Intel Xeon E5 2643 0 (4 Ядра)",
             "single": 553,
             "multi": 2612
-        },
-        {
-            "name": "Intel Xeon E5 2630 V2 (6 Ядер)",
-            "single": 540,
-            "multi": 4240
         },
         {
             "name": "Intel Xeon E5 2690 v3",
@@ -1834,11 +1809,6 @@
             "name": "Intel Xeon E5 2630 v3",
             "single": 698,
             "multi": 5982
-        },
-        {
-            "name": "Intel Xeon E31270",
-            "single": 613,
-            "multi": 3049
         },
         {
             "name": "Intel Xeon E5 2680 v3",
