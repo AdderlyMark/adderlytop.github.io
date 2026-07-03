@@ -504,6 +504,11 @@
             "name": "Intel Core i5 760",
             "single": 501,
             "multi": 1783
+        },
+        {
+            "name": "Intel Core i7 9xx (Nehalem Class Core i7)",
+            "single": 18,
+            "multi": 47
         }
     ],
     "desktop_amd": [
@@ -519,7 +524,7 @@
         },
         {
             "name": "AMD Ryzen 9 9900X",
-            "single": 1264,
+            "single": 1270,
             "multi": 25445
         },
         {
@@ -670,7 +675,7 @@
         {
             "name": "AMD Ryzen 5 1600",
             "single": 751,
-            "multi": 5906
+            "multi": 5988
         },
         {
             "name": "AMD Ryzen 5 2600",
@@ -741,6 +746,16 @@
             "name": "AMD Ryzen 5 220",
             "single": 950,
             "multi": 6941
+        },
+        {
+            "name": "AMD Ryzen 5 PRO 4650G",
+            "single": 979,
+            "multi": 8788
+        },
+        {
+            "name": "AMD Ryzen 3 3100 4 Core",
+            "single": 887,
+            "multi": 5193
         }
     ],
     "laptop_intel": [
@@ -1258,6 +1273,16 @@
             "name": "Intel Core i3 6100U",
             "single": 518,
             "multi": 1364
+        },
+        {
+            "name": "Intel Core 7 150U",
+            "single": 1370,
+            "multi": 7635
+        },
+        {
+            "name": "Intel Core i7 6500U",
+            "single": 673,
+            "multi": 1477
         }
     ],
     "laptop_amd": [
@@ -1722,6 +1747,16 @@
             "name": "Intel Core2 Quad Q9450",
             "single": 378,
             "multi": 1475
+        },
+        {
+            "name": "Intel Pentium N4200",
+            "single": 307,
+            "multi": 1142
+        },
+        {
+            "name": "Intel Pentium N3530",
+            "single": 180,
+            "multi": 648
         }
     ],
     "xeon_intel": [
@@ -1832,8 +1867,8 @@
         },
         {
             "name": "Intel Xeon E5 2650 v3",
-            "single": 685,
-            "multi": 7608
+            "single": 686,
+            "multi": 7614
         },
         {
             "name": "Intel Xeon E3 1230 V2",
@@ -1869,6 +1904,11 @@
             "name": "Intel Xeon E31270",
             "single": 613,
             "multi": 3049
+        },
+        {
+            "name": "Intel Xeon E5 2660 v4",
+            "single": 501,
+            "multi": 6837
         }
     ],
     "other_amd": [
