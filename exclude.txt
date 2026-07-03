@@ -424,3 +424,11 @@ Intel Xeon E5 2470 v2
 Intel Core i3 6100U
 AMD FX 6100
 Intel Xeon E31270
+AMD Ryzen 5 PRO 4650G
+Intel Core 7 150U
+Intel Xeon E5 2660 v4
+AMD Ryzen 3 3100 4 Core
+Intel Core i7 6500U
+Intel Pentium N4200
+Intel Pentium N3530
+Intel Core i7 9xx (Nehalem Class Core i7)
