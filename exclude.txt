@@ -432,3 +432,10 @@ Intel Core i7 6500U
 Intel Pentium N4200
 Intel Pentium N3530
 Intel Core i7 9xx (Nehalem Class Core i7)
+Intel Core i5 12500
+AMD Ryzen 7 4800H
+AMD Ryzen 5 2500U
+Intel Core i3 6006U
+AMD FX 8300
+Intel Core2 Duo E7500
+Intel Xeon E3 1240 V2
