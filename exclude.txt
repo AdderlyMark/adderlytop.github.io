@@ -439,3 +439,12 @@ Intel Core i3 6006U
 AMD FX 8300
 Intel Core2 Duo E7500
 Intel Xeon E3 1240 V2
+Intel Core i9 13900HX
+AMD Ryzen 7 7700X
+Intel Core i3 1215U
+AMD Ryzen Threadripper 3970X 32 Core
+Intel Xeon E3 1230 v5
+AMD Ryzen 5 2600X
+Intel Core i3 1315U
+Intel Core i5 12600H
+Intel Xeon E5 2680 v4
