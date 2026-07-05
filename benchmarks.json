@@ -761,6 +761,21 @@
             "name": "AMD Ryzen 3 3100 4 Core",
             "single": 887,
             "multi": 5193
+        },
+        {
+            "name": "AMD Ryzen 7 7700X",
+            "single": 1243,
+            "multi": 16382
+        },
+        {
+            "name": "AMD Ryzen Threadripper 3970X 32 Core",
+            "single": 953,
+            "multi": 41575
+        },
+        {
+            "name": "AMD Ryzen 5 2600X",
+            "single": 871,
+            "multi": 6392
         }
     ],
     "laptop_intel": [
@@ -1201,7 +1216,7 @@
         },
         {
             "name": "Intel Core i3 7100U",
-            "single": 477,
+            "single": 489,
             "multi": 1094
         },
         {
@@ -1216,8 +1231,8 @@
         },
         {
             "name": "Intel Core i3 2350M",
-            "single": 353,
-            "multi": 935
+            "single": 373,
+            "multi": 978
         },
         {
             "name": "Intel Core i3 3217U",
@@ -1293,6 +1308,26 @@
             "name": "Intel Core i3 6006U",
             "single": 475,
             "multi": 1335
+        },
+        {
+            "name": "Intel Core i9 13900HX",
+            "single": 1391,
+            "multi": 18320
+        },
+        {
+            "name": "Intel Core i3 1215U",
+            "single": 1094,
+            "multi": 5307
+        },
+        {
+            "name": "Intel Core i3 1315U",
+            "single": 815,
+            "multi": 4599
+        },
+        {
+            "name": "Intel Core i5 12600H",
+            "single": 744,
+            "multi": 7559
         }
     ],
     "laptop_amd": [
@@ -1750,8 +1785,8 @@
         },
         {
             "name": "Intel Core2 Quad Q8300",
-            "single": 331,
-            "multi": 1259
+            "single": 333,
+            "multi": 1277
         },
         {
             "name": "Intel Celeron B820",
@@ -1939,6 +1974,16 @@
             "name": "Intel Xeon E3 1240 V2",
             "single": 359,
             "multi": 2555
+        },
+        {
+            "name": "Intel Xeon E3 1230 v5",
+            "single": 897,
+            "multi": 4842
+        },
+        {
+            "name": "Intel Xeon E5 2680 v4",
+            "single": 594,
+            "multi": 11992
         }
     ],
     "other_amd": [
