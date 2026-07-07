@@ -142,8 +142,8 @@
         },
         {
             "name": "Intel Core i5 14400F",
-            "single": 1183,
-            "multi": 14109
+            "single": 1232,
+            "multi": 14327
         },
         {
             "name": "Intel Core i5 13400F",
@@ -197,7 +197,7 @@
         },
         {
             "name": "Intel Core i5 10400F",
-            "single": 985,
+            "single": 988,
             "multi": 7916
         },
         {
@@ -462,8 +462,8 @@
         },
         {
             "name": "Intel Core i9 11900K",
-            "single": 849,
-            "multi": 9929
+            "single": 1096,
+            "multi": 12687
         },
         {
             "name": "Intel Core i3 N305",
@@ -514,6 +514,16 @@
             "name": "Intel Core i5 12500",
             "single": 1427,
             "multi": 11684
+        },
+        {
+            "name": "Intel Core i3 10100",
+            "single": 1004,
+            "multi": 5376
+        },
+        {
+            "name": "Intel Core i5 4670K",
+            "single": 791,
+            "multi": 3006
         }
     ],
     "desktop_amd": [
@@ -614,7 +624,7 @@
         },
         {
             "name": "AMD Ryzen 5 7500F",
-            "single": 1160,
+            "single": 1161,
             "multi": 12801
         },
         {
@@ -685,7 +695,7 @@
         {
             "name": "AMD Ryzen 5 2600",
             "single": 800,
-            "multi": 6340
+            "multi": 6364
         },
         {
             "name": "AMD Ryzen 3 3200G",
@@ -1191,8 +1201,8 @@
         },
         {
             "name": "Intel Core i5 9300H",
-            "single": 717,
-            "multi": 2860
+            "single": 812,
+            "multi": 3277
         },
         {
             "name": "Intel Core i7 4870HQ",
@@ -1328,6 +1338,26 @@
             "name": "Intel Core i5 12600H",
             "single": 744,
             "multi": 7559
+        },
+        {
+            "name": "Intel Core i5 4300M",
+            "single": 614,
+            "multi": 1515
+        },
+        {
+            "name": "Intel Core i5 7300U",
+            "single": 535,
+            "multi": 1456
+        },
+        {
+            "name": "Intel Core m5 6Y54",
+            "single": 519,
+            "multi": 1168
+        },
+        {
+            "name": "Intel Core i7 3615QM",
+            "single": 292,
+            "multi": 1473
         }
     ],
     "laptop_amd": [
@@ -1545,6 +1575,16 @@
             "name": "AMD Ryzen 5 2500U",
             "single": 607,
             "multi": 2738
+        },
+        {
+            "name": "AMD Ryzen 7 7735HS",
+            "single": 954,
+            "multi": 11558
+        },
+        {
+            "name": "AMD Ryzen 7 5800H",
+            "single": 918,
+            "multi": 9933
         }
     ],
     "other_intel": [
@@ -1817,6 +1857,26 @@
             "name": "Intel Core2 Duo E7500",
             "single": 409,
             "multi": 794
+        },
+        {
+            "name": "Intel Celeron N4000C",
+            "single": 384,
+            "multi": 737
+        },
+        {
+            "name": "Intel Pentium Dual E2200",
+            "single": 246,
+            "multi": 442
+        },
+        {
+            "name": "Intel Celeron N2840",
+            "single": 202,
+            "multi": 337
+        },
+        {
+            "name": "Intel Celeron N4000",
+            "single": 173,
+            "multi": 533
         }
     ],
     "xeon_intel": [
@@ -2020,7 +2080,7 @@
         {
             "name": "AMD A10 6700",
             "single": 545,
-            "multi": 1859
+            "multi": 1904
         },
         {
             "name": "AMD A10 9700",
@@ -2119,7 +2179,7 @@
         },
         {
             "name": "AMD A4 9125",
-            "single": 320,
+            "single": 339,
             "multi": 690
         },
         {
@@ -2161,6 +2221,11 @@
             "name": "AMD FX 8300",
             "single": 459,
             "multi": 2314
+        },
+        {
+            "name": "AMD A6 5200",
+            "single": 188,
+            "multi": 673
         }
     ],
     "arm_cpu": [
