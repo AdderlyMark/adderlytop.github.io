@@ -448,3 +448,16 @@ AMD Ryzen 5 2600X
 Intel Core i3 1315U
 Intel Core i5 12600H
 Intel Xeon E5 2680 v4
+Intel Core i3 10100
+AMD Ryzen 7 7735HS
+AMD Ryzen 7 5800H
+Intel Core i5 4670K
+Intel Core i5 4300M
+Intel Core i5 7300U
+Intel Core m5 6Y54
+Intel Celeron N4000C
+Intel Core i7 3615QM
+Intel Pentium Dual E2200
+Intel Celeron N2840
+AMD A6 5200
+Intel Celeron N4000
