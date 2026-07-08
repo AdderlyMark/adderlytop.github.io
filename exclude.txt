@@ -461,3 +461,4 @@ Intel Pentium Dual E2200
 Intel Celeron N2840
 AMD A6 5200
 Intel Celeron N4000
+Intel Core i5 11300H
