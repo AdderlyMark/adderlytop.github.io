@@ -197,7 +197,7 @@
         },
         {
             "name": "Intel Core i5 10400F",
-            "single": 988,
+            "single": 1001,
             "multi": 7916
         },
         {
@@ -323,7 +323,7 @@
         {
             "name": "Intel Core i3 9100F",
             "single": 1002,
-            "multi": 3837
+            "multi": 3858
         },
         {
             "name": "Intel Core i3 7100",
@@ -1358,6 +1358,11 @@
             "name": "Intel Core i7 3615QM",
             "single": 292,
             "multi": 1473
+        },
+        {
+            "name": "Intel Core i5 11300H",
+            "single": 789,
+            "multi": 5434
         }
     ],
     "laptop_amd": [
@@ -1631,7 +1636,7 @@
         {
             "name": "Intel Pentium Silver N5000",
             "single": 398,
-            "multi": 1305
+            "multi": 1423
         },
         {
             "name": "Intel Pentium E5500",
@@ -2219,8 +2224,8 @@
         },
         {
             "name": "AMD FX 8300",
-            "single": 459,
-            "multi": 2314
+            "single": 466,
+            "multi": 2605
         },
         {
             "name": "AMD A6 5200",
