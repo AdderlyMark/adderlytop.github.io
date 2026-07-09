@@ -462,3 +462,8 @@ Intel Celeron N2840
 AMD A6 5200
 Intel Celeron N4000
 Intel Core i5 11300H
+Intel Core i3 4350
+AMD Ryzen 3 7320U
+Intel Xeon E5 2689 0
+Intel Core i5 2430M
+Pentium E5500
