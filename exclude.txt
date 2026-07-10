@@ -467,3 +467,10 @@ AMD Ryzen 3 7320U
 Intel Xeon E5 2689 0
 Intel Core i5 2430M
 Pentium E5500
+Intel Core i7 13700H
+Intel Core Ultra 5 125U
+Intel Xeon E5 2650 v4
+Intel Core i5 4200U
+AMD Ryzen 5 4600H
+AMD A10 7700K
+AMD A4 5000
