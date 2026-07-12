@@ -474,3 +474,7 @@ Intel Core i5 4200U
 AMD Ryzen 5 4600H
 AMD A10 7700K
 AMD A4 5000
+Intel Xeon E5 2640 v4
+Intel Core i3 4150
+Intel Xeon E5 2676 v3
+Intel Core i5 2500K
