@@ -518,7 +518,7 @@
         {
             "name": "Intel Core i3 10100",
             "single": 1004,
-            "multi": 5376
+            "multi": 5396
         },
         {
             "name": "Intel Core i5 4670K",
@@ -529,6 +529,16 @@
             "name": "Intel Core i3 4350",
             "single": 795,
             "multi": 1995
+        },
+        {
+            "name": "Intel Core i3 4150",
+            "single": 702,
+            "multi": 1967
+        },
+        {
+            "name": "Intel Core i5 2500K",
+            "single": 668,
+            "multi": 2454
         }
     ],
     "desktop_amd": [
@@ -595,12 +605,12 @@
         {
             "name": "AMD Ryzen 7 5700X",
             "single": 1072,
-            "multi": 12600
+            "multi": 12631
         },
         {
             "name": "AMD Ryzen 7 7800X3D",
-            "single": 1122,
-            "multi": 15447
+            "single": 1137,
+            "multi": 15632
         },
         {
             "name": "AMD Ryzen 7 5700G",
@@ -1261,8 +1271,8 @@
         },
         {
             "name": "Intel Core i3 4005U",
-            "single": 319,
-            "multi": 885
+            "single": 366,
+            "multi": 931
         },
         {
             "name": "Intel Core i3 10110U",
@@ -2099,6 +2109,16 @@
             "name": "Intel Xeon E5 2650 v4",
             "single": 703,
             "multi": 9504
+        },
+        {
+            "name": "Intel Xeon E5 2640 v4",
+            "single": 817,
+            "multi": 8116
+        },
+        {
+            "name": "Intel Xeon E5 2676 v3",
+            "single": 694,
+            "multi": 10193
         }
     ],
     "other_amd": [
@@ -2306,8 +2326,8 @@
         },
         {
             "name": "Apple Silicon",
-            "single": 391,
-            "multi": 1356
+            "single": 418,
+            "multi": 1624
         },
         {
             "name": "Snapdragon 845",
