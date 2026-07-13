@@ -478,3 +478,10 @@ Intel Xeon E5 2640 v4
 Intel Core i3 4150
 Intel Xeon E5 2676 v3
 Intel Core i5 2500K
+AMD Ryzen 9 7900X
+AMD Ryzen 9 7950X 1
+AMD Ryzen 3 4300G
+Intel CC150
+Intel Xeon E3 1245 V2
+Intel Core i5 661
+AMD FX 6200
