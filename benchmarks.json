@@ -821,6 +821,11 @@
             "name": "AMD Ryzen 3 4300G",
             "single": 933,
             "multi": 5394
+        },
+        {
+            "name": "AMD Ryzen 3 PRO 2200G",
+            "single": 767,
+            "multi": 2990
         }
     ],
     "laptop_intel": [
