@@ -198,7 +198,7 @@
         {
             "name": "Intel Core i5 10400F",
             "single": 1001,
-            "multi": 7916
+            "multi": 7967
         },
         {
             "name": "Intel Core i5 9400F",
@@ -227,8 +227,8 @@
         },
         {
             "name": "Intel Core i5 8600K",
-            "single": 885,
-            "multi": 5287
+            "single": 1061,
+            "multi": 6295
         },
         {
             "name": "Intel Core i5 5675R",
@@ -408,7 +408,7 @@
         {
             "name": "Intel Core i7 3770K",
             "single": 743,
-            "multi": 3348
+            "multi": 3405
         },
         {
             "name": "Intel Core i3 4170",
@@ -1052,7 +1052,7 @@
         {
             "name": "Intel Core i5 8250U",
             "single": 826,
-            "multi": 3527
+            "multi": 3586
         },
         {
             "name": "Intel Core i5 7200U",
@@ -1411,7 +1411,7 @@
         },
         {
             "name": "Intel Core i7 13700H",
-            "single": 1200,
+            "single": 1205,
             "multi": 13397
         },
         {
@@ -1423,6 +1423,11 @@
             "name": "Intel Core i5 4200U",
             "single": 570,
             "multi": 1204
+        },
+        {
+            "name": "Intel Core m3 7Y30",
+            "single": 627,
+            "multi": 1596
         }
     ],
     "laptop_amd": [
@@ -2351,6 +2356,11 @@
             "name": "AMD FX 6200",
             "single": 436,
             "multi": 2262
+        },
+        {
+            "name": "AMD A6 9220",
+            "single": 328,
+            "multi": 603
         }
     ],
     "arm_cpu": [
