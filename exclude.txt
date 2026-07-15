@@ -486,3 +486,5 @@ Intel Xeon E3 1245 V2
 Intel Core i5 661
 AMD FX 6200
 AMD Ryzen 3 PRO 2200G
+Intel Core m3 7Y30
+AMD A6 9220
