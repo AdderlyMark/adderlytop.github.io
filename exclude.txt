@@ -488,3 +488,11 @@ AMD FX 6200
 AMD Ryzen 3 PRO 2200G
 Intel Core m3 7Y30
 AMD A6 9220
+Intel Core i7 10700K
+AMD Ryzen 5 3500X
+AMD Ryzen 5 4500U
+Intel Xeon E5 2690 v4
+AMD A10 6800K
+Intel Core i9 13900HK
+Intel Core i7 M 620
+Intel Core i7 2760QM
