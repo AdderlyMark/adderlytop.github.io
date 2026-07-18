@@ -117,7 +117,7 @@
         },
         {
             "name": "Intel Core i5 14600KF",
-            "single": 1388,
+            "single": 1397,
             "multi": 20624
         },
         {
@@ -554,6 +554,11 @@
             "name": "Intel Core i9 13900HK",
             "single": 498,
             "multi": 8891
+        },
+        {
+            "name": "Intel Core Ultra 7 256V",
+            "single": 1034,
+            "multi": 7356
         }
     ],
     "desktop_amd": [
@@ -669,8 +674,8 @@
         },
         {
             "name": "AMD Ryzen 5 5600",
-            "single": 1283,
-            "multi": 11648
+            "single": 1300,
+            "multi": 11786
         },
         {
             "name": "AMD Ryzen 5 5600G",
@@ -986,7 +991,7 @@
         },
         {
             "name": "Intel Core i5 13420H",
-            "single": 1155,
+            "single": 1192,
             "multi": 9369
         },
         {
@@ -1067,7 +1072,7 @@
         {
             "name": "Intel Core i5 8250U",
             "single": 826,
-            "multi": 3586
+            "multi": 3650
         },
         {
             "name": "Intel Core i5 7200U",
@@ -1146,7 +1151,7 @@
         },
         {
             "name": "Intel Core i3 8130U",
-            "single": 829,
+            "single": 830,
             "multi": 2153
         },
         {
@@ -1453,6 +1458,11 @@
             "name": "Intel Core i7 2760QM",
             "single": 429,
             "multi": 1914
+        },
+        {
+            "name": "Intel Core i5 7300HQ",
+            "single": 685,
+            "multi": 2432
         }
     ],
     "laptop_amd": [
@@ -1688,13 +1698,18 @@
         },
         {
             "name": "AMD Ryzen 5 4600H",
-            "single": 528,
-            "multi": 5045
+            "single": 717,
+            "multi": 5556
         },
         {
             "name": "AMD Ryzen 5 4500U",
             "single": 777,
             "multi": 4249
+        },
+        {
+            "name": "AMD Ryzen 7 5800U",
+            "single": 975,
+            "multi": 8531
         }
     ],
     "other_intel": [
@@ -2073,7 +2088,7 @@
         {
             "name": "Intel Xeon E5 2690 v3",
             "single": 785,
-            "multi": 9929
+            "multi": 10423
         },
         {
             "name": "Intel Xeon E5 2643 v3",
@@ -2401,6 +2416,16 @@
             "name": "AMD A10 6800K",
             "single": 552,
             "multi": 2022
+        },
+        {
+            "name": "AMD Athlon Silver 3050U",
+            "single": 680,
+            "multi": 1299
+        },
+        {
+            "name": "AMD FX 8350",
+            "single": 493,
+            "multi": 3311
         }
     ],
     "arm_cpu": [
