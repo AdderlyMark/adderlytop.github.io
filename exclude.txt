@@ -496,3 +496,8 @@ AMD A10 6800K
 Intel Core i9 13900HK
 Intel Core i7 M 620
 Intel Core i7 2760QM
+Intel Core Ultra 7 256V
+AMD Ryzen 7 5800U
+Intel Core i5 7300HQ
+AMD Athlon Silver 3050U
+AMD FX 8350
