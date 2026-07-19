@@ -501,3 +501,6 @@ AMD Ryzen 7 5800U
 Intel Core i5 7300HQ
 AMD Athlon Silver 3050U
 AMD FX 8350
+AMD Ryzen 5 PRO 4650GE
+Intel Core i5 750
+Intel Core2 Quad Q8400
