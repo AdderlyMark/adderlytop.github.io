@@ -559,6 +559,11 @@
             "name": "Intel Core Ultra 7 256V",
             "single": 1034,
             "multi": 7356
+        },
+        {
+            "name": "Intel Core i5 750",
+            "single": 401,
+            "multi": 1197
         }
     ],
     "desktop_amd": [
@@ -846,6 +851,11 @@
             "name": "AMD Ryzen 5 3500X",
             "single": 905,
             "multi": 5310
+        },
+        {
+            "name": "AMD Ryzen 5 PRO 4650GE",
+            "single": 962,
+            "multi": 2247
         }
     ],
     "laptop_intel": [
@@ -1032,7 +1042,7 @@
         {
             "name": "Intel Core i5 1235U",
             "single": 1146,
-            "multi": 7604
+            "multi": 7629
         },
         {
             "name": "Intel Core i5 10300H",
@@ -2012,6 +2022,11 @@
             "name": "Intel CC150",
             "single": 864,
             "multi": 9173
+        },
+        {
+            "name": "Intel Core2 Quad Q8400",
+            "single": 373,
+            "multi": 1419
         }
     ],
     "xeon_intel": [
