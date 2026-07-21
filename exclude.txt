@@ -504,3 +504,10 @@ AMD FX 8350
 AMD Ryzen 5 PRO 4650GE
 Intel Core i5 750
 Intel Core2 Quad Q8400
+Intel Core i7 13700K
+Intel Xeon E3 1265L v3
+Intel Core i7 2670QM
+AMD Ryzen 3 PRO 1200
+Intel Core i3 8145U
+Intel Core i5 3317U
+Intel Core i3 3227U
