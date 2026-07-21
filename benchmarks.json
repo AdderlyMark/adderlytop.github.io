@@ -183,7 +183,7 @@
         {
             "name": "Intel Core i5 11400F",
             "single": 1052,
-            "multi": 9163
+            "multi": 9179
         },
         {
             "name": "Intel Core i5 10500",
@@ -564,6 +564,11 @@
             "name": "Intel Core i5 750",
             "single": 401,
             "multi": 1197
+        },
+        {
+            "name": "Intel Core i7 13700K",
+            "single": 1402,
+            "multi": 24382
         }
     ],
     "desktop_amd": [
@@ -605,7 +610,7 @@
         {
             "name": "AMD Ryzen 7 9800X3D",
             "single": 1190,
-            "multi": 18243
+            "multi": 18306
         },
         {
             "name": "AMD Ryzen 7 8700F",
@@ -664,8 +669,8 @@
         },
         {
             "name": "AMD Ryzen 5 7500F",
-            "single": 1255,
-            "multi": 12847
+            "single": 1333,
+            "multi": 13429
         },
         {
             "name": "AMD Ryzen 5 8400F",
@@ -679,8 +684,8 @@
         },
         {
             "name": "AMD Ryzen 5 5600",
-            "single": 1391,
-            "multi": 12431
+            "single": 1471,
+            "multi": 13047
         },
         {
             "name": "AMD Ryzen 5 5600G",
@@ -694,8 +699,8 @@
         },
         {
             "name": "AMD Ryzen 5 5500",
-            "single": 976,
-            "multi": 9788
+            "single": 1010,
+            "multi": 10257
         },
         {
             "name": "AMD Ryzen 5 4500",
@@ -856,6 +861,11 @@
             "name": "AMD Ryzen 5 PRO 4650GE",
             "single": 962,
             "multi": 2247
+        },
+        {
+            "name": "AMD Ryzen 3 PRO 1200",
+            "single": 710,
+            "multi": 2372
         }
     ],
     "laptop_intel": [
@@ -1016,7 +1026,7 @@
         },
         {
             "name": "Intel Core i5 12450H",
-            "single": 1090,
+            "single": 1146,
             "multi": 10088
         },
         {
@@ -1431,8 +1441,8 @@
         },
         {
             "name": "Intel Core i5 11300H",
-            "single": 789,
-            "multi": 5434
+            "single": 1065,
+            "multi": 6275
         },
         {
             "name": "Intel Core i5 2430M",
@@ -1473,6 +1483,26 @@
             "name": "Intel Core i5 7300HQ",
             "single": 685,
             "multi": 2432
+        },
+        {
+            "name": "Intel Core i7 2670QM",
+            "single": 551,
+            "multi": 2558
+        },
+        {
+            "name": "Intel Core i3 8145U",
+            "single": 842,
+            "multi": 2124
+        },
+        {
+            "name": "Intel Core i5 3317U",
+            "single": 299,
+            "multi": 780
+        },
+        {
+            "name": "Intel Core i3 3227U",
+            "single": 308,
+            "multi": 760
         }
     ],
     "laptop_amd": [
@@ -1791,7 +1821,7 @@
         {
             "name": "Intel Celeron N4020",
             "single": 407,
-            "multi": 728
+            "multi": 769
         },
         {
             "name": "Intel Celeron E3500",
@@ -2026,7 +2056,7 @@
         {
             "name": "Intel Core2 Quad Q8400",
             "single": 373,
-            "multi": 1419
+            "multi": 1429
         }
     ],
     "xeon_intel": [
@@ -2224,6 +2254,11 @@
             "name": "Intel Xeon E5 2690 v4",
             "single": 763,
             "multi": 13508
+        },
+        {
+            "name": "Intel Xeon E3 1265L v3",
+            "single": 757,
+            "multi": 3368
         }
     ],
     "other_amd": [
