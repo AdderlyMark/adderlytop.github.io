@@ -52,8 +52,8 @@
         },
         {
             "name": "Intel Core i7 12700KF",
-            "single": 1312,
-            "multi": 19218
+            "single": 1323,
+            "multi": 19525
         },
         {
             "name": "Intel Core i7 11700",
@@ -634,8 +634,8 @@
         },
         {
             "name": "AMD Ryzen 7 5700X",
-            "single": 1072,
-            "multi": 12631
+            "single": 1113,
+            "multi": 13934
         },
         {
             "name": "AMD Ryzen 7 7800X3D",
@@ -1026,7 +1026,7 @@
         },
         {
             "name": "Intel Core i5 12450H",
-            "single": 1146,
+            "single": 1156,
             "multi": 10088
         },
         {
@@ -1146,8 +1146,8 @@
         },
         {
             "name": "Intel Core i5 3337U",
-            "single": 498,
-            "multi": 1187
+            "single": 514,
+            "multi": 1218
         },
         {
             "name": "Intel Core i3 1220P",
@@ -1282,7 +1282,7 @@
         {
             "name": "Intel Core i5 9300H",
             "single": 947,
-            "multi": 4012
+            "multi": 4254
         },
         {
             "name": "Intel Core i7 4870HQ",
@@ -1306,8 +1306,8 @@
         },
         {
             "name": "Intel Core i3 7100U",
-            "single": 549,
-            "multi": 1376
+            "single": 561,
+            "multi": 1426
         },
         {
             "name": "Intel Core i5 M 540",
@@ -1341,8 +1341,8 @@
         },
         {
             "name": "Intel Core i3 10110U",
-            "single": 870,
-            "multi": 2187
+            "single": 950,
+            "multi": 2256
         },
         {
             "name": "Intel Core i5 5300U",
@@ -1503,6 +1503,11 @@
             "name": "Intel Core i3 3227U",
             "single": 308,
             "multi": 760
+        },
+        {
+            "name": "Intel Core i7 4710HQ",
+            "single": 526,
+            "multi": 2738
         }
     ],
     "laptop_amd": [
@@ -1750,6 +1755,16 @@
             "name": "AMD Ryzen 7 5800U",
             "single": 975,
             "multi": 8531
+        },
+        {
+            "name": "AMD Ryzen 7 6800H",
+            "single": 1019,
+            "multi": 11482
+        },
+        {
+            "name": "AMD Ryzen 5 5560U",
+            "single": 437,
+            "multi": 4353
         }
     ],
     "other_intel": [
@@ -2057,6 +2072,11 @@
             "name": "Intel Core2 Quad Q8400",
             "single": 373,
             "multi": 1429
+        },
+        {
+            "name": "Intel Core2 Duo T7700",
+            "single": 266,
+            "multi": 362
         }
     ],
     "xeon_intel": [
