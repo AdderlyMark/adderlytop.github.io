@@ -511,3 +511,7 @@ AMD Ryzen 3 PRO 1200
 Intel Core i3 8145U
 Intel Core i5 3317U
 Intel Core i3 3227U
+AMD Ryzen 7 6800H
+Intel Core i7 4710HQ
+AMD Ryzen 5 5560U
+Intel Core2 Duo T7700
