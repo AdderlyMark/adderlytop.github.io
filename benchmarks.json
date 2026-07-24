@@ -197,7 +197,7 @@
         },
         {
             "name": "Intel Core i5 10400F",
-            "single": 1003,
+            "single": 1014,
             "multi": 7967
         },
         {
@@ -277,8 +277,8 @@
         },
         {
             "name": "Intel Core i5 3450",
-            "single": 675,
-            "multi": 2515
+            "single": 762,
+            "multi": 2807
         },
         {
             "name": "Intel Core i5 2400",
@@ -408,7 +408,7 @@
         {
             "name": "Intel Core i7 3770K",
             "single": 862,
-            "multi": 4245
+            "multi": 4300
         },
         {
             "name": "Intel Core i3 4170",
@@ -654,7 +654,7 @@
         },
         {
             "name": "AMD Ryzen 7 5700X3D",
-            "single": 937,
+            "single": 944,
             "multi": 12215
         },
         {
@@ -866,6 +866,11 @@
             "name": "AMD Ryzen 3 PRO 1200",
             "single": 710,
             "multi": 2372
+        },
+        {
+            "name": "AMD Ryzen 7 170",
+            "single": 542,
+            "multi": 7428
         }
     ],
     "laptop_intel": [
@@ -1282,7 +1287,7 @@
         {
             "name": "Intel Core i5 9300H",
             "single": 947,
-            "multi": 4254
+            "multi": 4403
         },
         {
             "name": "Intel Core i7 4870HQ",
@@ -1588,8 +1593,8 @@
         },
         {
             "name": "AMD Ryzen 5 7535HS",
-            "single": 997,
-            "multi": 8826
+            "single": 1037,
+            "multi": 9077
         },
         {
             "name": "AMD Ryzen 5 6600H",
@@ -1638,8 +1643,8 @@
         },
         {
             "name": "AMD Ryzen 9 8945HX",
-            "single": 1183,
-            "multi": 13037
+            "single": 1185,
+            "multi": 22180
         },
         {
             "name": "AMD Ryzen 7 8845HS",
@@ -1765,6 +1770,11 @@
             "name": "AMD Ryzen 5 5560U",
             "single": 437,
             "multi": 4353
+        },
+        {
+            "name": "AMD Ryzen 9 8940HX",
+            "single": 1180,
+            "multi": 29345
         }
     ],
     "other_intel": [
@@ -2203,7 +2213,7 @@
         {
             "name": "Intel Xeon E5 2666 v3",
             "single": 811,
-            "multi": 10042
+            "multi": 10152
         },
         {
             "name": "Intel Xeon E5 2630 v2",
@@ -2279,6 +2289,16 @@
             "name": "Intel Xeon E3 1265L v3",
             "single": 757,
             "multi": 3368
+        },
+        {
+            "name": "Intel Xeon E5 2678 v3",
+            "single": 800,
+            "multi": 12529
+        },
+        {
+            "name": "Intel Xeon E5 2640 v3",
+            "single": 785,
+            "multi": 7814
         }
     ],
     "other_amd": [
@@ -2299,7 +2319,7 @@
         },
         {
             "name": "AMD FX 4300",
-            "single": 493,
+            "single": 503,
             "multi": 1761
         },
         {
@@ -2496,6 +2516,11 @@
             "name": "AMD FX 8350",
             "single": 493,
             "multi": 3311
+        },
+        {
+            "name": "AMD Athlon II P320",
+            "single": 234,
+            "multi": 452
         }
     ],
     "arm_cpu": [
