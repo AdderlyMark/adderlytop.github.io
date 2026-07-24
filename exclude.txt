@@ -515,3 +515,8 @@ AMD Ryzen 7 6800H
 Intel Core i7 4710HQ
 AMD Ryzen 5 5560U
 Intel Core2 Duo T7700
+AMD Ryzen 9 8940HX
+Intel Xeon E5 2678 v3
+Intel Xeon E5 2640 v3
+AMD Ryzen 7 170
+AMD Athlon II P320
