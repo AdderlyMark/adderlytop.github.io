@@ -520,3 +520,9 @@ Intel Xeon E5 2678 v3
 Intel Xeon E5 2640 v3
 AMD Ryzen 7 170
 AMD Athlon II P320
+AMD Ryzen 9 5900HX
+Intel Xeon E3 1270 v3
+Intel Core i5 6440HQ
+Intel Core i5 M 460
+Intel Core2 Duo T9600
+Snapdragon 860
