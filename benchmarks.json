@@ -644,7 +644,7 @@
         },
         {
             "name": "AMD Ryzen 7 5700G",
-            "single": 1026,
+            "single": 1065,
             "multi": 12416
         },
         {
@@ -1067,7 +1067,7 @@
         {
             "name": "Intel Core i5 1135G7",
             "single": 1020,
-            "multi": 5588
+            "multi": 5998
         },
         {
             "name": "Intel Core i5 1334U",
@@ -1077,7 +1077,7 @@
         {
             "name": "Intel Core i5 8300H",
             "single": 980,
-            "multi": 4431
+            "multi": 4951
         },
         {
             "name": "Intel Core i5 10210U",
@@ -1513,6 +1513,16 @@
             "name": "Intel Core i7 4710HQ",
             "single": 526,
             "multi": 2738
+        },
+        {
+            "name": "Intel Core i5 6440HQ",
+            "single": 854,
+            "multi": 3042
+        },
+        {
+            "name": "Intel Core i5 M 460",
+            "single": 419,
+            "multi": 790
         }
     ],
     "laptop_amd": [
@@ -1775,6 +1785,11 @@
             "name": "AMD Ryzen 9 8940HX",
             "single": 1180,
             "multi": 29345
+        },
+        {
+            "name": "AMD Ryzen 9 5900HX",
+            "single": 1056,
+            "multi": 12679
         }
     ],
     "other_intel": [
@@ -2087,6 +2102,11 @@
             "name": "Intel Core2 Duo T7700",
             "single": 266,
             "multi": 362
+        },
+        {
+            "name": "Intel Core2 Duo T9600",
+            "single": 398,
+            "multi": 666
         }
     ],
     "xeon_intel": [
@@ -2299,6 +2319,11 @@
             "name": "Intel Xeon E5 2640 v3",
             "single": 785,
             "multi": 7814
+        },
+        {
+            "name": "Intel Xeon E3 1270 v3",
+            "single": 1033,
+            "multi": 3849
         }
     ],
     "other_amd": [
@@ -2319,8 +2344,8 @@
         },
         {
             "name": "AMD FX 4300",
-            "single": 503,
-            "multi": 1761
+            "single": 514,
+            "multi": 1778
         },
         {
             "name": "AMD FX 4170",
@@ -2543,6 +2568,11 @@
             "name": "Snapdragon 845",
             "single": 82,
             "multi": 341
+        },
+        {
+            "name": "Snapdragon 860",
+            "single": 201,
+            "multi": 844
         }
     ]
 }
