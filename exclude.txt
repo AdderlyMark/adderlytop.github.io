@@ -526,3 +526,10 @@ Intel Core i5 6440HQ
 Intel Core i5 M 460
 Intel Core2 Duo T9600
 Snapdragon 860
+AMD Ryzen 5 7600
+AMD Ryzen AI 9 HX 370 890M
+AMD Ryzen 3 4300U
+Intel Xeon E3 1240 v3
+Intel Pentium Gold G5400
+Intel Core i5 4670
+AMD E2 1800
