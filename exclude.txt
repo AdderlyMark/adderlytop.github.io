@@ -536,3 +536,6 @@ AMD E2 1800
 Intel Core i7 12700
 Intel Core i7 4790S
 Intel Core i5 1035G4
+Intel Arc G3 Extreme
+AMD Ryzen 5 7520U
+Intel Core i7 4600U
