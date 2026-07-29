@@ -884,8 +884,8 @@
         },
         {
             "name": "AMD Ryzen 7 170",
-            "single": 799,
-            "multi": 9767
+            "single": 1057,
+            "multi": 12107
         },
         {
             "name": "AMD Ryzen 5 7600",
@@ -1317,7 +1317,7 @@
         {
             "name": "Intel Core i5 5350U",
             "single": 651,
-            "multi": 1550
+            "multi": 1681
         },
         {
             "name": "Intel Core i5 2410M",
@@ -1546,8 +1546,13 @@
         },
         {
             "name": "Intel Core i5 1035G4",
-            "single": 577,
-            "multi": 2867
+            "single": 578,
+            "multi": 2874
+        },
+        {
+            "name": "Intel Core i7 4600U",
+            "single": 702,
+            "multi": 1273
         }
     ],
     "laptop_amd": [
@@ -1825,6 +1830,11 @@
             "name": "AMD Ryzen 3 4300U",
             "single": 843,
             "multi": 3227
+        },
+        {
+            "name": "AMD Ryzen 5 7520U",
+            "single": 730,
+            "multi": 4367
         }
     ],
     "other_intel": [
@@ -2055,8 +2065,8 @@
         },
         {
             "name": "Intel N95",
-            "single": 508,
-            "multi": 520
+            "single": 634,
+            "multi": 1825
         },
         {
             "name": "Genuine Intel 0000",
@@ -2147,6 +2157,11 @@
             "name": "Intel Pentium Gold G5400",
             "single": 558,
             "multi": 2139
+        },
+        {
+            "name": "Intel Arc G3 Extreme",
+            "single": 1005,
+            "multi": 10197
         }
     ],
     "xeon_intel": [
@@ -2262,7 +2277,7 @@
         },
         {
             "name": "Intel Xeon E3 1230 V2",
-            "single": 676,
+            "single": 709,
             "multi": 3341
         },
         {
