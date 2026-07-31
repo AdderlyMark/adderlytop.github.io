@@ -539,3 +539,11 @@ Intel Core i5 1035G4
 Intel Arc G3 Extreme
 AMD Ryzen 5 7520U
 Intel Core i7 4600U
+Intel Core i5 12450HX
+Intel Core i9 10900
+AMD Ryzen 5 5600GT
+Intel Xeon E5 2660 v3
+Intel Xeon E5 2620 v3
+AMD Athlon 200GE
+Intel Xeon E5 2670 v2
+AMD PRO A10 8700B R6
