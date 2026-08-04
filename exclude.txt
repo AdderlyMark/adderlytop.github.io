@@ -547,3 +547,15 @@ Intel Xeon E5 2620 v3
 AMD Athlon 200GE
 Intel Xeon E5 2670 v2
 AMD PRO A10 8700B R6
+Intel Core i5 9500
+Intel Core i3 6100
+Intel Xeon E5 2695 v3
+Intel Xeon E5 2667 v2
+Intel Xeon E3 1225 V2
+Intel Core i3 550
+Intel Xeon E5 2630 0
+AMD Phenom II X3 720
+Intel Pentium B980
+Intel Core i5 6360U
+Pentium T4300
+Intel Celeron N3450
