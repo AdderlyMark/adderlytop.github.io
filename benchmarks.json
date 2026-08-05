@@ -128,7 +128,7 @@
         {
             "name": "Intel Core i5 13600KF",
             "single": 1401,
-            "multi": 19448
+            "multi": 20353
         },
         {
             "name": "Intel Core i5 13490F",
@@ -1037,7 +1037,7 @@
         {
             "name": "Intel Core i7 3630QM",
             "single": 647,
-            "multi": 3134
+            "multi": 3151
         },
         {
             "name": "Intel Core i7 3517U",
@@ -1392,7 +1392,7 @@
         {
             "name": "Intel Core i3 10110U",
             "single": 950,
-            "multi": 2256
+            "multi": 2396
         },
         {
             "name": "Intel Core i5 5300U",
@@ -1588,6 +1588,11 @@
             "name": "Intel Core i5 6360U",
             "single": 309,
             "multi": 1134
+        },
+        {
+            "name": "Intel Core i7 12800HX",
+            "single": 1152,
+            "multi": 12171
         }
     ],
     "laptop_amd": [
@@ -2469,6 +2474,11 @@
             "name": "Intel Xeon E5 2630 0",
             "single": 396,
             "multi": 3260
+        },
+        {
+            "name": "Intel Xeon E5 2640 v2",
+            "single": 449,
+            "multi": 4080
         }
     ],
     "other_amd": [
