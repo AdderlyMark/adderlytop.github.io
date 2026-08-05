@@ -559,3 +559,5 @@ Intel Pentium B980
 Intel Core i5 6360U
 Pentium T4300
 Intel Celeron N3450
+Intel Core i7 12800HX
+Intel Xeon E5 2640 v2
