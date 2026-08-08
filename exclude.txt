@@ -561,3 +561,18 @@ Pentium T4300
 Intel Celeron N3450
 Intel Core i7 12800HX
 Intel Xeon E5 2640 v2
+AMD Ryzen 7 9850X3D
+AMD Ryzen 9 9955HX 1
+Intel Core i7 11700K
+Intel Core i7 11700KF
+Intel Core 7 240H
+AMD Ryzen 5 PRO 4650U
+AMD Ryzen 3 5300U
+Intel Core i3 7100T
+AMD Ryzen 5 PRO 5650U
+AMD Ryzen 3 2200GE
+Intel Xeon E5 2450 v2
+Intel Celeron N4500
+Intel Celeron 4205U
+AMD Athlon II X2 240
+Intel Pentium N3540
