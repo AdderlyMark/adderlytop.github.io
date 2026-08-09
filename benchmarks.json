@@ -824,8 +824,8 @@
         },
         {
             "name": "AMD Ryzen 5 3600X",
-            "single": 842,
-            "multi": 7123
+            "single": 963,
+            "multi": 8069
         },
         {
             "name": "AMD Ryzen 3 PRO 1300",
@@ -1096,8 +1096,8 @@
         },
         {
             "name": "Intel Core i5 13500H",
-            "single": 1147,
-            "multi": 9207
+            "single": 1210,
+            "multi": 12063
         },
         {
             "name": "Intel Core i5 12450H",
@@ -1471,8 +1471,8 @@
         },
         {
             "name": "Intel Core i3 6006U",
-            "single": 475,
-            "multi": 1335
+            "single": 489,
+            "multi": 1342
         },
         {
             "name": "Intel Core i9 13900HX",
@@ -1783,8 +1783,8 @@
         },
         {
             "name": "AMD Ryzen 5 5600U",
-            "single": 854,
-            "multi": 4062
+            "single": 907,
+            "multi": 6585
         },
         {
             "name": "AMD Ryzen 7 2700U",
