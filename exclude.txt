@@ -576,3 +576,11 @@ Intel Celeron N4500
 Intel Celeron 4205U
 AMD Athlon II X2 240
 Intel Pentium N3540
+AMD Ryzen 9 9950X3D 1
+Intel Core i5 10600KF
+AMD Ryzen 5 PRO 3600
+Intel Xeon E5 2696 v3
+Intel Xeon X5670
+Intel Core i3 5015U
+AMD A6 3650
+Intel Pentium N3520
