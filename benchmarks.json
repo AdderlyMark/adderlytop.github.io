@@ -128,7 +128,7 @@
         {
             "name": "Intel Core i5 13600KF",
             "single": 1401,
-            "multi": 20446
+            "multi": 20493
         },
         {
             "name": "Intel Core i5 13490F",
@@ -1292,7 +1292,7 @@
         {
             "name": "Intel Core i3 3110M",
             "single": 456,
-            "multi": 1153
+            "multi": 1157
         },
         {
             "name": "Intel Core i3 4030U",
@@ -1437,7 +1437,7 @@
         {
             "name": "Intel Core i3 10110U",
             "single": 950,
-            "multi": 2399
+            "multi": 2402
         },
         {
             "name": "Intel Core i5 5300U",
