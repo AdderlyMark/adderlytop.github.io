@@ -587,3 +587,8 @@ Intel Pentium N3520
 Intel Xeon E5 2683 v4
 Intel Core i3 2125
 Intel Celeron J4115
+Intel Core i9 9900KF
+Intel Core i5 9600KF
+Intel Pentium 2020M
+AMD A8 3850
+AMD Phenom II X4 945
