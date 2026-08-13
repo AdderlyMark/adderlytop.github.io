@@ -357,8 +357,8 @@
         },
         {
             "name": "Intel Core i3 540",
-            "single": 459,
-            "multi": 1217
+            "single": 464,
+            "multi": 1259
         },
         {
             "name": "Intel Core i5 14600K",
@@ -597,13 +597,13 @@
         },
         {
             "name": "Intel Core i3 6100",
-            "single": 797,
-            "multi": 2213
+            "single": 904,
+            "multi": 2451
         },
         {
             "name": "Intel Core i3 550",
-            "single": 482,
-            "multi": 1044
+            "single": 485,
+            "multi": 1312
         },
         {
             "name": "Intel Core i7 11700K",
@@ -612,8 +612,8 @@
         },
         {
             "name": "Intel Core i7 11700KF",
-            "single": 1158,
-            "multi": 13636
+            "single": 1161,
+            "multi": 13806
         },
         {
             "name": "Intel Core i3 7100T",
@@ -629,6 +629,16 @@
             "name": "Intel Core i3 2125",
             "single": 583,
             "multi": 1487
+        },
+        {
+            "name": "Intel Core i9 9900KF",
+            "single": 1150,
+            "multi": 11450
+        },
+        {
+            "name": "Intel Core i5 9600KF",
+            "single": 1064,
+            "multi": 5919
         }
     ],
     "desktop_amd": [
@@ -1376,8 +1386,8 @@
         },
         {
             "name": "Intel Core i5 9300H",
-            "single": 999,
-            "multi": 4553
+            "single": 1003,
+            "multi": 5335
         },
         {
             "name": "Intel Core i7 4870HQ",
@@ -1743,7 +1753,7 @@
         },
         {
             "name": "AMD Ryzen 5 5600H",
-            "single": 964,
+            "single": 980,
             "multi": 8646
         },
         {
@@ -1873,7 +1883,7 @@
         },
         {
             "name": "AMD Ryzen 7 5800H",
-            "single": 941,
+            "single": 944,
             "multi": 10496
         },
         {
@@ -2181,12 +2191,12 @@
         {
             "name": "Intel N95",
             "single": 634,
-            "multi": 1825
+            "multi": 1938
         },
         {
             "name": "Genuine Intel 0000",
-            "single": 985,
-            "multi": 5689
+            "single": 1091,
+            "multi": 10759
         },
         {
             "name": "Intel Core2 Quad Q8300",
@@ -2317,6 +2327,11 @@
             "name": "Intel Celeron J4115",
             "single": 117,
             "multi": 412
+        },
+        {
+            "name": "Intel Pentium 2020M",
+            "single": 464,
+            "multi": 834
         }
     ],
     "xeon_intel": [
@@ -2851,6 +2866,16 @@
             "name": "AMD A6 3650",
             "single": 219,
             "multi": 669
+        },
+        {
+            "name": "AMD A8 3850",
+            "single": 350,
+            "multi": 1303
+        },
+        {
+            "name": "AMD Phenom II X4 945",
+            "single": 284,
+            "multi": 1200
         }
     ],
     "arm_cpu": [
