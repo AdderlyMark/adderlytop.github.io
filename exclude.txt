@@ -592,3 +592,6 @@ Intel Core i5 9600KF
 Intel Pentium 2020M
 AMD A8 3850
 AMD Phenom II X4 945
+Intel Core i5 12490F
+AMD A10 9600P
+Intel Celeron N2830
