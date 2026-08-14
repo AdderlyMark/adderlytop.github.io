@@ -639,6 +639,11 @@
             "name": "Intel Core i5 9600KF",
             "single": 1064,
             "multi": 5919
+        },
+        {
+            "name": "Intel Core i5 12490F",
+            "single": 1141,
+            "multi": 10380
         }
     ],
     "desktop_amd": [
@@ -940,7 +945,7 @@
         {
             "name": "AMD Ryzen 7 170",
             "single": 1057,
-            "multi": 12107
+            "multi": 12183
         },
         {
             "name": "AMD Ryzen 5 7600",
@@ -1366,7 +1371,7 @@
         },
         {
             "name": "Intel Core i3 1115G4",
-            "single": 994,
+            "single": 1004,
             "multi": 3168
         },
         {
@@ -1536,8 +1541,8 @@
         },
         {
             "name": "Intel Core m5 6Y54",
-            "single": 519,
-            "multi": 1168
+            "single": 646,
+            "multi": 1260
         },
         {
             "name": "Intel Core i7 3615QM",
@@ -1938,7 +1943,7 @@
         },
         {
             "name": "AMD Ryzen 5 7520U",
-            "single": 730,
+            "single": 866,
             "multi": 4367
         },
         {
@@ -2165,7 +2170,7 @@
         },
         {
             "name": "Intel Pentium N3710",
-            "single": 234,
+            "single": 235,
             "multi": 922
         },
         {
@@ -2332,6 +2337,11 @@
             "name": "Intel Pentium 2020M",
             "single": 464,
             "multi": 834
+        },
+        {
+            "name": "Intel Celeron N2830",
+            "single": 138,
+            "multi": 285
         }
     ],
     "xeon_intel": [
@@ -2498,7 +2508,7 @@
         {
             "name": "Intel Xeon E5 2680 v4",
             "single": 803,
-            "multi": 11992
+            "multi": 12368
         },
         {
             "name": "Intel Xeon E5 2689 0",
@@ -2795,7 +2805,7 @@
         {
             "name": "AMD A6 5200",
             "single": 188,
-            "multi": 673
+            "multi": 737
         },
         {
             "name": "AMD A10 7700K",
@@ -2876,6 +2886,11 @@
             "name": "AMD Phenom II X4 945",
             "single": 284,
             "multi": 1200
+        },
+        {
+            "name": "AMD A10 9600P",
+            "single": 268,
+            "multi": 875
         }
     ],
     "arm_cpu": [
