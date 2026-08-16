@@ -595,3 +595,16 @@ AMD Phenom II X4 945
 Intel Core i5 12490F
 AMD A10 9600P
 Intel Celeron N2830
+Intel Core Ultra 9 185H
+Intel Core i7 10700
+AMD Ryzen 7 7735U
+Intel Core i5 11320H
+AMD Ryzen 7 PRO 6850U
+Intel Core i7 2600K
+AMD Ryzen 5 5625U
+Intel Xeon E5 2696 v2
+Intel Core i5 6300HQ
+AMD A10 5700
+Intel Xeon E5 2620 v2
+AMD Athlon II X4 640
+Intel Core2 Duo T6570
