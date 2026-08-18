@@ -608,3 +608,8 @@ AMD A10 5700
 Intel Xeon E5 2620 v2
 AMD Athlon II X4 640
 Intel Core2 Duo T6570
+Intel Core i9 14900F
+Intel Core i7 4700HQ
+Intel Core i7 5600U
+Intel Pentium G4400
+Pentium T4200
