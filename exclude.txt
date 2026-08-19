@@ -613,3 +613,7 @@ Intel Core i7 4700HQ
 Intel Core i7 5600U
 Intel Pentium G4400
 Pentium T4200
+Intel Core i7 11370H
+Intel Pentium Gold 8505
+Intel Xeon E3 1240 v5
+Intel Celeron N3060
