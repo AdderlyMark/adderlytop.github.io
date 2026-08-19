@@ -622,8 +622,8 @@
         },
         {
             "name": "Intel Core i5 10600KF",
-            "single": 1091,
-            "multi": 8343
+            "single": 1107,
+            "multi": 8733
         },
         {
             "name": "Intel Core i3 2125",
@@ -799,7 +799,7 @@
         },
         {
             "name": "AMD Ryzen 5 3600",
-            "single": 939,
+            "single": 947,
             "multi": 8308
         },
         {
@@ -1703,6 +1703,11 @@
             "name": "Intel Core i7 5600U",
             "single": 724,
             "multi": 1931
+        },
+        {
+            "name": "Intel Core i7 11370H",
+            "single": 1177,
+            "multi": 6829
         }
     ],
     "laptop_amd": [
@@ -1834,7 +1839,7 @@
         {
             "name": "AMD Ryzen 9 8945HX",
             "single": 1185,
-            "multi": 22180
+            "multi": 29658
         },
         {
             "name": "AMD Ryzen 7 8845HS",
@@ -2060,8 +2065,8 @@
         },
         {
             "name": "Intel Pentium B970",
-            "single": 410,
-            "multi": 658
+            "single": 412,
+            "multi": 810
         },
         {
             "name": "Intel Pentium Silver N5000",
@@ -2412,6 +2417,16 @@
             "name": "Pentium T4200",
             "single": 145,
             "multi": 381
+        },
+        {
+            "name": "Intel Pentium Gold 8505",
+            "single": 932,
+            "multi": 3679
+        },
+        {
+            "name": "Intel Celeron N3060",
+            "single": 174,
+            "multi": 377
         }
     ],
     "xeon_intel": [
@@ -2704,6 +2719,11 @@
             "name": "Intel Xeon E5 2620 v2",
             "single": 411,
             "multi": 3436
+        },
+        {
+            "name": "Intel Xeon E3 1240 v5",
+            "single": 751,
+            "multi": 3843
         }
     ],
     "other_amd": [
