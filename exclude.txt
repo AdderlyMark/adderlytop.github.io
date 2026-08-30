@@ -617,3 +617,38 @@ Intel Core i7 11370H
 Intel Pentium Gold 8505
 Intel Xeon E3 1240 v5
 Intel Celeron N3060
+Intel Core i9 13900F
+Intel Core i9 12900H
+Intel Core i9 13950HX
+Intel Core i5 14500
+Intel Core i7 11700F
+Intel Core Ultra 5 135H
+Intel Core i5 1335U
+Intel Core i7 1065G7
+Intel Core i7 6700K
+Intel Core i5 6267U
+Intel Xeon E3 1271 v3
+Intel Xeon E5 2698 v3
+Intel Pentium G4600
+Intel Core i5 6400
+Intel Core i5 10600
+AMD Ryzen 5 6600U
+AMD Ryzen Z1 Extreme
+Intel Pentium Gold G6405
+Intel Core i7 10510U
+Intel Core i3 7020U
+Intel Core i5 2310
+Intel Core i3 3210
+AMD Ryzen 7 7735H 680M
+Intel Xeon E5 2673 v3
+Intel Xeon E5 2680 v2
+Intel Xeon E5 2640 0
+AMD FX 8320E
+AMD A10 5750M
+Intel Core2 Duo E8200
+AMD Athlon II X4 620
+Intel Core2 Duo T6600
+AMD A6 7310 AMD
+Intel Core i5 2520M
+AMD A6 9220e
+AMD A8 6410 AMD
