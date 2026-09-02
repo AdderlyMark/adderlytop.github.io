@@ -652,3 +652,10 @@ AMD A6 7310 AMD
 Intel Core i5 2520M
 AMD A6 9220e
 AMD A8 6410 AMD
+Intel Core i9 14900KF
+Intel Core i7 14700HX
+Intel Core Ultra 5 225U
+AMD A6 9225
+Intel Core i5 M 450
+Pentium T4500
+AMD Athlon II X2 270
