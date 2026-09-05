@@ -659,3 +659,10 @@ AMD A6 9225
 Intel Core i5 M 450
 Pentium T4500
 AMD Athlon II X2 270
+Intel Xeon E5 2630L v2
+Intel Core i5 M 520
+Intel Xeon X5450
+AMD Phenom II X4 965
+Intel Celeron J4105
+AMD E1 6010 AMD
+Intel Pentium 4415Y
