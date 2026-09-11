@@ -666,3 +666,16 @@ AMD Phenom II X4 965
 Intel Celeron J4105
 AMD E1 6010 AMD
 Intel Pentium 4415Y
+Intel Core i5 12600K
+AMD Ryzen 3 4300GE
+Intel Core i5 8600
+Intel Core i5 8265U
+Intel Core Ultra 5 125H
+Intel Core i7 2700K
+Intel Pentium G3260
+AMD Ryzen 3 2200U
+Intel Core2 Quad Q9300
+AMD Ryzen 3 PRO 2300U Vega Mobile Gfx
+AMD A4 7210 AMD
+AMD A8 3530MX
+Intel Celeron J1800
