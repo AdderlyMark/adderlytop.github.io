@@ -679,3 +679,13 @@ AMD Ryzen 3 PRO 2300U Vega Mobile Gfx
 AMD A4 7210 AMD
 AMD A8 3530MX
 Intel Celeron J1800
+Intel Core Ultra 5 225
+Intel Xeon E3 1270 V2
+Intel Pentium G2120
+Intel Core i7 3610QM
+AMD A10 5800K
+AMD Athlon X4 750K Quad Core
+Intel Pentium 3558U
+Intel Xeon E5 2420 0
+Intel Pentium P6100
+AMD A10 4600M
