@@ -77,8 +77,8 @@
         },
         {
             "name": "Intel Core i7 7700",
-            "single": 1037,
-            "multi": 5537
+            "single": 1117,
+            "multi": 6200
         },
         {
             "name": "Intel Core i7 4790",
@@ -87,8 +87,8 @@
         },
         {
             "name": "Intel Core i7 4770",
-            "single": 886,
-            "multi": 4318
+            "single": 992,
+            "multi": 5103
         },
         {
             "name": "Intel Core i7 6700",
@@ -117,8 +117,8 @@
         },
         {
             "name": "Intel Core i5 14600KF",
-            "single": 1399,
-            "multi": 20624
+            "single": 1596,
+            "multi": 23468
         },
         {
             "name": "Intel Core i5 13600K",
@@ -142,18 +142,18 @@
         },
         {
             "name": "Intel Core i5 14400F",
-            "single": 1232,
-            "multi": 15379
+            "single": 1283,
+            "multi": 17646
         },
         {
             "name": "Intel Core i5 13400F",
-            "single": 1406,
-            "multi": 14493
+            "single": 1518,
+            "multi": 17208
         },
         {
             "name": "Intel Core i5 14400",
             "single": 1473,
-            "multi": 15390
+            "multi": 15792
         },
         {
             "name": "Intel Core i5 7600K",
@@ -162,13 +162,13 @@
         },
         {
             "name": "Intel Core i5 12400F",
-            "single": 1357,
-            "multi": 12468
+            "single": 1372,
+            "multi": 12742
         },
         {
             "name": "Intel Core i5 13400",
-            "single": 1195,
-            "multi": 14076
+            "single": 1484,
+            "multi": 16882
         },
         {
             "name": "Intel Core i5 12400",
@@ -177,13 +177,13 @@
         },
         {
             "name": "Intel Core i5 11400",
-            "single": 1333,
-            "multi": 11961
+            "single": 1369,
+            "multi": 12286
         },
         {
             "name": "Intel Core i5 11400F",
-            "single": 1246,
-            "multi": 9349
+            "single": 1292,
+            "multi": 10124
         },
         {
             "name": "Intel Core i5 10500",
@@ -197,7 +197,7 @@
         },
         {
             "name": "Intel Core i5 10400F",
-            "single": 1152,
+            "single": 1154,
             "multi": 8552
         },
         {
@@ -207,8 +207,8 @@
         },
         {
             "name": "Intel Core i5 8400",
-            "single": 1073,
-            "multi": 6138
+            "single": 1190,
+            "multi": 6854
         },
         {
             "name": "Intel Core i5 6600",
@@ -217,8 +217,8 @@
         },
         {
             "name": "Intel Core i5 7500",
-            "single": 919,
-            "multi": 3483
+            "single": 1150,
+            "multi": 4319
         },
         {
             "name": "Intel Core i5 6100",
@@ -257,23 +257,23 @@
         },
         {
             "name": "Intel Core i5 4460",
-            "single": 782,
-            "multi": 2942
+            "single": 897,
+            "multi": 3402
         },
         {
             "name": "Intel Core i5 3570",
-            "single": 741,
-            "multi": 2895
+            "single": 824,
+            "multi": 3042
         },
         {
             "name": "Intel Core i5 3470",
-            "single": 712,
+            "single": 789,
             "multi": 2781
         },
         {
             "name": "Intel Core i5 2500",
-            "single": 659,
-            "multi": 2429
+            "single": 730,
+            "multi": 2734
         },
         {
             "name": "Intel Core i5 3450",
@@ -297,7 +297,7 @@
         },
         {
             "name": "Intel Core i3 12100F",
-            "single": 1317,
+            "single": 1337,
             "multi": 8502
         },
         {
@@ -327,8 +327,8 @@
         },
         {
             "name": "Intel Core i3 7100",
-            "single": 1171,
-            "multi": 3089
+            "single": 1182,
+            "multi": 3187
         },
         {
             "name": "Intel Core i3 8100",
@@ -352,8 +352,8 @@
         },
         {
             "name": "Intel Core i3 2100",
-            "single": 547,
-            "multi": 1390
+            "single": 633,
+            "multi": 1716
         },
         {
             "name": "Intel Core i3 540",
@@ -467,8 +467,8 @@
         },
         {
             "name": "Intel Core i3 N305",
-            "single": 992,
-            "multi": 6292
+            "single": 1008,
+            "multi": 6410
         },
         {
             "name": "Intel Core i5 4440",
@@ -577,8 +577,8 @@
         },
         {
             "name": "Intel Core i7 12700",
-            "single": 1374,
-            "multi": 19649
+            "single": 1430,
+            "multi": 20499
         },
         {
             "name": "Intel Core i7 4790S",
@@ -692,8 +692,8 @@
         },
         {
             "name": "Intel Core i5 2310",
-            "single": 588,
-            "multi": 2142
+            "single": 617,
+            "multi": 2317
         },
         {
             "name": "Intel Core i3 3210",
@@ -724,6 +724,26 @@
             "name": "Intel Core Ultra 5 225",
             "single": 1511,
             "multi": 1448
+        },
+        {
+            "name": "Intel Core i5 9400",
+            "single": 1223,
+            "multi": 7099
+        },
+        {
+            "name": "Intel Core i7 4790K",
+            "single": 1187,
+            "multi": 6005
+        },
+        {
+            "name": "Intel Core i7 5930K",
+            "single": 1013,
+            "multi": 7649
+        },
+        {
+            "name": "Intel Core i5 3330",
+            "single": 668,
+            "multi": 2391
         }
     ],
     "desktop_amd": [
@@ -760,7 +780,7 @@
         {
             "name": "AMD Ryzen 7 7700",
             "single": 1634,
-            "multi": 16488
+            "multi": 18762
         },
         {
             "name": "AMD Ryzen 7 9800X3D",
@@ -779,8 +799,8 @@
         },
         {
             "name": "AMD Ryzen 7 5800X",
-            "single": 1308,
-            "multi": 15137
+            "single": 1681,
+            "multi": 17997
         },
         {
             "name": "AMD Ryzen 7 5800X3D",
@@ -789,13 +809,13 @@
         },
         {
             "name": "AMD Ryzen 7 5700X",
-            "single": 1489,
-            "multi": 15382
+            "single": 1570,
+            "multi": 15741
         },
         {
             "name": "AMD Ryzen 7 7800X3D",
-            "single": 1425,
-            "multi": 15632
+            "single": 1545,
+            "multi": 15918
         },
         {
             "name": "AMD Ryzen 7 5700G",
@@ -804,13 +824,13 @@
         },
         {
             "name": "AMD Ryzen 7 3700X",
-            "single": 1321,
+            "single": 1330,
             "multi": 13927
         },
         {
             "name": "AMD Ryzen 7 5700X3D",
-            "single": 1278,
-            "multi": 15113
+            "single": 1441,
+            "multi": 16572
         },
         {
             "name": "AMD Ryzen 7 2700X",
@@ -824,28 +844,28 @@
         },
         {
             "name": "AMD Ryzen 5 7500F",
-            "single": 1563,
+            "single": 1572,
             "multi": 15482
         },
         {
             "name": "AMD Ryzen 5 8400F",
-            "single": 1127,
-            "multi": 12722
+            "single": 1617,
+            "multi": 14074
         },
         {
             "name": "AMD Ryzen 5 5600X",
-            "single": 1541,
-            "multi": 13073
+            "single": 1619,
+            "multi": 13790
         },
         {
             "name": "AMD Ryzen 5 5600",
-            "single": 1471,
+            "single": 1503,
             "multi": 13047
         },
         {
             "name": "AMD Ryzen 5 5600G",
-            "single": 1345,
-            "multi": 11780
+            "single": 1567,
+            "multi": 13203
         },
         {
             "name": "AMD Ryzen 5 4600G",
@@ -854,7 +874,7 @@
         },
         {
             "name": "AMD Ryzen 5 5500",
-            "single": 1351,
+            "single": 1356,
             "multi": 12074
         },
         {
@@ -864,8 +884,8 @@
         },
         {
             "name": "AMD Ryzen 5 3600",
-            "single": 1049,
-            "multi": 8631
+            "single": 1224,
+            "multi": 10190
         },
         {
             "name": "AMD Ryzen 5 3500",
@@ -894,13 +914,13 @@
         },
         {
             "name": "AMD Ryzen 5 2600",
-            "single": 1110,
-            "multi": 8445
+            "single": 1111,
+            "multi": 8449
         },
         {
             "name": "AMD Ryzen 3 3200G",
-            "single": 839,
-            "multi": 3288
+            "single": 985,
+            "multi": 3885
         },
         {
             "name": "AMD Ryzen 3 2200G",
@@ -929,8 +949,8 @@
         },
         {
             "name": "AMD Ryzen 5 3600X",
-            "single": 963,
-            "multi": 8069
+            "single": 1229,
+            "multi": 9284
         },
         {
             "name": "AMD Ryzen 3 PRO 1300",
@@ -954,8 +974,8 @@
         },
         {
             "name": "AMD Ryzen 3 1200",
-            "single": 898,
-            "multi": 3478
+            "single": 1096,
+            "multi": 4411
         },
         {
             "name": "AMD Ryzen 5 220",
@@ -974,8 +994,8 @@
         },
         {
             "name": "AMD Ryzen 7 7700X",
-            "single": 1243,
-            "multi": 16382
+            "single": 1930,
+            "multi": 24214
         },
         {
             "name": "AMD Ryzen Threadripper 3970X 32 Core",
@@ -1039,8 +1059,8 @@
         },
         {
             "name": "AMD Ryzen 7 9850X3D",
-            "single": 1640,
-            "multi": 21394
+            "single": 1948,
+            "multi": 23265
         },
         {
             "name": "AMD Ryzen 3 2200GE",
@@ -1086,7 +1106,7 @@
         },
         {
             "name": "Intel Core Ultra 9 275HX",
-            "single": 1280,
+            "single": 1496,
             "multi": 26370
         },
         {
@@ -1126,7 +1146,7 @@
         },
         {
             "name": "Intel Core i7 1165G7",
-            "single": 1115,
+            "single": 1378,
             "multi": 6172
         },
         {
@@ -1217,7 +1237,7 @@
         {
             "name": "Intel Core i5 12500H",
             "single": 1262,
-            "multi": 11305
+            "multi": 11656
         },
         {
             "name": "Intel Core i5 13500H",
@@ -1226,7 +1246,7 @@
         },
         {
             "name": "Intel Core i5 12450H",
-            "single": 1263,
+            "single": 1387,
             "multi": 10088
         },
         {
@@ -1291,7 +1311,7 @@
         },
         {
             "name": "Intel Core i5 8250U",
-            "single": 928,
+            "single": 955,
             "multi": 4399
         },
         {
@@ -1321,8 +1341,8 @@
         },
         {
             "name": "Intel Core i5 3230M",
-            "single": 614,
-            "multi": 1471
+            "single": 624,
+            "multi": 1552
         },
         {
             "name": "Intel Core i5 3210M",
@@ -1476,8 +1496,8 @@
         },
         {
             "name": "Intel Core i5 6300U",
-            "single": 808,
-            "multi": 2092
+            "single": 893,
+            "multi": 2300
         },
         {
             "name": "Intel Core i5 9300H",
@@ -1516,8 +1536,8 @@
         },
         {
             "name": "Intel Core i5 2540M",
-            "single": 426,
-            "multi": 624
+            "single": 648,
+            "multi": 1710
         },
         {
             "name": "Intel Core i3 2350M",
@@ -1566,8 +1586,8 @@
         },
         {
             "name": "Intel Core Ultra 9 285H",
-            "single": 1282,
-            "multi": 14475
+            "single": 1620,
+            "multi": 20465
         },
         {
             "name": "Intel Core i7 8565U",
@@ -1606,8 +1626,8 @@
         },
         {
             "name": "Intel Core i3 1215U",
-            "single": 1105,
-            "multi": 5307
+            "single": 1329,
+            "multi": 6633
         },
         {
             "name": "Intel Core i3 1315U",
@@ -1821,7 +1841,7 @@
         },
         {
             "name": "Intel Core i3 7020U",
-            "single": 578,
+            "single": 629,
             "multi": 1635
         },
         {
@@ -1863,6 +1883,26 @@
             "name": "Intel Core i7 3610QM",
             "single": 664,
             "multi": 3221
+        },
+        {
+            "name": "Intel Core 3 100U",
+            "single": 1567,
+            "multi": 8643
+        },
+        {
+            "name": "Intel Core i7 6820HQ",
+            "single": 929,
+            "multi": 4047
+        },
+        {
+            "name": "Intel Core i7 3612QM",
+            "single": 657,
+            "multi": 3217
+        },
+        {
+            "name": "Intel Core i3 5010U",
+            "single": 182,
+            "multi": 482
         }
     ],
     "laptop_amd": [
@@ -1958,13 +1998,13 @@
         },
         {
             "name": "AMD Ryzen 5 5600H",
-            "single": 1078,
-            "multi": 8646
+            "single": 1373,
+            "multi": 9605
         },
         {
             "name": "AMD Ryzen 5 7430U",
-            "single": 1003,
-            "multi": 7801
+            "single": 1538,
+            "multi": 11049
         },
         {
             "name": "AMD Ryzen 5 5500U",
@@ -2018,8 +2058,8 @@
         },
         {
             "name": "AMD Ryzen 7 7435HS",
-            "single": 1054,
-            "multi": 12872
+            "single": 1548,
+            "multi": 16392
         },
         {
             "name": "AMD Ryzen 5 5600U",
@@ -2103,13 +2143,13 @@
         },
         {
             "name": "AMD Ryzen 5 4500U",
-            "single": 777,
-            "multi": 4249
+            "single": 905,
+            "multi": 4567
         },
         {
             "name": "AMD Ryzen 7 5800U",
-            "single": 975,
-            "multi": 8531
+            "single": 1438,
+            "multi": 10278
         },
         {
             "name": "AMD Ryzen 7 6800H",
@@ -2153,8 +2193,8 @@
         },
         {
             "name": "AMD Ryzen 5 PRO 4650U",
-            "single": 908,
-            "multi": 6992
+            "single": 1284,
+            "multi": 9667
         },
         {
             "name": "AMD Ryzen 3 5300U",
@@ -2200,6 +2240,16 @@
             "name": "AMD Ryzen 3 PRO 2300U Vega Mobile Gfx",
             "single": 278,
             "multi": 2635
+        },
+        {
+            "name": "AMD Ryzen 5 PRO 3500U Vega Mobile Gfx",
+            "single": 1091,
+            "multi": 4921
+        },
+        {
+            "name": "AMD Ryzen 7 4700U",
+            "single": 954,
+            "multi": 6303
         }
     ],
     "other_intel": [
@@ -2345,8 +2395,8 @@
         },
         {
             "name": "Intel N97",
-            "single": 696,
-            "multi": 2225
+            "single": 938,
+            "multi": 3039
         },
         {
             "name": "Intel N150",
@@ -2356,7 +2406,7 @@
         {
             "name": "Intel Pentium G4560",
             "single": 698,
-            "multi": 1995
+            "multi": 1997
         },
         {
             "name": "Intel Pentium Silver N6000",
@@ -2440,8 +2490,8 @@
         },
         {
             "name": "Intel Core2 Quad Q8300",
-            "single": 354,
-            "multi": 1372
+            "single": 415,
+            "multi": 1600
         },
         {
             "name": "Intel Celeron B820",
@@ -2480,8 +2530,8 @@
         },
         {
             "name": "Intel Pentium Dual E2200",
-            "single": 246,
-            "multi": 442
+            "single": 308,
+            "multi": 590
         },
         {
             "name": "Intel Celeron N2840",
@@ -2667,6 +2717,11 @@
             "name": "Intel Pentium P6100",
             "single": 326,
             "multi": 619
+        },
+        {
+            "name": "Intel Celeron 1007U",
+            "single": 327,
+            "multi": 546
         }
     ],
     "xeon_intel": [
@@ -2772,8 +2827,8 @@
         },
         {
             "name": "Intel Xeon E5 2670 v3",
-            "single": 757,
-            "multi": 10177
+            "single": 815,
+            "multi": 10790
         },
         {
             "name": "Intel Xeon E5 2650 v3",
@@ -2783,7 +2838,7 @@
         {
             "name": "Intel Xeon E3 1230 V2",
             "single": 792,
-            "multi": 4022
+            "multi": 4082
         },
         {
             "name": "Intel Xeon E5 2650 v2",
@@ -2843,7 +2898,7 @@
         {
             "name": "Intel Xeon E5 2650 v4",
             "single": 752,
-            "multi": 10611
+            "multi": 10794
         },
         {
             "name": "Intel Xeon E5 2640 v4",
@@ -2977,8 +3032,8 @@
         },
         {
             "name": "Intel Xeon E5 2673 v3",
-            "single": 658,
-            "multi": 10625
+            "single": 781,
+            "multi": 11745
         },
         {
             "name": "Intel Xeon E5 2680 v2",
@@ -3119,8 +3174,8 @@
         },
         {
             "name": "AMD 3020e",
-            "single": 524,
-            "multi": 1051
+            "single": 710,
+            "multi": 1140
         },
         {
             "name": "AMD C-50",
@@ -3154,8 +3209,8 @@
         },
         {
             "name": "AMD FX 6300",
-            "single": 583,
-            "multi": 2832
+            "single": 588,
+            "multi": 2985
         },
         {
             "name": "AMD C 70",
@@ -3189,8 +3244,8 @@
         },
         {
             "name": "AMD A6 5200",
-            "single": 188,
-            "multi": 737
+            "single": 246,
+            "multi": 939
         },
         {
             "name": "AMD A10 7700K",
@@ -3269,8 +3324,8 @@
         },
         {
             "name": "AMD Phenom II X4 945",
-            "single": 284,
-            "multi": 1200
+            "single": 361,
+            "multi": 1324
         },
         {
             "name": "AMD A10 9600P",
@@ -3361,6 +3416,16 @@
             "name": "AMD A10 4600M",
             "single": 275,
             "multi": 1040
+        },
+        {
+            "name": "AMD Athlon X4 870K Quad Core",
+            "single": 646,
+            "multi": 2272
+        },
+        {
+            "name": "AMD A9 9420",
+            "single": 399,
+            "multi": 988
         }
     ],
     "arm_cpu": [
