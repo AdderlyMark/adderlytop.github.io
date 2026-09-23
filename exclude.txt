@@ -689,3 +689,16 @@ Intel Pentium 3558U
 Intel Xeon E5 2420 0
 Intel Pentium P6100
 AMD A10 4600M
+Intel Core 3 100U
+Intel Core i5 9400
+Intel Core i7 4790K
+AMD Ryzen 5 PRO 3500U Vega Mobile Gfx
+Intel Core i7 5930K
+AMD Ryzen 7 4700U
+Intel Core i7 6820HQ
+Intel Core i5 3330
+Intel Core i7 3612QM
+AMD Athlon X4 870K Quad Core
+AMD A9 9420
+Intel Celeron 1007U
+Intel Core i3 5010U
