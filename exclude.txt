@@ -702,3 +702,6 @@ AMD Athlon X4 870K Quad Core
 AMD A9 9420
 Intel Celeron 1007U
 Intel Core i3 5010U
+Intel Core i7 14700
+AMD Ryzen 5 7640HS
+Intel Core i5 4250U
