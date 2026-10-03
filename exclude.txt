@@ -705,3 +705,33 @@ Intel Core i3 5010U
 Intel Core i7 14700
 AMD Ryzen 5 7640HS
 Intel Core i5 4250U
+AMD Eng Sample: 100 000000562 40_Y
+Intel Core i7 8700K
+Intel Core i9 11900F
+Intel Core i7 8750H
+AMD Ryzen Z2 A
+AMD Ryzen Threadripper 1920X
+Intel Core i5 8257U
+AMD Ryzen 3 PRO 3200G
+Intel Xeon E3 1505M v6
+Intel Core i5 9400H
+Intel Core i5 1038NG7
+Intel Core i5 14450HX
+AMD Ryzen 7 1700
+Intel Core i5 6402P
+AMD Athlon 300U
+Intel Core i5 14500HX
+Intel Core i5 4300U
+AMD Ryzen 5 7600X
+Intel Xeon E3 1265L V2
+AMD Athlon X4 950 Quad Core
+Intel Core i5 3570K
+Intel Core i7 3632QM
+Intel Pentium Silver N5030
+AMD FX 8370
+Intel Celeron N5095A
+Intel Core i7 920
+AMD Phenom II N930
+AMD A4 3300M
+Intel Core i3 2375M
+Intel Atom x5 Z8350
