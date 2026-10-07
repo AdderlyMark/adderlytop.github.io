@@ -142,8 +142,8 @@
         },
         {
             "name": "Intel Core i5 14400F",
-            "single": 1283,
-            "multi": 17646
+            "single": 1574,
+            "multi": 17670
         },
         {
             "name": "Intel Core i5 13400F",
@@ -183,7 +183,7 @@
         {
             "name": "Intel Core i5 11400F",
             "single": 1295,
-            "multi": 10124
+            "multi": 11149
         },
         {
             "name": "Intel Core i5 10500",
@@ -197,8 +197,8 @@
         },
         {
             "name": "Intel Core i5 10400F",
-            "single": 1207,
-            "multi": 9139
+            "single": 1211,
+            "multi": 9184
         },
         {
             "name": "Intel Core i5 9400F",
@@ -333,7 +333,7 @@
         {
             "name": "Intel Core i3 8100",
             "single": 1118,
-            "multi": 4419
+            "multi": 4424
         },
         {
             "name": "Intel Core i3 4360",
@@ -794,7 +794,7 @@
         },
         {
             "name": "AMD Ryzen 9 5900X",
-            "single": 1665,
+            "single": 1668,
             "multi": 25909
         },
         {
@@ -804,8 +804,8 @@
         },
         {
             "name": "AMD Ryzen 7 7700",
-            "single": 1634,
-            "multi": 19909
+            "single": 1854,
+            "multi": 21937
         },
         {
             "name": "AMD Ryzen 7 9800X3D",
@@ -834,13 +834,13 @@
         },
         {
             "name": "AMD Ryzen 7 5700X",
-            "single": 1626,
-            "multi": 16511
+            "single": 1653,
+            "multi": 16766
         },
         {
             "name": "AMD Ryzen 7 7800X3D",
             "single": 1545,
-            "multi": 15918
+            "multi": 16238
         },
         {
             "name": "AMD Ryzen 7 5700G",
@@ -849,7 +849,7 @@
         },
         {
             "name": "AMD Ryzen 7 3700X",
-            "single": 1330,
+            "single": 1338,
             "multi": 13927
         },
         {
@@ -899,8 +899,8 @@
         },
         {
             "name": "AMD Ryzen 5 5500",
-            "single": 1384,
-            "multi": 12074
+            "single": 1483,
+            "multi": 12185
         },
         {
             "name": "AMD Ryzen 5 4500",
@@ -1166,8 +1166,8 @@
         },
         {
             "name": "Intel Core i7 13650HX",
-            "single": 1612,
-            "multi": 19415
+            "single": 1639,
+            "multi": 20651
         },
         {
             "name": "Intel Core i7 13620H",
@@ -1257,7 +1257,7 @@
         {
             "name": "Intel Core i7 3630QM",
             "single": 741,
-            "multi": 3674
+            "multi": 3818
         },
         {
             "name": "Intel Core i7 3517U",
@@ -1926,8 +1926,8 @@
         },
         {
             "name": "Intel Core Ultra 5 125H",
-            "single": 1292,
-            "multi": 13206
+            "single": 1479,
+            "multi": 13367
         },
         {
             "name": "Intel Core i7 3610QM",
@@ -1941,8 +1941,8 @@
         },
         {
             "name": "Intel Core i7 6820HQ",
-            "single": 929,
-            "multi": 4047
+            "single": 996,
+            "multi": 4476
         },
         {
             "name": "Intel Core i7 3612QM",
@@ -2074,7 +2074,7 @@
         {
             "name": "AMD Ryzen 7 5700U",
             "single": 1378,
-            "multi": 10535
+            "multi": 10549
         },
         {
             "name": "AMD Ryzen 7 4800HS",
@@ -2113,8 +2113,8 @@
         },
         {
             "name": "AMD Ryzen 5 5500U",
-            "single": 997,
-            "multi": 7613
+            "single": 1068,
+            "multi": 8286
         },
         {
             "name": "AMD Ryzen 5 3550H",
@@ -2338,8 +2338,8 @@
         },
         {
             "name": "AMD Ryzen 3 2200U",
-            "single": 826,
-            "multi": 2559
+            "single": 892,
+            "multi": 2763
         },
         {
             "name": "AMD Ryzen 3 PRO 2300U Vega Mobile Gfx",
@@ -3162,7 +3162,7 @@
         },
         {
             "name": "Intel Xeon E5 2680 v2",
-            "single": 647,
+            "single": 681,
             "multi": 9075
         },
         {
@@ -3606,8 +3606,8 @@
         },
         {
             "name": "Apple Silicon",
-            "single": 993,
-            "multi": 5055
+            "single": 1014,
+            "multi": 5149
         },
         {
             "name": "Snapdragon 845",
