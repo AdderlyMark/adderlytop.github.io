@@ -225,6 +225,44 @@ main > p {
     box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3); 
 }
 
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    background: #000;
+}
+
+.video-wrapper:hover {
+    border-color: rgba(168, 85, 247, 0.6);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+    background: transparent;
+}
+
 .accordion-container {
     margin-bottom: 16px;
     border-radius: 16px;
@@ -384,6 +422,7 @@ footer {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    cursor: pointer;
 }
 
 .lightbox.active { display: flex; opacity: 1; }
@@ -394,6 +433,7 @@ footer {
     border-radius: 12px;
     box-shadow: 0 0 50px rgba(0,0,0,0.8);
     border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
 }
 
 .lightbox-close {
@@ -491,6 +531,11 @@ footer {
     display: flex;
     justify-content: center;
     margin: 15px 0;
+}
+
+.gallery-row > .video-wrapper {
+    display: block !important;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
