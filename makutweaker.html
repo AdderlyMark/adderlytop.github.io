@@ -415,11 +415,11 @@
 
 <h1 data-i18n="download_title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuTweaker</h1>
 <div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
-    <a href="https://www.mediafire.com/file/e1lsfzzc1bnn94g/MakuTweaker+5.8.7+Setup.exe/file" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://www.mediafire.com/file/e1lsfzzc1bnn94g/MakuTweaker+5.8.7+Setup.exe/file" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuTweaker' });">
         <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
         <span>MediaFire</span>
     </a>
-    <a href="https://pixeldrain.com/u/4ocz7mFp" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://pixeldrain.com/u/4ocz7mFp" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuTweaker' });">
         <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
         <span>PixelDrain</span>
     </a>
@@ -427,11 +427,11 @@
 
 <h1 data-i18n="portable_btn" style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 5px;">Портативная версия</h1>
 <div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
-    <a href="https://www.mediafire.com/file/5bzxarj93xpuetq/MakuTweaker+5.8.7.exe/file" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://www.mediafire.com/file/5bzxarj93xpuetq/MakuTweaker+5.8.7.exe/file" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuTweaker_Portable' });">
         <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
         <span>MediaFire</span>
     </a>
-    <a href="https://pixeldrain.com/u/oNrRm3wM" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://pixeldrain.com/u/oNrRm3wM" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuTweaker_Portable' });">
         <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
         <span>PixelDrain</span>
     </a>
@@ -439,11 +439,11 @@
 
 <h1 data-i18n="legacy_btn" style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 5px;">MakuTweaker для Windows 8.1 / Windows 7</h1>
 <div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
-    <a href="https://www.mediafire.com/file/pq2iwfrsrxex3l1/MakuTweaker+Legacy.exe/file" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://www.mediafire.com/file/pq2iwfrsrxex3l1/MakuTweaker+Legacy.exe/file" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuTweaker_Legacy' });">
         <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
         <span>MediaFire</span>
     </a>
-    <a href="https://pixeldrain.com/u/qfbdM9Gt" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://pixeldrain.com/u/qfbdM9Gt" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuTweaker_Legacy' });">
         <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
         <span>PixelDrain</span>
     </a>
@@ -509,6 +509,7 @@
     const closeBtn = document.querySelector('.lightbox-close');
 
     document.querySelectorAll('.gallery-row img').forEach(img => {
+        img.style.cursor = 'pointer';
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
@@ -522,7 +523,7 @@
     }
 
     closeBtn.addEventListener('click', closeLightbox);
-    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+    lightboxImg.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', closeLightbox);
 
     document.addEventListener('keydown', (e) => {

@@ -78,7 +78,7 @@
     </script>
 
     <div class="buttons">
-        <a href="https://t.me/adderly324/4484" class="btn-primary">Скачать MakuYan</a>
+        <a href="https://t.me/adderly324/4484" class="btn-primary" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuYan' });">Скачать MakuYan</a>
         <a href="https://www.youtube.com/watch?v=97CMTnJL9p0" class="btn-secondary" style="display: flex; align-items: center;">
             <img src="icons/yt.png" alt="YouTube" style="width: 24px; margin-right: 10px;"> Обзор на программу
         </a>
@@ -113,6 +113,7 @@
     const closeBtn = document.querySelector('.lightbox-close');
 
     document.querySelectorAll('.gallery-row img').forEach(img => {
+        img.style.cursor = 'pointer';
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
@@ -126,7 +127,7 @@
     }
 
     closeBtn.addEventListener('click', closeLightbox);
-    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+    lightboxImg.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', closeLightbox);
 
     document.addEventListener('keydown', (e) => {

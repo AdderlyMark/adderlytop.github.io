@@ -125,13 +125,13 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
-<h1 data-i18n="title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuTyper</h1>
+<h1 data-i18n="title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать MakuTweaker</h1>
 <div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
-    <a href="https://www.mediafire.com/file/hbqy1adk0j558we/MakuTyper+1.2+Setup.exe/file" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://www.mediafire.com/file/051ucsy4xi567g8/MakuTyper+1.1+Setup.exe/file" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuTyper' });">
         <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
         <span>MediaFire</span>
     </a>
-    <a href="https://pixeldrain.com/u/5Jf6L59b" class="btn-primary" style="display: flex; align-items: center;">
+    <a href="https://pixeldrain.com/u/pdjMYxBa" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'MakuTyper' });">
         <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
         <span>PixelDrain</span>
     </a>
@@ -192,6 +192,7 @@
     const closeBtn = document.querySelector('.lightbox-close');
 
     document.querySelectorAll('.gallery-row img').forEach(img => {
+        img.style.cursor = 'pointer';
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
@@ -205,7 +206,7 @@
     }
 
     closeBtn.addEventListener('click', closeLightbox);
-    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+    lightboxImg.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', closeLightbox);
 
     document.addEventListener('keydown', (e) => {
