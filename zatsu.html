@@ -111,6 +111,20 @@
             <img data-img="Music" src="images/zatsu/ru/Music.png" alt="Zatsu Music">
             <img data-img="Scan" src="images/zatsu/ru/Scan.png" alt="Zatsu Scan">
         </div>
+        <div class="gallery-row tweaker-row ru-update-only">
+            <div class="video-wrapper">
+                <iframe 
+                    id="zatsu-video"
+                    src="https://www.youtube.com/embed/g-MXSGh8dAo?enablejsapi=1" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+                <div class="video-overlay" id="video-overlay"></div>
+            </div>
+        </div>
         <br>
     </div>
     
@@ -121,6 +135,48 @@
             <div class="panel-content">
                 <h1 data-i18n="sys_req_title">Системные требования</h1>
                 <p data-i18n="sys_req_p1">• Для запуска программы требуется Windows 10 1809 (2018) и .NET Core 10 (уже предустановлен в портативной версии).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-container ru-update-only">
+        <button class="accordion">Новое актуальное обновление - Zatsu 1.1 (27 октября 2026)</button>
+        <div class="panel">
+            <div class="panel-content">
+                <h1>Большое обновление - Zatsu 1.1!</h1>
+                <p>Это быстрый, но достаточно большой хотфикс, в котором исправлены критические проблемы и уязвимости, а также добавлены полезные фишки, которые улучшат опыт использования программы! Это первая часть большого обновления - вторая выйдет к концу года. Начнём с нововведений!</p>
+
+                <h2>Полноценная поддержка нескольких мониторов</h2>
+                <p>Теперь Zatsu умеет работать с дополнительными мониторами точно так же, как и системная панель задач Windows. На каждом мониторе теперь отображается своя независимая панель задач, и в ней находятся только те окна, которые открыты именно на этом мониторе. Анимации сворачивания и разворачивания окон теперь тоже привязаны к конкретному монитору.</p>
+
+                <h2>Свой таймер выключения Zatsu</h2>
+                <p>Вместо фиксированной кнопки на 12 часов, теперь будет кнопка "ЗАДАТЬ ВРЕМЯ", где можно задать абсолютно любое собственное время сессии.</p>
+
+                <h2>Подсчёт аптайма запущенных программ на панели задач</h2>
+                <p>Появился счётчик времени работы программ. При наведении курсора на программу на панели задач, вы увидите сколько именно она запущена.</p>
+
+                <h2>Ромадзизация текстов песен</h2>
+                <p>В музыкальной панели Zatsu появилась очень полезная фишка для любителей азиатской музыки - ромадзизация текста!<br>Если трек на японском, китайском или корейском языке, программа в реальном времени будет транслитерировать иероглифы в латиницу. Доступны - Японский Хэпбурн, Китайский Пиньинь, Корейская транслитерация, и совмещённый японский+китайский режим). Словари встроены в саму программу, так что всё работает полностью локально, и ничего докачивать не нужно.</p>
+
+                <h2>Панель задач теперь сохраняет порядок приложений</h2>
+                <p>Раньше при запуске Zatsu значки на панели задач могли выстраиваться в произвольном порядке. Теперь программа считывает порядок закрепления и открытых окон из системной панели задач, и значки встают ровно на те места, на которых они находились до открытия.</p>
+
+                <h2>Новый календарь на панели задач</h2>
+                <p>По многочисленным просьбам, в программу добавлен встроенный календарь. При клике на часы и дату в правом нижнем углу теперь открывается всплывающий календарь в фирменном дизайне Zatsu!</p>
+
+                <h2>Исправления и улучшения:</h2>
+                <ul>
+                    <li>Исправлено некорректное отображение программы на Windows 10.</li>
+                    <li>Исправлены артефакты и наслоение цветов в светлой теме системы.</li>
+                    <li>Исправлена проблема со старыми приложениями, когда иконки отображались слишком мелко и были практически не видны на рабочем столе и в меню отсканированных программ.</li>
+                    <li>Переработана система шрифтов на рабочем столе - это улучшило читаемость текста у иконок при любом масштабировании.</li>
+                    <li>Исправлена проблема с некорректным открытием музыкального виджета при смене масштаба.</li>
+                    <li>Исправлена анимация закрытия приложений на панели задач.</li>
+                    <li>Исправлена анимация сворачивания и разворачивания окон на дополнительных мониторах.</li>
+                    <li>Исправлена ошибка, из-за которой медиа в системе могло не переключаться через виджет музыки.</li>
+                    <li>Теперь текст песни можно прокручивать вручную, и он больше не перескакивает к текущей строке.<br>Это позволяет отвязать окно с текстом и свободно его листать.</li>
+                    <li>Кнопка переключения медиа на панели задач теперь скрывается, если эта функция недоступна.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -147,11 +203,11 @@
 
     <h1 data-i18n="download_title" style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 5px;">Скачать Zatsu</h1>
     <div class="buttons" style="margin-top: 0; padding-top: 0; margin-bottom: 20px;">
-        <a href="https://www.mediafire.com/file/gqelrnek1q2tc8m/Zatsu.exe/file" class="btn-primary" style="display: flex; align-items: center;">
+        <a href="https://www.mediafire.com/file/oezgdzgymf4yrwj/Zatsu+1.1.exe/file" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'Zatsu' });">
             <img src="icons/mediafire.png" alt="MediaFire" style="width: 24px; margin-right: 10px; border-radius: 4px;"> 
             <span>MediaFire</span>
         </a>
-        <a href="https://pixeldrain.com/u/33Gj9ZwU" class="btn-primary" style="display: flex; align-items: center;">
+        <a href="https://pixeldrain.com/u/cwtiemes" class="btn-primary" style="display: flex; align-items: center;" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'download', { DownloadBtn: 'Zatsu' });">
             <img src="icons/pixeldrain.png" alt="PixelDrain" style="width: 24px; margin-right: 10px;"> 
             <span>PixelDrain</span>
         </a>
@@ -231,6 +287,89 @@
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+        const iframe = wrapper.querySelector('iframe');
+        const overlay = wrapper.querySelector('.video-overlay');
+        if (!iframe || !overlay) return;
+
+        let resetTimer = null;
+        let isStarted = false;
+        let isPlaying = false;
+
+        function enableOverlay() {
+            overlay.style.pointerEvents = 'auto';
+            clearTimeout(resetTimer);
+        }
+
+        function disableOverlay(duration = 4000) {
+            overlay.style.pointerEvents = 'none';
+            clearTimeout(resetTimer);
+            if (duration > 0) {
+                resetTimer = setTimeout(enableOverlay, duration);
+            }
+        }
+
+        window.addEventListener('message', (e) => {
+            if (typeof e.data !== 'string') return;
+            try {
+                const data = JSON.parse(e.data);
+                if (data.event === 'onStateChange') {
+                    isPlaying = (data.info === 1 || data.info === 3);
+                }
+            } catch (err) {}
+        });
+
+        iframe.addEventListener('load', () => {
+            try {
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    event: 'listening',
+                    id: 1,
+                    channel: 'widget'
+                }), '*');
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    event: 'command',
+                    func: 'addEventListener',
+                    args: ['onStateChange']
+                }), '*');
+            } catch (err) {}
+        });
+
+        overlay.addEventListener('click', (e) => {
+            disableOverlay(4000);
+            if (!isStarted) {
+                try {
+                    iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                } catch (err) {}
+                if (!iframe.src.includes('autoplay=1')) {
+                    iframe.src += (iframe.src.includes('?') ? '&' : '?') + 'autoplay=1';
+                }
+                isStarted = true;
+                isPlaying = true;
+            } else {
+                const rect = overlay.getBoundingClientRect();
+                const clickY = e.clientY - rect.top;
+                if (clickY < rect.height - 50) {
+                    if (isPlaying) {
+                        try {
+                            iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                        } catch (err) {}
+                        isPlaying = false;
+                    } else {
+                        try {
+                            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                        } catch (err) {}
+                        isPlaying = true;
+                    }
+                }
+            }
+        });
+
+        wrapper.addEventListener('mouseleave', enableOverlay);
+        window.addEventListener('scroll', enableOverlay, { passive: true });
     });
 </script>
 
@@ -323,6 +462,20 @@ function applyLang(lang) {
     document.querySelectorAll("[data-img]").forEach(img => {
         const name = img.dataset.img;
         img.src = `images/zatsu/${imgLang}/${name}.png`;
+    });
+
+    document.querySelectorAll('.ru-update-only').forEach(el => {
+        if (lang === 'ru') {
+            el.style.display = '';
+        } else {
+            el.style.display = 'none';
+            const iframe = el.querySelector('iframe');
+            if (iframe) {
+                try {
+                    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                } catch (e) {}
+            }
+        }
     });
 }
 
